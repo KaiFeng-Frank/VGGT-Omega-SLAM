@@ -15,6 +15,7 @@ The project is independent of the VGGT-Ω and VGGT-SLAM authors. The released ex
 - TUM-format trajectories, run metadata, keyframe records, point-cloud export, and Sim(3)-aligned ATE evaluation.
 - Fixed-window diagnostics for focal length, translation shape, lens distortion, principal point, input size, and numerical precision.
 - Lossless prediction caches and CPU backend replay, opt-in confidence/noise policies, and a frozen development/validation sweep for keyframe spacing and submap size.
+- Optional CPU storage for historical keyframe images, with lossless transfers for loop retrieval.
 - Small result records and frame manifests. Download model weights and datasets from their original providers.
 
 ## Current findings
@@ -36,6 +37,8 @@ An additional **104 successful diagnostic forwards** found:
 **Correction:** the initial claim that Ω had roughly half the relative rotation error was a bf16/nonorthogonal-matrix metric artifact. After projection onto SO(3), adjacent-frame relative rotation errors are comparable: approximately **0.715° for VGGT and 0.731° for Ω** on the raw windows. Public geometry helpers include this correction and regression tests.
 
 The remaining focal bias is present in the model's predicted FoV. Its training-level cause, and whether it causes the translation gap, remain unresolved. See [the result definitions and limitations](docs/RESULTS.md) before comparing numbers across metric versions.
+
+The [system adaptation experiments](docs/ADAPTATION.md) retain the original defaults. Confidence and graph-noise changes did not improve both validation sequences. A six-setting frontend search selected 32-frame submaps with a 25-pixel keyframe threshold on `desk` (3.15% lower ATE), but both original validation attempts exceeded the configured VRAM budget. This development result is not a validated accuracy gain. The optional CPU image-storage path has a separate prediction/trajectory equivalence gate before retrying the same frozen configuration; [the result record](results/adaptation_frontend.json) distinguishes original failures from that retry.
 
 ## Run a sequence
 

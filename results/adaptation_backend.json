@@ -1,6 +1,6 @@
 {
   "schema": "vggt_omega_slam.adaptation_backend.v1",
-  "status": "partial_validation_room_pending",
+  "status": "complete",
   "generated_utc": "2026-10-19T20:09:58.998114+00:00",
   "system": "VGGT-Ω-SLAM",
   "scope": {
@@ -92,7 +92,8 @@
       "One development sequence and two previously inspected validation sequences provide exploratory evidence only.",
       "Accepted loops are frozen; replay cannot evaluate rejected loops or alternative attention thresholds.",
       "A small desk ATE decrease does not establish a robust accuracy gain or the cause of the focal-length bias."
-    ]
+    ],
+    "completed_validation_result": "The frozen main policy is worse than matching legacy on both desk2 and room. Its equal-weight validation ATE-ratio geometric mean exceeds 1, and neither validation sequence meets the 2% improvement gate. Legacy remains the default."
   },
   "summary": {
     "development_desk": {
@@ -112,10 +113,38 @@
       "same_gt_support_supplement_ratio": 1.0019239982149537
     },
     "validation_room": {
-      "status": "pending",
-      "selection_locked": true
+      "legacy_ate_rmse_m": 0.07309544886221252,
+      "selected_ate_rmse_m": 0.07339492923153053,
+      "candidate_over_legacy": 1.0040971137598804,
+      "ate_change_percent": 0.4097113759880422,
+      "passes_two_percent_improvement_gate": false,
+      "same_gt_support_supplement_ratio": 1.0030494716705
     },
-    "default_change_gate_met": false
+    "default_change_gate_met": false,
+    "validation_geometric_mean": {
+      "sequences": [
+        "desk2",
+        "room"
+      ],
+      "n_sequences": 2,
+      "definition": "Equal weight per sequence: exp(mean(log(candidate ATE RMSE / matching legacy ATE RMSE))).",
+      "per_sequence_candidate_over_legacy": {
+        "desk2": 1.0027911096918831,
+        "room": 1.0040971137598804
+      },
+      "candidate_over_legacy_geometric_mean": 1.0034438992518153,
+      "ate_ratio_change_percent": 0.3443899251815319,
+      "all_validation_sequences_pass_two_percent_improvement_gate": false,
+      "same_gt_support_supplement": {
+        "per_sequence_ratios": {
+          "desk2": 1.0019239982149537,
+          "room": 1.0030494716705
+        },
+        "geometric_mean_ratio": 1.0024865769991658,
+        "ratio_change_percent": 0.24865769991657682,
+        "role": "Supplement only; piecewise-linear interpolation of sparse keyframes; does not reselect policy."
+      }
+    }
   },
   "development": {
     "design": {
@@ -2424,17 +2453,1193 @@
       "common_support_role": "Supplementary validation only; piecewise-linear interpolation is not a measured dense trajectory and does not change the original ATE selection."
     },
     "room": {
-      "status": "pending",
+      "status": "complete",
       "selection_locked": true,
-      "policy": {
-        "name": "noise_only",
-        "scale_confidence_percentile": null,
-        "scale_confidence_scope": "submap",
-        "cross_submap_noise_multiplier": 2,
-        "loop_noise_multiplier": 1,
-        "huber_delta": null,
-        "min_scale_points": 100
-      }
+      "selected_summary": {
+        "status": "complete",
+        "policy": {
+          "name": "noise_only",
+          "scale_confidence_percentile": null,
+          "scale_confidence_scope": "submap",
+          "cross_submap_noise_multiplier": 2,
+          "loop_noise_multiplier": 1,
+          "huber_delta": null,
+          "min_scale_points": 100
+        },
+        "cache_dir": "runs/adaptation/predictions/room_legacy",
+        "gpu_used": false,
+        "cache_count": 12,
+        "legacy_reference_verification": {
+          "reference": "runs/adaptation/online/room_legacy/poses.tum",
+          "n_reference_rows": 197,
+          "n_replay_rows": 197,
+          "absolute_tolerance": 0.0,
+          "relative_tolerance": 0.0,
+          "exact_numeric_match": true,
+          "timestamps_equal": true,
+          "passed": true,
+          "max_abs_xyz_difference": 0.0,
+          "max_abs_quaternion_difference": 0.0,
+          "online_update_counts": {
+            "checked": true,
+            "updates_checked": 12,
+            "passed": true
+          }
+        },
+        "schema": "vggt_omega_slam.cpu_replay.v1",
+        "cloud_conf_percentile": 25.0,
+        "models_loaded": false,
+        "retrieval_executed": false,
+        "accepted_loops_frozen": true,
+        "updates": [
+          {
+            "update": 0,
+            "cache": "00000.npz",
+            "submap_id": 0,
+            "frame_names": [
+              "1305031910.765238.png",
+              "1305031911.035050.png",
+              "1305031911.165177.png",
+              "1305031911.365235.png",
+              "1305031911.565335.png",
+              "1305031911.797297.png",
+              "1305031911.997252.png",
+              "1305031912.297250.png",
+              "1305031912.733125.png",
+              "1305031913.197113.png",
+              "1305031913.333122.png",
+              "1305031913.497227.png",
+              "1305031913.597139.png",
+              "1305031913.697243.png",
+              "1305031913.797106.png",
+              "1305031913.897116.png",
+              "1305031914.033441.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 1,
+            "graph_nodes": 17,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.13799291900068056
+          },
+          {
+            "update": 1,
+            "cache": "00001.npz",
+            "submap_id": 17,
+            "frame_names": [
+              "1305031914.033441.png",
+              "1305031914.165013.png",
+              "1305031914.297165.png",
+              "1305031914.497127.png",
+              "1305031914.697129.png",
+              "1305031915.901234.png",
+              "1305031916.165155.png",
+              "1305031916.333426.png",
+              "1305031916.501025.png",
+              "1305031916.665139.png",
+              "1305031916.865085.png",
+              "1305031917.033155.png",
+              "1305031917.165045.png",
+              "1305031917.733003.png",
+              "1305031917.865107.png",
+              "1305031918.001098.png",
+              "1305031918.165017.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 2,
+            "graph_nodes": 34,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.13920924100966658
+          },
+          {
+            "update": 2,
+            "cache": "00002.npz",
+            "submap_id": 34,
+            "frame_names": [
+              "1305031918.165017.png",
+              "1305031918.333165.png",
+              "1305031918.465089.png",
+              "1305031918.601029.png",
+              "1305031919.065147.png",
+              "1305031919.433256.png",
+              "1305031920.001054.png",
+              "1305031920.401115.png",
+              "1305031920.533105.png",
+              "1305031920.701147.png",
+              "1305031920.801031.png",
+              "1305031920.933077.png",
+              "1305031921.101105.png",
+              "1305031921.301188.png",
+              "1305031921.533099.png",
+              "1305031921.701068.png",
+              "1305031921.833122.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 3,
+            "graph_nodes": 51,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.14523829899553675
+          },
+          {
+            "update": 3,
+            "cache": "00003.npz",
+            "submap_id": 51,
+            "frame_names": [
+              "1305031921.833122.png",
+              "1305031922.065166.png",
+              "1305031922.301137.png",
+              "1305031922.501312.png",
+              "1305031922.733235.png",
+              "1305031923.033184.png",
+              "1305031923.333169.png",
+              "1305031923.565198.png",
+              "1305031923.901121.png",
+              "1305031925.201117.png",
+              "1305031925.833148.png",
+              "1305031926.033156.png",
+              "1305031926.301054.png",
+              "1305031926.569122.png",
+              "1305031926.801342.png",
+              "1305031926.933348.png",
+              "1305031927.070528.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 4,
+            "graph_nodes": 68,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.15532670100219548
+          },
+          {
+            "update": 4,
+            "cache": "00004.npz",
+            "submap_id": 68,
+            "frame_names": [
+              "1305031927.070528.png",
+              "1305031927.201210.png",
+              "1305031927.333139.png",
+              "1305031927.501136.png",
+              "1305031927.933465.png",
+              "1305031928.269216.png",
+              "1305031928.469232.png",
+              "1305031928.633595.png",
+              "1305031928.769202.png",
+              "1305031928.901197.png",
+              "1305031929.001155.png",
+              "1305031929.101213.png",
+              "1305031929.201163.png",
+              "1305031929.333529.png",
+              "1305031929.501198.png",
+              "1305031929.634447.png",
+              "1305031929.869242.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 5,
+            "graph_nodes": 85,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.15075604600133374
+          },
+          {
+            "update": 5,
+            "cache": "00005.npz",
+            "submap_id": 85,
+            "frame_names": [
+              "1305031929.869242.png",
+              "1305031930.301105.png",
+              "1305031930.433290.png",
+              "1305031930.569007.png",
+              "1305031930.733195.png",
+              "1305031930.900829.png",
+              "1305031931.068905.png",
+              "1305031931.200696.png",
+              "1305031931.300955.png",
+              "1305031931.432892.png",
+              "1305031931.768911.png",
+              "1305031932.368837.png",
+              "1305031932.568972.png",
+              "1305031932.732848.png",
+              "1305031932.901214.png",
+              "1305031933.200949.png",
+              "1305031933.500809.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 6,
+            "graph_nodes": 102,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.15037859599397052
+          },
+          {
+            "update": 6,
+            "cache": "00006.npz",
+            "submap_id": 102,
+            "frame_names": [
+              "1305031933.500809.png",
+              "1305031933.700931.png",
+              "1305031933.900942.png",
+              "1305031934.100917.png",
+              "1305031934.300934.png",
+              "1305031935.200951.png",
+              "1305031935.536900.png",
+              "1305031935.669100.png",
+              "1305031935.768974.png",
+              "1305031935.869025.png",
+              "1305031936.000820.png",
+              "1305031936.168897.png",
+              "1305031936.368927.png",
+              "1305031937.068765.png",
+              "1305031937.236893.png",
+              "1305031937.468824.png",
+              "1305031937.636891.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 7,
+            "graph_nodes": 119,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.15707247900718357
+          },
+          {
+            "update": 7,
+            "cache": "00007.npz",
+            "submap_id": 119,
+            "frame_names": [
+              "1305031937.636891.png",
+              "1305031937.800834.png",
+              "1305031937.968830.png",
+              "1305031938.136885.png",
+              "1305031938.336900.png",
+              "1305031938.537028.png",
+              "1305031938.668747.png",
+              "1305031938.800781.png",
+              "1305031938.900976.png",
+              "1305031939.001030.png",
+              "1305031939.168815.png",
+              "1305031939.300842.png",
+              "1305031939.400848.png",
+              "1305031939.668867.png",
+              "1305031939.903633.png",
+              "1305031940.037088.png",
+              "1305031940.168737.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 8,
+            "graph_nodes": 136,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.16336886800127104
+          },
+          {
+            "update": 8,
+            "cache": "00008.npz",
+            "submap_id": 136,
+            "frame_names": [
+              "1305031940.168737.png",
+              "1305031940.336732.png",
+              "1305031940.436756.png",
+              "1305031940.568758.png",
+              "1305031940.736947.png",
+              "1305031940.903305.png",
+              "1305031941.171144.png",
+              "1305031941.537220.png",
+              "1305031941.836848.png",
+              "1305031942.639942.png",
+              "1305031943.404245.png",
+              "1305031943.638026.png",
+              "1305031943.868873.png",
+              "1305031944.070886.png",
+              "1305031944.306934.png",
+              "1305031944.539069.png",
+              "1305031944.707774.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 10,
+            "graph_nodes": 155,
+            "loops_accepted_in_update": 1,
+            "loop_closures_total": 1,
+            "backend_seconds": 0.17337566500646062
+          },
+          {
+            "update": 9,
+            "cache": "00009.npz",
+            "submap_id": 155,
+            "frame_names": [
+              "1305031944.707774.png",
+              "1305031944.875719.png",
+              "1305031945.069177.png",
+              "1305031945.207107.png",
+              "1305031945.436818.png",
+              "1305031945.738673.png",
+              "1305031945.869258.png",
+              "1305031945.969300.png",
+              "1305031946.069057.png",
+              "1305031946.237369.png",
+              "1305031946.506586.png",
+              "1305031946.969064.png",
+              "1305031947.904995.png",
+              "1305031948.705075.png",
+              "1305031948.868835.png",
+              "1305031949.005006.png",
+              "1305031949.137263.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 12,
+            "graph_nodes": 174,
+            "loops_accepted_in_update": 1,
+            "loop_closures_total": 2,
+            "backend_seconds": 0.18585542400251143
+          },
+          {
+            "update": 10,
+            "cache": "00010.npz",
+            "submap_id": 174,
+            "frame_names": [
+              "1305031949.137263.png",
+              "1305031949.405064.png",
+              "1305031949.705003.png",
+              "1305031949.836964.png",
+              "1305031949.936858.png",
+              "1305031950.036989.png",
+              "1305031950.136997.png",
+              "1305031950.237027.png",
+              "1305031950.337197.png",
+              "1305031950.468976.png",
+              "1305031950.837135.png",
+              "1305031951.004836.png",
+              "1305031951.204914.png",
+              "1305031951.368840.png",
+              "1305031951.536888.png",
+              "1305031951.668929.png",
+              "1305031951.804886.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 14,
+            "graph_nodes": 193,
+            "loops_accepted_in_update": 1,
+            "loop_closures_total": 3,
+            "backend_seconds": 0.1854395510017639
+          },
+          {
+            "update": 11,
+            "cache": "00011.npz",
+            "submap_id": 193,
+            "frame_names": [
+              "1305031951.804886.png",
+              "1305031951.936962.png",
+              "1305031952.536948.png",
+              "1305031952.768957.png",
+              "1305031952.904920.png",
+              "1305031953.036943.png",
+              "1305031953.372964.png",
+              "1305031953.972857.png",
+              "1305031954.136939.png",
+              "1305031955.272905.png"
+            ],
+            "n_frames": 10,
+            "n_submaps": 16,
+            "graph_nodes": 205,
+            "loops_accepted_in_update": 1,
+            "loop_closures_total": 4,
+            "backend_seconds": 0.12953474700043444
+          }
+        ],
+        "n_updates": 12,
+        "n_submaps": 16,
+        "graph_nodes": 205,
+        "loop_closures_total": 4,
+        "n_trajectory_rows": 197,
+        "n_backend_diagnostics": 20,
+        "n_scale_diagnostics": 0,
+        "wall_seconds": 4.3469626610021805,
+        "poses": "runs/adaptation/backend_validation/room_frozen_main/poses.tum",
+        "provenance_check": {
+          "commit": "35327ac28b7d193df9ccc39ba6346052bb6f1207",
+          "files_checked": 25,
+          "mismatches": [],
+          "unmodified": true
+        },
+        "ate": {
+          "groundtruth": "<TUM_ROOT>/rgbd_dataset_freiburg1_room/groundtruth.txt",
+          "estimate": "runs/adaptation/backend_validation/room_frozen_main/poses.tum",
+          "max_time_diff_s": 0.01,
+          "n_groundtruth": 4887,
+          "n_estimate_rows": 197,
+          "n_estimate_nonfinite_dropped": 0,
+          "n_groundtruth_nonfinite_dropped": 0,
+          "n_estimate_unique_stamps": 186,
+          "alignment": "Sim(3) Umeyama with scale (evo_ape tum -as)",
+          "n_associated": 374,
+          "status": "ok",
+          "ate_rmse_m": 0.07339492923153053,
+          "ate_mean_m": 0.06817369532030071,
+          "ate_median_m": 0.06721045102171552,
+          "ate_std_m": 0.027187550519974818,
+          "ate_min_m": 0.007821838193347613,
+          "ate_max_m": 0.17448891698687058,
+          "scale": 1.545633000142189,
+          "rotation": [
+            [
+              0.5905904168714821,
+              -0.5533099304732988,
+              0.5874104870865017
+            ],
+            [
+              -0.8068939553626445,
+              -0.39481738464309085,
+              0.4393647432177682
+            ],
+            [
+              -0.011185003298825463,
+              -0.7334625782023391,
+              -0.679637802125502
+            ]
+          ],
+          "translation": [
+            -0.9309788799583902,
+            0.6608346938181944,
+            1.5903361971498695
+          ],
+          "ate_rmse_se3_no_scale_m": 0.36150004502745237,
+          "n_distinct_estimate_poses_used": 186,
+          "mean_abs_time_diff_s": 0.005032260787678275,
+          "max_abs_time_diff_s": 0.009996891021728516,
+          "path_length_groundtruth_m": 17.483354324474753
+        },
+        "legacy_equivalence_checked": true
+      },
+      "legacy_replay_summary": {
+        "schema": "vggt_omega_slam.cpu_replay.v1",
+        "status": "complete",
+        "policy": {
+          "name": "legacy",
+          "scale_confidence_percentile": null,
+          "scale_confidence_scope": "submap",
+          "cross_submap_noise_multiplier": 1.0,
+          "loop_noise_multiplier": 1.0,
+          "huber_delta": null,
+          "min_scale_points": 100
+        },
+        "cloud_conf_percentile": 25.0,
+        "gpu_used": false,
+        "models_loaded": false,
+        "retrieval_executed": false,
+        "accepted_loops_frozen": true,
+        "updates": [
+          {
+            "update": 0,
+            "cache": "00000.npz",
+            "submap_id": 0,
+            "frame_names": [
+              "1305031910.765238.png",
+              "1305031911.035050.png",
+              "1305031911.165177.png",
+              "1305031911.365235.png",
+              "1305031911.565335.png",
+              "1305031911.797297.png",
+              "1305031911.997252.png",
+              "1305031912.297250.png",
+              "1305031912.733125.png",
+              "1305031913.197113.png",
+              "1305031913.333122.png",
+              "1305031913.497227.png",
+              "1305031913.597139.png",
+              "1305031913.697243.png",
+              "1305031913.797106.png",
+              "1305031913.897116.png",
+              "1305031914.033441.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 1,
+            "graph_nodes": 17,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.14130219700746238
+          },
+          {
+            "update": 1,
+            "cache": "00001.npz",
+            "submap_id": 17,
+            "frame_names": [
+              "1305031914.033441.png",
+              "1305031914.165013.png",
+              "1305031914.297165.png",
+              "1305031914.497127.png",
+              "1305031914.697129.png",
+              "1305031915.901234.png",
+              "1305031916.165155.png",
+              "1305031916.333426.png",
+              "1305031916.501025.png",
+              "1305031916.665139.png",
+              "1305031916.865085.png",
+              "1305031917.033155.png",
+              "1305031917.165045.png",
+              "1305031917.733003.png",
+              "1305031917.865107.png",
+              "1305031918.001098.png",
+              "1305031918.165017.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 2,
+            "graph_nodes": 34,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.14403533400036395
+          },
+          {
+            "update": 2,
+            "cache": "00002.npz",
+            "submap_id": 34,
+            "frame_names": [
+              "1305031918.165017.png",
+              "1305031918.333165.png",
+              "1305031918.465089.png",
+              "1305031918.601029.png",
+              "1305031919.065147.png",
+              "1305031919.433256.png",
+              "1305031920.001054.png",
+              "1305031920.401115.png",
+              "1305031920.533105.png",
+              "1305031920.701147.png",
+              "1305031920.801031.png",
+              "1305031920.933077.png",
+              "1305031921.101105.png",
+              "1305031921.301188.png",
+              "1305031921.533099.png",
+              "1305031921.701068.png",
+              "1305031921.833122.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 3,
+            "graph_nodes": 51,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.14941215398721397
+          },
+          {
+            "update": 3,
+            "cache": "00003.npz",
+            "submap_id": 51,
+            "frame_names": [
+              "1305031921.833122.png",
+              "1305031922.065166.png",
+              "1305031922.301137.png",
+              "1305031922.501312.png",
+              "1305031922.733235.png",
+              "1305031923.033184.png",
+              "1305031923.333169.png",
+              "1305031923.565198.png",
+              "1305031923.901121.png",
+              "1305031925.201117.png",
+              "1305031925.833148.png",
+              "1305031926.033156.png",
+              "1305031926.301054.png",
+              "1305031926.569122.png",
+              "1305031926.801342.png",
+              "1305031926.933348.png",
+              "1305031927.070528.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 4,
+            "graph_nodes": 68,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.16362724998907652
+          },
+          {
+            "update": 4,
+            "cache": "00004.npz",
+            "submap_id": 68,
+            "frame_names": [
+              "1305031927.070528.png",
+              "1305031927.201210.png",
+              "1305031927.333139.png",
+              "1305031927.501136.png",
+              "1305031927.933465.png",
+              "1305031928.269216.png",
+              "1305031928.469232.png",
+              "1305031928.633595.png",
+              "1305031928.769202.png",
+              "1305031928.901197.png",
+              "1305031929.001155.png",
+              "1305031929.101213.png",
+              "1305031929.201163.png",
+              "1305031929.333529.png",
+              "1305031929.501198.png",
+              "1305031929.634447.png",
+              "1305031929.869242.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 5,
+            "graph_nodes": 85,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.15200392200495116
+          },
+          {
+            "update": 5,
+            "cache": "00005.npz",
+            "submap_id": 85,
+            "frame_names": [
+              "1305031929.869242.png",
+              "1305031930.301105.png",
+              "1305031930.433290.png",
+              "1305031930.569007.png",
+              "1305031930.733195.png",
+              "1305031930.900829.png",
+              "1305031931.068905.png",
+              "1305031931.200696.png",
+              "1305031931.300955.png",
+              "1305031931.432892.png",
+              "1305031931.768911.png",
+              "1305031932.368837.png",
+              "1305031932.568972.png",
+              "1305031932.732848.png",
+              "1305031932.901214.png",
+              "1305031933.200949.png",
+              "1305031933.500809.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 6,
+            "graph_nodes": 102,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.15393973300524522
+          },
+          {
+            "update": 6,
+            "cache": "00006.npz",
+            "submap_id": 102,
+            "frame_names": [
+              "1305031933.500809.png",
+              "1305031933.700931.png",
+              "1305031933.900942.png",
+              "1305031934.100917.png",
+              "1305031934.300934.png",
+              "1305031935.200951.png",
+              "1305031935.536900.png",
+              "1305031935.669100.png",
+              "1305031935.768974.png",
+              "1305031935.869025.png",
+              "1305031936.000820.png",
+              "1305031936.168897.png",
+              "1305031936.368927.png",
+              "1305031937.068765.png",
+              "1305031937.236893.png",
+              "1305031937.468824.png",
+              "1305031937.636891.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 7,
+            "graph_nodes": 119,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.17222056900209282
+          },
+          {
+            "update": 7,
+            "cache": "00007.npz",
+            "submap_id": 119,
+            "frame_names": [
+              "1305031937.636891.png",
+              "1305031937.800834.png",
+              "1305031937.968830.png",
+              "1305031938.136885.png",
+              "1305031938.336900.png",
+              "1305031938.537028.png",
+              "1305031938.668747.png",
+              "1305031938.800781.png",
+              "1305031938.900976.png",
+              "1305031939.001030.png",
+              "1305031939.168815.png",
+              "1305031939.300842.png",
+              "1305031939.400848.png",
+              "1305031939.668867.png",
+              "1305031939.903633.png",
+              "1305031940.037088.png",
+              "1305031940.168737.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 8,
+            "graph_nodes": 136,
+            "loops_accepted_in_update": 0,
+            "loop_closures_total": 0,
+            "backend_seconds": 0.17136268901231233
+          },
+          {
+            "update": 8,
+            "cache": "00008.npz",
+            "submap_id": 136,
+            "frame_names": [
+              "1305031940.168737.png",
+              "1305031940.336732.png",
+              "1305031940.436756.png",
+              "1305031940.568758.png",
+              "1305031940.736947.png",
+              "1305031940.903305.png",
+              "1305031941.171144.png",
+              "1305031941.537220.png",
+              "1305031941.836848.png",
+              "1305031942.639942.png",
+              "1305031943.404245.png",
+              "1305031943.638026.png",
+              "1305031943.868873.png",
+              "1305031944.070886.png",
+              "1305031944.306934.png",
+              "1305031944.539069.png",
+              "1305031944.707774.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 10,
+            "graph_nodes": 155,
+            "loops_accepted_in_update": 1,
+            "loop_closures_total": 1,
+            "backend_seconds": 0.24796156800584868
+          },
+          {
+            "update": 9,
+            "cache": "00009.npz",
+            "submap_id": 155,
+            "frame_names": [
+              "1305031944.707774.png",
+              "1305031944.875719.png",
+              "1305031945.069177.png",
+              "1305031945.207107.png",
+              "1305031945.436818.png",
+              "1305031945.738673.png",
+              "1305031945.869258.png",
+              "1305031945.969300.png",
+              "1305031946.069057.png",
+              "1305031946.237369.png",
+              "1305031946.506586.png",
+              "1305031946.969064.png",
+              "1305031947.904995.png",
+              "1305031948.705075.png",
+              "1305031948.868835.png",
+              "1305031949.005006.png",
+              "1305031949.137263.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 12,
+            "graph_nodes": 174,
+            "loops_accepted_in_update": 1,
+            "loop_closures_total": 2,
+            "backend_seconds": 0.22844861599151045
+          },
+          {
+            "update": 10,
+            "cache": "00010.npz",
+            "submap_id": 174,
+            "frame_names": [
+              "1305031949.137263.png",
+              "1305031949.405064.png",
+              "1305031949.705003.png",
+              "1305031949.836964.png",
+              "1305031949.936858.png",
+              "1305031950.036989.png",
+              "1305031950.136997.png",
+              "1305031950.237027.png",
+              "1305031950.337197.png",
+              "1305031950.468976.png",
+              "1305031950.837135.png",
+              "1305031951.004836.png",
+              "1305031951.204914.png",
+              "1305031951.368840.png",
+              "1305031951.536888.png",
+              "1305031951.668929.png",
+              "1305031951.804886.png"
+            ],
+            "n_frames": 17,
+            "n_submaps": 14,
+            "graph_nodes": 193,
+            "loops_accepted_in_update": 1,
+            "loop_closures_total": 3,
+            "backend_seconds": 0.19344135699793696
+          },
+          {
+            "update": 11,
+            "cache": "00011.npz",
+            "submap_id": 193,
+            "frame_names": [
+              "1305031951.804886.png",
+              "1305031951.936962.png",
+              "1305031952.536948.png",
+              "1305031952.768957.png",
+              "1305031952.904920.png",
+              "1305031953.036943.png",
+              "1305031953.372964.png",
+              "1305031953.972857.png",
+              "1305031954.136939.png",
+              "1305031955.272905.png"
+            ],
+            "n_frames": 10,
+            "n_submaps": 16,
+            "graph_nodes": 205,
+            "loops_accepted_in_update": 1,
+            "loop_closures_total": 4,
+            "backend_seconds": 0.13564867799868807
+          }
+        ],
+        "n_updates": 12,
+        "n_submaps": 16,
+        "graph_nodes": 205,
+        "loop_closures_total": 4,
+        "n_trajectory_rows": 197,
+        "n_backend_diagnostics": 0,
+        "n_scale_diagnostics": 0,
+        "wall_seconds": 4.700358999005402,
+        "poses": "runs/adaptation/backend_validation/room_frozen_main/legacy_verification/poses.tum",
+        "provenance_check": {
+          "commit": "35327ac28b7d193df9ccc39ba6346052bb6f1207",
+          "files_checked": 25,
+          "mismatches": [],
+          "unmodified": true
+        },
+        "ate": {
+          "groundtruth": "<TUM_ROOT>/rgbd_dataset_freiburg1_room/groundtruth.txt",
+          "estimate": "runs/adaptation/backend_validation/room_frozen_main/legacy_verification/poses.tum",
+          "max_time_diff_s": 0.01,
+          "n_groundtruth": 4887,
+          "n_estimate_rows": 197,
+          "n_estimate_nonfinite_dropped": 0,
+          "n_groundtruth_nonfinite_dropped": 0,
+          "n_estimate_unique_stamps": 186,
+          "alignment": "Sim(3) Umeyama with scale (evo_ape tum -as)",
+          "n_associated": 374,
+          "status": "ok",
+          "ate_rmse_m": 0.07309544886221252,
+          "ate_mean_m": 0.06786377134987945,
+          "ate_median_m": 0.06651249700165524,
+          "ate_std_m": 0.027156089235005974,
+          "ate_min_m": 0.007439453861276443,
+          "ate_max_m": 0.17449412654802454,
+          "scale": 1.5452963703885334,
+          "rotation": [
+            [
+              0.5917737507824811,
+              -0.5530630633345,
+              0.5864512561670343
+            ],
+            [
+              -0.8060150389678711,
+              -0.39515302899597016,
+              0.44067430221528797
+            ],
+            [
+              -0.011982689283085103,
+              -0.7334680167876229,
+              -0.679618336647251
+            ]
+          ],
+          "translation": [
+            -0.931319630844847,
+            0.6605238292768902,
+            1.5902558852045587
+          ],
+          "ate_rmse_se3_no_scale_m": 0.3613085206112265,
+          "n_distinct_estimate_poses_used": 186,
+          "mean_abs_time_diff_s": 0.005032260787678275,
+          "max_abs_time_diff_s": 0.009996891021728516,
+          "path_length_groundtruth_m": 17.483354324474753
+        }
+      },
+      "common_trajectory_support": {
+        "schema": "vggt_omega_slam.common_trajectory_support.v1",
+        "gpu_used": false,
+        "baseline": {
+          "path": "runs/adaptation/online/room_legacy/poses.tum",
+          "n_input_rows": 197,
+          "n_nonfinite_dropped": 0,
+          "n_finite_rows": 197,
+          "n_unique_timestamps": 186,
+          "n_duplicate_rows_dropped": 11,
+          "n_duplicate_timestamps": 11,
+          "duplicates_policy": "first occurrence in input file, then sort by timestamp",
+          "input_had_decreasing_timestamps": false,
+          "time_range_s": [
+            1305031910.765238,
+            1305031955.272905
+          ],
+          "timestamp_intervals": {
+            "count": 185,
+            "min_s": 0.09975695610046387,
+            "q25_s": 0.13207578659057617,
+            "median_s": 0.16807007789611816,
+            "q75_s": 0.23604822158813477,
+            "q95_s": 0.6256219863891596,
+            "max_s": 1.2999961376190186,
+            "mean_s": 0.24058198413333376
+          }
+        },
+        "candidate": {
+          "path": "runs/adaptation/backend_validation/room_frozen_main/poses.tum",
+          "n_input_rows": 197,
+          "n_nonfinite_dropped": 0,
+          "n_finite_rows": 197,
+          "n_unique_timestamps": 186,
+          "n_duplicate_rows_dropped": 11,
+          "n_duplicate_timestamps": 11,
+          "duplicates_policy": "first occurrence in input file, then sort by timestamp",
+          "input_had_decreasing_timestamps": false,
+          "time_range_s": [
+            1305031910.765238,
+            1305031955.272905
+          ],
+          "timestamp_intervals": {
+            "count": 185,
+            "min_s": 0.09975695610046387,
+            "q25_s": 0.13207578659057617,
+            "median_s": 0.16807007789611816,
+            "q75_s": 0.23604822158813477,
+            "q95_s": 0.6256219863891596,
+            "max_s": 1.2999961376190186,
+            "mean_s": 0.24058198413333376
+          }
+        },
+        "groundtruth": {
+          "path": "<TUM_ROOT>/rgbd_dataset_freiburg1_room/groundtruth.txt",
+          "n_input_rows": 4887,
+          "n_nonfinite_dropped": 0,
+          "n_finite_rows": 4887,
+          "n_unique_timestamps": 4887,
+          "n_duplicate_rows_dropped": 0,
+          "n_duplicate_timestamps": 0,
+          "duplicates_policy": "first occurrence in input file, then sort by timestamp",
+          "input_had_decreasing_timestamps": false,
+          "time_range_s": [
+            1305031907.2496,
+            1305031956.1487
+          ],
+          "timestamp_intervals": {
+            "count": 4886,
+            "min_s": 0.00839996337890625,
+            "q25_s": 0.009999990463256836,
+            "median_s": 0.009999990463256836,
+            "q75_s": 0.009999990463256836,
+            "q95_s": 0.010100126266479492,
+            "max_s": 0.040400028228759766,
+            "mean_s": 0.010008002469347386
+          }
+        },
+        "limitation": "Piecewise linear interpolation between sparse keyframes is supplementary; it cannot establish the actual motion between those frames. No extrapolation is used.",
+        "selection": "supplementary validation only; original development ATE selection remains frozen",
+        "common_time_range_s": [
+          1305031910.765238,
+          1305031955.272905
+        ],
+        "common_groundtruth_support": {
+          "query_source": "unique ground-truth timestamps in common interval",
+          "n_gt_timestamps_excluded": 440,
+          "n_timestamps": 4447,
+          "small_sample": false,
+          "small_sample_definition": "fewer than 20 timestamps",
+          "alignment": "independent Sim(3) Umeyama alignment to identical ground-truth positions",
+          "baseline": {
+            "ate_rmse_m": 0.07324981906380874,
+            "ate_mean_m": 0.06784563858945226,
+            "ate_median_m": 0.06627605087291502,
+            "scale": 1.548222112015818,
+            "rotation": [
+              [
+                0.5921113801699044,
+                -0.5495065026267032,
+                0.5894461103818223
+              ],
+              [
+                -0.8057557623667456,
+                -0.3921610698984438,
+                0.4438100344391633
+              ],
+              [
+                -0.012718682560489617,
+                -0.7377345720698445,
+                -0.6749710632959378
+              ]
+            ],
+            "translation": [
+              -0.9330699743178458,
+              0.6637027234699248,
+              1.5867167737132775
+            ]
+          },
+          "candidate": {
+            "ate_rmse_m": 0.07347319231191309,
+            "ate_mean_m": 0.06808301088000962,
+            "ate_median_m": 0.06655027819029435,
+            "scale": 1.5486341691504004,
+            "rotation": [
+              [
+                0.5909166891648968,
+                -0.5497465557989092,
+                0.5904203509819361
+              ],
+              [
+                -0.8066440492007867,
+                -0.391792378745404,
+                0.44252018015676586
+              ],
+              [
+                -0.011951751141785785,
+                -0.7377516223935087,
+                -0.6749664430920922
+              ]
+            ],
+            "translation": [
+              -0.9327318623820621,
+              0.6640778743157033,
+              1.5868186559354316
+            ]
+          },
+          "status": "ok",
+          "candidate_over_baseline_rmse": 1.0030494716705,
+          "rmse_difference_m": 0.00022337324810434156,
+          "ratio_unavailable_reason": null,
+          "evaluated_time_range_s": [
+            1305031910.7695,
+            1305031955.2686
+          ],
+          "baseline_interpolation": {
+            "n_exact_samples": 0,
+            "n_interpolated_samples": 4447,
+            "bracketing_gap_distribution": {
+              "count": 4447,
+              "min_s": 0.09975695610046387,
+              "q25_s": 0.16799497604370117,
+              "median_s": 0.26780104637145996,
+              "q75_s": 0.567957878112793,
+              "q95_s": 1.2041049003601074,
+              "max_s": 1.2999961376190186,
+              "mean_s": 0.40318628442617166
+            },
+            "max_bracketing_gap_s": 1.2999961376190186
+          },
+          "candidate_interpolation": {
+            "n_exact_samples": 0,
+            "n_interpolated_samples": 4447,
+            "bracketing_gap_distribution": {
+              "count": 4447,
+              "min_s": 0.09975695610046387,
+              "q25_s": 0.16799497604370117,
+              "median_s": 0.26780104637145996,
+              "q75_s": 0.567957878112793,
+              "q95_s": 1.2041049003601074,
+              "max_s": 1.2999961376190186,
+              "mean_s": 0.40318628442617166
+            },
+            "max_bracketing_gap_s": 1.2999961376190186
+          },
+          "timestamp_intervals": {
+            "count": 4446,
+            "min_s": 0.00839996337890625,
+            "q25_s": 0.009999990463256836,
+            "median_s": 0.009999990463256836,
+            "q75_s": 0.009999990463256836,
+            "q95_s": 0.010100126266479492,
+            "max_s": 0.040400028228759766,
+            "mean_s": 0.010008794415174065
+          }
+        },
+        "exact_shared_prediction_support": {
+          "n_timestamps": 186,
+          "small_sample": false,
+          "small_sample_definition": "fewer than 20 timestamps",
+          "alignment": "independent Sim(3) Umeyama alignment to identical ground-truth positions",
+          "baseline": {
+            "ate_rmse_m": 0.0731569415268353,
+            "ate_mean_m": 0.0679661702612304,
+            "ate_median_m": 0.06712928349149608,
+            "scale": 1.5450942473831313,
+            "rotation": [
+              [
+                0.591552901721556,
+                -0.5529710422069287,
+                0.5867607612523098
+              ],
+              [
+                -0.8061796687249267,
+                -0.39500708992208694,
+                0.4405039621227622
+              ],
+              [
+                -0.011811274248562011,
+                -0.7336159931407354,
+                -0.6794616018648574
+              ]
+            ],
+            "translation": [
+              -0.930897301680191,
+              0.6606728171599862,
+              1.5900435152285128
+            ]
+          },
+          "candidate": {
+            "ate_rmse_m": 0.07345738037590047,
+            "ate_mean_m": 0.06827837800646405,
+            "ate_median_m": 0.0674800847826308,
+            "scale": 1.545421842434434,
+            "rotation": [
+              [
+                0.5903694688575415,
+                -0.5532177896952706,
+                0.5877192930349859
+              ],
+              [
+                -0.8070579859711845,
+                -0.39467209333612474,
+                0.4391939731164533
+              ],
+              [
+                -0.011013515378823146,
+                -0.7336102615874182,
+                -0.6794811892706375
+              ]
+            ],
+            "translation": [
+              -0.9305522184310911,
+              0.6609808216517338,
+              1.5901212010633627
+            ]
+          },
+          "status": "ok",
+          "candidate_over_baseline_rmse": 1.0041067715898833,
+          "rmse_difference_m": 0.0003004388490651655,
+          "ratio_unavailable_reason": null,
+          "groundtruth_interpolation": {
+            "n_exact_samples": 0,
+            "n_interpolated_samples": 186,
+            "bracketing_gap_distribution": {
+              "count": 186,
+              "min_s": 0.009400129318237305,
+              "q25_s": 0.009999990463256836,
+              "median_s": 0.009999990463256836,
+              "q75_s": 0.010000228881835938,
+              "q95_s": 0.010200023651123047,
+              "max_s": 0.011399984359741211,
+              "mean_s": 0.010016138835619855
+            },
+            "max_bracketing_gap_s": 0.011399984359741211
+          },
+          "query_source": "exact shared prediction timestamps within ground-truth range; ground truth linearly interpolated",
+          "time_range_s": [
+            1305031910.765238,
+            1305031955.272905
+          ],
+          "timestamp_intervals": {
+            "count": 185,
+            "min_s": 0.09975695610046387,
+            "q25_s": 0.13207578659057617,
+            "median_s": 0.16807007789611816,
+            "q75_s": 0.23604822158813477,
+            "q95_s": 0.6256219863891596,
+            "max_s": 1.2999961376190186,
+            "mean_s": 0.24058198413333376
+          }
+        },
+        "status": "ok"
+      },
+      "common_support_role": "Supplementary validation only; piecewise-linear interpolation is not a measured dense trajectory and does not change the original ATE selection."
     }
   },
   "independent_audit": {
@@ -2456,6 +3661,17 @@
         "n_columns": 8,
         "max_abs_difference_all_columns": 0.0,
         "online_and_replay_sha256": "45fcef0338506f041f2743de7572756471f0b587c72ac8bf8ae0848612d6d35a"
+      },
+      "room": {
+        "online_file": "runs/adaptation/online/room_legacy/poses.tum",
+        "legacy_replay_file": "runs/adaptation/backend_validation/room_frozen_main/legacy_verification/poses.tum",
+        "byte_identical": true,
+        "n_rows": 197,
+        "n_columns": 8,
+        "max_abs_difference_all_columns": 0.0,
+        "online_and_replay_sha256": "85160924c0a12f3d2677e56e3f1acf2d105a86bd1fab059c9eaa517df5eaea71",
+        "online_legacy_and_selected_update_counts_and_frame_names_match": true,
+        "updates_checked": 12
       }
     },
     "main_freeze_hash_checks": {
@@ -2536,10 +3752,20 @@
       },
       "runs/adaptation/backend_validation/desk2_frozen_main/common_support.json": {
         "sha256_original_file": "6b9c42ebaf33df1112c251dd1c15fa58c2c2a8c227dd2e5ab2bf2892c3181b2d"
+      },
+      "runs/adaptation/backend_validation/room_frozen_main/summary.json": {
+        "sha256_original_file": "7490bb701c3ddecd1bc38eacdc1e1ecf52fcca0a912be541376c0328d37ab97f"
+      },
+      "runs/adaptation/backend_validation/room_frozen_main/legacy_verification/replay.json": {
+        "sha256_original_file": "400bb04c5da6ea28b98f3b97cc9431bc6a690db5115d5d80a07569a3804057d0"
+      },
+      "runs/adaptation/backend_validation/room_frozen_main/common_support.json": {
+        "sha256_original_file": "2670f9151073c1922863fa189e6b780c0999a8a840372707c09deb829736cb94"
       }
     },
     "hash_convention": "SHA256 values identify the original local source artifact bytes before path redaction; embedded objects preserve original fields and numeric values. Absolute project paths were made relative and external TUM paths use <TUM_ROOT>.",
     "large_or_private_artifacts_included": false,
     "artifact_note": "No source RGB images, NPZ prediction tensors, checkpoints or private sequences are included. Relative paths identify local experiment artifacts, many ignored by Git; they are provenance labels, not a promise that the artifacts are shipped."
-  }
+  },
+  "completed_utc": "2026-10-19T20:20:09.984603+00:00"
 }

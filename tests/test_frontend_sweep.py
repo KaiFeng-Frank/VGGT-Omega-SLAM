@@ -50,6 +50,18 @@ def selection_records():
             for c in sweep.GRID]
 
 
+def test_offload_changes_storage_command_without_changing_selected_geometry(tmp_path, signature):
+    ordinary = sweep.make_design(arguments(tmp_path))
+    offloaded = sweep.make_design(arguments(tmp_path, "--offload-keyframes"))
+    assert offloaded["offload_keyframes"] is True
+    for before, after in zip(ordinary["configs"], offloaded["configs"]):
+        assert after["argv"] == before["argv"] + ["--offload-keyframes"]
+        assert (before["submap_size"], before["min_disparity"]) == (after["submap_size"], after["min_disparity"])
+    baseline = completed_metadata(offloaded["configs"][1], offloaded)
+    baseline["args"]["offload_keyframes"] = False
+    assert sweep.validate_metadata(baseline, offloaded["configs"][1], offloaded) == .04
+
+
 def test_six_commands_keep_backend_fixed_and_record_resource_limits(tmp_path, signature):
     design = sweep.make_design(arguments(tmp_path))
     assert len(design["configs"]) == 6

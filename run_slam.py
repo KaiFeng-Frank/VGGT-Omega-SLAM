@@ -105,6 +105,8 @@ def parse_args(argv=None):
     p.add_argument("--gpu-need-mb", type=int, default=None, help="default 9000 (omega) / 7500 (vggt)")
     p.add_argument("--verify-checkpoints", action="store_true", help="recompute sha256 of all checkpoints (slow)")
     p.add_argument("--prediction-cache", type=Path, help="save lossless model predictions for CPU backend replay")
+    p.add_argument("--offload-keyframes", action="store_true",
+                   help="store completed submap images on CPU; reload retrieved loop frames losslessly")
     p.add_argument("--preflight-only", action="store_true", help="CPU import/SL4 check; no model, no GPU")
     args = p.parse_args(argv)
     if not args.preflight_only:
@@ -431,6 +433,10 @@ def run(args, report, out, ctx):
     report["backend_policy"] = backend_policy.to_dict()
     report["backend_diagnostics"] = getattr(solver, "backend_diagnostics", [])
     retrieval = RetrievalRecorder(solver)
+    report["keyframe_storage"] = "cpu_archive" if args.offload_keyframes else "upstream_device"
+    if args.offload_keyframes:
+        from vos.keyframe_storage import install_frame_offload
+        install_frame_offload(solver)
     torch.cuda.synchronize()
     report["model_and_salad_load_seconds"] = time.perf_counter() - load_start
     report["status"] = "running"
@@ -461,6 +467,10 @@ def run(args, report, out, ctx):
         solver.graph.optimize()  # upstream: with backend_time
         report["backend_diagnostics"] = getattr(solver, "backend_diagnostics", [])
         t_opt = time.perf_counter()
+        storage_diagnostic = None
+        if args.offload_keyframes:
+            from vos.keyframe_storage import offload_stored_frames
+            storage_diagnostic = offload_stored_frames(solver)
         calls = recording.calls[n_calls:]
         main_call = calls[0]
         lc_calls = [c for c in calls[1:] if c["compute_similarity"]]
@@ -477,6 +487,8 @@ def run(args, report, out, ctx):
                   "rss_kib_after": rss_kib(),
                   "n_submaps": int(solver.map.get_num_submaps()), "graph_nodes": int(solver.graph.values.size()),
                   "loop_candidates": len(retrieval.matches), "loops_accepted_in_update": int(accepted)}
+        if storage_diagnostic is not None:
+            record["keyframe_storage"] = storage_diagnostic
         updates.append(record)
         # GraphMap.retrieve_best_score_frame starts from a sentinel distance of 1000 when no earlier
         # (non-adjacent) submap exists; those queries carry no information and are not listed.

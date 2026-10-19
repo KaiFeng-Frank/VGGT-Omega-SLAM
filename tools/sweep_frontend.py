@@ -90,7 +90,7 @@ def default_threads():
     return min(limits)
 
 
-def command(config, sequence_path, backend, output, cache, threads=4):
+def command(config, sequence_path, backend, output, cache, threads=4, offload_keyframes=False):
     argv = [sys.executable, str(ROOT / "run_slam.py"), str(Path(sequence_path).resolve()),
             "--backend", backend, "--output", str(Path(output).resolve()),
             "--submap-size", str(config["submap_size"]),
@@ -99,6 +99,8 @@ def command(config, sequence_path, backend, output, cache, threads=4):
             "--conf-threshold", "25", "--backend-policy", "legacy", "--lc-thres", "0.95",
             "--prediction-cache", str(Path(cache).resolve()), "--max-cloud-points", "100000",
             "--threads", str(threads), "--gpu-need-mb", "9000" if config["submap_size"] == 16 else "9500"]
+    if offload_keyframes:
+        argv.append("--offload-keyframes")
     return argv
 
 
@@ -141,13 +143,15 @@ def make_design(args):
     for config in GRID:
         output = args.out / "runs" / config["id"]
         cache = args.out / "predictions" / config["id"]
-        argv = command(config, sequence_path, args.backend, output, cache, args.threads)
+        argv = command(config, sequence_path, args.backend, output, cache, args.threads,
+                       getattr(args, "offload_keyframes", False))
         configs.append({**config, "scheduled": config["id"] in scheduled,
                         "output": str(output), "prediction_cache": str(cache),
                         "argv": argv, "command": shlex.join(argv)})
     design = {"schema": SCHEMA, "phase": "validation" if frozen else "development",
               "sequence": args.sequence, "sequence_path": str(sequence_path), "backend": args.backend,
               "runtime_signature": signature, "threads": args.threads,
+              "offload_keyframes": getattr(args, "offload_keyframes", False),
               "thread_environment": {k: v for k, v in inherited_environment(args.threads).items()
                                      if k in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS")},
               "inherited_vos_environment_keys": sorted(k for k in os.environ if k.startswith("VOS_")),
@@ -160,7 +164,7 @@ def make_design(args):
               "configs": configs,
               "selection_rule": "Minimum finite Sim(3) ATE on this named development sequence only; exact ties prefer baseline, then fixed grid order. Only completed feasible runs are scored. Validation never selects.",
               "resume_rule": "Completed outputs require matching inference/evaluation args and full prediction-cache frame lists. Failed/incomplete directories are preserved and never rerun in place.",
-              "allowed_baseline_execution_differences": ["output/cache directory", "point-cloud export cap", "CPU threads", "GPU reservation request", "checkpoint hash-verification toggle"],
+              "allowed_baseline_execution_differences": ["output/cache directory", "point-cloud export cap", "CPU threads", "GPU reservation request", "checkpoint hash-verification toggle", "historical image tensor storage device (lossless CPU offload)"],
               "limitations": ["Development-sequence optimization is not evidence of generalization.",
                               "OOM/resource failures are hardware infeasibility, never accuracy scores.",
                               "Expected checkpoint SHA is recorded; only run_slam --verify-checkpoints records an independently measured full checkpoint SHA.",
@@ -442,6 +446,7 @@ def parse_args(argv=None):
     parser.add_argument("--frozen-selection", type=Path, help="Validation: only baseline and the frozen selected setting; never reselect")
     parser.add_argument("--threads", type=int, default=default_threads(), choices=range(1, 5))
     parser.add_argument("--run", action="store_true", help="Explicitly execute serial GPU child runs; default only writes design/commands")
+    parser.add_argument("--offload-keyframes", action="store_true", help="CPU-store historical images in child runs; does not change the frozen configuration")
     args = parser.parse_args(argv)
     if args.baseline_cache and not args.baseline_run:
         parser.error("--baseline-cache requires the matching completed --baseline-run; a cache alone has no trajectory ATE")

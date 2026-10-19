@@ -118,14 +118,41 @@ subsequent frozen backend candidate therefore uses `noise_only`: cross-submap
 sigma ×2, loop sigma ×1, no Huber, with upstream scale/masks/fallbacks intact.
 It changed `desk` replay ATE from 43.178 mm to 43.132 mm, a decrease of only
 0.108%. This very small development change is not evidence of a useful general
-improvement. Its external-sequence evaluation is a separate step under the
-selection rule below; the default remains `legacy`.
+improvement. It was frozen for the exploratory external-sequence validation
+below; the default remains `legacy`.
 
 For this frozen candidate, the live flags are
 `--backend-policy noise_only --cross-noise-multiplier 2 --loop-noise-multiplier 1`;
 the CPU replay flags are
 `--policy noise_only --cross-submap-noise-multiplier 2 --loop-noise-multiplier 1`.
 Do not add confidence-mask options to `noise_only`.
+
+### Frozen backend validation
+
+The frozen `noise_only` candidate was applied unchanged to `desk2` and `room`.
+The table reports original per-run Sim(3)-aligned ATE, using the matching legacy
+predictions and accepted loops. `desk` is the development sequence; the other
+two sequences are exploratory external-sequence validation, both previously
+examined.
+
+| Sequence | Legacy ATE RMSE (mm) | Frozen candidate ATE RMSE (mm) | Change from legacy |
+|---|---:|---:|---:|
+| `desk` | 43.178 | 43.132 | −0.108% |
+| `desk2` | 39.367 | 39.477 | +0.279% |
+| `room` | 73.095 | 73.395 | +0.410% |
+
+The equal-weight geometric mean of the two validation candidate/legacy ATE
+ratios is 1.003444, a 0.3444% increase. The supplementary comparison on identical
+ground-truth timestamps also gives slightly higher candidate ATE: ratios
+1.001924 for `desk2` and 1.003049 for `room` (+0.1924% and +0.3049%, respectively).
+These interpolated comparisons do not change the frozen selection or replace
+the original metric; their method and limitations are described below.
+
+Neither validation sequence meets the prespecified requirement of at least 2%
+lower ATE. **The default remains `legacy`.** The small development improvement
+did not transfer to either validation sequence under this fixed backend
+intervention. Complete scores, replay verification, policy, and provenance are
+published in [the backend adaptation evidence](../results/adaptation_backend.json).
 
 ## Capture predictions once and replay the backend on CPU
 
@@ -260,7 +287,9 @@ ATE ratio 1.015. Focal-bias changes also depended on the sequence. These few
 dependent windows show context sensitivity; they do not establish that shifting
 all SLAM boundaries would help or explain the model's focal bias. Detailed local
 artifacts are under `runs/adaptation/context_raw/`; they are regenerated rather
-than assumed to be distributed with the source tree.
+than assumed to be distributed with the source tree. The design and per-window
+results are published in
+[the context adaptation evidence](../results/adaptation_context.json).
 
 For raw RGB and its matching baseline caches:
 
@@ -402,6 +431,110 @@ is available, its frame lists. Use identical arguments/environment when resuming
 a design. Failed or incomplete output directories are preserved rather than
 retried in place; use a fresh output directory for a new attempt.
 
+### Frontend development and validation status
+
+All six original `desk` development settings completed with the standard image
+storage. The original selection metric was each run's own-trajectory ATE;
+supplementary common-time comparisons did not select the setting.
+
+| Setting | Keyframes | Own-trajectory ATE RMSE (mm) | Change from baseline | Common-time ATE ratio | Common GT timestamps |
+|---|---:|---:|---:|---:|---:|
+| `s16_d25` | 119 | 52.944 | +22.616% | 1.094722 | 1981 |
+| `s16_d50` (baseline) | 54 | 43.178 | Reference | 1.000000 | 1997 |
+| `s16_d75` | 19 | 43.254 | +0.175% | 2.710985 | 1817 |
+| `s32_d25` (frozen selection) | 119 | 41.817 | −3.154% | 0.867402 | 1981 |
+| `s32_d50` | 54 | 51.881 | +20.156% | 1.143158 | 1997 |
+| `s32_d75` | 19 | 43.031 | −0.342% | 2.718609 | 1817 |
+
+Each common-time ratio compares the setting with the baseline on that pair's
+identical GT timestamps, with independent Sim(3) alignment. Intervals and
+baseline fits can differ between pairs. These scores combine sparse sampling
+and prediction errors; they are not isolated keyframe-geometry errors. The
+selected `s32_d25` setting reduced development own-trajectory ATE from 43.178 mm
+to 41.817 mm. This is a development result, not a validation success.
+
+The original frozen-candidate runs on both `desk2` and `room` exhausted their
+configured GPU memory budget and are **hardware-limited and unscored**. They
+provide no final ATE, validation geometric mean, or evidence that the default
+change gate passed. A resource failure is not an accuracy failure and does not
+show that the physical GPU can never run the setting under another storage
+strategy. The original attempts are retained in
+[the frontend adaptation evidence](../results/adaptation_frontend.json).
+
+A separate retry uses the optional CPU image storage below. Its first gate is
+an exact `desk` comparison against the original `s32_d25` run: all prediction
+cache arrays must match in dtype, shape, and bytes; frame ordering and IDs,
+ordered poses, keyframes, graph/submap counts, and loop decisions must also
+match. That check and the subsequent two-sequence retry are pending. Fresh
+validation outputs are kept under
+`runs/adaptation/frontend_validation_cpu_storage2seq/`; the original failed
+directories are preserved. The selected frontend setting, the shared GPU lock,
+and the 2048 MiB reserve are unchanged. The default remains `s16_d50` with the
+`legacy` backend policy until the stated validation requirement is established.
+
+## Optional CPU storage for historical keyframe images
+
+`run_slam.py --offload-keyframes` moves completed submaps' image tensors to CPU
+after prediction caching, `add_points`, and graph optimization. It is **off by
+default**. The transfer changes the storage device only: dtype, shape, pixel
+values, and selected frontend/backend parameters are preserved. It applies no
+resampling, quantization, preprocessing change, or confidence-mask change.
+Prediction equivalence across the complete run is checked by the separate gate
+above. It includes completed auxiliary loop submaps; a working submap that has
+not entered the map is excluded.
+
+Before a loop-verification stack, an instance-local wrapper retrieves historical
+frames and transfers them back to the current working submap's frame device.
+It reads that device on every retrieval and preserves the returned frame order
+and dtype. Copies are synchronous. The wrapper leaves the fetched upstream
+class methods untouched. CPU image storage increases host-memory use and adds
+transfer work; it does not lower the memory required by a single model forward.
+
+For a direct run with a new output/cache directory:
+
+```bash
+python run_slam.py "$VOS_TUM_ROOT/rgbd_dataset_freiburg1_desk" \
+  --backend omega --backend-policy legacy \
+  --submap-size 32 --min-disparity 25 --conf-threshold 25 --max-loops 1 --seed 0 \
+  --offload-keyframes \
+  --prediction-cache runs/desk_s32_d25_cpu_storage/predictions \
+  --output runs/desk_s32_d25_cpu_storage
+```
+
+The sweep accepts the same flag and passes it to child runs. Use a fresh output
+directory when adding it to an existing design. This example still schedules
+only the baseline and the previously frozen selection:
+
+```bash
+python tools/sweep_frontend.py \
+  --data-root "$VOS_TUM_ROOT" --sequence desk2 \
+  --out runs/frontend_validation_desk2_cpu_storage \
+  --frozen-selection runs/frontend_development/frozen_selection.json \
+  --offload-keyframes --run
+```
+
+The sweep records image storage as an allowed baseline execution difference;
+it does not use the flag to select new parameters or rewrite the frozen file.
+For an equivalence-controlled retry, first establish the exact comparison
+described above, then retain the original selected configuration for validation.
+
+Run metadata records `keyframe_storage: cpu_archive` when enabled and
+`upstream_device` otherwise. Each update records submaps/frames copied,
+`copied_bytes`, already-CPU submaps, and `cpu_frame_bytes`. These are logical
+tensor byte counts, not measured CUDA savings or host RSS. Repeated calls do
+not copy frames already on CPU; shared storage or other live references may
+retain a GPU allocation after a copy. The implementation does not empty CUDA's
+allocator cache.
+
+Use the recorded per-update CUDA allocated/reserved peaks and current allocated
+bytes, plus host RSS and processing-loop time, to assess resource effects.
+Per-update peaks reset before processing, and the post-update reading follows
+CPU storage. `summary.total_seconds` covers the processing loop, including
+storage work; it excludes model loading and final output export. The
+model-forward and graph optimization timers alone do not measure the full
+transfer cost. Neither the logical copied-byte count nor CPU-only unit coverage
+establishes GPU feasibility or prediction equivalence for a completed SLAM run.
+
 ## Compare trajectories on identical time support
 
 Changing keyframe disparity changes the timestamps used by the original per-run
@@ -453,9 +586,11 @@ export VOS_GPU_RESERVE_MB=2048
 Use the lock path already shared by other research jobs on your own machine.
 Without an override, the project uses
 `$XDG_CACHE_HOME/vggt-omega-slam/gpu.lock`, falling back to
-`$HOME/.cache/vggt-omega-slam/gpu.lock`. An optional `VOS_GPU_WAIT_S` sets a wait
-timeout. Lock acquisition occurs once per process, before CUDA work; the lock
-is held until that process exits.
+`$HOME/.cache/vggt-omega-slam/gpu.lock`. Without a timeout, lock contention uses
+blocking `flock` so the process queues in the kernel rather than polling past
+short release windows. An optional `VOS_GPU_WAIT_S` sets a wait timeout and uses
+timed polling. Lock acquisition occurs once per process, before CUDA work; the
+lock is held until that process exits.
 
 With `VOS_GPU_REQUIRE_IDLE=1`, startup waits for other compute PIDs to finish.
 The runner checks again before regular frontend forwards, loop-verification
