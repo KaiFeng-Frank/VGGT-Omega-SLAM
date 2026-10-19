@@ -38,6 +38,9 @@ installing the older `torch==2.3.1` requirements from VGGT-SLAM on top of Omega.
 
 On a Linux installation without the relevant system libraries, Open3D/OpenCV
 may also require `libgl1` and `libglib2.0-0` from your system package manager.
+The calibration plots contain Chinese labels and require a CJK font, including
+the synthetic calibration pipeline test. On Ubuntu/Debian, install it with
+`sudo apt-get install fonts-noto-cjk` before running the full test suite.
 There is no need to install SAM 3, Perception Encoder, RealSense bindings, or
 the upstream interactive demos for this headless runner. DINOv2 can use its
 ordinary PyTorch attention path; xFormers is not required by this integration.
