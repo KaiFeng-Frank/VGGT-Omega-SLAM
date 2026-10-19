@@ -6,7 +6,7 @@ This research preview connects VGGT-Ω camera/depth predictions to the existing 
 
 The project is independent of the VGGT-Ω and VGGT-SLAM authors. The released experiments use the original **VGGT-Ω-1B-512** checkpoint. They are not a reproduction of the newer 416-checkpoint benchmark or a claim of improved SLAM accuracy.
 
-[Installation](docs/INSTALL.md) · [Reproduction](docs/REPRODUCE.md) · [Results and corrections](docs/RESULTS.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+[Installation](docs/INSTALL.md) · [Reproduction](docs/REPRODUCE.md) · [Results and corrections](docs/RESULTS.md) · [System adaptation](docs/ADAPTATION.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
 ## What is included
 
@@ -14,6 +14,7 @@ The project is independent of the VGGT-Ω and VGGT-SLAM authors. The released ex
 - An Ω adapter using the official image loader and camera decoder, with attention-hook loop verification.
 - TUM-format trajectories, run metadata, keyframe records, point-cloud export, and Sim(3)-aligned ATE evaluation.
 - Fixed-window diagnostics for focal length, translation shape, lens distortion, principal point, input size, and numerical precision.
+- Lossless prediction caches and CPU backend replay, opt-in confidence/noise policies, and a frozen development/validation sweep for keyframe spacing and submap size.
 - Small result records and frame manifests. Download model weights and datasets from their original providers.
 
 ## Current findings

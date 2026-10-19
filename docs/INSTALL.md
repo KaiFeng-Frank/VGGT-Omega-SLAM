@@ -158,6 +158,9 @@ Use `--verify-checkpoints` on a run to recompute the checkpoint hashes.
 Run one CUDA job at a time. The runner's shared GPU lock protects other processes
 using the same lock; its options use the `VOS_GPU_*` environment-variable prefix.
 SLAM default settings and outputs are described in the main README.
+On a shared workstation, point `VOS_GPU_LOCK` at the same lock used by the
+other jobs and set `VOS_GPU_REQUIRE_IDLE=1`. The default reserve is 2048 MiB;
+see [GPU execution and allocator margins](ADAPTATION.md#shared-gpu-execution-and-allocator-margin).
 
 For scripts that locate datasets through environment variables, set `VOS_TUM_ROOT`
 to the parent directory containing the `rgbd_dataset_freiburg1_*` sequence folders,

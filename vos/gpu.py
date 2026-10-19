@@ -6,6 +6,8 @@ timeout, VOS_GPU_RESERVE_MB overrides the default 2048 MiB reserve.
 VOS_GPU_DEVICE is the nvidia-smi selector corresponding to Torch's logical
 CUDA device zero; the first CUDA_VISIBLE_DEVICES entry or 0 is the default.
 All cooperating jobs must use the same lock path.
+VOS_GPU_REQUIRE_IDLE=1 also refuses concurrent compute processes outside that
+lock. It does not stop them or reserve the display's GPU memory.
 """
 from __future__ import annotations
 
@@ -44,6 +46,33 @@ def free_mb() -> int:
                            "Check the NVIDIA driver and VOS_GPU_DEVICE/CUDA_VISIBLE_DEVICES.") from exc
 
 
+def other_compute_pids() -> list[int]:
+    try:
+        result = subprocess.run(["nvidia-smi", "--query-compute-apps=pid", "--format=csv,noheader,nounits",
+                                 "-i", device_selector()], capture_output=True, text=True, timeout=20, check=True)
+        return sorted({int(line.strip()) for line in result.stdout.splitlines() if line.strip()} - {os.getpid()})
+    except (OSError, subprocess.SubprocessError, ValueError) as exc:
+        raise RuntimeError("Cannot verify other GPU compute processes with nvidia-smi") from exc
+
+
+def ensure_exclusive() -> None:
+    """Before a new forward, fail safely if a non-cooperating CUDA job appeared."""
+    if os.environ.get("VOS_GPU_REQUIRE_IDLE") == "1":
+        others = other_compute_pids()
+        if others:
+            raise RuntimeError(f"Other GPU compute processes appeared: {others}; leaving them running")
+
+
+def allocator_budget_bytes(requested_bytes: int, total_bytes: int) -> int:
+    """Budget the allocator after context creation, retaining reserve plus headroom."""
+    reserve = int(os.environ.get("VOS_GPU_RESERVE_MB", "2048"))
+    # cuBLAS/cuDNN and display allocations are outside PyTorch's allocator.
+    available = (free_mb() - reserve - 256) * 2**20
+    if available <= 0:
+        raise RuntimeError("No GPU allocator budget remains after the display reserve")
+    return min(int(requested_bytes), int(total_bytes * .95), available)
+
+
 def _holder(fd) -> str:
     os.lseek(fd, 0, os.SEEK_SET)
     return os.read(fd, 400).decode(errors="replace").strip() or "unknown"
@@ -62,6 +91,12 @@ def _take_lock(who, deadline):
             if not announced:
                 print(f"[gpu] {who}: waiting for {path}, held by {_holder(fd)}", file=sys.stderr, flush=True)
                 announced = True
+            if deadline is None:
+                # Queue in the kernel instead of missing short release windows
+                # between another project's consecutive jobs. Timed waits keep
+                # the interruptible polling path below.
+                fcntl.flock(fd, fcntl.LOCK_EX)
+                break
             if deadline is not None and time.monotonic() >= deadline:
                 os.close(fd)
                 raise RuntimeError(f"GPU lock {path} is still held after VOS_GPU_WAIT_S") from None
@@ -85,13 +120,17 @@ def claim(need_mb: int, who: str = "") -> int:
         _fd = _take_lock(who, deadline)
     announced = False
     while True:
+        others = other_compute_pids() if os.environ.get("VOS_GPU_REQUIRE_IDLE") == "1" else []
         free = free_mb()
-        if free >= need_mb + reserve:
+        if not others and free >= need_mb + reserve:
             return free
         if not announced:
-            print(f"[gpu] {who}: {free} MiB free; waiting for {need_mb} + {reserve} MiB", file=sys.stderr, flush=True)
+            print(f"[gpu] {who}: {free} MiB free, other compute PIDs {others}; "
+                  f"waiting for {need_mb} + {reserve} MiB", file=sys.stderr, flush=True)
             announced = True
         if deadline is not None and time.monotonic() >= deadline:
+            if others:
+                raise RuntimeError(f"Other GPU compute processes still active after VOS_GPU_WAIT_S: {others}")
             raise RuntimeError(f"{who}: only {free} MiB free after VOS_GPU_WAIT_S; need {need_mb} + {reserve} MiB")
         time.sleep(POLL_S)
 

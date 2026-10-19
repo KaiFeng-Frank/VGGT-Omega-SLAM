@@ -119,3 +119,28 @@ def test_late_failure_keeps_partial_outputs(tmp_path, monkeypatch):
     assert sorted(meta["partial_outputs"]) == ["keyframes.csv", "poses_partial.tum"]
     assert (out / "poses_partial.tum").read_text().startswith("1.0")
     assert "0" in (out / "keyframes.csv").read_text().splitlines()[1].split(",")[-1]
+
+
+def test_retrieval_checks_gpu_before_descriptor_forward(monkeypatch):
+    from types import SimpleNamespace
+    import run_slam
+    from vos import gpu
+
+    calls = []
+    retrieval = SimpleNamespace(
+        find_loop_closures=lambda *args, **kwargs: [],
+        get_batch_descriptors=lambda images: calls.append(images) or "descriptors",
+    )
+    solver = SimpleNamespace(map=SimpleNamespace(retrieve_best_score_frame=lambda *a, **kw: None),
+                             image_retrieval=retrieval)
+    run_slam.RetrievalRecorder(solver)
+    monkeypatch.setattr(gpu, "ensure_exclusive", lambda: None)
+    assert retrieval.get_batch_descriptors("first") == "descriptors"
+
+    def busy():
+        raise RuntimeError("Other GPU compute processes appeared")
+
+    monkeypatch.setattr(gpu, "ensure_exclusive", busy)
+    with pytest.raises(RuntimeError, match="Other GPU"):
+        retrieval.get_batch_descriptors("blocked")
+    assert calls == ["first"]

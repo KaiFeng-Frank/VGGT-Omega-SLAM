@@ -26,3 +26,7 @@ jobs:
           tests/test_compare_summary.py tests/test_calibration.py
           tests/test_calibration_pipeline.py tests/test_why_utils.py
           tests/test_geometry_precision.py
+          tests/test_gpu.py tests/test_prediction_cache.py
+          tests/test_backend_policy.py tests/test_backend_cache.py
+          tests/test_submap_context.py tests/test_frontend_sweep.py
+          tests/test_trajectory_support.py

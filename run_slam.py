@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """Headless VGGT-SLAM 2.0 runner with a switchable feed-forward front-end (VGGT or VGGT-Omega).
 
-The back-end is the UNMODIFIED upstream pipeline (MIT-SPARK/VGGT-SLAM 35327ac, imported from the
-read-only snapshot): LK-flow keyframe selection, submaps of `--submap-size` new keyframes plus one
-overlap frame, SALAD retrieval, SL(4) factor graph. The control loop below replicates upstream
-main.py statement for statement, including the final partial batch; the only additions are
+The default --backend-policy legacy uses the original upstream pipeline
+(MIT-SPARK/VGGT-SLAM 35327ac, imported from a verified read-only snapshot):
+LK-flow keyframe selection, submaps of --submap-size new keyframes plus one
+overlap frame, SALAD retrieval, and an SL(4) factor graph. An opt-in Solver
+subclass changes overlap confidence selection and factor noise without editing
+the upstream files. The control loop retains the final partial batch and adds
 
   * a non-rendering Viewer stub (no viser server),
   * offline torch.hub for SALAD/DINOv2 (local checkpoints),
   * instrumentation by wrapping (model call, ImageRetrieval/GraphMap retrieval calls) - no upstream
     file is edited,
+  * optional lossless prediction caching for CPU backend experiments,
   * for --backend omega: `vggt_slam.solver.load_and_preprocess_images` and
     `vggt_slam.solver.pose_encoding_to_extri_intri` are replaced by the VGGT-Omega loader/decoder
     and the model is `OmegaForSLAM` (see vos/omega_backend.py).
@@ -71,6 +74,8 @@ class Tee:
 
 
 def parse_args(argv=None):
+    from vos.backend_policy import POLICY_NAMES
+
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("input", type=Path, nargs="?", help="image folder, or TUM sequence dir (its rgb/ is used)")
     p.add_argument("--backend", choices=["vggt", "omega"], default="omega")
@@ -79,6 +84,12 @@ def parse_args(argv=None):
     p.add_argument("--overlap", type=int, default=1, help="upstream supports only 1 (--overlapping_window_size)")
     p.add_argument("--min-disparity", type=float, default=50.0)
     p.add_argument("--conf-threshold", type=float, default=25.0)
+    p.add_argument("--backend-policy", choices=POLICY_NAMES, default="legacy")
+    p.add_argument("--scale-confidence-percentile", type=float, help="overlap-scale confidence percentile; separate from cloud filtering")
+    p.add_argument("--scale-confidence-scope", choices=("submap", "frame"), default="submap")
+    p.add_argument("--cross-noise-multiplier", type=float, default=1.0, help="cross-submap factor standard-deviation multiplier")
+    p.add_argument("--loop-noise-multiplier", type=float, default=1.0, help="loop factor standard-deviation multiplier")
+    p.add_argument("--edge-huber-delta", type=float, help="optional Huber threshold in whitened residual units")
     p.add_argument("--lc-thres", type=float, default=0.95, help="SALAD distance threshold, upstream --lc_thres")
     p.add_argument("--max-loops", type=int, default=1, choices=[0, 1])
     p.add_argument("--seed", type=int, default=0)
@@ -93,6 +104,7 @@ def parse_args(argv=None):
     p.add_argument("--cuda-memory-limit-gb", type=float, default=10.0)
     p.add_argument("--gpu-need-mb", type=int, default=None, help="default 9000 (omega) / 7500 (vggt)")
     p.add_argument("--verify-checkpoints", action="store_true", help="recompute sha256 of all checkpoints (slow)")
+    p.add_argument("--prediction-cache", type=Path, help="save lossless model predictions for CPU backend replay")
     p.add_argument("--preflight-only", action="store_true", help="CPU import/SL4 check; no model, no GPU")
     args = p.parse_args(argv)
     if not args.preflight_only:
@@ -104,7 +116,23 @@ def parse_args(argv=None):
         p.error("upstream supports only --overlap 1")
     if args.submap_size < 1 or args.max_frames < 0 or args.threads < 1 or args.max_cloud_points < 1:
         p.error("invalid numeric argument")
+    if not 0 <= args.conf_threshold <= 100 or args.min_disparity < 0:
+        p.error("confidence percentile must be in [0,100] and disparity must be nonnegative")
+    try:
+        backend_policy_from_args(args)
+    except ValueError as exc:
+        p.error(str(exc))
     return args
+
+
+def backend_policy_from_args(args):
+    from vos.backend_policy import BackendPolicy
+    return BackendPolicy(name=args.backend_policy,
+                         scale_confidence_percentile=args.scale_confidence_percentile,
+                         scale_confidence_scope=args.scale_confidence_scope,
+                         cross_submap_noise_multiplier=args.cross_noise_multiplier,
+                         loop_noise_multiplier=args.loop_noise_multiplier,
+                         huber_delta=args.edge_huber_delta)
 
 
 # ---------------------------------------------------------------------------------------------
@@ -139,6 +167,8 @@ class RecordingModel:
         self.calls = []
 
     def __call__(self, images, *args, **kwargs):
+        from vos.gpu import ensure_exclusive
+        ensure_exclusive()
         torch = self.torch
         torch.cuda.synchronize()
         start = time.perf_counter()
@@ -167,6 +197,12 @@ class RetrievalRecorder:
         self.queries, self.matches, self.threshold = [], [], None
         original_best = solver.map.retrieve_best_score_frame
         original_find = solver.image_retrieval.find_loop_closures
+        original_descriptors = solver.image_retrieval.get_batch_descriptors
+
+        def descriptors(images):
+            from vos.gpu import ensure_exclusive
+            ensure_exclusive()
+            return original_descriptors(images)
 
         def best(query_vector, current_submap_id, ignore_last_submap=True):
             result = original_best(query_vector, current_submap_id, ignore_last_submap=ignore_last_submap)
@@ -183,6 +219,7 @@ class RetrievalRecorder:
 
         solver.map.retrieve_best_score_frame = best
         solver.image_retrieval.find_loop_closures = find
+        solver.image_retrieval.get_batch_descriptors = descriptors
 
     def reset(self):
         self.queries, self.matches, self.threshold = [], [], None
@@ -297,7 +334,7 @@ def run(args, report, out, ctx):
         import vggt_slam.solver as solver_module
     except ImportError as exc:
         raise RuntimeError(f"Missing runtime dependency: {exc}. Install the upstream Python dependencies "
-                           "and GTSAM with SL(4); source setup alone does not install these. See docs/setup.md.") from exc
+                           "and GTSAM with SL(4); source setup alone does not install these. See docs/INSTALL.md.") from exc
 
     report["versions"] = versions(torch)
     report["upstream"] = {"slam_commit": env.SLAM_COMMIT, "slam_source": str(env.SLAM_SRC),
@@ -315,7 +352,7 @@ def run(args, report, out, ctx):
             else:
                 from vos import vggt_backend  # noqa: F401
         except ImportError as exc:
-            raise RuntimeError(f"Missing front-end dependency: {exc}. See docs/setup.md.") from exc
+            raise RuntimeError(f"Missing front-end dependency: {exc}. See docs/INSTALL.md.") from exc
         report.update(status="preflight_passed", model_loaded=False, gpu_used=False)
         return 0
 
@@ -342,7 +379,8 @@ def run(args, report, out, ctx):
     np.random.seed(args.seed)
     torch.manual_seed(args.seed)
     total_memory = torch.cuda.get_device_properties(0).total_memory
-    limit = min(args.cuda_memory_limit_gb * 1024 ** 3, total_memory * 0.95)
+    from vos.gpu import allocator_budget_bytes
+    limit = allocator_budget_bytes(int(args.cuda_memory_limit_gb * 1024 ** 3), total_memory)
     torch.cuda.set_per_process_memory_fraction(limit / total_memory)
     report["gpu"].update(device=torch.cuda.get_device_name(0), total_bytes=int(total_memory),
                          allocator_limit_bytes=int(limit))
@@ -385,8 +423,13 @@ def run(args, report, out, ctx):
     report["model_load_seconds"] = time.perf_counter() - load_start
     recording = RecordingModel(model, torch, args.backend)
 
-    solver = Solver(init_conf_threshold=args.conf_threshold, lc_thres=args.lc_thres, vis_voxel_size=None,
-                    vis_imgs=False)
+    from vos.backend_policy import make_solver_class
+    backend_policy = backend_policy_from_args(args)
+    SolverClass = make_solver_class(Solver, backend_policy, scale_estimator=solver_module.estimate_scale_pairwise)
+    solver = SolverClass(init_conf_threshold=args.conf_threshold, lc_thres=args.lc_thres, vis_voxel_size=None,
+                         vis_imgs=False)
+    report["backend_policy"] = backend_policy.to_dict()
+    report["backend_diagnostics"] = getattr(solver, "backend_diagnostics", [])
     retrieval = RetrievalRecorder(solver)
     torch.cuda.synchronize()
     report["model_and_salad_load_seconds"] = time.perf_counter() - load_start
@@ -409,9 +452,14 @@ def run(args, report, out, ctx):
         predictions = solver.run_predictions(names, recording, args.max_loops, None, None)
         torch.cuda.synchronize()
         t_pred = time.perf_counter()
+        if args.prediction_cache is not None:
+            from vos.prediction_cache import save_predictions
+            save_predictions(args.prediction_cache / f"{update_index:05d}.npz", predictions, names,
+                             solver.current_working_submap.get_id())
         solver.add_points(predictions)
         t_add = time.perf_counter()
         solver.graph.optimize()  # upstream: with backend_time
+        report["backend_diagnostics"] = getattr(solver, "backend_diagnostics", [])
         t_opt = time.perf_counter()
         calls = recording.calls[n_calls:]
         main_call = calls[0]
@@ -562,6 +610,8 @@ def main(argv=None):
                     report.setdefault("partial_output_errors", []).append(f"{label}: {inner}")
         code = 1
     finally:
+        if ctx["solver"] is not None:
+            report["backend_diagnostics"] = getattr(ctx["solver"], "backend_diagnostics", [])
         report["wall_seconds"] = time.monotonic() - started
         report["peak_rss_kib"] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
         if out is not None:
