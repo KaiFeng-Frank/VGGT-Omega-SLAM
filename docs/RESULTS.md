@@ -106,6 +106,13 @@ The [full SLAM summary](../results/undistortion/slam_summary.json) preserves unr
 
 [artifact_index.json](../results/artifact_index.json) records the source artifact, purpose, metric convention, and source SHA-256 for each copied result. Host paths are replaced with relative archive locations or symbolic placeholders; numerical values are preserved.
 
+The later [system adaptation experiments](ADAPTATION.md) test confidence and
+graph-noise policies, submap context, and a fixed keyframe-density/submap-size
+grid. Their `adaptation_*.json` files carry their own designs, frozen selections,
+metric definitions, and source hashes. They preserve the earlier matched-model
+comparison above; a frontend setting with different keyframes has different
+evaluation support and inference cost.
+
 | File under `results/` | Purpose |
 |---|---|
 | `summary.json` | Compact cross-experiment summary, explicit geometry conventions, controlled probes, and all 12 SLAM pairs. |
@@ -123,6 +130,9 @@ The [full SLAM summary](../results/undistortion/slam_summary.json) preserves unr
 | `focal_cause/evidence_focal_regimes.json` | Context/frame-set-dependent focal estimates and same-first-frame checks. |
 | `focal_cause/evidence_intervention_pairs.json` | Independent 20-window principal-point pairing using each case's true K. |
 | `focal_cause/evidence_principal_point.json` | Geometric ray/FoV calculation of the principal-point approximation; not a network intervention. |
+| `adaptation_backend.json` | Exact CPU replay gates, confidence/noise development results, and frozen backend validation. |
+| `adaptation_context.json` | Same-frame context-shift design and all per-window results for both models. |
+| `adaptation_frontend.json` | Six-setting development grid, frozen validation, resource failures, and separate memory-only retry evidence. |
 | `render_figures.py` and `figures/` | Rebuilds the three data-only figures; PNG and SVG outputs contain no scene imagery. |
 
 The archive contains no source RGB/depth images, private office sequences, weights, clouds, or bulk prediction NPZ files. Re-running inference requires obtaining the public datasets and checkpoints separately, following the repository setup instructions. The manifest resolves frame names relative to each sequence's `rgb/` directory.

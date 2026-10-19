@@ -461,16 +461,63 @@ show that the physical GPU can never run the setting under another storage
 strategy. The original attempts are retained in
 [the frontend adaptation evidence](../results/adaptation_frontend.json).
 
-A separate retry uses the optional CPU image storage below. Its first gate is
-an exact `desk` comparison against the original `s32_d25` run: all prediction
-cache arrays must match in dtype, shape, and bytes; frame ordering and IDs,
-ordered poses, keyframes, graph/submap counts, and loop decisions must also
-match. That check and the subsequent two-sequence retry are pending. Fresh
-validation outputs are kept under
-`runs/adaptation/frontend_validation_cpu_storage2seq/`; the original failed
-directories are preserved. The selected frontend setting, the shared GPU lock,
-and the 2048 MiB reserve are unchanged. The default remains `s16_d50` with the
-`legacy` backend policy until the stated validation requirement is established.
+A separate retry uses the optional CPU image storage below. Its independent
+`desk` equivalence gate against the original `s32_d25` run **passed exactly**.
+Across four NPZ files, all 38 cache entries matched in dtype, shape, and bytes:
+34 numerical prediction arrays and four `__metadata__` text arrays. The
+122-row trajectory and `keyframes.csv` were byte-identical; the loop log and
+all four updates' frame lists/counts also matched. Both runs had 119 keyframes,
+six submaps, 126 graph nodes, and two loops.
+
+For this `desk` gate, peak CUDA allocated memory decreased from 9,616,730,112
+to 9,406,679,040 bytes, a reduction of 200.32 MiB (2.18%). The logical CPU image
+inventory was 401,006,592 bytes (382.43 MiB), which is not a measurement of host
+RSS. These equivalence and resource measurements apply to this gate run. The
+two-sequence validation retry completed without reselecting the frontend
+configuration. Its outputs are kept under
+`runs/adaptation/frontend_validation_cpu_storage/`; the original failed
+directories are preserved. The selected setting, shared GPU lock, and 2048 MiB
+reserve were unchanged.
+
+### Completed frontend validation after CPU storage
+
+The frozen `s32_d25` setting used CPU image storage for the completed retry.
+Each comparison reused the matching completed `s16_d50` baseline. The original
+OOM attempts remain separate and unscored; the table below contains the
+completed retry's accuracy results.
+
+| Sequence | Baseline ATE RMSE (mm) | Frozen setting ATE RMSE (mm) | Own-trajectory ATE ratio | Change from baseline | Common-time ATE ratio |
+|---|---:|---:|---:|---:|---:|
+| `desk2` | 39.367 | 38.108 | 0.968015 | −3.1985% | 0.902636 |
+| `room` | 73.095 | 75.806 | 1.037081 | +3.7081% | 1.072149 |
+
+The equal-weight geometric mean of the two own-trajectory ATE ratios is
+1.001953, a 0.1953% increase. `desk2` met the 2% improvement requirement, while
+`room` worsened. The requirement of at least 2% lower ATE on **each** validation
+sequence therefore failed. **The frontend default remains `s16_d50`, and the
+backend default remains `legacy`.** CPU image storage remains optional.
+
+The common-time comparisons use 1964 GT timestamps for `desk2` and 4440 for
+`room`; their geometric-mean ratio is 0.983748. These linearly interpolated
+position scores are supplementary. They do not replace the original
+own-trajectory selection/adoption metric, trigger a new selection, or establish
+an isolated geometric-error improvement.
+
+The selected setting also uses more keyframes and more computation. The
+following values come from each completed run's metadata; arrows show
+`s16_d50` baseline → `s32_d25` candidate:
+
+| Sequence | Keyframes | Model-forward total (s) | Processing-loop time (s) |
+|---|---:|---:|---:|
+| `desk2` | 98 → 180 | 17.87 → 37.98 | 40.17 → 73.81 |
+| `room` | 186 → 369 | 30.34 → 78.83 | 73.72 → 155.40 |
+
+These are observed times from separate runs, using the reused standard-storage
+baselines and CPU-storage candidates. They include the consequences of changed
+keyframe density and window size; they do not isolate the cost of CPU image
+storage. Processing-loop time excludes model loading and final output export.
+The conclusion is limited to the documented configurations and these three
+previously examined sequences; other integrations remain untested.
 
 ## Optional CPU storage for historical keyframe images
 

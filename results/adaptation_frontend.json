@@ -1,6 +1,9 @@
 {
   "schema": "vggt_omega_slam.adaptation_frontend.v1",
   "status": "development_complete_original_validation_hardware_limited",
+  "latest_status": "complete",
+  "current_result_path": "memory_only_retry",
+  "status_scope": "The original status and summary preserve the initial resource-limited attempts. The completed execution-only retry and unchanged adoption criterion are under memory_only_retry.",
   "generated_utc": "2026-10-19T20:29:32.399063+00:00",
   "system": "VGGT-Ω-SLAM",
   "scope": {
@@ -5533,6 +5536,33 @@
       },
       "runs/adaptation/keyframe_storage_gate/amendment.json": {
         "sha256_original_file": "1717e198301cbe212e2ce8aa38da4a340df74e399efc9da4f7fa489d31eeb3fe"
+      },
+      "runs/adaptation/keyframe_storage_gate/equivalence.json": {
+        "sha256_original_file": "eeec7ea3f3129a55d4b004a65b5924c53b81b7ca95a25bcb6e0b2baa2e8bdeed"
+      },
+      "runs/adaptation/frontend_validation_cpu_storage/desk2/design.json": {
+        "sha256_original_file": "2ed832887d331166bc2fe619173da0c2d3179011f1ba57feb20bb69741522e40"
+      },
+      "runs/adaptation/frontend_validation_cpu_storage/desk2/results.json": {
+        "sha256_original_file": "044cf4c51f629c5f3613ab7640962ec4783f11b1c86ba5d13526190b9467862e"
+      },
+      "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d25/metadata.json": {
+        "sha256_original_file": "06ba36cd9d178e4e4485ac82c2a28edc63109fe18619f26c7c3554e8130bc66f"
+      },
+      "runs/adaptation/frontend_validation_cpu_storage/desk2/common_support.json": {
+        "sha256_original_file": "a63ce4077af9ba227abbb828472fb22936381b4430507acbabab2314ba869bab"
+      },
+      "runs/adaptation/frontend_validation_cpu_storage/room/design.json": {
+        "sha256_original_file": "7cd5c5c880e7065c7dd701f60d142551fb54b4eb21ffd2c23b766c5bc6f426f2"
+      },
+      "runs/adaptation/frontend_validation_cpu_storage/room/results.json": {
+        "sha256_original_file": "bdf5220347200407dc5ef9acc5857928c4b8995b5ec399bf1ee369a83b4d33f3"
+      },
+      "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d25/metadata.json": {
+        "sha256_original_file": "af221a6120faa1466763f2335a9237be95956ac3fb04badb19565361ccdc6299"
+      },
+      "runs/adaptation/frontend_validation_cpu_storage/room/common_support.json": {
+        "sha256_original_file": "c9b5bacb2e6a8c5988f52ac2250fca93157115e4da622ae07f3e9d67164c4824"
       }
     },
     "hash_convention": "Hashes identify original file bytes before path redaction. Embedded source objects retain original fields and numeric values; metadata excerpts explicitly name omitted fields.",
@@ -5546,8 +5576,8 @@
     "artifact_note": "Relative runs paths are provenance labels for ignored experiment artifacts, not a claim that their large contents are included."
   },
   "memory_only_retry": {
-    "status": "queued",
-    "updated_utc": "2026-10-19T20:35:38.816737+00:00",
+    "status": "complete",
+    "updated_utc": "2026-10-19T20:43:30.398916+00:00",
     "amendment": {
       "purpose": "Memory-only execution retry after the frozen frontend validation exceeded the existing allocator cap",
       "original_frozen_selection_sha256": "2ac0d69a254a21a0df4a0445ff1f37f5144e5c69216b502f5777340f80ee8498",
@@ -5561,26 +5591,1913 @@
     },
     "amendment_original_file_sha256": "1717e198301cbe212e2ce8aa38da4a340df74e399efc9da4f7fa489d31eeb3fe",
     "gate": {
-      "status": "pending",
-      "expected_artifact": "runs/adaptation/keyframe_storage_gate/equivalence.json"
+      "status": "exact",
+      "result": {
+        "status": "exact",
+        "reference_run": "runs/adaptation/frontend_development/runs/s32_d25",
+        "candidate_run": "runs/adaptation/keyframe_storage_gate/online",
+        "frozen_selection_sha256": "2ac0d69a254a21a0df4a0445ff1f37f5144e5c69216b502f5777340f80ee8498",
+        "checked_arrays": 38,
+        "checked_cache_files": 4,
+        "poses_sha256": "e84c5aebf95d6d01936958c366de716de0cf16e103dd98efb2cd87264ce01b91",
+        "reference_metadata_sha256": "537f68485ff7b98b90a4609621062292057f3ad2e396dda1562a6625095a2158",
+        "candidate_metadata_sha256": "faff397a74df7409e82a6b267241ef95c666f386bc5239106953b44c4f7a3df9",
+        "reference_peak_cuda_allocated_bytes": 9616730112,
+        "candidate_peak_cuda_allocated_bytes": 9406679040
+      },
+      "independent_artifact_checks": {
+        "cache_file_count_matches": true,
+        "nonzero_arrays_checked": true,
+        "poses_match_frozen_hash": true,
+        "trajectory_bytes_equal": true,
+        "candidate_trajectory_hash_matches": true,
+        "reference_metadata_hash_matches": true,
+        "candidate_metadata_hash_matches": true
+      },
+      "array_check_note": "All-array dtype/shape/byte checks are reported by memory_retry.py; this updater verifies gate provenance, file counts and trajectory/metadata hashes without loading prediction tensors."
     },
     "validation_root": "runs/adaptation/frontend_validation_cpu_storage",
     "validation": {
       "desk2": {
-        "status": "not_started_gate_pending"
+        "status": "complete",
+        "design": {
+          "schema": "vggt-omega-slam-frontend-sweep-v1",
+          "phase": "validation",
+          "sequence": "desk2",
+          "sequence_path": "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2",
+          "backend": "omega",
+          "runtime_signature": {
+            "runner_sha256": "d008c85cbbbc5e2f3a3c15e59eb95796e9e7963df4b95579d50f1cf6d4c269a0",
+            "checkpoint_sha256_expected": "c02da418b18bb01d0392598d3f6147366bcde1bb70fd08a5e3bf7925b0667934",
+            "similarity": {
+              "layer": 15,
+              "tau": 0.3764137492904663,
+              "config_file": "config/omega_similarity.json",
+              "config_sha256": "e7c66ef335463ce94795a82e7234ab8122d7accb4365ae6c285b8f52444e1817"
+            }
+          },
+          "threads": 4,
+          "offload_keyframes": true,
+          "thread_environment": {
+            "OPENBLAS_NUM_THREADS": "4",
+            "OMP_NUM_THREADS": "4",
+            "MKL_NUM_THREADS": "4"
+          },
+          "inherited_vos_environment_keys": [
+            "VOS_GPU_LOCK",
+            "VOS_GPU_REQUIRE_IDLE",
+            "VOS_GPU_RESERVE_MB",
+            "VOS_GPU_WAIT_S",
+            "VOS_OFFICE_ROOT",
+            "VOS_OMEGA_CKPT",
+            "VOS_PYLIB",
+            "VOS_PYTHON",
+            "VOS_SALAD_CKPT",
+            "VOS_TUM_ROOT",
+            "VOS_VGGT_CKPT"
+          ],
+          "baseline_id": "s16_d50",
+          "baseline_run": "runs/adaptation/online/desk2_legacy",
+          "baseline_cache": "runs/adaptation/predictions/desk2_legacy",
+          "source_frozen_selection": "runs/adaptation/frontend_development/frozen_selection.json",
+          "source_frozen_selection_sha256": "2ac0d69a254a21a0df4a0445ff1f37f5144e5c69216b502f5777340f80ee8498",
+          "validation_selected_id": "s32_d25",
+          "configs": [
+            {
+              "id": "s16_d25",
+              "submap_size": 16,
+              "min_disparity": 25,
+              "scheduled": false,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d25",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d25",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d25",
+                "--submap-size",
+                "16",
+                "--min-disparity",
+                "25",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d25",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9000",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d25' --submap-size 16 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes"
+            },
+            {
+              "id": "s16_d50",
+              "submap_size": 16,
+              "min_disparity": 50,
+              "scheduled": true,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d50",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d50",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d50",
+                "--submap-size",
+                "16",
+                "--min-disparity",
+                "50",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d50",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9000",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d50' --submap-size 16 --min-disparity 50 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d50' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes"
+            },
+            {
+              "id": "s16_d75",
+              "submap_size": 16,
+              "min_disparity": 75,
+              "scheduled": false,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d75",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d75",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d75",
+                "--submap-size",
+                "16",
+                "--min-disparity",
+                "75",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d75",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9000",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d75' --submap-size 16 --min-disparity 75 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d75' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes"
+            },
+            {
+              "id": "s32_d25",
+              "submap_size": 32,
+              "min_disparity": 25,
+              "scheduled": true,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d25",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d25",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d25",
+                "--submap-size",
+                "32",
+                "--min-disparity",
+                "25",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d25",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9500",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d25' --submap-size 32 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes"
+            },
+            {
+              "id": "s32_d50",
+              "submap_size": 32,
+              "min_disparity": 50,
+              "scheduled": false,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d50",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d50",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d50",
+                "--submap-size",
+                "32",
+                "--min-disparity",
+                "50",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d50",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9500",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d50' --submap-size 32 --min-disparity 50 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d50' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes"
+            },
+            {
+              "id": "s32_d75",
+              "submap_size": 32,
+              "min_disparity": 75,
+              "scheduled": false,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d75",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d75",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d75",
+                "--submap-size",
+                "32",
+                "--min-disparity",
+                "75",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d75",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9500",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d75' --submap-size 32 --min-disparity 75 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d75' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes"
+            }
+          ],
+          "selection_rule": "Minimum finite Sim(3) ATE on this named development sequence only; exact ties prefer baseline, then fixed grid order. Only completed feasible runs are scored. Validation never selects.",
+          "resume_rule": "Completed outputs require matching inference/evaluation args and full prediction-cache frame lists. Failed/incomplete directories are preserved and never rerun in place.",
+          "allowed_baseline_execution_differences": [
+            "output/cache directory",
+            "point-cloud export cap",
+            "CPU threads",
+            "GPU reservation request",
+            "checkpoint hash-verification toggle",
+            "historical image tensor storage device (lossless CPU offload)"
+          ],
+          "limitations": [
+            "Development-sequence optimization is not evidence of generalization.",
+            "OOM/resource failures are hardware infeasibility, never accuracy scores.",
+            "Expected checkpoint SHA is recorded; only run_slam --verify-checkpoints records an independently measured full checkpoint SHA.",
+            "Disparity changes keyframe timestamps. The prespecified own-trajectory ATE selection does not control evaluation time support; common-time evaluation must be reported separately.",
+            "Caller is responsible for any systemd MemoryMax scope; each child acquires the shared GPU lock."
+          ],
+          "design_sha256": "09f19996002d197fa89c25a664f33fa1dff9211e614ee6884b3ccc8e96e7586e"
+        },
+        "results": {
+          "schema": "vggt-omega-slam-frontend-sweep-v1",
+          "phase": "validation",
+          "design_sha256": "09f19996002d197fa89c25a664f33fa1dff9211e614ee6884b3ccc8e96e7586e",
+          "sequence": "desk2",
+          "backend": "omega",
+          "executed": true,
+          "records": [
+            {
+              "id": "s16_d25",
+              "status": "not_scheduled_frozen_validation",
+              "ate_rmse_m": null
+            },
+            {
+              "id": "s16_d50",
+              "submap_size": 16,
+              "min_disparity": 50,
+              "run_dir": "runs/adaptation/online/desk2_legacy",
+              "prediction_cache": "runs/adaptation/predictions/desk2_legacy",
+              "reused_baseline": true,
+              "status": "complete",
+              "ate_rmse_m": 0.03936699083534465,
+              "eligible_for_accuracy_selection": true,
+              "cache_validation": {
+                "status": "verified",
+                "n_updates": 7
+              },
+              "metadata_sha256": "9bd5c6e56117c341c8dc69ff05f47dfe2520cc6e9d0fe13c93c81afaf1fa2463",
+              "poses_sha256": "45fcef0338506f041f2743de7572756471f0b587c72ac8bf8ae0848612d6d35a",
+              "n_associated": 191,
+              "runner_sha256": "76e367e867cd3c893b994ad57c8f3156373ab2f5c47124ada1e89359d8746a5c",
+              "n_keyframes": 98,
+              "n_pose_rows": 104,
+              "n_unique_pose_timestamps": 98,
+              "first_timestamp": 1305031526.671473,
+              "last_timestamp": 1305031546.807996
+            },
+            {
+              "id": "s16_d75",
+              "status": "not_scheduled_frozen_validation",
+              "ate_rmse_m": null
+            },
+            {
+              "id": "s32_d25",
+              "submap_size": 32,
+              "min_disparity": 25,
+              "run_dir": "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d25",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d25",
+              "reused_baseline": false,
+              "status": "complete",
+              "ate_rmse_m": 0.038107846883004524,
+              "eligible_for_accuracy_selection": true,
+              "cache_validation": {
+                "status": "verified",
+                "n_updates": 6
+              },
+              "metadata_sha256": "06ba36cd9d178e4e4485ac82c2a28edc63109fe18619f26c7c3554e8130bc66f",
+              "poses_sha256": "e959b5aeb764c92ca39e85a017f2f75534634ace7617dd0a250e06077b1ed948",
+              "n_associated": 351,
+              "runner_sha256": "d008c85cbbbc5e2f3a3c15e59eb95796e9e7963df4b95579d50f1cf6d4c269a0",
+              "n_keyframes": 180,
+              "n_pose_rows": 185,
+              "n_unique_pose_timestamps": 180,
+              "first_timestamp": 1305031526.671473,
+              "last_timestamp": 1305031546.743887,
+              "returncode": 0,
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d25' --submap-size 32 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes",
+              "launch_log": "runs/adaptation/frontend_validation_cpu_storage/desk2/logs/s32_d25.log"
+            },
+            {
+              "id": "s32_d50",
+              "status": "not_scheduled_frozen_validation",
+              "ate_rmse_m": null
+            },
+            {
+              "id": "s32_d75",
+              "status": "not_scheduled_frozen_validation",
+              "ate_rmse_m": null
+            }
+          ],
+          "commands": {
+            "s16_d25": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d25' --submap-size 16 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes",
+            "s16_d50": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d50' --submap-size 16 --min-disparity 50 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d50' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes",
+            "s16_d75": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s16_d75' --submap-size 16 --min-disparity 75 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s16_d75' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes",
+            "s32_d25": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d25' --submap-size 32 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes",
+            "s32_d50": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d50' --submap-size 32 --min-disparity 50 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d50' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes",
+            "s32_d75": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_desk2' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d75' --submap-size 32 --min-disparity 75 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d75' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes"
+          },
+          "status": "complete",
+          "frozen_selection_source": "runs/adaptation/frontend_development/frozen_selection.json",
+          "selection_performed": false
+        },
+        "baseline_and_frozen_candidate": {
+          "s16_d50": {
+            "metadata_excerpt": {
+              "schema": "vggt_omega_slam.run.v1",
+              "status": "complete",
+              "backend": "omega",
+              "args": {
+                "input": "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2",
+                "backend": "omega",
+                "output": "runs/adaptation/online/desk2_legacy",
+                "submap_size": 16,
+                "overlap": 1,
+                "min_disparity": 50.0,
+                "conf_threshold": 25.0,
+                "backend_policy": "legacy",
+                "scale_confidence_percentile": null,
+                "scale_confidence_scope": "submap",
+                "cross_noise_multiplier": 1.0,
+                "loop_noise_multiplier": 1.0,
+                "edge_huber_delta": null,
+                "lc_thres": 0.95,
+                "max_loops": 1,
+                "seed": 0,
+                "max_frames": 0,
+                "similarity_config": "config/omega_similarity.json",
+                "omega_layer": null,
+                "omega_tau": null,
+                "groundtruth": null,
+                "max_cloud_points": 2000000,
+                "threads": 4,
+                "cuda_memory_limit_gb": 10.0,
+                "gpu_need_mb": null,
+                "verify_checkpoints": false,
+                "prediction_cache": "runs/adaptation/predictions/desk2_legacy",
+                "preflight_only": false
+              },
+              "seed": 0,
+              "similarity": {
+                "layer": 15,
+                "tau": 0.3764137492904663,
+                "token_offset": 17,
+                "source": "config file config/omega_similarity.json",
+                "upstream_test": "image_match_ratio < 0.95  <=>  raw < tau",
+                "scaled_ratio": "0.95 * raw / tau",
+                "block_type": "global"
+              },
+              "front_end": {
+                "name": "VGGT-Omega 1B (512 balanced)",
+                "weights_dtype": "float32",
+                "aggregator_autocast": "bfloat16",
+                "loader": "vggt_omega.utils.load_fn balanced/512",
+                "decoder": "vggt_omega.utils.pose_enc.encoding_to_camera"
+              },
+              "backend_policy": {
+                "name": "legacy",
+                "scale_confidence_percentile": null,
+                "scale_confidence_scope": "submap",
+                "cross_submap_noise_multiplier": 1.0,
+                "loop_noise_multiplier": 1.0,
+                "huber_delta": null,
+                "min_scale_points": 100
+              },
+              "parameters_effective": {
+                "overlapping_window_size": 1,
+                "downsample_factor": 1,
+                "use_optical_flow_downsample": true
+              },
+              "summary": {
+                "images_used": 640,
+                "keyframes": 98,
+                "submaps_processed": 7,
+                "submaps_in_map": 11,
+                "loop_closures_accepted": 4,
+                "loop_candidates_total": 4,
+                "total_seconds": 40.17242074012756,
+                "forward_seconds_total": 17.86750831498648,
+                "forward_seconds_mean_per_submap": 2.5525011878552113,
+                "forward_seconds_median_per_submap": 2.931811174014001,
+                "forward_seconds_per_keyframe": 0.1823215134182294,
+                "optimize_seconds_total": 0.047531748976325616,
+                "peak_cuda_allocated_bytes": 8383538176,
+                "peak_cuda_reserved_bytes": 8489271296,
+                "upstream_style_timers": {
+                  "vggt_timer_total": 18.770950772057404,
+                  "loop_closure_timer_total": 0.06939475297986064,
+                  "keyframe_selection_total": 3.0116839210531907
+                }
+              },
+              "ate": {
+                "status": "ok",
+                "ate_rmse_m": 0.03936699083534465,
+                "scale": 1.2615139768459194,
+                "n_associated": 191,
+                "n_estimate_rows": 104,
+                "n_groundtruth": 2428,
+                "ate_rmse_se3_no_scale_m": 0.2046149910020125
+              }
+            }
+          },
+          "s32_d25": {
+            "metadata_excerpt": {
+              "schema": "vggt_omega_slam.run.v1",
+              "status": "complete",
+              "backend": "omega",
+              "args": {
+                "input": "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2",
+                "backend": "omega",
+                "output": "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d25",
+                "submap_size": 32,
+                "overlap": 1,
+                "min_disparity": 25.0,
+                "conf_threshold": 25.0,
+                "backend_policy": "legacy",
+                "scale_confidence_percentile": null,
+                "scale_confidence_scope": "submap",
+                "cross_noise_multiplier": 1.0,
+                "loop_noise_multiplier": 1.0,
+                "edge_huber_delta": null,
+                "lc_thres": 0.95,
+                "max_loops": 1,
+                "seed": 0,
+                "max_frames": 0,
+                "similarity_config": "config/omega_similarity.json",
+                "omega_layer": null,
+                "omega_tau": null,
+                "groundtruth": null,
+                "max_cloud_points": 100000,
+                "threads": 4,
+                "cuda_memory_limit_gb": 10.0,
+                "gpu_need_mb": 9500,
+                "verify_checkpoints": false,
+                "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/desk2/predictions/s32_d25",
+                "offload_keyframes": true,
+                "preflight_only": false
+              },
+              "seed": 0,
+              "similarity": {
+                "layer": 15,
+                "tau": 0.3764137492904663,
+                "token_offset": 17,
+                "source": "config file config/omega_similarity.json",
+                "upstream_test": "image_match_ratio < 0.95  <=>  raw < tau",
+                "scaled_ratio": "0.95 * raw / tau",
+                "block_type": "global"
+              },
+              "front_end": {
+                "name": "VGGT-Omega 1B (512 balanced)",
+                "weights_dtype": "float32",
+                "aggregator_autocast": "bfloat16",
+                "loader": "vggt_omega.utils.load_fn balanced/512",
+                "decoder": "vggt_omega.utils.pose_enc.encoding_to_camera"
+              },
+              "backend_policy": {
+                "name": "legacy",
+                "scale_confidence_percentile": null,
+                "scale_confidence_scope": "submap",
+                "cross_submap_noise_multiplier": 1.0,
+                "loop_noise_multiplier": 1.0,
+                "huber_delta": null,
+                "min_scale_points": 100
+              },
+              "parameters_effective": {
+                "overlapping_window_size": 1,
+                "downsample_factor": 1,
+                "use_optical_flow_downsample": true
+              },
+              "summary": {
+                "images_used": 640,
+                "keyframes": 180,
+                "submaps_processed": 6,
+                "submaps_in_map": 9,
+                "loop_closures_accepted": 3,
+                "loop_candidates_total": 4,
+                "total_seconds": 73.81057357788086,
+                "forward_seconds_total": 37.97805292902922,
+                "forward_seconds_mean_per_submap": 6.329675488171536,
+                "forward_seconds_median_per_submap": 6.885393683005532,
+                "forward_seconds_per_keyframe": 0.21098918293905122,
+                "optimize_seconds_total": 0.057107339991489425,
+                "peak_cuda_allocated_bytes": 9415274496,
+                "peak_cuda_reserved_bytes": 9535750144,
+                "upstream_style_timers": {
+                  "vggt_timer_total": 39.497712181997485,
+                  "loop_closure_timer_total": 0.21067485501407646,
+                  "keyframe_selection_total": 3.0961765108222608
+                }
+              },
+              "ate": {
+                "status": "ok",
+                "ate_rmse_m": 0.038107846883004524,
+                "scale": 1.2262392234877149,
+                "n_associated": 351,
+                "n_estimate_rows": 185,
+                "n_groundtruth": 2428,
+                "ate_rmse_se3_no_scale_m": 0.18552878341389487
+              }
+            }
+          }
+        },
+        "accuracy_comparison": {
+          "baseline_ate_rmse_m": 0.03936699083534465,
+          "candidate_ate_rmse_m": 0.038107846883004524,
+          "candidate_over_baseline": 0.9680152349564489,
+          "passes_two_percent_improvement_gate": true,
+          "ate_change_percent": -3.1984765043551078
+        },
+        "common_support": {
+          "schema": "vggt_omega_slam.common_trajectory_support.v1",
+          "gpu_used": false,
+          "baseline": {
+            "path": "runs/adaptation/online/desk2_legacy/poses.tum",
+            "n_input_rows": 104,
+            "n_nonfinite_dropped": 0,
+            "n_finite_rows": 104,
+            "n_unique_timestamps": 98,
+            "n_duplicate_rows_dropped": 6,
+            "n_duplicate_timestamps": 6,
+            "duplicates_policy": "first occurrence in input file, then sort by timestamp",
+            "input_had_decreasing_timestamps": false,
+            "time_range_s": [
+              1305031526.671473,
+              1305031546.807996
+            ],
+            "timestamp_intervals": {
+              "count": 97,
+              "min_s": 0.06414294242858887,
+              "q25_s": 0.10011887550354004,
+              "median_s": 0.16391420364379883,
+              "q75_s": 0.26785802841186523,
+              "q95_s": 0.5316242218017578,
+              "max_s": 0.5997500419616699,
+              "mean_s": 0.2075930207046037
+            }
+          },
+          "candidate": {
+            "path": "runs/adaptation/frontend_validation_cpu_storage/desk2/runs/s32_d25/poses.tum",
+            "n_input_rows": 185,
+            "n_nonfinite_dropped": 0,
+            "n_finite_rows": 185,
+            "n_unique_timestamps": 180,
+            "n_duplicate_rows_dropped": 5,
+            "n_duplicate_timestamps": 5,
+            "duplicates_policy": "first occurrence in input file, then sort by timestamp",
+            "input_had_decreasing_timestamps": false,
+            "time_range_s": [
+              1305031526.671473,
+              1305031546.743887
+            ],
+            "timestamp_intervals": {
+              "count": 179,
+              "min_s": 0.031883955001831055,
+              "q25_s": 0.06793701648712158,
+              "median_s": 0.09981107711791992,
+              "q75_s": 0.1359471082687378,
+              "q95_s": 0.23608179092407228,
+              "max_s": 0.43187785148620605,
+              "mean_s": 0.11213639062210168
+            }
+          },
+          "groundtruth": {
+            "path": "<TUM_ROOT>/rgbd_dataset_freiburg1_desk2/groundtruth.txt",
+            "n_input_rows": 2428,
+            "n_nonfinite_dropped": 0,
+            "n_finite_rows": 2428,
+            "n_unique_timestamps": 2428,
+            "n_duplicate_rows_dropped": 0,
+            "n_duplicate_timestamps": 0,
+            "duplicates_policy": "first occurrence in input file, then sort by timestamp",
+            "input_had_decreasing_timestamps": false,
+            "time_range_s": [
+              1305031523.0922,
+              1305031547.9528
+            ],
+            "timestamp_intervals": {
+              "count": 2427,
+              "min_s": 0.007899999618530273,
+              "q25_s": 0.009999990463256836,
+              "median_s": 0.009999990463256836,
+              "q75_s": 0.009999990463256836,
+              "q95_s": 0.010100126266479492,
+              "max_s": 0.2101001739501953,
+              "mean_s": 0.01024334569207228
+            }
+          },
+          "limitation": "Piecewise linear interpolation between sparse keyframes is supplementary; it cannot establish the actual motion between those frames. No extrapolation is used.",
+          "selection": "supplementary validation only; original development ATE selection remains frozen",
+          "common_time_range_s": [
+            1305031526.671473,
+            1305031546.743887
+          ],
+          "common_groundtruth_support": {
+            "query_source": "unique ground-truth timestamps in common interval",
+            "n_gt_timestamps_excluded": 464,
+            "n_timestamps": 1964,
+            "small_sample": false,
+            "small_sample_definition": "fewer than 20 timestamps",
+            "alignment": "independent Sim(3) Umeyama alignment to identical ground-truth positions",
+            "baseline": {
+              "ate_rmse_m": 0.04159857973362015,
+              "ate_mean_m": 0.03809053966524543,
+              "ate_median_m": 0.035104500913002226,
+              "scale": 1.2592719238367012,
+              "rotation": [
+                [
+                  0.937245107314162,
+                  0.11956782676949793,
+                  -0.32752884394703863
+                ],
+                [
+                  0.3404787888187555,
+                  -0.5162848796774929,
+                  0.7858270276472488
+                ],
+                [
+                  -0.0751385598755895,
+                  -0.84802916094791,
+                  -0.5245957862981808
+                ]
+              ],
+              "translation": [
+                1.4458065673642204,
+                0.890829342079711,
+                1.4518255646739917
+              ]
+            },
+            "candidate": {
+              "ate_rmse_m": 0.037548390337841187,
+              "ate_mean_m": 0.03439998985015039,
+              "ate_median_m": 0.030961985115771664,
+              "scale": 1.2245500338376367,
+              "rotation": [
+                [
+                  0.9328293289160637,
+                  0.13899842761119616,
+                  -0.33242875963974916
+                ],
+                [
+                  0.35339687542909104,
+                  -0.5329075833227238,
+                  0.7688433885220637
+                ],
+                [
+                  -0.07028578484275856,
+                  -0.8346789471160446,
+                  -0.5462334333325713
+                ]
+              ],
+              "translation": [
+                1.4531995391656494,
+                0.9119784442893992,
+                1.4421454861680933
+              ]
+            },
+            "status": "ok",
+            "candidate_over_baseline_rmse": 0.9026363538920157,
+            "rmse_difference_m": -0.004050189395778961,
+            "ratio_unavailable_reason": null,
+            "evaluated_time_range_s": [
+              1305031526.6721,
+              1305031546.7422
+            ],
+            "baseline_interpolation": {
+              "n_exact_samples": 0,
+              "n_interpolated_samples": 1964,
+              "bracketing_gap_distribution": {
+                "count": 1964,
+                "min_s": 0.06414294242858887,
+                "q25_s": 0.13599395751953125,
+                "median_s": 0.26795315742492676,
+                "q75_s": 0.46390199661254883,
+                "q95_s": 0.5680620670318604,
+                "max_s": 0.5997500419616699,
+                "mean_s": 0.3024821985520559
+              },
+              "max_bracketing_gap_s": 0.5997500419616699
+            },
+            "candidate_interpolation": {
+              "n_exact_samples": 0,
+              "n_interpolated_samples": 1964,
+              "bracketing_gap_distribution": {
+                "count": 1964,
+                "min_s": 0.031883955001831055,
+                "q25_s": 0.06810188293457031,
+                "median_s": 0.13217496871948242,
+                "q75_s": 0.20002412796020508,
+                "q95_s": 0.29497447013854694,
+                "max_s": 0.43187785148620605,
+                "mean_s": 0.14865673243878086
+              },
+              "max_bracketing_gap_s": 0.43187785148620605
+            },
+            "timestamp_intervals": {
+              "count": 1963,
+              "min_s": 0.007899999618530273,
+              "q25_s": 0.009999990463256836,
+              "median_s": 0.009999990463256836,
+              "q75_s": 0.009999990463256836,
+              "q95_s": 0.010100126266479492,
+              "max_s": 0.2101001739501953,
+              "mean_s": 0.010224197570365481
+            }
+          },
+          "exact_shared_prediction_support": {
+            "n_timestamps": 39,
+            "small_sample": false,
+            "small_sample_definition": "fewer than 20 timestamps",
+            "alignment": "independent Sim(3) Umeyama alignment to identical ground-truth positions",
+            "baseline": {
+              "ate_rmse_m": 0.03964674761600304,
+              "ate_mean_m": 0.03719609224755997,
+              "ate_median_m": 0.037986320450106435,
+              "scale": 1.275688999626535,
+              "rotation": [
+                [
+                  0.9366883025791477,
+                  0.12063480736955783,
+                  -0.3287282571704241
+                ],
+                [
+                  0.3419047157819975,
+                  -0.5177827058339542,
+                  0.7842207819646847
+                ],
+                [
+                  -0.07560548351426837,
+                  -0.8469641744431574,
+                  -0.5262466133595491
+                ]
+              ],
+              "translation": [
+                1.4636001421947453,
+                0.908022200481178,
+                1.4548213629419768
+              ]
+            },
+            "candidate": {
+              "ate_rmse_m": 0.04012706927500509,
+              "ate_mean_m": 0.0372239177933121,
+              "ate_median_m": 0.034102122744001886,
+              "scale": 1.2347553762292283,
+              "rotation": [
+                [
+                  0.9348506544434263,
+                  0.13632698077743174,
+                  -0.32782496579548
+                ],
+                [
+                  0.34850442134642756,
+                  -0.5287155163718293,
+                  0.7739538558917196
+                ],
+                [
+                  -0.06781535363536488,
+                  -0.8377797186968537,
+                  -0.5417806020443432
+                ]
+              ],
+              "translation": [
+                1.4665961546147084,
+                0.9157820230598116,
+                1.4520144696787498
+              ]
+            },
+            "status": "ok",
+            "candidate_over_baseline_rmse": 1.0121150330830206,
+            "rmse_difference_m": 0.0004803216590020462,
+            "ratio_unavailable_reason": null,
+            "groundtruth_interpolation": {
+              "n_exact_samples": 0,
+              "n_interpolated_samples": 39,
+              "bracketing_gap_distribution": {
+                "count": 39,
+                "min_s": 0.009799957275390625,
+                "q25_s": 0.009950041770935059,
+                "median_s": 0.009999990463256836,
+                "q75_s": 0.010050058364868164,
+                "q95_s": 0.010210013389587403,
+                "max_s": 0.019999980926513672,
+                "mean_s": 0.010253839003734099
+              },
+              "max_bracketing_gap_s": 0.019999980926513672
+            },
+            "query_source": "exact shared prediction timestamps within ground-truth range; ground truth linearly interpolated",
+            "time_range_s": [
+              1305031526.671473,
+              1305031546.6442
+            ],
+            "timestamp_intervals": {
+              "count": 38,
+              "min_s": 0.06414294242858887,
+              "q25_s": 0.16505295038223267,
+              "median_s": 0.26604795455932617,
+              "q75_s": 0.6751509308815002,
+              "q95_s": 1.9374030828475952,
+              "max_s": 2.3359761238098145,
+              "mean_s": 0.525598080534684
+            }
+          },
+          "status": "ok"
+        }
       },
       "room": {
-        "status": "not_started_gate_pending"
+        "status": "complete",
+        "design": {
+          "schema": "vggt-omega-slam-frontend-sweep-v1",
+          "phase": "validation",
+          "sequence": "room",
+          "sequence_path": "<TUM_ROOT>/rgbd_dataset_freiburg1_room",
+          "backend": "omega",
+          "runtime_signature": {
+            "runner_sha256": "d008c85cbbbc5e2f3a3c15e59eb95796e9e7963df4b95579d50f1cf6d4c269a0",
+            "checkpoint_sha256_expected": "c02da418b18bb01d0392598d3f6147366bcde1bb70fd08a5e3bf7925b0667934",
+            "similarity": {
+              "layer": 15,
+              "tau": 0.3764137492904663,
+              "config_file": "config/omega_similarity.json",
+              "config_sha256": "e7c66ef335463ce94795a82e7234ab8122d7accb4365ae6c285b8f52444e1817"
+            }
+          },
+          "threads": 4,
+          "offload_keyframes": true,
+          "thread_environment": {
+            "OPENBLAS_NUM_THREADS": "4",
+            "OMP_NUM_THREADS": "4",
+            "MKL_NUM_THREADS": "4"
+          },
+          "inherited_vos_environment_keys": [
+            "VOS_GPU_LOCK",
+            "VOS_GPU_REQUIRE_IDLE",
+            "VOS_GPU_RESERVE_MB",
+            "VOS_GPU_WAIT_S",
+            "VOS_OFFICE_ROOT",
+            "VOS_OMEGA_CKPT",
+            "VOS_PYLIB",
+            "VOS_PYTHON",
+            "VOS_SALAD_CKPT",
+            "VOS_TUM_ROOT",
+            "VOS_VGGT_CKPT"
+          ],
+          "baseline_id": "s16_d50",
+          "baseline_run": "runs/adaptation/online/room_legacy",
+          "baseline_cache": "runs/adaptation/predictions/room_legacy",
+          "source_frozen_selection": "runs/adaptation/frontend_development/frozen_selection.json",
+          "source_frozen_selection_sha256": "2ac0d69a254a21a0df4a0445ff1f37f5144e5c69216b502f5777340f80ee8498",
+          "validation_selected_id": "s32_d25",
+          "configs": [
+            {
+              "id": "s16_d25",
+              "submap_size": 16,
+              "min_disparity": 25,
+              "scheduled": false,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d25",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d25",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_room",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d25",
+                "--submap-size",
+                "16",
+                "--min-disparity",
+                "25",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d25",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9000",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d25' --submap-size 16 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes"
+            },
+            {
+              "id": "s16_d50",
+              "submap_size": 16,
+              "min_disparity": 50,
+              "scheduled": true,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d50",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d50",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_room",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d50",
+                "--submap-size",
+                "16",
+                "--min-disparity",
+                "50",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d50",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9000",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d50' --submap-size 16 --min-disparity 50 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d50' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes"
+            },
+            {
+              "id": "s16_d75",
+              "submap_size": 16,
+              "min_disparity": 75,
+              "scheduled": false,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d75",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d75",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_room",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d75",
+                "--submap-size",
+                "16",
+                "--min-disparity",
+                "75",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d75",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9000",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d75' --submap-size 16 --min-disparity 75 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d75' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes"
+            },
+            {
+              "id": "s32_d25",
+              "submap_size": 32,
+              "min_disparity": 25,
+              "scheduled": true,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d25",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d25",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_room",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d25",
+                "--submap-size",
+                "32",
+                "--min-disparity",
+                "25",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d25",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9500",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d25' --submap-size 32 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes"
+            },
+            {
+              "id": "s32_d50",
+              "submap_size": 32,
+              "min_disparity": 50,
+              "scheduled": false,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d50",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d50",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_room",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d50",
+                "--submap-size",
+                "32",
+                "--min-disparity",
+                "50",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d50",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9500",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d50' --submap-size 32 --min-disparity 50 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d50' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes"
+            },
+            {
+              "id": "s32_d75",
+              "submap_size": 32,
+              "min_disparity": 75,
+              "scheduled": false,
+              "output": "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d75",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d75",
+              "argv": [
+                "python3",
+                "run_slam.py",
+                "<TUM_ROOT>/rgbd_dataset_freiburg1_room",
+                "--backend",
+                "omega",
+                "--output",
+                "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d75",
+                "--submap-size",
+                "32",
+                "--min-disparity",
+                "75",
+                "--overlap",
+                "1",
+                "--seed",
+                "0",
+                "--max-loops",
+                "1",
+                "--max-frames",
+                "0",
+                "--conf-threshold",
+                "25",
+                "--backend-policy",
+                "legacy",
+                "--lc-thres",
+                "0.95",
+                "--prediction-cache",
+                "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d75",
+                "--max-cloud-points",
+                "100000",
+                "--threads",
+                "4",
+                "--gpu-need-mb",
+                "9500",
+                "--offload-keyframes"
+              ],
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d75' --submap-size 32 --min-disparity 75 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d75' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes"
+            }
+          ],
+          "selection_rule": "Minimum finite Sim(3) ATE on this named development sequence only; exact ties prefer baseline, then fixed grid order. Only completed feasible runs are scored. Validation never selects.",
+          "resume_rule": "Completed outputs require matching inference/evaluation args and full prediction-cache frame lists. Failed/incomplete directories are preserved and never rerun in place.",
+          "allowed_baseline_execution_differences": [
+            "output/cache directory",
+            "point-cloud export cap",
+            "CPU threads",
+            "GPU reservation request",
+            "checkpoint hash-verification toggle",
+            "historical image tensor storage device (lossless CPU offload)"
+          ],
+          "limitations": [
+            "Development-sequence optimization is not evidence of generalization.",
+            "OOM/resource failures are hardware infeasibility, never accuracy scores.",
+            "Expected checkpoint SHA is recorded; only run_slam --verify-checkpoints records an independently measured full checkpoint SHA.",
+            "Disparity changes keyframe timestamps. The prespecified own-trajectory ATE selection does not control evaluation time support; common-time evaluation must be reported separately.",
+            "Caller is responsible for any systemd MemoryMax scope; each child acquires the shared GPU lock."
+          ],
+          "design_sha256": "ec1ebd4cb8d501fe14a7381c631db5abebeec6d639b8f973ad9a165b29166155"
+        },
+        "results": {
+          "schema": "vggt-omega-slam-frontend-sweep-v1",
+          "phase": "validation",
+          "design_sha256": "ec1ebd4cb8d501fe14a7381c631db5abebeec6d639b8f973ad9a165b29166155",
+          "sequence": "room",
+          "backend": "omega",
+          "executed": true,
+          "records": [
+            {
+              "id": "s16_d25",
+              "status": "not_scheduled_frozen_validation",
+              "ate_rmse_m": null
+            },
+            {
+              "id": "s16_d50",
+              "submap_size": 16,
+              "min_disparity": 50,
+              "run_dir": "runs/adaptation/online/room_legacy",
+              "prediction_cache": "runs/adaptation/predictions/room_legacy",
+              "reused_baseline": true,
+              "status": "complete",
+              "ate_rmse_m": 0.07309544886221252,
+              "eligible_for_accuracy_selection": true,
+              "cache_validation": {
+                "status": "verified",
+                "n_updates": 12
+              },
+              "metadata_sha256": "493539d23e94087cfa892eb57fc05130123d75b8bb1853de9b9349eac82c2e4e",
+              "poses_sha256": "85160924c0a12f3d2677e56e3f1acf2d105a86bd1fab059c9eaa517df5eaea71",
+              "n_associated": 374,
+              "runner_sha256": "74b42af3a713ce13cc7ddd872833fff5300b0756e18f4928cd687308fccf5cc4",
+              "n_keyframes": 186,
+              "n_pose_rows": 197,
+              "n_unique_pose_timestamps": 186,
+              "first_timestamp": 1305031910.765238,
+              "last_timestamp": 1305031955.272905
+            },
+            {
+              "id": "s16_d75",
+              "status": "not_scheduled_frozen_validation",
+              "ate_rmse_m": null
+            },
+            {
+              "id": "s32_d25",
+              "submap_size": 32,
+              "min_disparity": 25,
+              "run_dir": "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d25",
+              "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d25",
+              "reused_baseline": false,
+              "status": "complete",
+              "ate_rmse_m": 0.07580587558799066,
+              "eligible_for_accuracy_selection": true,
+              "cache_validation": {
+                "status": "verified",
+                "n_updates": 12
+              },
+              "metadata_sha256": "af221a6120faa1466763f2335a9237be95956ac3fb04badb19565361ccdc6299",
+              "poses_sha256": "dc40ca602ffdc7ec1637c2c4b559364a6aa7add2eed83fb75196eb08017664f8",
+              "n_associated": 741,
+              "runner_sha256": "d008c85cbbbc5e2f3a3c15e59eb95796e9e7963df4b95579d50f1cf6d4c269a0",
+              "n_keyframes": 369,
+              "n_pose_rows": 380,
+              "n_unique_pose_timestamps": 369,
+              "first_timestamp": 1305031910.765238,
+              "last_timestamp": 1305031955.20496,
+              "returncode": 0,
+              "command": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d25' --submap-size 32 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes",
+              "launch_log": "runs/adaptation/frontend_validation_cpu_storage/room/logs/s32_d25.log"
+            },
+            {
+              "id": "s32_d50",
+              "status": "not_scheduled_frozen_validation",
+              "ate_rmse_m": null
+            },
+            {
+              "id": "s32_d75",
+              "status": "not_scheduled_frozen_validation",
+              "ate_rmse_m": null
+            }
+          ],
+          "commands": {
+            "s16_d25": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d25' --submap-size 16 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes",
+            "s16_d50": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d50' --submap-size 16 --min-disparity 50 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d50' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes",
+            "s16_d75": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s16_d75' --submap-size 16 --min-disparity 75 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s16_d75' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9000 --offload-keyframes",
+            "s32_d25": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d25' --submap-size 32 --min-disparity 25 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d25' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes",
+            "s32_d50": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d50' --submap-size 32 --min-disparity 50 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d50' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes",
+            "s32_d75": "'python3' 'run_slam.py' '<TUM_ROOT>/rgbd_dataset_freiburg1_room' --backend omega --output 'runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d75' --submap-size 32 --min-disparity 75 --overlap 1 --seed 0 --max-loops 1 --max-frames 0 --conf-threshold 25 --backend-policy legacy --lc-thres 0.95 --prediction-cache 'runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d75' --max-cloud-points 100000 --threads 4 --gpu-need-mb 9500 --offload-keyframes"
+          },
+          "status": "complete",
+          "frozen_selection_source": "runs/adaptation/frontend_development/frozen_selection.json",
+          "selection_performed": false
+        },
+        "baseline_and_frozen_candidate": {
+          "s16_d50": {
+            "metadata_excerpt": {
+              "schema": "vggt_omega_slam.run.v1",
+              "status": "complete",
+              "backend": "omega",
+              "args": {
+                "input": "<TUM_ROOT>/rgbd_dataset_freiburg1_room",
+                "backend": "omega",
+                "output": "runs/adaptation/online/room_legacy",
+                "submap_size": 16,
+                "overlap": 1,
+                "min_disparity": 50.0,
+                "conf_threshold": 25.0,
+                "backend_policy": "legacy",
+                "scale_confidence_percentile": null,
+                "scale_confidence_scope": "submap",
+                "cross_noise_multiplier": 1.0,
+                "loop_noise_multiplier": 1.0,
+                "edge_huber_delta": null,
+                "lc_thres": 0.95,
+                "max_loops": 1,
+                "seed": 0,
+                "max_frames": 0,
+                "similarity_config": "config/omega_similarity.json",
+                "omega_layer": null,
+                "omega_tau": null,
+                "groundtruth": null,
+                "max_cloud_points": 2000000,
+                "threads": 4,
+                "cuda_memory_limit_gb": 10.0,
+                "gpu_need_mb": null,
+                "verify_checkpoints": false,
+                "prediction_cache": "runs/adaptation/predictions/room_legacy",
+                "preflight_only": false
+              },
+              "seed": 0,
+              "similarity": {
+                "layer": 15,
+                "tau": 0.3764137492904663,
+                "token_offset": 17,
+                "source": "config file config/omega_similarity.json",
+                "upstream_test": "image_match_ratio < 0.95  <=>  raw < tau",
+                "scaled_ratio": "0.95 * raw / tau",
+                "block_type": "global"
+              },
+              "front_end": {
+                "name": "VGGT-Omega 1B (512 balanced)",
+                "weights_dtype": "float32",
+                "aggregator_autocast": "bfloat16",
+                "loader": "vggt_omega.utils.load_fn balanced/512",
+                "decoder": "vggt_omega.utils.pose_enc.encoding_to_camera"
+              },
+              "backend_policy": {
+                "name": "legacy",
+                "scale_confidence_percentile": null,
+                "scale_confidence_scope": "submap",
+                "cross_submap_noise_multiplier": 1.0,
+                "loop_noise_multiplier": 1.0,
+                "huber_delta": null,
+                "min_scale_points": 100
+              },
+              "parameters_effective": {
+                "overlapping_window_size": 1,
+                "downsample_factor": 1,
+                "use_optical_flow_downsample": true
+              },
+              "summary": {
+                "images_used": 1362,
+                "keyframes": 186,
+                "submaps_processed": 12,
+                "submaps_in_map": 16,
+                "loop_closures_accepted": 4,
+                "loop_candidates_total": 7,
+                "total_seconds": 73.71674036979675,
+                "forward_seconds_total": 30.340799791985773,
+                "forward_seconds_mean_per_submap": 2.5283999826654813,
+                "forward_seconds_median_per_submap": 2.6215925270007574,
+                "forward_seconds_per_keyframe": 0.16312257952680523,
+                "optimize_seconds_total": 0.1424076179973781,
+                "peak_cuda_allocated_bytes": 8656930816,
+                "peak_cuda_reserved_bytes": 8770289664,
+                "upstream_style_timers": {
+                  "vggt_timer_total": 32.015526261980995,
+                  "loop_closure_timer_total": 0.2549753179628169,
+                  "keyframe_selection_total": 6.648707706001005
+                }
+              },
+              "ate": {
+                "status": "ok",
+                "ate_rmse_m": 0.07309544886221252,
+                "scale": 1.5452963703885334,
+                "n_associated": 374,
+                "n_estimate_rows": 197,
+                "n_groundtruth": 4887,
+                "ate_rmse_se3_no_scale_m": 0.3613085206112265
+              }
+            }
+          },
+          "s32_d25": {
+            "metadata_excerpt": {
+              "schema": "vggt_omega_slam.run.v1",
+              "status": "complete",
+              "backend": "omega",
+              "args": {
+                "input": "<TUM_ROOT>/rgbd_dataset_freiburg1_room",
+                "backend": "omega",
+                "output": "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d25",
+                "submap_size": 32,
+                "overlap": 1,
+                "min_disparity": 25.0,
+                "conf_threshold": 25.0,
+                "backend_policy": "legacy",
+                "scale_confidence_percentile": null,
+                "scale_confidence_scope": "submap",
+                "cross_noise_multiplier": 1.0,
+                "loop_noise_multiplier": 1.0,
+                "edge_huber_delta": null,
+                "lc_thres": 0.95,
+                "max_loops": 1,
+                "seed": 0,
+                "max_frames": 0,
+                "similarity_config": "config/omega_similarity.json",
+                "omega_layer": null,
+                "omega_tau": null,
+                "groundtruth": null,
+                "max_cloud_points": 100000,
+                "threads": 4,
+                "cuda_memory_limit_gb": 10.0,
+                "gpu_need_mb": 9500,
+                "verify_checkpoints": false,
+                "prediction_cache": "runs/adaptation/frontend_validation_cpu_storage/room/predictions/s32_d25",
+                "offload_keyframes": true,
+                "preflight_only": false
+              },
+              "seed": 0,
+              "similarity": {
+                "layer": 15,
+                "tau": 0.3764137492904663,
+                "token_offset": 17,
+                "source": "config file config/omega_similarity.json",
+                "upstream_test": "image_match_ratio < 0.95  <=>  raw < tau",
+                "scaled_ratio": "0.95 * raw / tau",
+                "block_type": "global"
+              },
+              "front_end": {
+                "name": "VGGT-Omega 1B (512 balanced)",
+                "weights_dtype": "float32",
+                "aggregator_autocast": "bfloat16",
+                "loader": "vggt_omega.utils.load_fn balanced/512",
+                "decoder": "vggt_omega.utils.pose_enc.encoding_to_camera"
+              },
+              "backend_policy": {
+                "name": "legacy",
+                "scale_confidence_percentile": null,
+                "scale_confidence_scope": "submap",
+                "cross_submap_noise_multiplier": 1.0,
+                "loop_noise_multiplier": 1.0,
+                "huber_delta": null,
+                "min_scale_points": 100
+              },
+              "parameters_effective": {
+                "overlapping_window_size": 1,
+                "downsample_factor": 1,
+                "use_optical_flow_downsample": true
+              },
+              "summary": {
+                "images_used": 1362,
+                "keyframes": 369,
+                "submaps_processed": 12,
+                "submaps_in_map": 17,
+                "loop_closures_accepted": 5,
+                "loop_candidates_total": 8,
+                "total_seconds": 155.40260910987854,
+                "forward_seconds_total": 78.82807691399648,
+                "forward_seconds_mean_per_submap": 6.569006409499707,
+                "forward_seconds_median_per_submap": 6.891535330003535,
+                "forward_seconds_per_keyframe": 0.21362622469917747,
+                "optimize_seconds_total": 0.1697917079727631,
+                "peak_cuda_allocated_bytes": 9420850176,
+                "peak_cuda_reserved_bytes": 9598664704,
+                "upstream_style_timers": {
+                  "vggt_timer_total": 81.94457155797863,
+                  "loop_closure_timer_total": 1.0820753349835286,
+                  "keyframe_selection_total": 6.8287233189475955
+                }
+              },
+              "ate": {
+                "status": "ok",
+                "ate_rmse_m": 0.07580587558799066,
+                "scale": 1.537608260554675,
+                "n_associated": 741,
+                "n_estimate_rows": 380,
+                "n_groundtruth": 4887,
+                "ate_rmse_se3_no_scale_m": 0.35633263588899483
+              }
+            }
+          }
+        },
+        "accuracy_comparison": {
+          "baseline_ate_rmse_m": 0.07309544886221252,
+          "candidate_ate_rmse_m": 0.07580587558799066,
+          "candidate_over_baseline": 1.0370806495885592,
+          "passes_two_percent_improvement_gate": false,
+          "ate_change_percent": 3.7080649588559167
+        },
+        "common_support": {
+          "schema": "vggt_omega_slam.common_trajectory_support.v1",
+          "gpu_used": false,
+          "baseline": {
+            "path": "runs/adaptation/online/room_legacy/poses.tum",
+            "n_input_rows": 197,
+            "n_nonfinite_dropped": 0,
+            "n_finite_rows": 197,
+            "n_unique_timestamps": 186,
+            "n_duplicate_rows_dropped": 11,
+            "n_duplicate_timestamps": 11,
+            "duplicates_policy": "first occurrence in input file, then sort by timestamp",
+            "input_had_decreasing_timestamps": false,
+            "time_range_s": [
+              1305031910.765238,
+              1305031955.272905
+            ],
+            "timestamp_intervals": {
+              "count": 185,
+              "min_s": 0.09975695610046387,
+              "q25_s": 0.13207578659057617,
+              "median_s": 0.16807007789611816,
+              "q75_s": 0.23604822158813477,
+              "q95_s": 0.6256219863891596,
+              "max_s": 1.2999961376190186,
+              "mean_s": 0.24058198413333376
+            }
+          },
+          "candidate": {
+            "path": "runs/adaptation/frontend_validation_cpu_storage/room/runs/s32_d25/poses.tum",
+            "n_input_rows": 380,
+            "n_nonfinite_dropped": 0,
+            "n_finite_rows": 380,
+            "n_unique_timestamps": 369,
+            "n_duplicate_rows_dropped": 11,
+            "n_duplicate_timestamps": 11,
+            "duplicates_policy": "first occurrence in input file, then sort by timestamp",
+            "input_had_decreasing_timestamps": false,
+            "time_range_s": [
+              1305031910.765238,
+              1305031955.20496
+            ],
+            "timestamp_intervals": {
+              "count": 368,
+              "min_s": 0.031919002532958984,
+              "q25_s": 0.06800389289855957,
+              "median_s": 0.10000741481781006,
+              "q75_s": 0.13229525089263916,
+              "q95_s": 0.26799081563949584,
+              "max_s": 0.5359301567077637,
+              "mean_s": 0.1207601142966229
+            }
+          },
+          "groundtruth": {
+            "path": "<TUM_ROOT>/rgbd_dataset_freiburg1_room/groundtruth.txt",
+            "n_input_rows": 4887,
+            "n_nonfinite_dropped": 0,
+            "n_finite_rows": 4887,
+            "n_unique_timestamps": 4887,
+            "n_duplicate_rows_dropped": 0,
+            "n_duplicate_timestamps": 0,
+            "duplicates_policy": "first occurrence in input file, then sort by timestamp",
+            "input_had_decreasing_timestamps": false,
+            "time_range_s": [
+              1305031907.2496,
+              1305031956.1487
+            ],
+            "timestamp_intervals": {
+              "count": 4886,
+              "min_s": 0.00839996337890625,
+              "q25_s": 0.009999990463256836,
+              "median_s": 0.009999990463256836,
+              "q75_s": 0.009999990463256836,
+              "q95_s": 0.010100126266479492,
+              "max_s": 0.040400028228759766,
+              "mean_s": 0.010008002469347386
+            }
+          },
+          "limitation": "Piecewise linear interpolation between sparse keyframes is supplementary; it cannot establish the actual motion between those frames. No extrapolation is used.",
+          "selection": "supplementary validation only; original development ATE selection remains frozen",
+          "common_time_range_s": [
+            1305031910.765238,
+            1305031955.20496
+          ],
+          "common_groundtruth_support": {
+            "query_source": "unique ground-truth timestamps in common interval",
+            "n_gt_timestamps_excluded": 447,
+            "n_timestamps": 4440,
+            "small_sample": false,
+            "small_sample_definition": "fewer than 20 timestamps",
+            "alignment": "independent Sim(3) Umeyama alignment to identical ground-truth positions",
+            "baseline": {
+              "ate_rmse_m": 0.07321036702247748,
+              "ate_mean_m": 0.06781090018963551,
+              "ate_median_m": 0.06615600370868766,
+              "scale": 1.5482888738304457,
+              "rotation": [
+                [
+                  0.5920625385014419,
+                  -0.5494808905820705,
+                  0.5895190424306607
+                ],
+                [
+                  -0.8057924218898653,
+                  -0.39213535980531655,
+                  0.4437661911583836
+                ],
+                [
+                  -0.012669780112289185,
+                  -0.7377673145887454,
+                  -0.6749361941668391
+                ]
+              ],
+              "translation": [
+                -0.9330597474599697,
+                0.6636901599378812,
+                1.5867248585524354
+              ]
+            },
+            "candidate": {
+              "ate_rmse_m": 0.07849244608656283,
+              "ate_mean_m": 0.07265016733595951,
+              "ate_median_m": 0.07541766534211689,
+              "scale": 1.5362267195754484,
+              "rotation": [
+                [
+                  0.6042016197245297,
+                  -0.5571080437233136,
+                  0.5697113570405968
+                ],
+                [
+                  -0.7962566582152305,
+                  -0.3949730028386901,
+                  0.4582266483701075
+                ],
+                [
+                  -0.030261146213731632,
+                  -0.7304977444505708,
+                  -0.6822443172225472
+                ]
+              ],
+              "translation": [
+                -0.9187295485640422,
+                0.6676032731357789,
+                1.5909672646082942
+              ]
+            },
+            "status": "ok",
+            "candidate_over_baseline_rmse": 1.0721493318352526,
+            "rmse_difference_m": 0.005282079064085357,
+            "ratio_unavailable_reason": null,
+            "evaluated_time_range_s": [
+              1305031910.7695,
+              1305031955.1987
+            ],
+            "baseline_interpolation": {
+              "n_exact_samples": 0,
+              "n_interpolated_samples": 4440,
+              "bracketing_gap_distribution": {
+                "count": 4440,
+                "min_s": 0.09975695610046387,
+                "q25_s": 0.16799497604370117,
+                "median_s": 0.26392102241516113,
+                "q75_s": 0.567957878112793,
+                "q95_s": 1.2041049003601074,
+                "max_s": 1.2999961376190186,
+                "mean_s": 0.4020310009921993
+              },
+              "max_bracketing_gap_s": 1.2999961376190186
+            },
+            "candidate_interpolation": {
+              "n_exact_samples": 0,
+              "n_interpolated_samples": 4440,
+              "bracketing_gap_distribution": {
+                "count": 4440,
+                "min_s": 0.031919002532958984,
+                "q25_s": 0.0999290943145752,
+                "median_s": 0.13195514678955078,
+                "q75_s": 0.20016002655029297,
+                "q95_s": 0.4001619815826416,
+                "max_s": 0.5359301567077637,
+                "mean_s": 0.1656983959245252
+              },
+              "max_bracketing_gap_s": 0.5359301567077637
+            },
+            "timestamp_intervals": {
+              "count": 4439,
+              "min_s": 0.00839996337890625,
+              "q25_s": 0.009999990463256836,
+              "median_s": 0.009999990463256836,
+              "q75_s": 0.009999990463256836,
+              "q95_s": 0.010100126266479492,
+              "max_s": 0.040400028228759766,
+              "mean_s": 0.010008830802884824
+            }
+          },
+          "exact_shared_prediction_support": {
+            "n_timestamps": 72,
+            "small_sample": false,
+            "small_sample_definition": "fewer than 20 timestamps",
+            "alignment": "independent Sim(3) Umeyama alignment to identical ground-truth positions",
+            "baseline": {
+              "ate_rmse_m": 0.07534129447313379,
+              "ate_mean_m": 0.07042613278791207,
+              "ate_median_m": 0.06935048812917402,
+              "scale": 1.5489008333799181,
+              "rotation": [
+                [
+                  0.5928554496682622,
+                  -0.5508718931252484,
+                  0.5874202696223956
+                ],
+                [
+                  -0.8053037821937791,
+                  -0.40294128177535005,
+                  0.4348840556121055
+                ],
+                [
+                  -0.0028695266225565973,
+                  -0.7308751472076769,
+                  -0.6825051538348407
+                ]
+              ],
+              "translation": [
+                -0.9379154220297793,
+                0.665226197392464,
+                1.5766297173875456
+              ]
+            },
+            "candidate": {
+              "ate_rmse_m": 0.07312805290933785,
+              "ate_mean_m": 0.06778838030716684,
+              "ate_median_m": 0.06922080069794422,
+              "scale": 1.5482875650874415,
+              "rotation": [
+                [
+                  0.60774012254471,
+                  -0.5571321550653457,
+                  0.565911393454474
+                ],
+                [
+                  -0.7937693133084665,
+                  -0.4045156423223663,
+                  0.45419970537895316
+                ],
+                [
+                  -0.02412924986703941,
+                  -0.7252384827825717,
+                  -0.6880747941845329
+                ]
+              ],
+              "translation": [
+                -0.9374674069662915,
+                0.6673118011876674,
+                1.5857231644458338
+              ]
+            },
+            "status": "ok",
+            "candidate_over_baseline_rmse": 0.9706237916500736,
+            "rmse_difference_m": -0.0022132415637959313,
+            "ratio_unavailable_reason": null,
+            "groundtruth_interpolation": {
+              "n_exact_samples": 0,
+              "n_interpolated_samples": 72,
+              "bracketing_gap_distribution": {
+                "count": 72,
+                "min_s": 0.00950002670288086,
+                "q25_s": 0.009975016117095947,
+                "median_s": 0.009999990463256836,
+                "q75_s": 0.009999990463256836,
+                "q95_s": 0.010100126266479492,
+                "max_s": 0.010799884796142578,
+                "mean_s": 0.009998619556427002
+              },
+              "max_bracketing_gap_s": 0.010799884796142578
+            },
+            "query_source": "exact shared prediction timestamps within ground-truth range; ground truth linearly interpolated",
+            "time_range_s": [
+              1305031910.765238,
+              1305031954.136939
+            ],
+            "timestamp_intervals": {
+              "count": 71,
+              "min_s": 0.10005402565002441,
+              "q25_s": 0.16801857948303223,
+              "median_s": 0.2999601364135742,
+              "q75_s": 0.8661129474639893,
+              "q95_s": 1.6680424213409424,
+              "max_s": 5.001725912094116,
+              "mean_s": 0.6108690281988869
+            }
+          },
+          "status": "ok"
+        }
       }
     },
     "original_validation_preserved": true,
     "configuration_reselected": false,
     "adoption_criterion": {
       "definition": "A default change needs at least 2% lower ATE on each of desk2 and room vs freshly reproduced matching legacy; otherwise expose opt-in and preserve legacy default.",
-      "status": "not_established_gate_and_validation_pending",
+      "exact_execution_gate_passed": true,
+      "both_validation_accuracy_scores_available": true,
+      "per_sequence_candidate_over_baseline": {
+        "desk2": 0.9680152349564489,
+        "room": 1.0370806495885592
+      },
+      "validation_geometric_mean_ratio": 1.0019530271825399,
       "met": false,
-      "default_changed_by_update_script": false
+      "default_changed_by_update_script": false,
+      "note": "This reports the original >=2% own-trajectory ATE improvement criterion on each sequence. Supplementary interpolated results do not reselect parameters or introduce a new threshold. Passing the criterion does not edit a default configuration."
     },
-    "note": "The execution-only CPU storage change is queued behind the existing shared GPU lock. No equivalence pass or retry accuracy result is claimed. Original hardware-limited validation remains in original_validation."
+    "note": "Execution-only retry is separate from original_validation; no configuration re-selection. Status and criterion reflect only available completed artifacts.",
+    "supplementary_common_time": {
+      "per_sequence_ratios": {
+        "desk2": 0.9026363538920157,
+        "room": 1.0721493318352526
+      },
+      "geometric_mean_ratio": 0.9837484250129873,
+      "note": "Linear interpolation of sparse predictions; not an isolated keyframe geometric-error measurement."
+    }
   }
 }
