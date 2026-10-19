@@ -1,81 +1,132 @@
 # VGGT-Ω-SLAM
 
-**A runnable, unofficial VGGT-Ω front end for VGGT-SLAM 2.0, with matched VGGT comparisons and camera-bias diagnostics.**
+**Monocular visual SLAM with VGGT-Ω geometry, loop closure, and SL(4) graph optimization.**
 
-This research preview connects VGGT-Ω camera/depth predictions to the existing VGGT-SLAM 2.0 keyframe selection, submaps, SALAD retrieval, and SL(4) optimization. It includes a headless runner, calibrated attention-based loop verification, trajectory evaluation, fixed frame lists, and measured results on TUM RGB-D.
+[![CPU checks](https://github.com/KaiFeng-Frank/VGGT-Omega-SLAM/actions/workflows/cpu-tests.yml/badge.svg?branch=main)](https://github.com/KaiFeng-Frank/VGGT-Omega-SLAM/actions/workflows/cpu-tests.yml)
 
-The project is independent of the VGGT-Ω and VGGT-SLAM authors. The released experiments use the original **VGGT-Ω-1B-512** checkpoint. They are not a reproduction of the newer 416-checkpoint benchmark or a claim of improved SLAM accuracy.
+An independent integration of [VGGT-Ω](https://github.com/facebookresearch/vggt-omega) into [VGGT-SLAM 2.0](https://github.com/MIT-SPARK/VGGT-SLAM). Run a timestamped RGB sequence to produce a camera trajectory and point cloud, switch between Ω and VGGT, and replay cached predictions to study backend choices without rerunning the network.
 
-[Installation](docs/INSTALL.md) · [Reproduction](docs/REPRODUCE.md) · [Results and corrections](docs/RESULTS.md) · [System adaptation](docs/ADAPTATION.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+中文：将 **VGGT-Ω 接入完整的单目 SLAM 流程**，覆盖关键帧、子图、回环检测、图优化与轨迹/点云导出，并提供 VGGT 对照、CPU 后端重放和可复现实验。
 
-## What is included
+[Installation](docs/INSTALL.md) · [Quick start](#quick-start) · [System adaptation](docs/ADAPTATION.md) · [Reproduction](docs/REPRODUCE.md) · [Results](docs/RESULTS.md)
 
-- Switch between `--backend omega` and `--backend vggt` in the same SLAM runner.
-- An Ω adapter using the official image loader and camera decoder, with attention-hook loop verification.
-- TUM-format trajectories, run metadata, keyframe records, point-cloud export, and Sim(3)-aligned ATE evaluation.
-- Fixed-window diagnostics for focal length, translation shape, lens distortion, principal point, input size, and numerical precision.
-- Lossless prediction caches and CPU backend replay, opt-in confidence/noise policies, and a frozen development/validation sweep for keyframe spacing and submap size.
-- Optional CPU storage for historical keyframe images, with lossless transfers for loop retrieval.
-- Small result records and frame manifests. Download model weights and datasets from their original providers.
+## Features
 
-## Current findings
-
-On **freiburg1_desk, freiburg1_desk2, and freiburg1_room**, Ω has a higher final ATE than VGGT in all 12 paired configurations: raw/undistorted images × submap size 16/32 × three sequences. These are single runs with seed 0.
-
-![Sim(3)-aligned SLAM ATE across the 12 paired configurations](results/figures/slam_ate.png)
-
-The focal-length overestimate persists after undistortion: approximately **+13.0% → +13.5%**. Across 20 matched submaps, the median translation-shape error ratio Ω/VGGT is approximately **1.298 → 1.246**, using SO(3)-projected camera geometry. These are observations about this checkpoint and these sequences, not a general ranking of the models.
-
-An additional **104 successful diagnostic forwards** found:
-
-| Control | Focal-length result |
+| Component | What this repository provides |
 |---|---|
-| Full fp32, six matched windows | +13.966% → +13.945% |
-| Centered principal point, equal zoom, 20 windows | +12.030% → +11.475% |
-| 512×384 / 592×448 / 640×480 inputs | +14.917% / +13.469% / +12.834% |
+| **Ω frontend** | Official balanced preprocessing for the 512 checkpoint, official camera decoding, and the model's native precision policy. |
+| **Loop closure** | SALAD candidate retrieval and Ω-specific attention verification with a separately calibrated configuration. |
+| **SLAM pipeline** | Optical-flow keyframes, overlapping submaps, SL(4) graph optimization, and trajectory/point-cloud export through a headless runner. |
+| **Backend experiments** | Optional confidence selection, graph-noise and Huber policies; lossless prediction caches and CPU replay. |
+| **Memory management** | A shared GPU lock, configurable memory reserve, and optional CPU storage for historical keyframe images. |
+| **Reproducibility** | Pinned upstream sources, checkpoint identities, frame manifests, run metadata, corrected geometry metrics, and published experiment records. |
 
-**Correction:** the initial claim that Ω had roughly half the relative rotation error was a bf16/nonorthogonal-matrix metric artifact. After projection onto SO(3), adjacent-frame relative rotation errors are comparable: approximately **0.715° for VGGT and 0.731° for Ω** on the raw windows. Public geometry helpers include this correction and regression tests.
+The Ω adapter handles preprocessing, camera representation, precision, and attention-based loop verification in [vos/omega_backend.py](vos/omega_backend.py). The original VGGT frontend remains available for comparisons through the same runner.
 
-The remaining focal bias is present in the model's predicted FoV. Its training-level cause, and whether it causes the translation gap, remain unresolved. See [the result definitions and limitations](docs/RESULTS.md) before comparing numbers across metric versions.
+## Pipeline
 
-The [system adaptation experiments](docs/ADAPTATION.md) retain the original defaults. Confidence and graph-noise changes did not improve both validation sequences. A six-setting frontend search selected 32-frame submaps with a 25-pixel keyframe threshold on `desk` (3.15% lower ATE). After CPU image storage passed exact prediction/trajectory equivalence and resolved the original VRAM-budget failures, the frozen setting lowered `desk2` ATE by 3.20% but increased `room` ATE by 3.71%. It therefore fails the predefined requirement of at least 2% improvement on each validation sequence. [The full result record](results/adaptation_frontend.json) preserves the original failures, equivalence checks, and completed retries; the denser keyframe setting also uses more inference time.
+```mermaid
+flowchart LR
+    A["RGB sequence"] --> B["Keyframes and submaps"]
+    B --> C["VGGT-Ω / VGGT"]
+    C --> D["SL(4) graph"]
+    D --> E["Trajectory and point cloud"]
+    B --> F["SALAD retrieval"]
+    F --> G["Attention verification"]
+    G --> D
+    C -.-> H["Optional prediction cache"]
+    H --> I["CPU backend replay"]
+```
 
-## Run a sequence
+The runner uses RGB images. Ground truth, when available, is used for final evaluation. Trajectories and point clouds retain monocular scale; TUM evaluation reports Sim(3)-aligned ATE.
 
-First follow [installation](docs/INSTALL.md): fetch the pinned upstream sources, install a GTSAM build with **SL4**, and obtain the three checkpoints. Source paths, checkpoint paths, and dataset roots are configurable through `VOS_*` environment variables.
+## Quick start
+
+**Environment:** Linux, Python 3.11, an NVIDIA CUDA GPU, and GTSAM with SL(4) Python bindings. The supported Ω checkpoint is **VGGT-Ω-1B-512**. CPU tests, preflight, and cached backend replay are available separately from CUDA inference.
 
 ```bash
-python tools/setup_sources.py
-python run_slam.py --preflight-only --output runs/preflight
+git clone https://github.com/KaiFeng-Frank/VGGT-Omega-SLAM.git
+cd VGGT-Omega-SLAM
+```
+
+Follow the [installation guide](docs/INSTALL.md) to create the environment, fetch pinned sources, obtain checkpoints, and set their `VOS_*` paths. Then check the runtime and run a sequence:
+
+```bash
+python run_slam.py --preflight-only
 
 python run_slam.py data/tum_rgbd/rgbd_dataset_freiburg1_desk \
-  --backend omega --submap-size 16 --max-loops 1 --seed 0 \
+  --backend omega \
+  --submap-size 16 --min-disparity 50 --max-loops 1 --seed 0 \
   --output runs/desk_omega
+```
 
+The input can be a TUM sequence directory or an image directory with timestamped filenames. Use a **new output directory** for each run. A TUM sequence's `groundtruth.txt` is detected automatically.
+
+For the VGGT comparison, install its checkpoint as described in the guide and run:
+
+```bash
 python run_slam.py data/tum_rgbd/rgbd_dataset_freiburg1_desk \
-  --backend vggt --submap-size 16 --max-loops 1 --seed 0 \
+  --backend vggt \
+  --submap-size 16 --min-disparity 50 --max-loops 1 --seed 0 \
   --output runs/desk_vggt
 ```
 
-Output directories must be new. An available `groundtruth.txt` is evaluated automatically; predictions retain monocular scale until evaluation alignment. The standalone GPU lock serializes participating jobs and reserves memory for other applications.
+### Outputs
 
-The frozen loop-verification settings are layer **15** and threshold **0.3764**. They were calibrated on a separate development sequence, not these TUM sequences. That sequence is not distributed, so exact calibration-data replay is not included; the selected configuration, calibration procedure, and synthetic tests are provided.
+```text
+runs/desk_omega/
+├── poses.tum       # Timestamped camera trajectory
+├── cloud.ply       # Reconstructed point cloud
+├── keyframes.csv   # Selected frames
+├── metadata.json   # Configuration, versions, timings and run status
+├── run.log         # Execution log
+└── ate.json        # Evaluation when ground truth is available
+```
 
-## Repository map
+### Useful options
 
-| Path | Purpose |
+| Option | Purpose |
 |---|---|
-| `run_slam.py`, `eval_ate.py` | Headless SLAM and trajectory evaluation |
-| `vos/` | Front-end adapters, geometry, calibration, environment, GPU lock |
-| `tools/` | Dependency setup, experiment drivers, and diagnostics |
-| `config/omega_similarity.json` | Frozen Ω loop-verification configuration |
-| `results/` | Published measurements and exact frame selections |
-| `tests/` | CPU geometry, adapter, calibration, and runner checks |
+| `--submap-size 16` | Number of new keyframes per submap; a full window also includes one anchor or overlap frame. |
+| `--min-disparity 50` | Keyframe-selection motion threshold in pixels. |
+| `--max-loops 0` | Disable loop closure for an ablation. |
+| `--offload-keyframes` | Store historical images on CPU and restore retrieved loop images as needed. |
+| `--prediction-cache runs/desk_cache` | Save complete predictions for CPU backend replay. |
+| `--backend-policy legacy` | Preserve the original backend; experimental confidence/noise policies are opt-in. |
 
-## Attribution and use
+CPU image storage reduces accumulated historical-image memory; model inference still runs on CUDA. On a shared workstation, configure the shared lock and idle checks using the [GPU execution guide](docs/ADAPTATION.md#shared-gpu-execution-and-allocator-margin).
 
-Built on [VGGT-Ω](https://github.com/facebookresearch/vggt-omega), [VGGT-SLAM](https://github.com/MIT-SPARK/VGGT-SLAM), [VGGT](https://github.com/facebookresearch/vggt), [SALAD](https://github.com/serizba/salad), [DINOv2](https://github.com/facebookresearch/dinov2), and [GTSAM](https://github.com/borglab/gtsam). Evaluation uses the [TUM RGB-D dataset](https://cvg.cit.tum.de/data/datasets/rgbd-dataset).
+## Validation and experiments
+
+The published experiments use **VGGT-Ω-1B-512** on TUM RGB-D `freiburg1_desk`, `freiburg1_desk2`, and `freiburg1_room`.
+
+- **Replay verified:** the legacy CPU backend reproduces all three recorded online trajectories exactly. The CPU image-storage path also passed an exact prediction/trajectory check on `desk` before completing both validation sequences.
+- **Accuracy measured:** VGGT has lower ATE in all 12 original matched configurations. Ω-specific confidence, graph-noise, submap, and keyframe-density experiments did not produce consistent gains across both validation sequences, so the original defaults remain.
+- **Diagnostics published:** focal-bias controls, corrected rotation metrics, per-window measurements, and the full adaptation results are available in the linked records. The focal-bias root cause remains unresolved.
+
+| Guide | Contents |
+|---|---|
+| [Installation](docs/INSTALL.md) | Dependencies, checkpoints, source revisions, and environment configuration |
+| [Reproduction](docs/REPRODUCE.md) | Commands and datasets for the archived comparisons |
+| [System adaptation](docs/ADAPTATION.md) | Ω integration experiments, CPU replay, memory options, and frozen validation results |
+| [Results and metric corrections](docs/RESULTS.md) | Full ATE tables, focal diagnostics, rotation correction, and evaluation definitions |
+| [Published records](results/) | Machine-readable evidence and exact frame selections |
+
+## Repository layout
+
+```text
+run_slam.py     Headless SLAM runner
+eval_ate.py     Trajectory evaluation
+vos/           Model adapters, backend policies, geometry, caching and GPU control
+tools/         Setup, calibration, reproduction and diagnostic scripts
+config/        Source provenance and frozen Ω loop-verification settings
+docs/          Installation, reproduction and experiment documentation
+results/       Published measurements and frame manifests
+tests/         CPU unit and integration checks
+```
+
+## Acknowledgments and license
+
+Built on [VGGT-Ω](https://github.com/facebookresearch/vggt-omega), [VGGT-SLAM](https://github.com/MIT-SPARK/VGGT-SLAM), [VGGT](https://github.com/facebookresearch/vggt), [SALAD](https://github.com/serizba/salad), [DINOv2](https://github.com/facebookresearch/dinov2), and [GTSAM](https://github.com/borglab/gtsam). Evaluation uses the [TUM RGB-D dataset](https://cvg.cit.tum.de/data/datasets/rgbd-dataset). This is an independent, unofficial research integration.
 
 Upstream components have different licenses; Ω code, weights, and derived results carry noncommercial research conditions. This repository does not relicense those materials. Read [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-中文：这是 **VGGT-Ω 接入 VGGT-SLAM 2.0 的非官方研究预览**。已公开接入代码、复现步骤、对照结果和原因排查；当前 TUM fr1 测试中 Ω 未超过 VGGT。焦距偏差根因仍在调查，早期旋转误差结论已订正。
