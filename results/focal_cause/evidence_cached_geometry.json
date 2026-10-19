@@ -1,0 +1,5840 @@
+{
+  "rows": [
+    {
+      "cond": "raw",
+      "seq": "desk",
+      "backend": "vggt",
+      "tag": "A_desk_00",
+      "n": 17,
+      "ate_m": 0.01579564041640421,
+      "gt_path_m": 2.4779732085794492,
+      "ate_norm": 0.006374419368908106,
+      "ate_interp_gt_m": 0.01594282217118557,
+      "interp_over_nearest_ate": 1.009317871950827,
+      "max_abs_dt_s": 0.004189014434814453,
+      "rotation_anchored_ate_m": 0.01889926109800763,
+      "rotation_alignment_disagreement_deg": 1.657639804707782,
+      "focal_ratio": 1.02812479400068,
+      "focal_bias": 0.02812479400067991,
+      "step_axis_slopes": {
+        "axis": [
+          0.7470901530562505,
+          0.7804105211638502,
+          0.6962574352354642
+        ],
+        "z_over_xy": 0.9264440310788532,
+        "gt_axis_energy_fraction": [
+          0.7248311966630758,
+          0.11164677249504486,
+          0.1635220308418793
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.751103710579085,
+          0.7644915391420809,
+          0.7260297575928472
+        ],
+        "z_over_xy": 0.9658106221903847,
+        "gt_axis_energy_fraction": [
+          0.9050126690150216,
+          0.04448699931725318,
+          0.05050033166772523
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.016578000431980527,
+      "naive_focal_z_correction_ratio": 1.0495301231828382,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.8204311836259424,
+      "interp_projected_rel_rot_mean_deg": 0.7864746675153561,
+      "local_step_rel_dir_mean_deg": 7.589959086993817,
+      "gt_e2e_rot_deg": 55.87973238106455,
+      "gt_firstcam_bbox_m": [
+        1.6519707605191674,
+        0.4741246166883667,
+        0.5432522910642339
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk",
+      "backend": "vggt",
+      "tag": "A_desk_01",
+      "n": 17,
+      "ate_m": 0.02631465564556849,
+      "gt_path_m": 2.5519958418375497,
+      "ate_norm": 0.01031140224218421,
+      "ate_interp_gt_m": 0.02628637106117608,
+      "interp_over_nearest_ate": 0.9989251394822196,
+      "max_abs_dt_s": 0.003670930862426758,
+      "rotation_anchored_ate_m": 0.02693393797724258,
+      "rotation_alignment_disagreement_deg": 1.329713901697421,
+      "focal_ratio": 1.0314966377212336,
+      "focal_bias": 0.03149663772123357,
+      "step_axis_slopes": {
+        "axis": [
+          0.7040171104916856,
+          0.6764776108748641,
+          0.6933562018432157
+        ],
+        "z_over_xy": 0.9909448502557152,
+        "gt_axis_energy_fraction": [
+          0.7145886199843002,
+          0.13313551340011215,
+          0.15227586661558773
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7041955448673317,
+          0.7268876315900397,
+          0.690267139487594
+        ],
+        "z_over_xy": 0.9741060833913965,
+        "gt_axis_energy_fraction": [
+          0.48376351630031966,
+          0.11703631852054128,
+          0.3992001651791389
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.027415473242264617,
+      "naive_focal_z_correction_ratio": 1.041832871063297,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 1.24635587380739,
+      "interp_projected_rel_rot_mean_deg": 1.2501249686221931,
+      "local_step_rel_dir_mean_deg": 13.31735863836258,
+      "gt_e2e_rot_deg": 17.408524568695203,
+      "gt_firstcam_bbox_m": [
+        0.7716953642620318,
+        0.41254174435445956,
+        0.7421400629823216
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk",
+      "backend": "vggt",
+      "tag": "A_desk_02",
+      "n": 17,
+      "ate_m": 0.020407173609348284,
+      "gt_path_m": 3.409762020626444,
+      "ate_norm": 0.005984926069884215,
+      "ate_interp_gt_m": 0.02047329362042434,
+      "interp_over_nearest_ate": 1.003240037662333,
+      "max_abs_dt_s": 0.0037360191345214844,
+      "rotation_anchored_ate_m": 0.023452567336002716,
+      "rotation_alignment_disagreement_deg": 0.9667213649933197,
+      "focal_ratio": 1.0545374361847952,
+      "focal_bias": 0.05453743618479523,
+      "step_axis_slopes": {
+        "axis": [
+          0.5779508610430351,
+          0.5724918925499735,
+          0.5637259314340418
+        ],
+        "z_over_xy": 0.9785093283464638,
+        "gt_axis_energy_fraction": [
+          0.5613457336757428,
+          0.28634465947871485,
+          0.15230960684554223
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5557068977859217,
+          0.5777264473228843,
+          0.5668890956831143
+        ],
+        "z_over_xy": 1.0131226674197484,
+        "gt_axis_energy_fraction": [
+          0.5400655951605878,
+          0.11405655609968846,
+          0.3458778487397236
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.0226155134537823,
+      "naive_focal_z_correction_ratio": 1.1082139000092792,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 1.226161956792051,
+      "interp_projected_rel_rot_mean_deg": 1.157628921955201,
+      "local_step_rel_dir_mean_deg": 8.781056758549905,
+      "gt_e2e_rot_deg": 81.16196833552179,
+      "gt_firstcam_bbox_m": [
+        1.7117770450029097,
+        0.7716327008116097,
+        1.2027440896688026
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk",
+      "backend": "omega",
+      "tag": "A_desk_00",
+      "n": 17,
+      "ate_m": 0.035821762510840086,
+      "gt_path_m": 2.4779732085794492,
+      "ate_norm": 0.014456073369483955,
+      "ate_interp_gt_m": 0.035900894292180935,
+      "interp_over_nearest_ate": 1.0022090420960417,
+      "max_abs_dt_s": 0.004189014434814453,
+      "rotation_anchored_ate_m": 0.037531129003140415,
+      "rotation_alignment_disagreement_deg": 2.5736672288350615,
+      "focal_ratio": 1.137655887578418,
+      "focal_bias": 0.13765588757841796,
+      "step_axis_slopes": {
+        "axis": [
+          0.700184179009343,
+          0.676168433231576,
+          0.5571236369785119
+        ],
+        "z_over_xy": 0.7993409358641977,
+        "gt_axis_energy_fraction": [
+          0.7248311966630758,
+          0.11164677249504486,
+          0.1635220308418793
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6759093638890914,
+          0.6457154446304981,
+          0.6592101728765762
+        ],
+        "z_over_xy": 0.9773393137977014,
+        "gt_axis_energy_fraction": [
+          0.9050126690150216,
+          0.04448699931725318,
+          0.05050033166772523
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.0380372793173031,
+      "naive_focal_z_correction_ratio": 1.0618483472384301,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.8544795291926828,
+      "interp_projected_rel_rot_mean_deg": 0.8310047396218363,
+      "local_step_rel_dir_mean_deg": 11.672827273107922,
+      "gt_e2e_rot_deg": 55.87973238106455,
+      "gt_firstcam_bbox_m": [
+        1.6519707605191674,
+        0.4741246166883667,
+        0.5432522910642339
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk",
+      "backend": "omega",
+      "tag": "A_desk_01",
+      "n": 17,
+      "ate_m": 0.025957390399186823,
+      "gt_path_m": 2.5519958418375497,
+      "ate_norm": 0.010171407795279305,
+      "ate_interp_gt_m": 0.025827392424530363,
+      "interp_over_nearest_ate": 0.9949918704208212,
+      "max_abs_dt_s": 0.003670930862426758,
+      "rotation_anchored_ate_m": 0.03032682622275103,
+      "rotation_alignment_disagreement_deg": 4.124162003407268,
+      "focal_ratio": 1.1582320899328193,
+      "focal_bias": 0.15823208993281934,
+      "step_axis_slopes": {
+        "axis": [
+          0.8053867754077544,
+          0.730888675863857,
+          0.7501644904519659
+        ],
+        "z_over_xy": 0.9451643654138696,
+        "gt_axis_energy_fraction": [
+          0.7145886199843002,
+          0.13313551340011215,
+          0.15227586661558773
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.831534433187579,
+          0.8292044996977592,
+          0.7905067083599127
+        ],
+        "z_over_xy": 0.951179399749926,
+        "gt_axis_energy_fraction": [
+          0.48376351630031966,
+          0.11703631852054128,
+          0.3992001651791389
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.032329998953678156,
+      "naive_focal_z_correction_ratio": 1.2455026663501185,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 1.05224385075649,
+      "interp_projected_rel_rot_mean_deg": 1.0596074769782833,
+      "local_step_rel_dir_mean_deg": 10.4763591327169,
+      "gt_e2e_rot_deg": 17.408524568695203,
+      "gt_firstcam_bbox_m": [
+        0.7716953642620318,
+        0.41254174435445956,
+        0.7421400629823216
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk",
+      "backend": "omega",
+      "tag": "A_desk_02",
+      "n": 17,
+      "ate_m": 0.03169943480099529,
+      "gt_path_m": 3.409762020626444,
+      "ate_norm": 0.009296670738086129,
+      "ate_interp_gt_m": 0.03163854332288269,
+      "interp_over_nearest_ate": 0.9980790989336287,
+      "max_abs_dt_s": 0.0037360191345214844,
+      "rotation_anchored_ate_m": 0.04132412949698812,
+      "rotation_alignment_disagreement_deg": 2.1314161107184804,
+      "focal_ratio": 1.1689258732325019,
+      "focal_bias": 0.16892587323250186,
+      "step_axis_slopes": {
+        "axis": [
+          0.5824861933408718,
+          0.5566099607097341,
+          0.5298635156214949
+        ],
+        "z_over_xy": 0.9235168651170057,
+        "gt_axis_energy_fraction": [
+          0.5613457336757428,
+          0.28634465947871485,
+          0.15230960684554223
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5721951876462389,
+          0.5701500455323828,
+          0.5682248041053568
+        ],
+        "z_over_xy": 0.9936804183525481,
+        "gt_axis_energy_fraction": [
+          0.5400655951605878,
+          0.11405655609968846,
+          0.3458778487397236
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.045435171223528054,
+      "naive_focal_z_correction_ratio": 1.4333117138764093,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.948862670170098,
+      "interp_projected_rel_rot_mean_deg": 0.880217473845957,
+      "local_step_rel_dir_mean_deg": 8.330354587476185,
+      "gt_e2e_rot_deg": 81.16196833552179,
+      "gt_firstcam_bbox_m": [
+        1.7117770450029097,
+        0.7716327008116097,
+        1.2027440896688026
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_00",
+      "n": 15,
+      "ate_m": 0.016240732712866426,
+      "gt_path_m": 0.5368293712613814,
+      "ate_norm": 0.030253062858140146,
+      "ate_interp_gt_m": 0.016587660468748693,
+      "interp_over_nearest_ate": 1.0213615827571265,
+      "max_abs_dt_s": 0.00474095344543457,
+      "rotation_anchored_ate_m": 0.01819295584771201,
+      "rotation_alignment_disagreement_deg": 4.1871563250285115,
+      "focal_ratio": 0.9977784191778777,
+      "focal_bias": -0.0022215808221223154,
+      "step_axis_slopes": {
+        "axis": [
+          0.7142538979869721,
+          0.8494482311417267,
+          0.9070008116072783
+        ],
+        "z_over_xy": 1.2025196093156973,
+        "gt_axis_energy_fraction": [
+          0.60223936039175,
+          0.25302475110292993,
+          0.14473588850532013
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7612267546526629,
+          0.8755747825538329,
+          0.8151956794864227
+        ],
+        "z_over_xy": 1.0395363693358295,
+        "gt_axis_energy_fraction": [
+          0.678260417600871,
+          0.17044862758446797,
+          0.15129095481466098
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01623815348236135,
+      "naive_focal_z_correction_ratio": 0.9998411875528846,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.8003711369352793,
+      "interp_projected_rel_rot_mean_deg": 0.6703549887615774,
+      "local_step_rel_dir_mean_deg": 17.77540636295124,
+      "gt_e2e_rot_deg": 58.84639633477579,
+      "gt_firstcam_bbox_m": [
+        0.32320976608702867,
+        0.1919283356828636,
+        0.1992369753413975
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_01",
+      "n": 17,
+      "ate_m": 0.024239855684605557,
+      "gt_path_m": 2.2772127947057754,
+      "ate_norm": 0.010644528144651251,
+      "ate_interp_gt_m": 0.023360109218538802,
+      "interp_over_nearest_ate": 0.9637066128811372,
+      "max_abs_dt_s": 0.004786968231201172,
+      "rotation_anchored_ate_m": 0.026353940824492765,
+      "rotation_alignment_disagreement_deg": 1.5059747586982877,
+      "focal_ratio": 1.0059270111328018,
+      "focal_bias": 0.005927011132801807,
+      "step_axis_slopes": {
+        "axis": [
+          0.7314890441992284,
+          0.7135533600362751,
+          0.732445820562675
+        ],
+        "z_over_xy": 1.0028283270827418,
+        "gt_axis_energy_fraction": [
+          0.755054325433806,
+          0.04976244980756886,
+          0.19518322475862526
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7484453762489076,
+          0.7044267666458728,
+          0.739523332801373
+        ],
+        "z_over_xy": 1.0033628017406466,
+        "gt_axis_energy_fraction": [
+          0.4479511531305257,
+          0.15656685580710908,
+          0.3954819910623651
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.024239014173075755,
+      "naive_focal_z_correction_ratio": 0.9999652839711279,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 1.1756424726661605,
+      "interp_projected_rel_rot_mean_deg": 1.1110630778288841,
+      "local_step_rel_dir_mean_deg": 8.117121838461834,
+      "gt_e2e_rot_deg": 80.9142425883729,
+      "gt_firstcam_bbox_m": [
+        1.109943791367489,
+        0.616194849896728,
+        1.3168741119969471
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_02",
+      "n": 17,
+      "ate_m": 0.021430080750763244,
+      "gt_path_m": 1.2010399194821204,
+      "ate_norm": 0.01784293794331477,
+      "ate_interp_gt_m": 0.021519940735229375,
+      "interp_over_nearest_ate": 1.0041931705956326,
+      "max_abs_dt_s": 0.0047838687896728516,
+      "rotation_anchored_ate_m": 0.023722680806943224,
+      "rotation_alignment_disagreement_deg": 5.097582894322744,
+      "focal_ratio": 1.0208192176414395,
+      "focal_bias": 0.020819217641439458,
+      "step_axis_slopes": {
+        "axis": [
+          0.6272719845938857,
+          0.5151427966336755,
+          0.5710103234370258
+        ],
+        "z_over_xy": 0.9398691020839318,
+        "gt_axis_energy_fraction": [
+          0.5838208070455873,
+          0.12466013383349048,
+          0.2915190591209224
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6172784349852596,
+          0.6045230292815958,
+          0.6415643744575099
+        ],
+        "z_over_xy": 1.0507164194545293,
+        "gt_axis_energy_fraction": [
+          0.4074460928061032,
+          0.4481843650319263,
+          0.14436954216197032
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.021462574433054254,
+      "naive_focal_z_correction_ratio": 1.0015162650420648,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 1.3165388493611108,
+      "interp_projected_rel_rot_mean_deg": 1.2266717052447975,
+      "local_step_rel_dir_mean_deg": 24.336914425888608,
+      "gt_e2e_rot_deg": 41.772308979730816,
+      "gt_firstcam_bbox_m": [
+        0.6341685803985408,
+        0.5812067005265827,
+        0.39063942372021754
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_03",
+      "n": 17,
+      "ate_m": 0.02136101389441487,
+      "gt_path_m": 2.0583952857765633,
+      "ate_norm": 0.010377508169601195,
+      "ate_interp_gt_m": 0.020869509087462976,
+      "interp_over_nearest_ate": 0.9769905675179396,
+      "max_abs_dt_s": 0.004637956619262695,
+      "rotation_anchored_ate_m": 0.025831037872682164,
+      "rotation_alignment_disagreement_deg": 2.1551766009643507,
+      "focal_ratio": 1.0286867558062065,
+      "focal_bias": 0.0286867558062065,
+      "step_axis_slopes": {
+        "axis": [
+          0.6523303125737199,
+          0.6914909581630863,
+          0.7350371183994868
+        ],
+        "z_over_xy": 1.1209519109902701,
+        "gt_axis_energy_fraction": [
+          0.8601782972015927,
+          0.08166466427756441,
+          0.05815703852084278
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6649074884019244,
+          0.7085888325557509,
+          0.6955147607745535
+        ],
+        "z_over_xy": 1.0417160449304352,
+        "gt_axis_energy_fraction": [
+          0.8174623180678897,
+          0.055029033655049374,
+          0.12750864827706085
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.021997956311134683,
+      "naive_focal_z_correction_ratio": 1.0298179861624617,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.7194748954480715,
+      "interp_projected_rel_rot_mean_deg": 0.653197773291412,
+      "local_step_rel_dir_mean_deg": 6.72256519530864,
+      "gt_e2e_rot_deg": 62.13654595637829,
+      "gt_firstcam_bbox_m": [
+        1.6672896315487047,
+        0.4375892641111199,
+        0.5499854104450905
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_04",
+      "n": 17,
+      "ate_m": 0.015657135371356285,
+      "gt_path_m": 1.1951441835479057,
+      "ate_norm": 0.013100624666788322,
+      "ate_interp_gt_m": 0.015067701685349112,
+      "interp_over_nearest_ate": 0.9623536699385314,
+      "max_abs_dt_s": 0.004478931427001953,
+      "rotation_anchored_ate_m": 0.018242918486594963,
+      "rotation_alignment_disagreement_deg": 8.947915048050543,
+      "focal_ratio": 1.0137945492975688,
+      "focal_bias": 0.013794549297568848,
+      "step_axis_slopes": {
+        "axis": [
+          0.6544400944459284,
+          0.6681216035467936,
+          0.5884032723628877
+        ],
+        "z_over_xy": 0.898928780112886,
+        "gt_axis_energy_fraction": [
+          0.9591306951475902,
+          0.008515921666642516,
+          0.03235338318576745
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6467587092537548,
+          0.6292476851733658,
+          0.5494523549015217
+        ],
+        "z_over_xy": 0.8516877419795379,
+        "gt_axis_energy_fraction": [
+          0.9054134958520533,
+          0.09262445225128592,
+          0.0019620518966607524
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01564672362690596,
+      "naive_focal_z_correction_ratio": 0.9993350160036699,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.6929178272671741,
+      "interp_projected_rel_rot_mean_deg": 0.6829754903794831,
+      "local_step_rel_dir_mean_deg": 13.096230436562855,
+      "gt_e2e_rot_deg": 27.900331261827855,
+      "gt_firstcam_bbox_m": [
+        1.055935512863086,
+        0.3304998930808423,
+        0.05117497520955021
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_05",
+      "n": 17,
+      "ate_m": 0.020971951657826213,
+      "gt_path_m": 2.3095752493430153,
+      "ate_norm": 0.009080436614391292,
+      "ate_interp_gt_m": 0.02085882622492958,
+      "interp_over_nearest_ate": 0.9946058700333491,
+      "max_abs_dt_s": 0.004499912261962891,
+      "rotation_anchored_ate_m": 0.021103332789056288,
+      "rotation_alignment_disagreement_deg": 0.7021493866715844,
+      "focal_ratio": 1.0278438130979164,
+      "focal_bias": 0.027843813097916392,
+      "step_axis_slopes": {
+        "axis": [
+          0.7229184860946939,
+          0.7862268398676974,
+          0.7594414738952967
+        ],
+        "z_over_xy": 1.0389315403578503,
+        "gt_axis_energy_fraction": [
+          0.7052352279569302,
+          0.10295300124794957,
+          0.19181177079512027
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7048536752473034,
+          0.77127469879398,
+          0.7545320586578078
+        ],
+        "z_over_xy": 1.0625663156108116,
+        "gt_axis_energy_fraction": [
+          0.7635308079512189,
+          0.06552760454214718,
+          0.17094158750663402
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.019999611686972826,
+      "naive_focal_z_correction_ratio": 0.9536361714580563,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.9580374073246061,
+      "interp_projected_rel_rot_mean_deg": 0.9420733691371028,
+      "local_step_rel_dir_mean_deg": 6.825675877517601,
+      "gt_e2e_rot_deg": 25.94383634526146,
+      "gt_firstcam_bbox_m": [
+        0.9913134253554698,
+        0.38723871947308164,
+        0.5569084688129267
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_00",
+      "n": 15,
+      "ate_m": 0.020820317366427997,
+      "gt_path_m": 0.5368293712613814,
+      "ate_norm": 0.03878386407492338,
+      "ate_interp_gt_m": 0.02102598055778328,
+      "interp_over_nearest_ate": 1.009878004630559,
+      "max_abs_dt_s": 0.00474095344543457,
+      "rotation_anchored_ate_m": 0.02578889648752355,
+      "rotation_alignment_disagreement_deg": 13.401465617750238,
+      "focal_ratio": 1.1264595456990847,
+      "focal_bias": 0.12645954569908469,
+      "step_axis_slopes": {
+        "axis": [
+          0.6518514143328281,
+          0.6011017081312153,
+          0.7916120651257669
+        ],
+        "z_over_xy": 1.2430363576199916,
+        "gt_axis_energy_fraction": [
+          0.60223936039175,
+          0.25302475110292993,
+          0.14473588850532013
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6368928391397214,
+          0.7331921252338144,
+          0.8004039490391944
+        ],
+        "z_over_xy": 1.2196949497273084,
+        "gt_axis_energy_fraction": [
+          0.678260417600871,
+          0.17044862758446797,
+          0.15129095481466098
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02168188296060668,
+      "naive_focal_z_correction_ratio": 1.0413810019806868,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.9497438770443997,
+      "interp_projected_rel_rot_mean_deg": 0.8527153581713767,
+      "local_step_rel_dir_mean_deg": 22.813208934220576,
+      "gt_e2e_rot_deg": 58.84639633477579,
+      "gt_firstcam_bbox_m": [
+        0.32320976608702867,
+        0.1919283356828636,
+        0.1992369753413975
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_01",
+      "n": 17,
+      "ate_m": 0.0318558463317593,
+      "gt_path_m": 2.2772127947057754,
+      "ate_norm": 0.013988963352840812,
+      "ate_interp_gt_m": 0.030922271045839125,
+      "interp_over_nearest_ate": 0.9706937534731441,
+      "max_abs_dt_s": 0.004786968231201172,
+      "rotation_anchored_ate_m": 0.0407022076248503,
+      "rotation_alignment_disagreement_deg": 3.3178960040312777,
+      "focal_ratio": 1.1590735566713866,
+      "focal_bias": 0.15907355667138656,
+      "step_axis_slopes": {
+        "axis": [
+          0.6780950002444989,
+          0.6345085575732453,
+          0.6177803260684147
+        ],
+        "z_over_xy": 0.914688053036051,
+        "gt_axis_energy_fraction": [
+          0.755054325433806,
+          0.04976244980756886,
+          0.19518322475862526
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7066946202403254,
+          0.6230090409719994,
+          0.7064653097640162
+        ],
+        "z_over_xy": 1.031305334850392,
+        "gt_axis_energy_fraction": [
+          0.4479511531305257,
+          0.15656685580710908,
+          0.3954819910623651
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.04353725637553562,
+      "naive_focal_z_correction_ratio": 1.3666959565952674,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 1.1755802238372608,
+      "interp_projected_rel_rot_mean_deg": 1.0796467377533836,
+      "local_step_rel_dir_mean_deg": 8.256114334718136,
+      "gt_e2e_rot_deg": 80.9142425883729,
+      "gt_firstcam_bbox_m": [
+        1.109943791367489,
+        0.616194849896728,
+        1.3168741119969471
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_02",
+      "n": 17,
+      "ate_m": 0.026268109743416215,
+      "gt_path_m": 1.2010399194821204,
+      "ate_norm": 0.021871137934151956,
+      "ate_interp_gt_m": 0.02655245601285364,
+      "interp_over_nearest_ate": 1.0108247708805425,
+      "max_abs_dt_s": 0.0047838687896728516,
+      "rotation_anchored_ate_m": 0.04786233167140838,
+      "rotation_alignment_disagreement_deg": 11.282597026712628,
+      "focal_ratio": 1.1493794057546283,
+      "focal_bias": 0.14937940575462827,
+      "step_axis_slopes": {
+        "axis": [
+          0.6753262063326579,
+          0.4727527450144162,
+          0.489304940513003
+        ],
+        "z_over_xy": 0.764918353381091,
+        "gt_axis_energy_fraction": [
+          0.5838208070455873,
+          0.12466013383349048,
+          0.2915190591209224
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6014857640096605,
+          0.6067914046461608,
+          0.8186690573842761
+        ],
+        "z_over_xy": 1.354818177259723,
+        "gt_axis_energy_fraction": [
+          0.4074460928061032,
+          0.4481843650319263,
+          0.14436954216197032
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.026629807682364517,
+      "naive_focal_z_correction_ratio": 1.0137694696147277,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 1.1843017794935826,
+      "interp_projected_rel_rot_mean_deg": 1.0975556576998544,
+      "local_step_rel_dir_mean_deg": 19.197182772984565,
+      "gt_e2e_rot_deg": 41.772308979730816,
+      "gt_firstcam_bbox_m": [
+        0.6341685803985408,
+        0.5812067005265827,
+        0.39063942372021754
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_03",
+      "n": 17,
+      "ate_m": 0.026819264905954297,
+      "gt_path_m": 2.0583952857765633,
+      "ate_norm": 0.013029210225691073,
+      "ate_interp_gt_m": 0.026505912092032166,
+      "interp_over_nearest_ate": 0.9883161296545245,
+      "max_abs_dt_s": 0.004637956619262695,
+      "rotation_anchored_ate_m": 0.04238407812749764,
+      "rotation_alignment_disagreement_deg": 4.565518138896383,
+      "focal_ratio": 1.148329900172556,
+      "focal_bias": 0.14832990017255598,
+      "step_axis_slopes": {
+        "axis": [
+          0.5999326138355178,
+          0.5780841114624469,
+          0.7376781628843004
+        ],
+        "z_over_xy": 1.2334967504416567,
+        "gt_axis_energy_fraction": [
+          0.8601782972015927,
+          0.08166466427756441,
+          0.05815703852084278
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6068721552865212,
+          0.687246179007728,
+          0.655459111181782
+        ],
+        "z_over_xy": 1.0711141149416943,
+        "gt_axis_energy_fraction": [
+          0.8174623180678897,
+          0.055029033655049374,
+          0.12750864827706085
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.03382345440049291,
+      "naive_focal_z_correction_ratio": 1.2611626201948427,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.7003510241971146,
+      "interp_projected_rel_rot_mean_deg": 0.629217523104224,
+      "local_step_rel_dir_mean_deg": 10.981730338687505,
+      "gt_e2e_rot_deg": 62.13654595637829,
+      "gt_firstcam_bbox_m": [
+        1.6672896315487047,
+        0.4375892641111199,
+        0.5499854104450905
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_04",
+      "n": 17,
+      "ate_m": 0.022023530653932418,
+      "gt_path_m": 1.1951441835479057,
+      "ate_norm": 0.018427509380963016,
+      "ate_interp_gt_m": 0.02133900319372181,
+      "interp_over_nearest_ate": 0.9689183595960632,
+      "max_abs_dt_s": 0.004478931427001953,
+      "rotation_anchored_ate_m": 0.023474022161608103,
+      "rotation_alignment_disagreement_deg": 17.08011322527024,
+      "focal_ratio": 1.138779756523926,
+      "focal_bias": 0.13877975652392593,
+      "step_axis_slopes": {
+        "axis": [
+          0.7813158276901048,
+          0.5317952289714775,
+          0.6238960935239923
+        ],
+        "z_over_xy": 0.8007703392756853,
+        "gt_axis_energy_fraction": [
+          0.9591306951475902,
+          0.008515921666642516,
+          0.03235338318576745
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7545657253144528,
+          0.7710618526620653,
+          0.19744664450170302
+        ],
+        "z_over_xy": 0.26113941685503655,
+        "gt_axis_energy_fraction": [
+          0.9054134958520533,
+          0.09262445225128592,
+          0.0019620518966607524
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.022111395352262628,
+      "naive_focal_z_correction_ratio": 1.003989582765401,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.5970996896982563,
+      "interp_projected_rel_rot_mean_deg": 0.6131196318622287,
+      "local_step_rel_dir_mean_deg": 14.12399719911179,
+      "gt_e2e_rot_deg": 27.900331261827855,
+      "gt_firstcam_bbox_m": [
+        1.055935512863086,
+        0.3304998930808423,
+        0.05117497520955021
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_05",
+      "n": 17,
+      "ate_m": 0.02455022732884494,
+      "gt_path_m": 2.3095752493430153,
+      "ate_norm": 0.010629758582591553,
+      "ate_interp_gt_m": 0.024662222772322523,
+      "interp_over_nearest_ate": 1.004561890282213,
+      "max_abs_dt_s": 0.004499912261962891,
+      "rotation_anchored_ate_m": 0.025904773519604782,
+      "rotation_alignment_disagreement_deg": 1.4651958736792479,
+      "focal_ratio": 1.1594721596057542,
+      "focal_bias": 0.15947215960575423,
+      "step_axis_slopes": {
+        "axis": [
+          0.7171643772295079,
+          0.7469718989860903,
+          0.7174648893090504
+        ],
+        "z_over_xy": 0.9951501004390204,
+        "gt_axis_energy_fraction": [
+          0.7052352279569302,
+          0.10295300124794957,
+          0.19181177079512027
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7287306924011474,
+          0.7265723649918585,
+          0.7097179442051851
+        ],
+        "z_over_xy": 0.9741378137271096,
+        "gt_axis_energy_fraction": [
+          0.7635308079512189,
+          0.06552760454214718,
+          0.17094158750663402
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.03218905225795234,
+      "naive_focal_z_correction_ratio": 1.3111508837285704,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.8775691740931707,
+      "interp_projected_rel_rot_mean_deg": 0.8787365223908196,
+      "local_step_rel_dir_mean_deg": 12.004062005066311,
+      "gt_e2e_rot_deg": 25.94383634526146,
+      "gt_firstcam_bbox_m": [
+        0.9913134253554698,
+        0.38723871947308164,
+        0.5569084688129267
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_00",
+      "n": 17,
+      "ate_m": 0.013293477632460655,
+      "gt_path_m": 0.578110589589633,
+      "ate_norm": 0.022994696640822508,
+      "ate_interp_gt_m": 0.013745197194898898,
+      "interp_over_nearest_ate": 1.0339805410538483,
+      "max_abs_dt_s": 0.004450082778930664,
+      "rotation_anchored_ate_m": 0.024266610712016225,
+      "rotation_alignment_disagreement_deg": 12.877331336243335,
+      "focal_ratio": 1.03121565681847,
+      "focal_bias": 0.03121565681847005,
+      "step_axis_slopes": {
+        "axis": [
+          0.6114321784641452,
+          0.5503504149134192,
+          0.7721728254458451
+        ],
+        "z_over_xy": 1.2850215883978602,
+        "gt_axis_energy_fraction": [
+          0.5172001248374345,
+          0.1077281523876936,
+          0.37507172277487183
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.674221569531227,
+          0.5541118853214136,
+          0.6853883877427686
+        ],
+        "z_over_xy": 1.0311267160478501,
+        "gt_axis_energy_fraction": [
+          0.6087118227936812,
+          0.05241864945315505,
+          0.3388695277531638
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.013870710096033906,
+      "naive_focal_z_correction_ratio": 1.0434222315283201,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.9905879388036838,
+      "interp_projected_rel_rot_mean_deg": 0.879957301657619,
+      "local_step_rel_dir_mean_deg": 19.096302695162855,
+      "gt_e2e_rot_deg": 7.660497713818336,
+      "gt_firstcam_bbox_m": [
+        0.2438971010970145,
+        0.08360499331062393,
+        0.18685383291582675
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_01",
+      "n": 17,
+      "ate_m": 0.02258700321093812,
+      "gt_path_m": 2.156198782430627,
+      "ate_norm": 0.010475380746424677,
+      "ate_interp_gt_m": 0.02282278635165846,
+      "interp_over_nearest_ate": 1.0104388855182949,
+      "max_abs_dt_s": 0.004487037658691406,
+      "rotation_anchored_ate_m": 0.026278022938658847,
+      "rotation_alignment_disagreement_deg": 3.0290702015794304,
+      "focal_ratio": 1.029248717611733,
+      "focal_bias": 0.029248717611733088,
+      "step_axis_slopes": {
+        "axis": [
+          0.6777748776426076,
+          0.8658687899305626,
+          0.683299895025905
+        ],
+        "z_over_xy": 1.0016470614689579,
+        "gt_axis_energy_fraction": [
+          0.9611947380477907,
+          0.02303105906399111,
+          0.01577420288821823
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6879270351300146,
+          0.6794543992675389,
+          0.6899963534832396
+        ],
+        "z_over_xy": 1.0042237098471356,
+        "gt_axis_energy_fraction": [
+          0.8514001789284429,
+          0.0928051738217651,
+          0.05579464724979201
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02315403812719029,
+      "naive_focal_z_correction_ratio": 1.0251044776040752,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.7096437979533112,
+      "interp_projected_rel_rot_mean_deg": 0.6820590043554793,
+      "local_step_rel_dir_mean_deg": 10.994164033358134,
+      "gt_e2e_rot_deg": 81.6537641161744,
+      "gt_firstcam_bbox_m": [
+        1.662235874602907,
+        0.5691854086114401,
+        0.5093004198111233
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_02",
+      "n": 17,
+      "ate_m": 0.014511771414887947,
+      "gt_path_m": 1.6957099440624401,
+      "ate_norm": 0.00855793260262534,
+      "ate_interp_gt_m": 0.014498221879459353,
+      "interp_over_nearest_ate": 0.999066307272819,
+      "max_abs_dt_s": 0.004483222961425781,
+      "rotation_anchored_ate_m": 0.016655038690413036,
+      "rotation_alignment_disagreement_deg": 2.3742656556241215,
+      "focal_ratio": 1.0233480457663096,
+      "focal_bias": 0.023348045766309555,
+      "step_axis_slopes": {
+        "axis": [
+          0.5424163378095965,
+          0.5063984401971838,
+          0.48406515949533707
+        ],
+        "z_over_xy": 0.8962291940665558,
+        "gt_axis_energy_fraction": [
+          0.8756509082266254,
+          0.05981966743767294,
+          0.06452942433570172
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5410315493593824,
+          0.5278924570946326,
+          0.5405019382134896
+        ],
+        "z_over_xy": 1.002965862154666,
+        "gt_axis_energy_fraction": [
+          0.6884383487367941,
+          0.13304176991639738,
+          0.17851988134680857
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.014897669710203279,
+      "naive_focal_z_correction_ratio": 1.0265920875048673,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.6583121019933611,
+      "interp_projected_rel_rot_mean_deg": 0.6380032259446808,
+      "local_step_rel_dir_mean_deg": 8.519720393541416,
+      "gt_e2e_rot_deg": 21.86931367614804,
+      "gt_firstcam_bbox_m": [
+        1.2109379245552014,
+        0.5128417194545588,
+        0.5428919786093902
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_03",
+      "n": 17,
+      "ate_m": 0.017214822282496052,
+      "gt_path_m": 1.6018646633149483,
+      "ate_norm": 0.01074673951972395,
+      "ate_interp_gt_m": 0.01695740480666931,
+      "interp_over_nearest_ate": 0.9850467538030594,
+      "max_abs_dt_s": 0.0042340755462646484,
+      "rotation_anchored_ate_m": 0.03698912343793398,
+      "rotation_alignment_disagreement_deg": 10.706780142042609,
+      "focal_ratio": 0.9856960216968733,
+      "focal_bias": -0.014303978303126685,
+      "step_axis_slopes": {
+        "axis": [
+          0.6927400097761327,
+          0.6804164180380265,
+          0.6371512359253909
+        ],
+        "z_over_xy": 0.9275927934291616,
+        "gt_axis_energy_fraction": [
+          0.30579422294549613,
+          0.27662722367042153,
+          0.4175785533840823
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5846146005057733,
+          0.6899864641706304,
+          0.6578598681592454
+        ],
+        "z_over_xy": 0.9875407947774039,
+        "gt_axis_energy_fraction": [
+          0.07768830080020131,
+          0.2658815186681818,
+          0.6564301805316171
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.017028815044180735,
+      "naive_focal_z_correction_ratio": 0.9891949370569775,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.6656986335816248,
+      "interp_projected_rel_rot_mean_deg": 0.6357285284050381,
+      "local_step_rel_dir_mean_deg": 12.682590111287974,
+      "gt_e2e_rot_deg": 99.0139498946159,
+      "gt_firstcam_bbox_m": [
+        0.42432377543713407,
+        0.708459328576959,
+        1.131789965773661
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_04",
+      "n": 17,
+      "ate_m": 0.02038551437376458,
+      "gt_path_m": 0.9530992496845502,
+      "ate_norm": 0.021388658505933803,
+      "ate_interp_gt_m": 0.02017300307372427,
+      "interp_over_nearest_ate": 0.9895753770965033,
+      "max_abs_dt_s": 0.004853010177612305,
+      "rotation_anchored_ate_m": 0.03651466923671874,
+      "rotation_alignment_disagreement_deg": 8.524834419386499,
+      "focal_ratio": 0.9848530789885833,
+      "focal_bias": -0.01514692101141668,
+      "step_axis_slopes": {
+        "axis": [
+          0.5137244054947665,
+          0.5617870592481254,
+          0.6216825122693146
+        ],
+        "z_over_xy": 1.1855880305288178,
+        "gt_axis_energy_fraction": [
+          0.6895367771881241,
+          0.19609583049499335,
+          0.1143673923168827
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5701022706756046,
+          0.5787860065910839,
+          0.48869974166350083
+        ],
+        "z_over_xy": 0.8548588730948073,
+        "gt_axis_energy_fraction": [
+          0.6691153759835589,
+          0.147758055183354,
+          0.18312656883308723
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02087869842654069,
+      "naive_focal_z_correction_ratio": 1.0241928677262528,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.4312058572895945,
+      "interp_projected_rel_rot_mean_deg": 0.4480304475589905,
+      "local_step_rel_dir_mean_deg": 15.715224740298574,
+      "gt_e2e_rot_deg": 76.21700125918399,
+      "gt_firstcam_bbox_m": [
+        0.5055597158258175,
+        0.2791039158497636,
+        0.27202985876698493
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_05",
+      "n": 17,
+      "ate_m": 0.016745998828572247,
+      "gt_path_m": 0.8916594985652346,
+      "ate_norm": 0.01878071041189844,
+      "ate_interp_gt_m": 0.01663620004390368,
+      "interp_over_nearest_ate": 0.9934432824346537,
+      "max_abs_dt_s": 0.0040950775146484375,
+      "rotation_anchored_ate_m": 0.01901649399381895,
+      "rotation_alignment_disagreement_deg": 2.990890439825997,
+      "focal_ratio": 1.005083995537118,
+      "focal_bias": 0.0050839955371180245,
+      "step_axis_slopes": {
+        "axis": [
+          0.5382977573421999,
+          0.5112623902702347,
+          0.5649533030024029
+        ],
+        "z_over_xy": 1.0676998799219315,
+        "gt_axis_energy_fraction": [
+          0.3854575676543924,
+          0.1977371479249269,
+          0.41680528442068054
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5199804451814556,
+          0.5522614701265046,
+          0.581971044201205
+        ],
+        "z_over_xy": 1.0693234972045886,
+        "gt_axis_energy_fraction": [
+          0.1258822329194178,
+          0.3808523393240801,
+          0.493265427756502
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01670753103395205,
+      "naive_focal_z_correction_ratio": 0.9977028665167131,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.6230944557346534,
+      "interp_projected_rel_rot_mean_deg": 0.6491116642247673,
+      "local_step_rel_dir_mean_deg": 14.36657194130093,
+      "gt_e2e_rot_deg": 46.90523512800258,
+      "gt_firstcam_bbox_m": [
+        0.28699062598116465,
+        0.35100793329332025,
+        0.4414440884526401
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_06",
+      "n": 17,
+      "ate_m": 0.01617212913442543,
+      "gt_path_m": 1.5978519602937253,
+      "ate_norm": 0.01012116862907161,
+      "ate_interp_gt_m": 0.016186758071314155,
+      "interp_over_nearest_ate": 1.0009045770514895,
+      "max_abs_dt_s": 0.002051115036010742,
+      "rotation_anchored_ate_m": 0.01882078646199361,
+      "rotation_alignment_disagreement_deg": 1.7683170345829307,
+      "focal_ratio": 0.9994643045944578,
+      "focal_bias": -0.0005356954055422136,
+      "step_axis_slopes": {
+        "axis": [
+          0.554952413682308,
+          0.5881829083715419,
+          0.5873185650143553
+        ],
+        "z_over_xy": 1.0531087196920639,
+        "gt_axis_energy_fraction": [
+          0.7562432104132264,
+          0.06815990096096046,
+          0.17559688862581324
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5566537556299165,
+          0.611958389210155,
+          0.5817612600496505
+        ],
+        "z_over_xy": 1.0433751789288173,
+        "gt_axis_energy_fraction": [
+          0.7897148809536051,
+          0.013396653192842707,
+          0.19688846585355219
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.016155523167693035,
+      "naive_focal_z_correction_ratio": 0.9989731737488389,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.4656305361662037,
+      "interp_projected_rel_rot_mean_deg": 0.4569796041694915,
+      "local_step_rel_dir_mean_deg": 8.705001344834676,
+      "gt_e2e_rot_deg": 36.89829087846858,
+      "gt_firstcam_bbox_m": [
+        1.2610968825991002,
+        0.19397717365014647,
+        0.5469092644808156
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_07",
+      "n": 17,
+      "ate_m": 0.02253748798848958,
+      "gt_path_m": 0.6785347632180874,
+      "ate_norm": 0.033214934901199485,
+      "ate_interp_gt_m": 0.02242532394236988,
+      "interp_over_nearest_ate": 0.9950232232546509,
+      "max_abs_dt_s": 0.004733085632324219,
+      "rotation_anchored_ate_m": 0.026999613343511152,
+      "rotation_alignment_disagreement_deg": 8.565795857239163,
+      "focal_ratio": 1.0003072473027477,
+      "focal_bias": 0.00030724730274767076,
+      "step_axis_slopes": {
+        "axis": [
+          0.760797662127609,
+          0.8688589873867759,
+          0.5075586017300795
+        ],
+        "z_over_xy": 0.6374564731578739,
+        "gt_axis_energy_fraction": [
+          0.41484944796168355,
+          0.20234106863991982,
+          0.3828094833983966
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.8252045760822908,
+          0.9649721996801636,
+          0.716104971015254
+        ],
+        "z_over_xy": 0.8092751221915083,
+        "gt_axis_energy_fraction": [
+          0.235587393377416,
+          0.1754918348501557,
+          0.5889207717724284
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.022540166293860808,
+      "naive_focal_z_correction_ratio": 1.0001188377947265,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.5122334911253832,
+      "interp_projected_rel_rot_mean_deg": 0.5035650785299315,
+      "local_step_rel_dir_mean_deg": 18.601281378652857,
+      "gt_e2e_rot_deg": 76.62752979714199,
+      "gt_firstcam_bbox_m": [
+        0.2511883976249757,
+        0.1603290927518175,
+        0.3162590933574055
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_08",
+      "n": 17,
+      "ate_m": 0.018242551757158297,
+      "gt_path_m": 1.5613845523497298,
+      "ate_norm": 0.01168357387019428,
+      "ate_interp_gt_m": 0.018187367536826544,
+      "interp_over_nearest_ate": 0.9969749725221364,
+      "max_abs_dt_s": 0.005344867706298828,
+      "rotation_anchored_ate_m": 0.01901430385953885,
+      "rotation_alignment_disagreement_deg": 0.7152194317290931,
+      "focal_ratio": 0.9969354764695877,
+      "focal_bias": -0.003064523530412311,
+      "step_axis_slopes": {
+        "axis": [
+          0.4398932476532742,
+          0.4534938962346291,
+          0.4375381654037936
+        ],
+        "z_over_xy": 0.9819151737465692,
+        "gt_axis_energy_fraction": [
+          0.23787893464486418,
+          0.17179932254298114,
+          0.5903217428121547
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.4481688767148274,
+          0.4378615817327274,
+          0.41840051806118667
+        ],
+        "z_over_xy": 0.9359651778742075,
+        "gt_axis_energy_fraction": [
+          0.34075863006280666,
+          0.04250658316674033,
+          0.6167347867704531
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01813525182233293,
+      "naive_focal_z_correction_ratio": 0.9941181509991734,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.6062383459888301,
+      "interp_projected_rel_rot_mean_deg": 0.6302042934194827,
+      "local_step_rel_dir_mean_deg": 11.773909590274252,
+      "gt_e2e_rot_deg": 87.0532085543983,
+      "gt_firstcam_bbox_m": [
+        0.6190806017382172,
+        0.31174561679295215,
+        0.9063297676443421
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_09",
+      "n": 17,
+      "ate_m": 0.014489593028830601,
+      "gt_path_m": 1.874174800130926,
+      "ate_norm": 0.00773118549444715,
+      "ate_interp_gt_m": 0.01455462932798955,
+      "interp_over_nearest_ate": 1.0044884834949845,
+      "max_abs_dt_s": 0.003793954849243164,
+      "rotation_anchored_ate_m": 0.017369050114939007,
+      "rotation_alignment_disagreement_deg": 1.7693078775994755,
+      "focal_ratio": 1.0388022140804738,
+      "focal_bias": 0.038802214080473796,
+      "step_axis_slopes": {
+        "axis": [
+          0.6553886180158719,
+          0.62403057894713,
+          0.637046700003385
+        ],
+        "z_over_xy": 0.9740951027104526,
+        "gt_axis_energy_fraction": [
+          0.7868330358416749,
+          0.03678187811220833,
+          0.17638508604611666
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6488314566572401,
+          0.6360369008708894,
+          0.6907084736703435
+        ],
+        "z_over_xy": 1.0657057334276034,
+        "gt_axis_energy_fraction": [
+          0.793211615092226,
+          0.046491070824483754,
+          0.16029731408329043
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01630645625656874,
+      "naive_focal_z_correction_ratio": 1.125390908089899,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.6937330842691858,
+      "interp_projected_rel_rot_mean_deg": 0.6451070594039078,
+      "local_step_rel_dir_mean_deg": 11.512365396219472,
+      "gt_e2e_rot_deg": 33.398111463991825,
+      "gt_firstcam_bbox_m": [
+        1.265986451496487,
+        0.2999691192953229,
+        0.6128821669323845
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_10",
+      "n": 17,
+      "ate_m": 0.023567471103120383,
+      "gt_path_m": 1.0034029898260024,
+      "ate_norm": 0.02348754323246252,
+      "ate_interp_gt_m": 0.023771110005907172,
+      "interp_over_nearest_ate": 1.0086406768844973,
+      "max_abs_dt_s": 0.00391387939453125,
+      "rotation_anchored_ate_m": 0.027736339160901596,
+      "rotation_alignment_disagreement_deg": 4.44446631528514,
+      "focal_ratio": 1.029248717611733,
+      "focal_bias": 0.029248717611733088,
+      "step_axis_slopes": {
+        "axis": [
+          0.7064048830391423,
+          0.7162321013694317,
+          0.5897991604174381
+        ],
+        "z_over_xy": 0.8315086258273687,
+        "gt_axis_energy_fraction": [
+          0.6233043567737977,
+          0.2618661119509008,
+          0.11482953127530164
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7280388891034915,
+          0.655279541054957,
+          0.6788983030156477
+        ],
+        "z_over_xy": 0.9467247423282591,
+        "gt_axis_energy_fraction": [
+          0.7742900262502537,
+          0.13697661141375492,
+          0.08873336233599122
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.023401398727033024,
+      "naive_focal_z_correction_ratio": 0.992953322171874,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.8436690968168704,
+      "interp_projected_rel_rot_mean_deg": 0.769946460760192,
+      "local_step_rel_dir_mean_deg": 15.371918120962311,
+      "gt_e2e_rot_deg": 26.570125487554222,
+      "gt_firstcam_bbox_m": [
+        0.7197321926076878,
+        0.26461767642260847,
+        0.23840223917619383
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_00",
+      "n": 17,
+      "ate_m": 0.015396931008535328,
+      "gt_path_m": 0.578110589589633,
+      "ate_norm": 0.026633193174103093,
+      "ate_interp_gt_m": 0.015567843042681282,
+      "interp_over_nearest_ate": 1.0111003961796807,
+      "max_abs_dt_s": 0.004450082778930664,
+      "rotation_anchored_ate_m": 0.03313890105286598,
+      "rotation_alignment_disagreement_deg": 18.42065250933158,
+      "focal_ratio": 1.1342353004133188,
+      "focal_bias": 0.13423530041331877,
+      "step_axis_slopes": {
+        "axis": [
+          0.49977861833556214,
+          0.5872281788945326,
+          0.6929313294045468
+        ],
+        "z_over_xy": 1.345880334320252,
+        "gt_axis_energy_fraction": [
+          0.5172001248374345,
+          0.1077281523876936,
+          0.37507172277487183
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5050240382364912,
+          0.6464518835375408,
+          0.7024780346360516
+        ],
+        "z_over_xy": 1.3607656359339853,
+        "gt_axis_energy_fraction": [
+          0.6087118227936812,
+          0.05241864945315505,
+          0.3388695277531638
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.014912998762896224,
+      "naive_focal_z_correction_ratio": 0.9685695645859013,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.8305573885197715,
+      "interp_projected_rel_rot_mean_deg": 0.7147508326742995,
+      "local_step_rel_dir_mean_deg": 21.153833139543043,
+      "gt_e2e_rot_deg": 7.660497713818336,
+      "gt_firstcam_bbox_m": [
+        0.2438971010970145,
+        0.08360499331062393,
+        0.18685383291582675
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_01",
+      "n": 17,
+      "ate_m": 0.042775388337414934,
+      "gt_path_m": 2.156198782430627,
+      "ate_norm": 0.019838332479343742,
+      "ate_interp_gt_m": 0.04269047606637285,
+      "interp_over_nearest_ate": 0.9980149269394754,
+      "max_abs_dt_s": 0.004487037658691406,
+      "rotation_anchored_ate_m": 0.04518836220748868,
+      "rotation_alignment_disagreement_deg": 3.0721457282161033,
+      "focal_ratio": 1.1429222933237517,
+      "focal_bias": 0.14292229332375173,
+      "step_axis_slopes": {
+        "axis": [
+          0.6724058671117585,
+          0.5544204205427344,
+          0.29105279346862656
+        ],
+        "z_over_xy": 0.4346374560817226,
+        "gt_axis_energy_fraction": [
+          0.9611947380477907,
+          0.02303105906399111,
+          0.01577420288821823
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6710891397106872,
+          0.6304332711846895,
+          0.686312269949252
+        ],
+        "z_over_xy": 1.0288103147376952,
+        "gt_axis_energy_fraction": [
+          0.8514001789284429,
+          0.0928051738217651,
+          0.05579464724979201
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.04652430796159881,
+      "naive_focal_z_correction_ratio": 1.0876419775458768,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.657169059741206,
+      "interp_projected_rel_rot_mean_deg": 0.671259257397457,
+      "local_step_rel_dir_mean_deg": 17.218593873516028,
+      "gt_e2e_rot_deg": 81.6537641161744,
+      "gt_firstcam_bbox_m": [
+        1.662235874602907,
+        0.5691854086114401,
+        0.5093004198111233
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_02",
+      "n": 17,
+      "ate_m": 0.022960430392699887,
+      "gt_path_m": 1.6957099440624401,
+      "ate_norm": 0.013540305329396847,
+      "ate_interp_gt_m": 0.022836801819088665,
+      "interp_over_nearest_ate": 0.9946155811761034,
+      "max_abs_dt_s": 0.004483222961425781,
+      "rotation_anchored_ate_m": 0.03732302624624283,
+      "rotation_alignment_disagreement_deg": 10.121933866496622,
+      "focal_ratio": 1.1138355037735512,
+      "focal_bias": 0.11383550377355123,
+      "step_axis_slopes": {
+        "axis": [
+          0.6121567259750471,
+          0.5273835873503193,
+          0.5519558128372141
+        ],
+        "z_over_xy": 0.9097135812480961,
+        "gt_axis_energy_fraction": [
+          0.8756509082266254,
+          0.05981966743767294,
+          0.06452942433570172
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5846668025887295,
+          0.5375722155827081,
+          0.6375037441156717
+        ],
+        "z_over_xy": 1.104783240969863,
+        "gt_axis_energy_fraction": [
+          0.6884383487367941,
+          0.13304176991639738,
+          0.17851988134680857
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.026215877850282433,
+      "naive_focal_z_correction_ratio": 1.1417851234451422,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.628724732068327,
+      "interp_projected_rel_rot_mean_deg": 0.6047385319766991,
+      "local_step_rel_dir_mean_deg": 12.098602278279976,
+      "gt_e2e_rot_deg": 21.86931367614804,
+      "gt_firstcam_bbox_m": [
+        1.2109379245552014,
+        0.5128417194545588,
+        0.5428919786093902
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_03",
+      "n": 17,
+      "ate_m": 0.027441621808036287,
+      "gt_path_m": 1.6018646633149483,
+      "ate_norm": 0.017131048856054883,
+      "ate_interp_gt_m": 0.027281199943166242,
+      "interp_over_nearest_ate": 0.9941540676424939,
+      "max_abs_dt_s": 0.0042340755462646484,
+      "rotation_anchored_ate_m": 0.03134892847698554,
+      "rotation_alignment_disagreement_deg": 5.101386956587903,
+      "focal_ratio": 1.0976878119082083,
+      "focal_bias": 0.0976878119082083,
+      "step_axis_slopes": {
+        "axis": [
+          0.6990161741186616,
+          0.681888181681343,
+          0.6769968275159032
+        ],
+        "z_over_xy": 0.9799035949102645,
+        "gt_axis_energy_fraction": [
+          0.30579422294549613,
+          0.27662722367042153,
+          0.4175785533840823
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.8097782402610901,
+          0.6726403625516274,
+          0.6533462680677206
+        ],
+        "z_over_xy": 0.9285101662274978,
+        "gt_axis_energy_fraction": [
+          0.07768830080020131,
+          0.2658815186681818,
+          0.6564301805316171
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02757535649546546,
+      "naive_focal_z_correction_ratio": 1.0048734250608324,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.6847988538306331,
+      "interp_projected_rel_rot_mean_deg": 0.6693906154126124,
+      "local_step_rel_dir_mean_deg": 19.418504687200198,
+      "gt_e2e_rot_deg": 99.0139498946159,
+      "gt_firstcam_bbox_m": [
+        0.42432377543713407,
+        0.708459328576959,
+        1.131789965773661
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_04",
+      "n": 17,
+      "ate_m": 0.015252161733046344,
+      "gt_path_m": 0.9530992496845502,
+      "ate_norm": 0.01600270038833248,
+      "ate_interp_gt_m": 0.015266880597018084,
+      "interp_over_nearest_ate": 1.0009650346114445,
+      "max_abs_dt_s": 0.004853010177612305,
+      "rotation_anchored_ate_m": 0.02401424051636868,
+      "rotation_alignment_disagreement_deg": 6.92591769079769,
+      "focal_ratio": 1.0965880504681709,
+      "focal_bias": 0.09658805046817087,
+      "step_axis_slopes": {
+        "axis": [
+          0.5280516656347258,
+          0.5530119368951034,
+          0.5254667040195053
+        ],
+        "z_over_xy": 0.9847976619384199,
+        "gt_axis_energy_fraction": [
+          0.6895367771881241,
+          0.19609583049499335,
+          0.1143673923168827
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5409450781037617,
+          0.5718906469282588,
+          0.4853151451034985
+        ],
+        "z_over_xy": 0.8879731530759202,
+        "gt_axis_energy_fraction": [
+          0.6691153759835589,
+          0.147758055183354,
+          0.18312656883308723
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01511299232745896,
+      "naive_focal_z_correction_ratio": 0.9908754307734718,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.5218250872561767,
+      "interp_projected_rel_rot_mean_deg": 0.5259839185794729,
+      "local_step_rel_dir_mean_deg": 15.031518608205976,
+      "gt_e2e_rot_deg": 76.21700125918399,
+      "gt_firstcam_bbox_m": [
+        0.5055597158258175,
+        0.2791039158497636,
+        0.27202985876698493
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_05",
+      "n": 17,
+      "ate_m": 0.031597216289746086,
+      "gt_path_m": 0.8916594985652346,
+      "ate_norm": 0.035436415291475086,
+      "ate_interp_gt_m": 0.03160166222015287,
+      "interp_over_nearest_ate": 1.000140706395336,
+      "max_abs_dt_s": 0.0040950775146484375,
+      "rotation_anchored_ate_m": 0.03721885427619224,
+      "rotation_alignment_disagreement_deg": 6.336476653530143,
+      "focal_ratio": 1.1015702682654178,
+      "focal_bias": 0.10157026826541782,
+      "step_axis_slopes": {
+        "axis": [
+          0.5144043041261755,
+          0.48516397223864116,
+          0.5415764523964318
+        ],
+        "z_over_xy": 1.0735125050027619,
+        "gt_axis_energy_fraction": [
+          0.3854575676543924,
+          0.1977371479249269,
+          0.41680528442068054
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.42138058601873424,
+          0.5198779169494975,
+          0.5583351703410427
+        ],
+        "z_over_xy": 1.1270178076956485,
+        "gt_axis_energy_fraction": [
+          0.1258822329194178,
+          0.3808523393240801,
+          0.493265427756502
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.03103059568347907,
+      "naive_focal_z_correction_ratio": 0.982067388434756,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.6080873068190775,
+      "interp_projected_rel_rot_mean_deg": 0.6081281567131083,
+      "local_step_rel_dir_mean_deg": 16.348856008335964,
+      "gt_e2e_rot_deg": 46.90523512800258,
+      "gt_firstcam_bbox_m": [
+        0.28699062598116465,
+        0.35100793329332025,
+        0.4414440884526401
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_06",
+      "n": 17,
+      "ate_m": 0.02212090835924424,
+      "gt_path_m": 1.5978519602937253,
+      "ate_norm": 0.01384415384462642,
+      "ate_interp_gt_m": 0.02207884962670288,
+      "interp_over_nearest_ate": 0.9980986887220759,
+      "max_abs_dt_s": 0.002051115036010742,
+      "rotation_anchored_ate_m": 0.02426494027497814,
+      "rotation_alignment_disagreement_deg": 2.976845624461833,
+      "focal_ratio": 1.1017386381448946,
+      "focal_bias": 0.10173863814489459,
+      "step_axis_slopes": {
+        "axis": [
+          0.6378884578651981,
+          0.6233625944305095,
+          0.6004424654583504
+        ],
+        "z_over_xy": 0.9430725035815557,
+        "gt_axis_energy_fraction": [
+          0.7562432104132264,
+          0.06815990096096046,
+          0.17559688862581324
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6009246869011207,
+          0.6114874913747292,
+          0.6148573890533566
+        ],
+        "z_over_xy": 1.0228855172732818,
+        "gt_axis_energy_fraction": [
+          0.7897148809536051,
+          0.013396653192842707,
+          0.19688846585355219
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02282397687775527,
+      "naive_focal_z_correction_ratio": 1.031782985901536,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.4646255955634915,
+      "interp_projected_rel_rot_mean_deg": 0.45603142055586066,
+      "local_step_rel_dir_mean_deg": 13.71896236387178,
+      "gt_e2e_rot_deg": 36.89829087846858,
+      "gt_firstcam_bbox_m": [
+        1.2610968825991002,
+        0.19397717365014647,
+        0.5469092644808156
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_07",
+      "n": 17,
+      "ate_m": 0.023715030656118182,
+      "gt_path_m": 0.6785347632180874,
+      "ate_norm": 0.0349503547079075,
+      "ate_interp_gt_m": 0.02367650680324233,
+      "interp_over_nearest_ate": 0.9983755512090846,
+      "max_abs_dt_s": 0.004733085632324219,
+      "rotation_anchored_ate_m": 0.0317803783415286,
+      "rotation_alignment_disagreement_deg": 12.00288051376477,
+      "focal_ratio": 1.1027793425741763,
+      "focal_bias": 0.10277934257417631,
+      "step_axis_slopes": {
+        "axis": [
+          0.6367974432427054,
+          0.9218738056147396,
+          0.8824077071743442
+        ],
+        "z_over_xy": 1.2083514606533847,
+        "gt_axis_energy_fraction": [
+          0.41484944796168355,
+          0.20234106863991982,
+          0.3828094833983966
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6739551596756475,
+          0.9552039837087205,
+          0.8225521007231239
+        ],
+        "z_over_xy": 1.0359314762777345,
+        "gt_axis_energy_fraction": [
+          0.235587393377416,
+          0.1754918348501557,
+          0.5889207717724284
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.023577792453874206,
+      "naive_focal_z_correction_ratio": 0.9942130286806705,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.5775948836553356,
+      "interp_projected_rel_rot_mean_deg": 0.5344347923282025,
+      "local_step_rel_dir_mean_deg": 20.11539639917288,
+      "gt_e2e_rot_deg": 76.62752979714199,
+      "gt_firstcam_bbox_m": [
+        0.2511883976249757,
+        0.1603290927518175,
+        0.3162590933574055
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_08",
+      "n": 17,
+      "ate_m": 0.02443997833699893,
+      "gt_path_m": 1.5613845523497298,
+      "ate_norm": 0.015652760429978107,
+      "ate_interp_gt_m": 0.02420065200117337,
+      "interp_over_nearest_ate": 0.9902075880540675,
+      "max_abs_dt_s": 0.005344867706298828,
+      "rotation_anchored_ate_m": 0.03749925490274437,
+      "rotation_alignment_disagreement_deg": 5.965172712058967,
+      "focal_ratio": 1.1138625449966186,
+      "focal_bias": 0.11386254499661863,
+      "step_axis_slopes": {
+        "axis": [
+          0.48104916094896294,
+          0.5074740191753637,
+          0.4654768987402849
+        ],
+        "z_over_xy": 0.9458404304763268,
+        "gt_axis_energy_fraction": [
+          0.23787893464486418,
+          0.17179932254298114,
+          0.5903217428121547
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.46439568568643375,
+          0.41426894931156505,
+          0.4961121651374149
+        ],
+        "z_over_xy": 1.0812399914560527,
+        "gt_axis_energy_fraction": [
+          0.34075863006280666,
+          0.04250658316674033,
+          0.6167347867704531
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.030219122775171702,
+      "naive_focal_z_correction_ratio": 1.2364627479814048,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.5556026549692651,
+      "interp_projected_rel_rot_mean_deg": 0.5525943643582025,
+      "local_step_rel_dir_mean_deg": 8.053532884619784,
+      "gt_e2e_rot_deg": 87.0532085543983,
+      "gt_firstcam_bbox_m": [
+        0.6190806017382172,
+        0.31174561679295215,
+        0.9063297676443421
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_09",
+      "n": 17,
+      "ate_m": 0.017580347288029787,
+      "gt_path_m": 1.874174800130926,
+      "ate_norm": 0.009380313558159922,
+      "ate_interp_gt_m": 0.017782824598392,
+      "interp_over_nearest_ate": 1.0115172531602987,
+      "max_abs_dt_s": 0.003793954849243164,
+      "rotation_anchored_ate_m": 0.038479360606870246,
+      "rotation_alignment_disagreement_deg": 4.61550751700283,
+      "focal_ratio": 1.121730775591626,
+      "focal_bias": 0.12173077559162593,
+      "step_axis_slopes": {
+        "axis": [
+          0.5863083743491491,
+          0.49120780870450276,
+          0.5531190014150014
+        ],
+        "z_over_xy": 0.9502762487211152,
+        "gt_axis_energy_fraction": [
+          0.7868330358416749,
+          0.03678187811220833,
+          0.17638508604611666
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5585708423630225,
+          0.4686010181922765,
+          0.6542392389609656
+        ],
+        "z_over_xy": 1.181812812987507,
+        "gt_axis_energy_fraction": [
+          0.793211615092226,
+          0.046491070824483754,
+          0.16029731408329043
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02235618025109299,
+      "naive_focal_z_correction_ratio": 1.2716574868981685,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.7732799702873809,
+      "interp_projected_rel_rot_mean_deg": 0.7286493556698288,
+      "local_step_rel_dir_mean_deg": 13.24970487097101,
+      "gt_e2e_rot_deg": 33.398111463991825,
+      "gt_firstcam_bbox_m": [
+        1.265986451496487,
+        0.2999691192953229,
+        0.6128821669323845
+      ]
+    },
+    {
+      "cond": "raw",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_10",
+      "n": 17,
+      "ate_m": 0.01646992441717287,
+      "gt_path_m": 1.0034029898260024,
+      "ate_norm": 0.01641406751242477,
+      "ate_interp_gt_m": 0.01649828844153897,
+      "interp_over_nearest_ate": 1.0017221708884423,
+      "max_abs_dt_s": 0.00391387939453125,
+      "rotation_anchored_ate_m": 0.03143503797685287,
+      "rotation_alignment_disagreement_deg": 16.912155010778715,
+      "focal_ratio": 1.1346752304999215,
+      "focal_bias": 0.13467523049992147,
+      "step_axis_slopes": {
+        "axis": [
+          0.948307865174443,
+          0.878550120808266,
+          0.7897465384273974
+        ],
+        "z_over_xy": 0.8513218397006278,
+        "gt_axis_energy_fraction": [
+          0.6233043567737977,
+          0.2618661119509008,
+          0.11482953127530164
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.9706378723860326,
+          0.9585336641484336,
+          0.591134772466593
+        ],
+        "z_over_xy": 0.6101605333597733,
+        "gt_axis_energy_fraction": [
+          0.7742900262502537,
+          0.13697661141375492,
+          0.08873336233599122
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01697942869671396,
+      "naive_focal_z_correction_ratio": 1.0309354351990734,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.49787974999999995,
+        0.53190414375
+      ],
+      "principal_point_error_fraction": [
+        0.0021202500000000457,
+        -0.03190414374999995
+      ],
+      "projected_rel_rot_mean_deg": 0.7607352236069087,
+      "interp_projected_rel_rot_mean_deg": 0.695089527871941,
+      "local_step_rel_dir_mean_deg": 15.128234772424864,
+      "gt_e2e_rot_deg": 26.570125487554222,
+      "gt_firstcam_bbox_m": [
+        0.7197321926076878,
+        0.26461767642260847,
+        0.23840223917619383
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk",
+      "backend": "vggt",
+      "tag": "A_desk_00",
+      "n": 17,
+      "ate_m": 0.014475333132590702,
+      "gt_path_m": 2.4779732085794492,
+      "ate_norm": 0.005841601952140957,
+      "ate_interp_gt_m": 0.014547088697178925,
+      "interp_over_nearest_ate": 1.0049570924503746,
+      "max_abs_dt_s": 0.004189014434814453,
+      "rotation_anchored_ate_m": 0.01728851318588337,
+      "rotation_alignment_disagreement_deg": 1.967312659102059,
+      "focal_ratio": 1.0315121092870363,
+      "focal_bias": 0.031512109287036294,
+      "step_axis_slopes": {
+        "axis": [
+          0.7712303036870625,
+          0.8152246427277017,
+          0.7277674519547
+        ],
+        "z_over_xy": 0.9365143017934259,
+        "gt_axis_energy_fraction": [
+          0.7248311966630758,
+          0.11164677249504486,
+          0.1635220308418793
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7762750441898075,
+          0.7884877972511571,
+          0.756410594736258
+        ],
+        "z_over_xy": 0.9736928273075998,
+        "gt_axis_energy_fraction": [
+          0.9050126690150216,
+          0.04448699931725318,
+          0.05050033166772523
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.015473031916148338,
+      "naive_focal_z_correction_ratio": 1.0689240637447819,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.9346264028236666,
+      "interp_projected_rel_rot_mean_deg": 0.8824937104474284,
+      "local_step_rel_dir_mean_deg": 7.570088823770449,
+      "gt_e2e_rot_deg": 55.87973238106455,
+      "gt_firstcam_bbox_m": [
+        1.6519707605191674,
+        0.4741246166883667,
+        0.5432522910642339
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk",
+      "backend": "vggt",
+      "tag": "A_desk_01",
+      "n": 17,
+      "ate_m": 0.026268707901189882,
+      "gt_path_m": 2.5519958418375497,
+      "ate_norm": 0.010293397610818697,
+      "ate_interp_gt_m": 0.0262200615406851,
+      "interp_over_nearest_ate": 0.9981481251119101,
+      "max_abs_dt_s": 0.003670930862426758,
+      "rotation_anchored_ate_m": 0.02777683069391128,
+      "rotation_alignment_disagreement_deg": 3.1793663382655497,
+      "focal_ratio": 1.0341706740892311,
+      "focal_bias": 0.034170674089231134,
+      "step_axis_slopes": {
+        "axis": [
+          0.7203450857950545,
+          0.7027617058765566,
+          0.6951162946944945
+        ],
+        "z_over_xy": 0.9686903212691713,
+        "gt_axis_energy_fraction": [
+          0.7145886199843002,
+          0.13313551340011215,
+          0.15227586661558773
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7163402008656338,
+          0.7557799302054802,
+          0.7090219951462031
+        ],
+        "z_over_xy": 0.9792809115468939,
+        "gt_axis_energy_fraction": [
+          0.48376351630031966,
+          0.11703631852054128,
+          0.3992001651791389
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.027520019331061057,
+      "naive_focal_z_correction_ratio": 1.0476350582060603,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 1.365152132266509,
+      "interp_projected_rel_rot_mean_deg": 1.352759438388465,
+      "local_step_rel_dir_mean_deg": 12.27162887362055,
+      "gt_e2e_rot_deg": 17.408524568695203,
+      "gt_firstcam_bbox_m": [
+        0.7716953642620318,
+        0.41254174435445956,
+        0.7421400629823216
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk",
+      "backend": "vggt",
+      "tag": "A_desk_02",
+      "n": 17,
+      "ate_m": 0.02152806049568688,
+      "gt_path_m": 3.409762020626444,
+      "ate_norm": 0.006313654843199798,
+      "ate_interp_gt_m": 0.02154223428891542,
+      "interp_over_nearest_ate": 1.000658386910023,
+      "max_abs_dt_s": 0.0037360191345214844,
+      "rotation_anchored_ate_m": 0.02348991902122232,
+      "rotation_alignment_disagreement_deg": 1.0194025218705614,
+      "focal_ratio": 1.0580974814598707,
+      "focal_bias": 0.0580974814598707,
+      "step_axis_slopes": {
+        "axis": [
+          0.5923097892463799,
+          0.575942312528943,
+          0.5585502911914109
+        ],
+        "z_over_xy": 0.9518889225822897,
+        "gt_axis_energy_fraction": [
+          0.5613457336757428,
+          0.28634465947871485,
+          0.15230960684554223
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5628652343576678,
+          0.5772322753987684,
+          0.5890159170614405
+        ],
+        "z_over_xy": 1.0418231365416162,
+        "gt_axis_energy_fraction": [
+          0.5400655951605878,
+          0.11405655609968846,
+          0.3458778487397236
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02383035859609794,
+      "naive_focal_z_correction_ratio": 1.1069440556836192,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 1.1084238739729009,
+      "interp_projected_rel_rot_mean_deg": 1.0444302230193605,
+      "local_step_rel_dir_mean_deg": 8.450460974599778,
+      "gt_e2e_rot_deg": 81.16196833552179,
+      "gt_firstcam_bbox_m": [
+        1.7117770450029097,
+        0.7716327008116097,
+        1.2027440896688026
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk",
+      "backend": "omega",
+      "tag": "A_desk_00",
+      "n": 17,
+      "ate_m": 0.02972299141732741,
+      "gt_path_m": 2.4779732085794492,
+      "ate_norm": 0.011994880055368615,
+      "ate_interp_gt_m": 0.029765430217758307,
+      "interp_over_nearest_ate": 1.001427810540165,
+      "max_abs_dt_s": 0.004189014434814453,
+      "rotation_anchored_ate_m": 0.0311737956992017,
+      "rotation_alignment_disagreement_deg": 0.9419787393487734,
+      "focal_ratio": 1.1324088709180098,
+      "focal_bias": 0.1324088709180098,
+      "step_axis_slopes": {
+        "axis": [
+          0.7159261610805618,
+          0.6911363686366869,
+          0.6108604533537744
+        ],
+        "z_over_xy": 0.857206753283387,
+        "gt_axis_energy_fraction": [
+          0.7248311966630758,
+          0.11164677249504486,
+          0.1635220308418793
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6974834757201406,
+          0.6661740790021297,
+          0.6750334267625018
+        ],
+        "z_over_xy": 0.9698525742284725,
+        "gt_axis_energy_fraction": [
+          0.9050126690150216,
+          0.04448699931725318,
+          0.05050033166772523
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.03313707649585213,
+      "naive_focal_z_correction_ratio": 1.1148634412529028,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.7521951299521741,
+      "interp_projected_rel_rot_mean_deg": 0.722973697437161,
+      "local_step_rel_dir_mean_deg": 8.834827299822884,
+      "gt_e2e_rot_deg": 55.87973238106455,
+      "gt_firstcam_bbox_m": [
+        1.6519707605191674,
+        0.4741246166883667,
+        0.5432522910642339
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk",
+      "backend": "omega",
+      "tag": "A_desk_01",
+      "n": 17,
+      "ate_m": 0.024208382362038112,
+      "gt_path_m": 2.5519958418375497,
+      "ate_norm": 0.009486058701650158,
+      "ate_interp_gt_m": 0.024007194076856482,
+      "interp_over_nearest_ate": 0.9916893131406781,
+      "max_abs_dt_s": 0.003670930862426758,
+      "rotation_anchored_ate_m": 0.027740957599059136,
+      "rotation_alignment_disagreement_deg": 2.8145713352030506,
+      "focal_ratio": 1.1510600984571142,
+      "focal_bias": 0.1510600984571142,
+      "step_axis_slopes": {
+        "axis": [
+          0.8182391297596635,
+          0.7438344487251336,
+          0.7697032320383916
+        ],
+        "z_over_xy": 0.954311042303257,
+        "gt_axis_energy_fraction": [
+          0.7145886199843002,
+          0.13313551340011215,
+          0.15227586661558773
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.8471993162231947,
+          0.8537493261970218,
+          0.8002498934142225
+        ],
+        "z_over_xy": 0.9431623143527443,
+        "gt_axis_energy_fraction": [
+          0.48376351630031966,
+          0.11703631852054128,
+          0.3992001651791389
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.03161822890186006,
+      "naive_focal_z_correction_ratio": 1.3060859841441346,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 1.1170884827349812,
+      "interp_projected_rel_rot_mean_deg": 1.1273321583446132,
+      "local_step_rel_dir_mean_deg": 10.353715560215075,
+      "gt_e2e_rot_deg": 17.408524568695203,
+      "gt_firstcam_bbox_m": [
+        0.7716953642620318,
+        0.41254174435445956,
+        0.7421400629823216
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk",
+      "backend": "omega",
+      "tag": "A_desk_02",
+      "n": 17,
+      "ate_m": 0.027131687408228057,
+      "gt_path_m": 3.409762020626444,
+      "ate_norm": 0.007957061884114542,
+      "ate_interp_gt_m": 0.027007628296027233,
+      "interp_over_nearest_ate": 0.9954275194780845,
+      "max_abs_dt_s": 0.0037360191345214844,
+      "rotation_anchored_ate_m": 0.03457950359115435,
+      "rotation_alignment_disagreement_deg": 1.7237807995813774,
+      "focal_ratio": 1.1567416592227502,
+      "focal_bias": 0.15674165922275018,
+      "step_axis_slopes": {
+        "axis": [
+          0.6001073785292873,
+          0.5637746078490894,
+          0.5541286292279092
+        ],
+        "z_over_xy": 0.9426611288374744,
+        "gt_axis_energy_fraction": [
+          0.5613457336757428,
+          0.28634465947871485,
+          0.15230960684554223
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5803337362008381,
+          0.5874486045474651,
+          0.5929403887330225
+        ],
+        "z_over_xy": 1.0195436112799419,
+        "gt_axis_energy_fraction": [
+          0.5400655951605878,
+          0.11405655609968846,
+          0.3458778487397236
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.03935866011656161,
+      "naive_focal_z_correction_ratio": 1.4506528666781542,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.9829094475314732,
+      "interp_projected_rel_rot_mean_deg": 0.9153558254001826,
+      "local_step_rel_dir_mean_deg": 7.086562767376648,
+      "gt_e2e_rot_deg": 81.16196833552179,
+      "gt_firstcam_bbox_m": [
+        1.7117770450029097,
+        0.7716327008116097,
+        1.2027440896688026
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_00",
+      "n": 15,
+      "ate_m": 0.01556017212322156,
+      "gt_path_m": 0.5368293712613814,
+      "ate_norm": 0.028985321884791835,
+      "ate_interp_gt_m": 0.0159658895211798,
+      "interp_over_nearest_ate": 1.0260740944730784,
+      "max_abs_dt_s": 0.00474095344543457,
+      "rotation_anchored_ate_m": 0.017432229947500055,
+      "rotation_alignment_disagreement_deg": 5.864476002285182,
+      "focal_ratio": 1.0336389749212478,
+      "focal_bias": 0.03363897492124779,
+      "step_axis_slopes": {
+        "axis": [
+          0.6921735586960917,
+          0.885609736362111,
+          0.8572465861435815
+        ],
+        "z_over_xy": 1.143909828426838,
+        "gt_axis_energy_fraction": [
+          0.60223936039175,
+          0.25302475110292993,
+          0.14473588850532013
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7534915388681969,
+          0.8511859177562462,
+          0.7680098957014986
+        ],
+        "z_over_xy": 0.9934008502359436,
+        "gt_axis_energy_fraction": [
+          0.678260417600871,
+          0.17044862758446797,
+          0.15129095481466098
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.015727316688876225,
+      "naive_focal_z_correction_ratio": 1.0107418198417757,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.8238968138525603,
+      "interp_projected_rel_rot_mean_deg": 0.6697190007819674,
+      "local_step_rel_dir_mean_deg": 16.482190089517374,
+      "gt_e2e_rot_deg": 58.84639633477579,
+      "gt_firstcam_bbox_m": [
+        0.32320976608702867,
+        0.1919283356828636,
+        0.1992369753413975
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_01",
+      "n": 17,
+      "ate_m": 0.026084505109870457,
+      "gt_path_m": 2.2772127947057754,
+      "ate_norm": 0.011454575158945862,
+      "ate_interp_gt_m": 0.0253730060792762,
+      "interp_over_nearest_ate": 0.9727233072815699,
+      "max_abs_dt_s": 0.004786968231201172,
+      "rotation_anchored_ate_m": 0.027755195240533572,
+      "rotation_alignment_disagreement_deg": 2.0834844078460346,
+      "focal_ratio": 1.012104813806533,
+      "focal_bias": 0.012104813806532944,
+      "step_axis_slopes": {
+        "axis": [
+          0.739336259508478,
+          0.715787674143906,
+          0.7649685069560344
+        ],
+        "z_over_xy": 1.0367109372161591,
+        "gt_axis_energy_fraction": [
+          0.755054325433806,
+          0.04976244980756886,
+          0.19518322475862526
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7657119061797534,
+          0.7313546804646733,
+          0.7459298889292398
+        ],
+        "z_over_xy": 0.9856190689251537,
+        "gt_axis_energy_fraction": [
+          0.4479511531305257,
+          0.15656685580710908,
+          0.3954819910623651
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.026306977624515376,
+      "naive_focal_z_correction_ratio": 1.0085289145302103,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 1.1275841827858977,
+      "interp_projected_rel_rot_mean_deg": 1.053208668197849,
+      "local_step_rel_dir_mean_deg": 8.926868765236696,
+      "gt_e2e_rot_deg": 80.9142425883729,
+      "gt_firstcam_bbox_m": [
+        1.109943791367489,
+        0.616194849896728,
+        1.3168741119969471
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_02",
+      "n": 17,
+      "ate_m": 0.020574863360810648,
+      "gt_path_m": 1.2010399194821204,
+      "ate_norm": 0.017130873859448715,
+      "ate_interp_gt_m": 0.020759716160428546,
+      "interp_over_nearest_ate": 1.0089843998658086,
+      "max_abs_dt_s": 0.0047838687896728516,
+      "rotation_anchored_ate_m": 0.022669223071996585,
+      "rotation_alignment_disagreement_deg": 3.8511158587267045,
+      "focal_ratio": 1.0293853126151031,
+      "focal_bias": 0.029385312615103132,
+      "step_axis_slopes": {
+        "axis": [
+          0.6338796963160481,
+          0.5300176811563,
+          0.5887655810168
+        ],
+        "z_over_xy": 0.9564019496414716,
+        "gt_axis_energy_fraction": [
+          0.5838208070455873,
+          0.12466013383349048,
+          0.2915190591209224
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6319290151636435,
+          0.6189312864174584,
+          0.5945840347063092
+        ],
+        "z_over_xy": 0.9511507283654201,
+        "gt_axis_energy_fraction": [
+          0.4074460928061032,
+          0.4481843650319263,
+          0.14436954216197032
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.020617791735086478,
+      "naive_focal_z_correction_ratio": 1.0020864475998221,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 1.3269840832840292,
+      "interp_projected_rel_rot_mean_deg": 1.237211939427648,
+      "local_step_rel_dir_mean_deg": 24.539156379889313,
+      "gt_e2e_rot_deg": 41.772308979730816,
+      "gt_firstcam_bbox_m": [
+        0.6341685803985408,
+        0.5812067005265827,
+        0.39063942372021754
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_03",
+      "n": 17,
+      "ate_m": 0.020864231214142197,
+      "gt_path_m": 2.0583952857765633,
+      "ate_norm": 0.010136163524233308,
+      "ate_interp_gt_m": 0.020589706835837118,
+      "interp_over_nearest_ate": 0.9868423439384145,
+      "max_abs_dt_s": 0.004637956619262695,
+      "rotation_anchored_ate_m": 0.023418236282245635,
+      "rotation_alignment_disagreement_deg": 1.468438836440961,
+      "focal_ratio": 1.038158486811384,
+      "focal_bias": 0.03815848681138401,
+      "step_axis_slopes": {
+        "axis": [
+          0.6637576429417564,
+          0.7247747889803365,
+          0.7422530244887003
+        ],
+        "z_over_xy": 1.1094162439563688,
+        "gt_axis_energy_fraction": [
+          0.8601782972015927,
+          0.08166466427756441,
+          0.05815703852084278
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6819584111761715,
+          0.6728188443324962,
+          0.6742299902286649
+        ],
+        "z_over_xy": 0.989503717030274,
+        "gt_axis_energy_fraction": [
+          0.8174623180678897,
+          0.055029033655049374,
+          0.12750864827706085
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02247523941670443,
+      "naive_focal_z_correction_ratio": 1.0772138779534928,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.8435210707182346,
+      "interp_projected_rel_rot_mean_deg": 0.7717233347921224,
+      "local_step_rel_dir_mean_deg": 6.212208300517833,
+      "gt_e2e_rot_deg": 62.13654595637829,
+      "gt_firstcam_bbox_m": [
+        1.6672896315487047,
+        0.4375892641111199,
+        0.5499854104450905
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_04",
+      "n": 17,
+      "ate_m": 0.01827898059112815,
+      "gt_path_m": 1.1951441835479057,
+      "ate_norm": 0.015294372714817686,
+      "ate_interp_gt_m": 0.01743921370009174,
+      "interp_over_nearest_ate": 0.9540583301760276,
+      "max_abs_dt_s": 0.004478931427001953,
+      "rotation_anchored_ate_m": 0.018997266804564792,
+      "rotation_alignment_disagreement_deg": 4.305777682303172,
+      "focal_ratio": 1.0344365236732227,
+      "focal_bias": 0.034436523673222696,
+      "step_axis_slopes": {
+        "axis": [
+          0.6698460158853639,
+          0.55368779512261,
+          0.582118304568817
+        ],
+        "z_over_xy": 0.8703612970274869,
+        "gt_axis_energy_fraction": [
+          0.9591306951475902,
+          0.008515921666642516,
+          0.03235338318576745
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6489760589457102,
+          0.637735730708793,
+          0.5432948856446916
+        ],
+        "z_over_xy": 0.8385048821482506,
+        "gt_axis_energy_fraction": [
+          0.9054134958520533,
+          0.09262445225128592,
+          0.0019620518966607524
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.018220500309355375,
+      "naive_focal_z_correction_ratio": 0.9968006814449402,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.6334006113289729,
+      "interp_projected_rel_rot_mean_deg": 0.6372273130985038,
+      "local_step_rel_dir_mean_deg": 15.77396394858394,
+      "gt_e2e_rot_deg": 27.900331261827855,
+      "gt_firstcam_bbox_m": [
+        1.055935512863086,
+        0.3304998930808423,
+        0.05117497520955021
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "vggt",
+      "tag": "A_desk2_05",
+      "n": 17,
+      "ate_m": 0.02043872182037434,
+      "gt_path_m": 2.3095752493430153,
+      "ate_norm": 0.00884955873431202,
+      "ate_interp_gt_m": 0.020362493063116088,
+      "interp_over_nearest_ate": 0.9962703755191645,
+      "max_abs_dt_s": 0.004499912261962891,
+      "rotation_anchored_ate_m": 0.020497286073947723,
+      "rotation_alignment_disagreement_deg": 0.4332121980780954,
+      "focal_ratio": 1.0333731253372562,
+      "focal_bias": 0.033373125337256226,
+      "step_axis_slopes": {
+        "axis": [
+          0.7175552391551115,
+          0.795638815015054,
+          0.7611766115830678
+        ],
+        "z_over_xy": 1.0462878501347297,
+        "gt_axis_energy_fraction": [
+          0.7052352279569302,
+          0.10295300124794957,
+          0.19181177079512027
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.703803180324018,
+          0.7748355827038718,
+          0.73945042244266
+        ],
+        "z_over_xy": 1.0423346510176832,
+        "gt_axis_energy_fraction": [
+          0.7635308079512189,
+          0.06552760454214718,
+          0.17094158750663402
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.019241745201084955,
+      "naive_focal_z_correction_ratio": 0.9414358378273842,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.9329720962260306,
+      "interp_projected_rel_rot_mean_deg": 0.9067419356045279,
+      "local_step_rel_dir_mean_deg": 7.228237035390638,
+      "gt_e2e_rot_deg": 25.94383634526146,
+      "gt_firstcam_bbox_m": [
+        0.9913134253554698,
+        0.38723871947308164,
+        0.5569084688129267
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_00",
+      "n": 15,
+      "ate_m": 0.01975963184578599,
+      "gt_path_m": 0.5368293712613814,
+      "ate_norm": 0.036808030453618856,
+      "ate_interp_gt_m": 0.02001710278527159,
+      "interp_over_nearest_ate": 1.0130301486128401,
+      "max_abs_dt_s": 0.00474095344543457,
+      "rotation_anchored_ate_m": 0.02442853498366732,
+      "rotation_alignment_disagreement_deg": 16.091589390714766,
+      "focal_ratio": 1.135469658210122,
+      "focal_bias": 0.13546965821012202,
+      "step_axis_slopes": {
+        "axis": [
+          0.6767415763616971,
+          0.6577633036962147,
+          0.8609303552668722
+        ],
+        "z_over_xy": 1.2828129338343583,
+        "gt_axis_energy_fraction": [
+          0.60223936039175,
+          0.25302475110292993,
+          0.14473588850532013
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6725317705198645,
+          0.7651792904554294,
+          0.8029430293310322
+        ],
+        "z_over_xy": 1.1617687443852476,
+        "gt_axis_energy_fraction": [
+          0.678260417600871,
+          0.17044862758446797,
+          0.15129095481466098
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.020740475619930327,
+      "naive_focal_z_correction_ratio": 1.0496387676551533,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.9087035836380144,
+      "interp_projected_rel_rot_mean_deg": 0.7994699788122575,
+      "local_step_rel_dir_mean_deg": 22.941811973286622,
+      "gt_e2e_rot_deg": 58.84639633477579,
+      "gt_firstcam_bbox_m": [
+        0.32320976608702867,
+        0.1919283356828636,
+        0.1992369753413975
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_01",
+      "n": 17,
+      "ate_m": 0.030010023374852302,
+      "gt_path_m": 2.2772127947057754,
+      "ate_norm": 0.013178401001707753,
+      "ate_interp_gt_m": 0.029066080858343987,
+      "interp_over_nearest_ate": 0.9685457587047628,
+      "max_abs_dt_s": 0.004786968231201172,
+      "rotation_anchored_ate_m": 0.03973043928066929,
+      "rotation_alignment_disagreement_deg": 3.6252891856687124,
+      "focal_ratio": 1.1579540505616255,
+      "focal_bias": 0.15795405056162548,
+      "step_axis_slopes": {
+        "axis": [
+          0.6729097209293461,
+          0.638506309056428,
+          0.6350911830612113
+        ],
+        "z_over_xy": 0.9467914765417329,
+        "gt_axis_energy_fraction": [
+          0.755054325433806,
+          0.04976244980756886,
+          0.19518322475862526
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6984179084112309,
+          0.6150687064381659,
+          0.7048676484402792
+        ],
+        "z_over_xy": 1.0414235317736973,
+        "gt_axis_energy_fraction": [
+          0.4479511531305257,
+          0.15656685580710908,
+          0.3954819910623651
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.04349546725737483,
+      "naive_focal_z_correction_ratio": 1.4493646577370884,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 1.0876631555544025,
+      "interp_projected_rel_rot_mean_deg": 0.9795371235952977,
+      "local_step_rel_dir_mean_deg": 6.718942308813288,
+      "gt_e2e_rot_deg": 80.9142425883729,
+      "gt_firstcam_bbox_m": [
+        1.109943791367489,
+        0.616194849896728,
+        1.3168741119969471
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_02",
+      "n": 17,
+      "ate_m": 0.02430372451325915,
+      "gt_path_m": 1.2010399194821204,
+      "ate_norm": 0.020235567626876828,
+      "ate_interp_gt_m": 0.024677737994768145,
+      "interp_over_nearest_ate": 1.0153891425696893,
+      "max_abs_dt_s": 0.0047838687896728516,
+      "rotation_anchored_ate_m": 0.038058722021596304,
+      "rotation_alignment_disagreement_deg": 10.602658820472197,
+      "focal_ratio": 1.1405907625375995,
+      "focal_bias": 0.1405907625375995,
+      "step_axis_slopes": {
+        "axis": [
+          0.6848693903812233,
+          0.5190319642921443,
+          0.5184354454343575
+        ],
+        "z_over_xy": 0.7906720416277218,
+        "gt_axis_energy_fraction": [
+          0.5838208070455873,
+          0.12466013383349048,
+          0.2915190591209224
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6237775073500411,
+          0.6198990159068176,
+          0.7831888848575422
+        ],
+        "z_over_xy": 1.2596606535308574,
+        "gt_axis_energy_fraction": [
+          0.4074460928061032,
+          0.4481843650319263,
+          0.14436954216197032
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02503238454298003,
+      "naive_focal_z_correction_ratio": 1.0299814141377117,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 1.1489086640435922,
+      "interp_projected_rel_rot_mean_deg": 1.0518123915656885,
+      "local_step_rel_dir_mean_deg": 14.92031277364476,
+      "gt_e2e_rot_deg": 41.772308979730816,
+      "gt_firstcam_bbox_m": [
+        0.6341685803985408,
+        0.5812067005265827,
+        0.39063942372021754
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_03",
+      "n": 17,
+      "ate_m": 0.02438540936267241,
+      "gt_path_m": 2.0583952857765633,
+      "ate_norm": 0.011846805874058643,
+      "ate_interp_gt_m": 0.023870034793087566,
+      "interp_over_nearest_ate": 0.9788654534389837,
+      "max_abs_dt_s": 0.004637956619262695,
+      "rotation_anchored_ate_m": 0.03384056887924997,
+      "rotation_alignment_disagreement_deg": 3.92910447174475,
+      "focal_ratio": 1.1486827445864685,
+      "focal_bias": 0.14868274458646846,
+      "step_axis_slopes": {
+        "axis": [
+          0.5829063120729739,
+          0.5754535566975604,
+          0.6871482189387237
+        ],
+        "z_over_xy": 1.1801396223431888,
+        "gt_axis_energy_fraction": [
+          0.8601782972015927,
+          0.08166466427756441,
+          0.05815703852084278
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5948291888297308,
+          0.6384019109840978,
+          0.6167497531536545
+        ],
+        "z_over_xy": 1.0320835151006584,
+        "gt_axis_energy_fraction": [
+          0.8174623180678897,
+          0.055029033655049374,
+          0.12750864827706085
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.030918437524784494,
+      "naive_focal_z_correction_ratio": 1.2679072581866275,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.7852383618429036,
+      "interp_projected_rel_rot_mean_deg": 0.7241293043329742,
+      "local_step_rel_dir_mean_deg": 8.896790577943833,
+      "gt_e2e_rot_deg": 62.13654595637829,
+      "gt_firstcam_bbox_m": [
+        1.6672896315487047,
+        0.4375892641111199,
+        0.5499854104450905
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_04",
+      "n": 17,
+      "ate_m": 0.021171449693686905,
+      "gt_path_m": 1.1951441835479057,
+      "ate_norm": 0.017714556942273967,
+      "ate_interp_gt_m": 0.020457078898533716,
+      "interp_over_nearest_ate": 0.966257823366427,
+      "max_abs_dt_s": 0.004478931427001953,
+      "rotation_anchored_ate_m": 0.022095292875468617,
+      "rotation_alignment_disagreement_deg": 13.40282154977644,
+      "focal_ratio": 1.1369893109812865,
+      "focal_bias": 0.13698931098128653,
+      "step_axis_slopes": {
+        "axis": [
+          0.8009325813439442,
+          0.5745965276244521,
+          0.6113537856293153
+        ],
+        "z_over_xy": 0.7652054823430283,
+        "gt_axis_energy_fraction": [
+          0.9591306951475902,
+          0.008515921666642516,
+          0.03235338318576745
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.77106502114937,
+          0.7857957285796193,
+          0.2541026982709869
+        ],
+        "z_over_xy": 0.3289644349667127,
+        "gt_axis_energy_fraction": [
+          0.9054134958520533,
+          0.09262445225128592,
+          0.0019620518966607524
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.021402337291099586,
+      "naive_focal_z_correction_ratio": 1.0109056111297625,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.6452011783025953,
+      "interp_projected_rel_rot_mean_deg": 0.6692072169493835,
+      "local_step_rel_dir_mean_deg": 17.437864836232162,
+      "gt_e2e_rot_deg": 27.900331261827855,
+      "gt_firstcam_bbox_m": [
+        1.055935512863086,
+        0.3304998930808423,
+        0.05117497520955021
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "desk2",
+      "backend": "omega",
+      "tag": "A_desk2_05",
+      "n": 17,
+      "ate_m": 0.01917591750637117,
+      "gt_path_m": 2.3095752493430153,
+      "ate_norm": 0.008302789663088906,
+      "ate_interp_gt_m": 0.019271830285694964,
+      "interp_over_nearest_ate": 1.0050017309102381,
+      "max_abs_dt_s": 0.004499912261962891,
+      "rotation_anchored_ate_m": 0.019946644390734687,
+      "rotation_alignment_disagreement_deg": 0.8670364269654315,
+      "focal_ratio": 1.1508596423538022,
+      "focal_bias": 0.15085964235380223,
+      "step_axis_slopes": {
+        "axis": [
+          0.7209868492486772,
+          0.7429618089177693,
+          0.7411746870403203
+        ],
+        "z_over_xy": 1.024024366766594,
+        "gt_axis_energy_fraction": [
+          0.7052352279569302,
+          0.10295300124794957,
+          0.19181177079512027
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.731286071064957,
+          0.7363243981705845,
+          0.7103864298608439
+        ],
+        "z_over_xy": 0.9708920040400189,
+        "gt_axis_energy_fraction": [
+          0.7635308079512189,
+          0.06552760454214718,
+          0.17094158750663402
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02757774742604017,
+      "naive_focal_z_correction_ratio": 1.4381448719143428,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.8798213699253608,
+      "interp_projected_rel_rot_mean_deg": 0.8304177259632232,
+      "local_step_rel_dir_mean_deg": 10.087964298287421,
+      "gt_e2e_rot_deg": 25.94383634526146,
+      "gt_firstcam_bbox_m": [
+        0.9913134253554698,
+        0.38723871947308164,
+        0.5569084688129267
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_00",
+      "n": 17,
+      "ate_m": 0.014468528879861864,
+      "gt_path_m": 0.578110589589633,
+      "ate_norm": 0.025027268381525806,
+      "ate_interp_gt_m": 0.01490513379256981,
+      "interp_over_nearest_ate": 1.0301761786794812,
+      "max_abs_dt_s": 0.004450082778930664,
+      "rotation_anchored_ate_m": 0.02286281850301809,
+      "rotation_alignment_disagreement_deg": 11.057647923735264,
+      "focal_ratio": 1.0533121199857427,
+      "focal_bias": 0.0533121199857427,
+      "step_axis_slopes": {
+        "axis": [
+          0.6144047160633013,
+          0.6322497859953685,
+          0.7346877455869478
+        ],
+        "z_over_xy": 1.1898144599109004,
+        "gt_axis_energy_fraction": [
+          0.5172001248374345,
+          0.1077281523876936,
+          0.37507172277487183
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6691996142178277,
+          0.6362951774586761,
+          0.6664838918801577
+        ],
+        "z_over_xy": 0.9998397093203403,
+        "gt_axis_energy_fraction": [
+          0.6087118227936812,
+          0.05241864945315505,
+          0.3388695277531638
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.015534842504664855,
+      "naive_focal_z_correction_ratio": 1.0736988282400395,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.8742867865597029,
+      "interp_projected_rel_rot_mean_deg": 0.7377292160105463,
+      "local_step_rel_dir_mean_deg": 17.844524608161414,
+      "gt_e2e_rot_deg": 7.660497713818336,
+      "gt_firstcam_bbox_m": [
+        0.2438971010970145,
+        0.08360499331062393,
+        0.18685383291582675
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_01",
+      "n": 17,
+      "ate_m": 0.0250776945769558,
+      "gt_path_m": 2.156198782430627,
+      "ate_norm": 0.011630511426542207,
+      "ate_interp_gt_m": 0.025181193709539765,
+      "interp_over_nearest_ate": 1.004127139050456,
+      "max_abs_dt_s": 0.004487037658691406,
+      "rotation_anchored_ate_m": 0.027146276980791733,
+      "rotation_alignment_disagreement_deg": 2.6899154336334834,
+      "focal_ratio": 1.0408169826513005,
+      "focal_bias": 0.040816982651300515,
+      "step_axis_slopes": {
+        "axis": [
+          0.6979256604882436,
+          0.8223171845883347,
+          0.837616440242234
+        ],
+        "z_over_xy": 1.1951667853874672,
+        "gt_axis_energy_fraction": [
+          0.9611947380477907,
+          0.02303105906399111,
+          0.01577420288821823
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7157834747243099,
+          0.7012905475966255,
+          0.7172220782318889
+        ],
+        "z_over_xy": 1.0040079310046985,
+        "gt_axis_energy_fraction": [
+          0.8514001789284429,
+          0.0928051738217651,
+          0.05579464724979201
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.026312612485238158,
+      "naive_focal_z_correction_ratio": 1.0492436776631429,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.8408607248946904,
+      "interp_projected_rel_rot_mean_deg": 0.7876350211153902,
+      "local_step_rel_dir_mean_deg": 11.961808368797012,
+      "gt_e2e_rot_deg": 81.6537641161744,
+      "gt_firstcam_bbox_m": [
+        1.662235874602907,
+        0.5691854086114401,
+        0.5093004198111233
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_02",
+      "n": 17,
+      "ate_m": 0.016897160282117258,
+      "gt_path_m": 1.6957099440624401,
+      "ate_norm": 0.00996465246977113,
+      "ate_interp_gt_m": 0.0168551255850056,
+      "interp_over_nearest_ate": 0.9975123218097101,
+      "max_abs_dt_s": 0.004483222961425781,
+      "rotation_anchored_ate_m": 0.01701068930672725,
+      "rotation_alignment_disagreement_deg": 0.31694763305085694,
+      "focal_ratio": 1.0341706740892311,
+      "focal_bias": 0.034170674089231134,
+      "step_axis_slopes": {
+        "axis": [
+          0.5442995745058377,
+          0.4873790226446238,
+          0.46171220093248
+        ],
+        "z_over_xy": 0.853979270637988,
+        "gt_axis_energy_fraction": [
+          0.8756509082266254,
+          0.05981966743767294,
+          0.06452942433570172
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.546001911976678,
+          0.5268883643206839,
+          0.5344382245766897
+        ],
+        "z_over_xy": 0.9844021418338302,
+        "gt_axis_energy_fraction": [
+          0.6884383487367941,
+          0.13304176991639738,
+          0.17851988134680857
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.017655401860169853,
+      "naive_focal_z_correction_ratio": 1.044873905756523,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.6433954290307115,
+      "interp_projected_rel_rot_mean_deg": 0.6357797433963119,
+      "local_step_rel_dir_mean_deg": 10.658431689972339,
+      "gt_e2e_rot_deg": 21.86931367614804,
+      "gt_firstcam_bbox_m": [
+        1.2109379245552014,
+        0.5128417194545588,
+        0.5428919786093902
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_03",
+      "n": 17,
+      "ate_m": 0.02092108731224723,
+      "gt_path_m": 1.6018646633149483,
+      "ate_norm": 0.01306045872124583,
+      "ate_interp_gt_m": 0.020680276635222938,
+      "interp_over_nearest_ate": 0.9884895716254996,
+      "max_abs_dt_s": 0.0042340755462646484,
+      "rotation_anchored_ate_m": 0.028494772403830134,
+      "rotation_alignment_disagreement_deg": 8.329039260090367,
+      "focal_ratio": 1.0171560248646525,
+      "focal_bias": 0.017156024864652508,
+      "step_axis_slopes": {
+        "axis": [
+          0.6889054401567405,
+          0.6892433198709074,
+          0.6616799381902516
+        ],
+        "z_over_xy": 0.9602563692006542,
+        "gt_axis_energy_fraction": [
+          0.30579422294549613,
+          0.27662722367042153,
+          0.4175785533840823
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5940307735943667,
+          0.7010259096425362,
+          0.6543333172092864
+        ],
+        "z_over_xy": 0.9667587254207102,
+        "gt_axis_energy_fraction": [
+          0.07768830080020131,
+          0.2658815186681818,
+          0.6564301805316171
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02107341527968386,
+      "naive_focal_z_correction_ratio": 1.0072810731661856,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.5924111417978825,
+      "interp_projected_rel_rot_mean_deg": 0.5729667490535189,
+      "local_step_rel_dir_mean_deg": 12.411346833991825,
+      "gt_e2e_rot_deg": 99.0139498946159,
+      "gt_firstcam_bbox_m": [
+        0.42432377543713407,
+        0.708459328576959,
+        1.131789965773661
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_04",
+      "n": 17,
+      "ate_m": 0.01557935449485406,
+      "gt_path_m": 0.9530992496845502,
+      "ate_norm": 0.016345993872107653,
+      "ate_interp_gt_m": 0.015359525421697159,
+      "interp_over_nearest_ate": 0.9858897187794583,
+      "max_abs_dt_s": 0.004853010177612305,
+      "rotation_anchored_ate_m": 0.03688574829823324,
+      "rotation_alignment_disagreement_deg": 9.444983041381771,
+      "focal_ratio": 1.0187511223686023,
+      "focal_bias": 0.018751122368602324,
+      "step_axis_slopes": {
+        "axis": [
+          0.5134000434471373,
+          0.5145064628087945,
+          0.6660879781983067
+        ],
+        "z_over_xy": 1.2967865840043986,
+        "gt_axis_energy_fraction": [
+          0.6895367771881241,
+          0.19609583049499335,
+          0.1143673923168827
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5568696662260434,
+          0.5353099982150854,
+          0.3925283460310995
+        ],
+        "z_over_xy": 0.709854813678043,
+        "gt_axis_energy_fraction": [
+          0.6691153759835589,
+          0.147758055183354,
+          0.18312656883308723
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01552319879471177,
+      "naive_focal_z_correction_ratio": 0.996395505336191,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.3606650376542033,
+      "interp_projected_rel_rot_mean_deg": 0.3769551672728218,
+      "local_step_rel_dir_mean_deg": 15.023539526142239,
+      "gt_e2e_rot_deg": 76.21700125918399,
+      "gt_firstcam_bbox_m": [
+        0.5055597158258175,
+        0.2791039158497636,
+        0.27202985876698493
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_05",
+      "n": 17,
+      "ate_m": 0.020716085045960043,
+      "gt_path_m": 0.8916594985652346,
+      "ate_norm": 0.023233179346257404,
+      "ate_interp_gt_m": 0.020643650376563575,
+      "interp_over_nearest_ate": 0.9965034576158687,
+      "max_abs_dt_s": 0.0040950775146484375,
+      "rotation_anchored_ate_m": 0.02468710515323263,
+      "rotation_alignment_disagreement_deg": 4.153075777561761,
+      "focal_ratio": 1.0347023732572143,
+      "focal_bias": 0.03470237325721426,
+      "step_axis_slopes": {
+        "axis": [
+          0.5114423058171015,
+          0.4987264378915382,
+          0.5551283713751083
+        ],
+        "z_over_xy": 1.0946451711681424,
+        "gt_axis_energy_fraction": [
+          0.3854575676543924,
+          0.1977371479249269,
+          0.41680528442068054
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.49394738879803807,
+          0.521372727653327,
+          0.591956303032041
+        ],
+        "z_over_xy": 1.1504131131696886,
+        "gt_axis_energy_fraction": [
+          0.1258822329194178,
+          0.3808523393240801,
+          0.493265427756502
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.020443847385744847,
+      "naive_focal_z_correction_ratio": 0.9868586337808897,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.667161622840041,
+      "interp_projected_rel_rot_mean_deg": 0.6938489827456933,
+      "local_step_rel_dir_mean_deg": 12.21312744200279,
+      "gt_e2e_rot_deg": 46.90523512800258,
+      "gt_firstcam_bbox_m": [
+        0.28699062598116465,
+        0.35100793329332025,
+        0.4414440884526401
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_06",
+      "n": 17,
+      "ate_m": 0.014718480274990692,
+      "gt_path_m": 1.5978519602937253,
+      "ate_norm": 0.009211416727420147,
+      "ate_interp_gt_m": 0.014727343328803174,
+      "interp_over_nearest_ate": 1.0006021718035347,
+      "max_abs_dt_s": 0.002051115036010742,
+      "rotation_anchored_ate_m": 0.015754989099327467,
+      "rotation_alignment_disagreement_deg": 0.8474500397685888,
+      "focal_ratio": 1.0317779588710279,
+      "focal_bias": 0.031777958871027856,
+      "step_axis_slopes": {
+        "axis": [
+          0.5414510056795764,
+          0.5555255785946772,
+          0.5635487678161614
+        ],
+        "z_over_xy": 1.038580060179042,
+        "gt_axis_energy_fraction": [
+          0.7562432104132264,
+          0.06815990096096046,
+          0.17559688862581324
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5510043850869228,
+          0.5658790685813814,
+          0.5323793563192448
+        ],
+        "z_over_xy": 0.9657631445994649,
+        "gt_axis_energy_fraction": [
+          0.7897148809536051,
+          0.013396653192842707,
+          0.19688846585355219
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01579028552463209,
+      "naive_focal_z_correction_ratio": 1.0728203747680787,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.607395353542828,
+      "interp_projected_rel_rot_mean_deg": 0.6062740778976234,
+      "local_step_rel_dir_mean_deg": 10.31727114731099,
+      "gt_e2e_rot_deg": 36.89829087846858,
+      "gt_firstcam_bbox_m": [
+        1.2610968825991002,
+        0.19397717365014647,
+        0.5469092644808156
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_07",
+      "n": 17,
+      "ate_m": 0.013309100114946404,
+      "gt_path_m": 0.6785347632180874,
+      "ate_norm": 0.019614470527383628,
+      "ate_interp_gt_m": 0.013267243029002554,
+      "interp_over_nearest_ate": 0.996855002548456,
+      "max_abs_dt_s": 0.004733085632324219,
+      "rotation_anchored_ate_m": 0.022746729287729105,
+      "rotation_alignment_disagreement_deg": 8.089618423971162,
+      "focal_ratio": 1.012104813806533,
+      "focal_bias": 0.012104813806532944,
+      "step_axis_slopes": {
+        "axis": [
+          0.7034887732419536,
+          0.7945299526267032,
+          0.5927285351903407
+        ],
+        "z_over_xy": 0.8082633448138405,
+        "gt_axis_energy_fraction": [
+          0.41484944796168355,
+          0.20234106863991982,
+          0.3828094833983966
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7784127160958219,
+          0.8310134722255268,
+          0.6326508529146543
+        ],
+        "z_over_xy": 0.789956217600353,
+        "gt_axis_energy_fraction": [
+          0.235587393377416,
+          0.1754918348501557,
+          0.5889207717724284
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01350933778280729,
+      "naive_focal_z_correction_ratio": 1.0150451695555294,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.4484638427498607,
+      "interp_projected_rel_rot_mean_deg": 0.4329591284702972,
+      "local_step_rel_dir_mean_deg": 16.239557554553507,
+      "gt_e2e_rot_deg": 76.62752979714199,
+      "gt_firstcam_bbox_m": [
+        0.2511883976249757,
+        0.1603290927518175,
+        0.3162590933574055
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_08",
+      "n": 17,
+      "ate_m": 0.014747933305414006,
+      "gt_path_m": 1.5613845523497298,
+      "ate_norm": 0.009445420273448857,
+      "ate_interp_gt_m": 0.01468987207010727,
+      "interp_over_nearest_ate": 0.9960630934447323,
+      "max_abs_dt_s": 0.005344867706298828,
+      "rotation_anchored_ate_m": 0.015368737919387638,
+      "rotation_alignment_disagreement_deg": 0.8159667707026689,
+      "focal_ratio": 1.0251316503089585,
+      "focal_bias": 0.025131650308958475,
+      "step_axis_slopes": {
+        "axis": [
+          0.4314443819007315,
+          0.44121275712168834,
+          0.44654030128550615
+        ],
+        "z_over_xy": 1.0252548883488697,
+        "gt_axis_energy_fraction": [
+          0.23787893464486418,
+          0.17179932254298114,
+          0.5903217428121547
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.42852386668792314,
+          0.42024606873245246,
+          0.43394946313227933
+        ],
+        "z_over_xy": 1.0148352934524276,
+        "gt_axis_energy_fraction": [
+          0.34075863006280666,
+          0.04250658316674033,
+          0.6167347867704531
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.015042681246810621,
+      "naive_focal_z_correction_ratio": 1.0199857115768494,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.612378504671595,
+      "interp_projected_rel_rot_mean_deg": 0.6152762830566292,
+      "local_step_rel_dir_mean_deg": 10.763835706934522,
+      "gt_e2e_rot_deg": 87.0532085543983,
+      "gt_firstcam_bbox_m": [
+        0.6190806017382172,
+        0.31174561679295215,
+        0.9063297676443421
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_09",
+      "n": 17,
+      "ate_m": 0.015235934222829008,
+      "gt_path_m": 1.874174800130926,
+      "ate_norm": 0.008129409392210725,
+      "ate_interp_gt_m": 0.01528356272818308,
+      "interp_over_nearest_ate": 1.0031260639917117,
+      "max_abs_dt_s": 0.003793954849243164,
+      "rotation_anchored_ate_m": 0.01581792710514547,
+      "rotation_alignment_disagreement_deg": 1.557630880869499,
+      "focal_ratio": 1.0453364945414367,
+      "focal_bias": 0.045336494541436734,
+      "step_axis_slopes": {
+        "axis": [
+          0.6479299865816492,
+          0.6165639553290563,
+          0.6514642574628149
+        ],
+        "z_over_xy": 1.007633141204992,
+        "gt_axis_energy_fraction": [
+          0.7868330358416749,
+          0.03678187811220833,
+          0.17638508604611666
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6467559702679168,
+          0.6600230995178565,
+          0.6348215049304924
+        ],
+        "z_over_xy": 0.9804336676997342,
+        "gt_axis_energy_fraction": [
+          0.793211615092226,
+          0.046491070824483754,
+          0.16029731408329043
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01748203051064025,
+      "naive_focal_z_correction_ratio": 1.1474209756331035,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.7970179577371149,
+      "interp_projected_rel_rot_mean_deg": 0.7492002271067645,
+      "local_step_rel_dir_mean_deg": 9.796214274210907,
+      "gt_e2e_rot_deg": 33.398111463991825,
+      "gt_firstcam_bbox_m": [
+        1.265986451496487,
+        0.2999691192953229,
+        0.6128821669323845
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "vggt",
+      "tag": "A_room_10",
+      "n": 17,
+      "ate_m": 0.021471414183036663,
+      "gt_path_m": 1.0034029898260024,
+      "ate_norm": 0.021398594982022096,
+      "ate_interp_gt_m": 0.02168440211165109,
+      "interp_over_nearest_ate": 1.0099196041210317,
+      "max_abs_dt_s": 0.00391387939453125,
+      "rotation_anchored_ate_m": 0.024716525466321478,
+      "rotation_alignment_disagreement_deg": 4.127004079017612,
+      "focal_ratio": 1.0368291699291474,
+      "focal_bias": 0.03682916992914742,
+      "step_axis_slopes": {
+        "axis": [
+          0.7012936045042316,
+          0.7233569782519744,
+          0.7048041897551006
+        ],
+        "z_over_xy": 0.9957382213104634,
+        "gt_axis_energy_fraction": [
+          0.6233043567737977,
+          0.2618661119509008,
+          0.11482953127530164
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.7231206153691704,
+          0.6905757632311891,
+          0.7160055070339019
+        ],
+        "z_over_xy": 0.9969046843870156,
+        "gt_axis_energy_fraction": [
+          0.7742900262502537,
+          0.13697661141375492,
+          0.08873336233599122
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.0211500586358066,
+      "naive_focal_z_correction_ratio": 0.9850333310842679,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.8162477702535319,
+      "interp_projected_rel_rot_mean_deg": 0.7398929599712487,
+      "local_step_rel_dir_mean_deg": 13.10423727556334,
+      "gt_e2e_rot_deg": 26.570125487554222,
+      "gt_firstcam_bbox_m": [
+        0.7197321926076878,
+        0.26461767642260847,
+        0.23840223917619383
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_00",
+      "n": 17,
+      "ate_m": 0.014532329469148494,
+      "gt_path_m": 0.578110589589633,
+      "ate_norm": 0.025137628908448378,
+      "ate_interp_gt_m": 0.014732234912508623,
+      "interp_over_nearest_ate": 1.0137559118642692,
+      "max_abs_dt_s": 0.004450082778930664,
+      "rotation_anchored_ate_m": 0.029320405410790226,
+      "rotation_alignment_disagreement_deg": 15.88950823314271,
+      "focal_ratio": 1.1465813949953378,
+      "focal_bias": 0.14658139499533784,
+      "step_axis_slopes": {
+        "axis": [
+          0.5468024867100203,
+          0.6849850364805256,
+          0.7122958879175728
+        ],
+        "z_over_xy": 1.248277428569438,
+        "gt_axis_energy_fraction": [
+          0.5172001248374345,
+          0.1077281523876936,
+          0.37507172277487183
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5427421760469495,
+          0.725116097768297,
+          0.7038797190064412
+        ],
+        "z_over_xy": 1.263239878831131,
+        "gt_axis_energy_fraction": [
+          0.6087118227936812,
+          0.05241864945315505,
+          0.3388695277531638
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.014801115687258495,
+      "naive_focal_z_correction_ratio": 1.0184957421093859,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.7646078587720772,
+      "interp_projected_rel_rot_mean_deg": 0.6560310237230195,
+      "local_step_rel_dir_mean_deg": 19.448922386298122,
+      "gt_e2e_rot_deg": 7.660497713818336,
+      "gt_firstcam_bbox_m": [
+        0.2438971010970145,
+        0.08360499331062393,
+        0.18685383291582675
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_01",
+      "n": 17,
+      "ate_m": 0.044442717419097985,
+      "gt_path_m": 2.156198782430627,
+      "ate_norm": 0.02061160491380988,
+      "ate_interp_gt_m": 0.04443577978101946,
+      "interp_over_nearest_ate": 0.9998438970773749,
+      "max_abs_dt_s": 0.004487037658691406,
+      "rotation_anchored_ate_m": 0.04917719187443072,
+      "rotation_alignment_disagreement_deg": 2.5886054519751576,
+      "focal_ratio": 1.1410625162449124,
+      "focal_bias": 0.1410625162449124,
+      "step_axis_slopes": {
+        "axis": [
+          0.645040046882001,
+          0.5430170603957519,
+          0.35391088487211675
+        ],
+        "z_over_xy": 0.550703186853662,
+        "gt_axis_energy_fraction": [
+          0.9611947380477907,
+          0.02303105906399111,
+          0.01577420288821823
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6607847192712857,
+          0.6090205563160642,
+          0.6682415034098846
+        ],
+        "z_over_xy": 1.0191317698982016,
+        "gt_axis_energy_fraction": [
+          0.8514001789284429,
+          0.0928051738217651,
+          0.05579464724979201
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.04878305191272607,
+      "naive_focal_z_correction_ratio": 1.0976613210371098,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.6587703324989836,
+      "interp_projected_rel_rot_mean_deg": 0.649086742139422,
+      "local_step_rel_dir_mean_deg": 16.20111017847193,
+      "gt_e2e_rot_deg": 81.6537641161744,
+      "gt_firstcam_bbox_m": [
+        1.662235874602907,
+        0.5691854086114401,
+        0.5093004198111233
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_02",
+      "n": 17,
+      "ate_m": 0.021405122874008455,
+      "gt_path_m": 1.6957099440624401,
+      "ate_norm": 0.012623103938830394,
+      "ate_interp_gt_m": 0.021367475277305852,
+      "interp_over_nearest_ate": 0.9982411875454209,
+      "max_abs_dt_s": 0.004483222961425781,
+      "rotation_anchored_ate_m": 0.03446080987936796,
+      "rotation_alignment_disagreement_deg": 9.099696674753206,
+      "focal_ratio": 1.1182332090570055,
+      "focal_bias": 0.11823320905700552,
+      "step_axis_slopes": {
+        "axis": [
+          0.6046845085357269,
+          0.5270129086696784,
+          0.5681874953190151
+        ],
+        "z_over_xy": 0.9474248987044114,
+        "gt_axis_energy_fraction": [
+          0.8756509082266254,
+          0.05981966743767294,
+          0.06452942433570172
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5824112681322878,
+          0.5350698521760214,
+          0.6383001260986992
+        ],
+        "z_over_xy": 1.1105813377756686,
+        "gt_axis_energy_fraction": [
+          0.6884383487367941,
+          0.13304176991639738,
+          0.17851988134680857
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.02541988484363956,
+      "naive_focal_z_correction_ratio": 1.1875607999665398,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.5304391455283788,
+      "interp_projected_rel_rot_mean_deg": 0.5220059057093488,
+      "local_step_rel_dir_mean_deg": 10.034042985779134,
+      "gt_e2e_rot_deg": 21.86931367614804,
+      "gt_firstcam_bbox_m": [
+        1.2109379245552014,
+        0.5128417194545588,
+        0.5428919786093902
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_03",
+      "n": 17,
+      "ate_m": 0.03268273347670544,
+      "gt_path_m": 1.6018646633149483,
+      "ate_norm": 0.020402930550369205,
+      "ate_interp_gt_m": 0.03250980542964965,
+      "interp_over_nearest_ate": 0.9947088866609325,
+      "max_abs_dt_s": 0.0042340755462646484,
+      "rotation_anchored_ate_m": 0.038997480217338724,
+      "rotation_alignment_disagreement_deg": 5.311179338561651,
+      "focal_ratio": 1.1183251702555148,
+      "focal_bias": 0.11832517025551481,
+      "step_axis_slopes": {
+        "axis": [
+          0.7250504951837178,
+          0.6920137818109664,
+          0.7005545649527936
+        ],
+        "z_over_xy": 0.9875876820029068,
+        "gt_axis_energy_fraction": [
+          0.30579422294549613,
+          0.27662722367042153,
+          0.4175785533840823
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.794854543294534,
+          0.6791158442222828,
+          0.6551827995945079
+        ],
+        "z_over_xy": 0.9289594252595749,
+        "gt_axis_energy_fraction": [
+          0.07768830080020131,
+          0.2658815186681818,
+          0.6564301805316171
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.032162486725557604,
+      "naive_focal_z_correction_ratio": 0.9840819082186428,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.6469511444583066,
+      "interp_projected_rel_rot_mean_deg": 0.6248552309704105,
+      "local_step_rel_dir_mean_deg": 18.915074083541704,
+      "gt_e2e_rot_deg": 99.0139498946159,
+      "gt_firstcam_bbox_m": [
+        0.42432377543713407,
+        0.708459328576959,
+        1.131789965773661
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_04",
+      "n": 17,
+      "ate_m": 0.019192946294644592,
+      "gt_path_m": 0.9530992496845502,
+      "ate_norm": 0.020137405732925436,
+      "ate_interp_gt_m": 0.019223363214809535,
+      "interp_over_nearest_ate": 1.0015847968153504,
+      "max_abs_dt_s": 0.004853010177612305,
+      "rotation_anchored_ate_m": 0.029308523077145397,
+      "rotation_alignment_disagreement_deg": 8.867116801924368,
+      "focal_ratio": 1.1223685665742171,
+      "focal_bias": 0.12236856657421713,
+      "step_axis_slopes": {
+        "axis": [
+          0.5290137956602453,
+          0.5004922570252225,
+          0.5283749134199137
+        ],
+        "z_over_xy": 1.010859655384312,
+        "gt_axis_energy_fraction": [
+          0.6895367771881241,
+          0.19609583049499335,
+          0.1143673923168827
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5248739636095537,
+          0.5389634821748216,
+          0.40921135596864716
+        ],
+        "z_over_xy": 0.7758701006955345,
+        "gt_axis_energy_fraction": [
+          0.6691153759835589,
+          0.147758055183354,
+          0.18312656883308723
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.020875184239793957,
+      "naive_focal_z_correction_ratio": 1.0876487600873848,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.509294054999947,
+      "interp_projected_rel_rot_mean_deg": 0.48143056395552564,
+      "local_step_rel_dir_mean_deg": 15.054572101802876,
+      "gt_e2e_rot_deg": 76.21700125918399,
+      "gt_firstcam_bbox_m": [
+        0.5055597158258175,
+        0.2791039158497636,
+        0.27202985876698493
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_05",
+      "n": 17,
+      "ate_m": 0.03459857570310357,
+      "gt_path_m": 0.8916594985652346,
+      "ate_norm": 0.038802452908061856,
+      "ate_interp_gt_m": 0.034589964241008825,
+      "interp_over_nearest_ate": 0.999751103566556,
+      "max_abs_dt_s": 0.0040950775146484375,
+      "rotation_anchored_ate_m": 0.04103984076365708,
+      "rotation_alignment_disagreement_deg": 8.029305854914176,
+      "focal_ratio": 1.1237646389421356,
+      "focal_bias": 0.12376463894213563,
+      "step_axis_slopes": {
+        "axis": [
+          0.4844030884014591,
+          0.4552779749982314,
+          0.5175578722852388
+        ],
+        "z_over_xy": 1.090679380324699,
+        "gt_axis_energy_fraction": [
+          0.3854575676543924,
+          0.1977371479249269,
+          0.41680528442068054
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.3913659864604192,
+          0.48764912569429,
+          0.5627957106806861
+        ],
+        "z_over_xy": 1.2136263881059979,
+        "gt_axis_energy_fraction": [
+          0.1258822329194178,
+          0.3808523393240801,
+          0.493265427756502
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.03328241486324319,
+      "naive_focal_z_correction_ratio": 0.961959103427997,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.6395257938250871,
+      "interp_projected_rel_rot_mean_deg": 0.6435132091652769,
+      "local_step_rel_dir_mean_deg": 17.203659200274423,
+      "gt_e2e_rot_deg": 46.90523512800258,
+      "gt_firstcam_bbox_m": [
+        0.28699062598116465,
+        0.35100793329332025,
+        0.4414440884526401
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_06",
+      "n": 17,
+      "ate_m": 0.021155042354602777,
+      "gt_path_m": 1.5978519602937253,
+      "ate_norm": 0.013239676065305793,
+      "ate_interp_gt_m": 0.02113310840988225,
+      "interp_over_nearest_ate": 0.9989631812428986,
+      "max_abs_dt_s": 0.002051115036010742,
+      "rotation_anchored_ate_m": 0.024375675984014484,
+      "rotation_alignment_disagreement_deg": 2.180522955333467,
+      "focal_ratio": 1.1099026347647607,
+      "focal_bias": 0.1099026347647607,
+      "step_axis_slopes": {
+        "axis": [
+          0.6393826503408886,
+          0.6053171529303291,
+          0.593840382243256
+        ],
+        "z_over_xy": 0.932880812916633,
+        "gt_axis_energy_fraction": [
+          0.7562432104132264,
+          0.06815990096096046,
+          0.17559688862581324
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6101354715525258,
+          0.5832516162750846,
+          0.5781041746861947
+        ],
+        "z_over_xy": 0.9481982595404561,
+        "gt_axis_energy_fraction": [
+          0.7897148809536051,
+          0.013396653192842707,
+          0.19688846585355219
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.022983464909195367,
+      "naive_focal_z_correction_ratio": 1.0864296333679886,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.4709837351138002,
+      "interp_projected_rel_rot_mean_deg": 0.47539928897115635,
+      "local_step_rel_dir_mean_deg": 13.743594992070419,
+      "gt_e2e_rot_deg": 36.89829087846858,
+      "gt_firstcam_bbox_m": [
+        1.2610968825991002,
+        0.19397717365014647,
+        0.5469092644808156
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_07",
+      "n": 17,
+      "ate_m": 0.021674632183897043,
+      "gt_path_m": 0.6785347632180874,
+      "ate_norm": 0.03194328921498546,
+      "ate_interp_gt_m": 0.02163148584088797,
+      "interp_over_nearest_ate": 0.9980093621592745,
+      "max_abs_dt_s": 0.004733085632324219,
+      "rotation_anchored_ate_m": 0.03260540969377749,
+      "rotation_alignment_disagreement_deg": 16.2728869551968,
+      "focal_ratio": 1.112860961351447,
+      "focal_bias": 0.11286096135144708,
+      "step_axis_slopes": {
+        "axis": [
+          0.621688986837443,
+          0.7875221993746337,
+          0.8456190475316202
+        ],
+        "z_over_xy": 1.2508119398581017,
+        "gt_axis_energy_fraction": [
+          0.41484944796168355,
+          0.20234106863991982,
+          0.3828094833983966
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.6529812654125505,
+          0.8922468738467665,
+          0.6905950248453601
+        ],
+        "z_over_xy": 0.9145440030314489,
+        "gt_axis_energy_fraction": [
+          0.235587393377416,
+          0.1754918348501557,
+          0.5889207717724284
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.021701719105625367,
+      "naive_focal_z_correction_ratio": 1.0012497061771801,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.5233910972416164,
+      "interp_projected_rel_rot_mean_deg": 0.4833348725903128,
+      "local_step_rel_dir_mean_deg": 16.884961720155076,
+      "gt_e2e_rot_deg": 76.62752979714199,
+      "gt_firstcam_bbox_m": [
+        0.2511883976249757,
+        0.1603290927518175,
+        0.3162590933574055
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_08",
+      "n": 17,
+      "ate_m": 0.0202448869786888,
+      "gt_path_m": 1.5613845523497298,
+      "ate_norm": 0.012965983907181764,
+      "ate_interp_gt_m": 0.019922036530788594,
+      "interp_over_nearest_ate": 0.9840527414037894,
+      "max_abs_dt_s": 0.005344867706298828,
+      "rotation_anchored_ate_m": 0.0360185912470241,
+      "rotation_alignment_disagreement_deg": 6.350491787673936,
+      "focal_ratio": 1.1300892039934105,
+      "focal_bias": 0.1300892039934105,
+      "step_axis_slopes": {
+        "axis": [
+          0.492778391295327,
+          0.49795898357143653,
+          0.48068515255765304
+        ],
+        "z_over_xy": 0.9711774843713488,
+        "gt_axis_energy_fraction": [
+          0.23787893464486418,
+          0.17179932254298114,
+          0.5903217428121547
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.4626283601551772,
+          0.40829874581840153,
+          0.5122153594691292
+        ],
+        "z_over_xy": 1.1217962242999204,
+        "gt_axis_energy_fraction": [
+          0.34075863006280666,
+          0.04250658316674033,
+          0.6167347867704531
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.028077065152339327,
+      "naive_focal_z_correction_ratio": 1.3868719139748833,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.5874688258102811,
+      "interp_projected_rel_rot_mean_deg": 0.573066458881059,
+      "local_step_rel_dir_mean_deg": 9.536368121983084,
+      "gt_e2e_rot_deg": 87.0532085543983,
+      "gt_firstcam_bbox_m": [
+        0.6190806017382172,
+        0.31174561679295215,
+        0.9063297676443421
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_09",
+      "n": 17,
+      "ate_m": 0.016600387869577526,
+      "gt_path_m": 1.874174800130926,
+      "ate_norm": 0.008857438414185195,
+      "ate_interp_gt_m": 0.01673037792923035,
+      "interp_over_nearest_ate": 1.007830543519471,
+      "max_abs_dt_s": 0.003793954849243164,
+      "rotation_anchored_ate_m": 0.02947747052530981,
+      "rotation_alignment_disagreement_deg": 3.7574033082982297,
+      "focal_ratio": 1.124478364044476,
+      "focal_bias": 0.12447836404447599,
+      "step_axis_slopes": {
+        "axis": [
+          0.6010401932992115,
+          0.5070863236920984,
+          0.6118653765629053
+        ],
+        "z_over_xy": 1.0251674949689247,
+        "gt_axis_energy_fraction": [
+          0.7868330358416749,
+          0.03678187811220833,
+          0.17638508604611666
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.5866396723392413,
+          0.5119120369930004,
+          0.6483077789673191
+        ],
+        "z_over_xy": 1.1129703449335189,
+        "gt_axis_energy_fraction": [
+          0.793211615092226,
+          0.046491070824483754,
+          0.16029731408329043
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.020967013357493687,
+      "naive_focal_z_correction_ratio": 1.2630435820068155,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.7048211429163076,
+      "interp_projected_rel_rot_mean_deg": 0.6585241153243727,
+      "local_step_rel_dir_mean_deg": 13.35259399750771,
+      "gt_e2e_rot_deg": 33.398111463991825,
+      "gt_firstcam_bbox_m": [
+        1.265986451496487,
+        0.2999691192953229,
+        0.6128821669323845
+      ]
+    },
+    {
+      "cond": "und",
+      "seq": "room",
+      "backend": "omega",
+      "tag": "A_room_10",
+      "n": 17,
+      "ate_m": 0.015170185212718151,
+      "gt_path_m": 1.0034029898260024,
+      "ate_norm": 0.015118736306883812,
+      "ate_interp_gt_m": 0.01518503528562232,
+      "interp_over_nearest_ate": 1.0009788985893013,
+      "max_abs_dt_s": 0.00391387939453125,
+      "rotation_anchored_ate_m": 0.0283995995551583,
+      "rotation_alignment_disagreement_deg": 14.317656562729598,
+      "focal_ratio": 1.1354499867201522,
+      "focal_bias": 0.13544998672015218,
+      "step_axis_slopes": {
+        "axis": [
+          0.924051494189191,
+          0.898160256415905,
+          0.7728310722817677
+        ],
+        "z_over_xy": 0.8433412210307191,
+        "gt_axis_energy_fraction": [
+          0.6233043567737977,
+          0.2618661119509008,
+          0.11482953127530164
+        ]
+      },
+      "firstcam_axis_slopes": {
+        "axis": [
+          0.9534727075607432,
+          0.9678794979044626,
+          0.6059946144847662
+        ],
+        "z_over_xy": 0.6341255279295308,
+        "gt_axis_energy_fraction": [
+          0.7742900262502537,
+          0.13697661141375492,
+          0.08873336233599122
+        ]
+      },
+      "naive_focal_z_correction_ate_m": 0.01579807886955901,
+      "naive_focal_z_correction_ratio": 1.0413899796236143,
+      "pred_principal_point_fraction": [
+        0.5,
+        0.5
+      ],
+      "gt_principal_point_fraction": [
+        0.5002122197951738,
+        0.5247625060680238
+      ],
+      "principal_point_error_fraction": [
+        -0.00021221979517382916,
+        -0.02476250606802377
+      ],
+      "projected_rel_rot_mean_deg": 0.7426804477748721,
+      "interp_projected_rel_rot_mean_deg": 0.6812492828018049,
+      "local_step_rel_dir_mean_deg": 12.911955281689657,
+      "gt_e2e_rot_deg": 26.570125487554222,
+      "gt_firstcam_bbox_m": [
+        0.7197321926076878,
+        0.26461767642260847,
+        0.23840223917619383
+      ]
+    }
+  ],
+  "summary": {
+    "raw": {
+      "vggt": {
+        "focal_bias": {
+          "n": 20,
+          "mean": 0.016660605526930338,
+          "median": 0.022083631703874507,
+          "min": -0.01514692101141668,
+          "max": 0.05453743618479523
+        },
+        "ate_norm": {
+          "n": 20,
+          "mean": 0.014657618531633365,
+          "median": 0.0106956338321876,
+          "min": 0.005984926069884215,
+          "max": 0.033214934901199485
+        },
+        "interp_over_nearest_ate": {
+          "n": 20,
+          "mean": 0.9976138801603016,
+          "median": 0.9989957233775193,
+          "min": 0.9623536699385314,
+          "max": 1.0339805410538483
+        },
+        "projected_rel_rot_mean_deg": {
+          "n": 20,
+          "mean": 0.8077989471475243,
+          "median": 0.7145593467006914,
+          "min": 0.4312058572895945,
+          "max": 1.3165388493611108
+        },
+        "rotation_alignment_disagreement_deg": {
+          "n": 20,
+          "mean": 4.215815439813618,
+          "median": 2.682578047725059,
+          "min": 0.7021493866715844,
+          "max": 12.877331336243335
+        },
+        "naive_focal_z_correction_ratio": {
+          "n": 20,
+          "mean": 1.02007263325937,
+          "median": 1.0008175514183957,
+          "min": 0.9536361714580563,
+          "max": 1.125390908089899
+        },
+        "local_step_rel_dir_mean_deg": {
+          "n": 20,
+          "mean": 12.695066918324526,
+          "median": 12.228249850781113,
+          "min": 6.72256519530864,
+          "max": 24.336914425888608
+        },
+        "step_axis_slopes": {
+          "n": 20,
+          "mean": 0.9970895061286009,
+          "median": 0.9864300120011422,
+          "min": 0.6374564731578739,
+          "max": 1.2850215883978602
+        },
+        "firstcam_axis_slopes": {
+          "n": 20,
+          "mean": 0.9876855236965085,
+          "median": 1.0037932557938911,
+          "min": 0.8092751221915083,
+          "max": 1.0693234972045886
+        },
+        "naive_focal_z_correction_n_improved": 9
+      },
+      "omega": {
+        "focal_bias": {
+          "n": 20,
+          "mean": 0.13039669675653653,
+          "median": 0.13445526545662012,
+          "min": 0.09658805046817087,
+          "max": 0.16892587323250186
+        },
+        "ate_norm": {
+          "n": 20,
+          "mean": 0.0184739120512907,
+          "median": 0.01582773040915529,
+          "min": 0.009296670738086129,
+          "max": 0.03878386407492338
+        },
+        "interp_over_nearest_ate": {
+          "n": 20,
+          "mean": 0.997369244247302,
+          "median": 0.9982371199655802,
+          "min": 0.9689183595960632,
+          "max": 1.0115172531602987
+        },
+        "projected_rel_rot_mean_deg": {
+          "n": 20,
+          "mean": 0.7701616287400315,
+          "median": 0.7305431239020117,
+          "min": 0.4646255955634915,
+          "max": 1.1843017794935826
+        },
+        "rotation_alignment_disagreement_deg": {
+          "n": 20,
+          "mean": 7.619655300616399,
+          "median": 5.5332798343234355,
+          "min": 1.4651958736792479,
+          "max": 18.42065250933158
+        },
+        "naive_focal_z_correction_ratio": {
+          "n": 20,
+          "mean": 1.1239838418425645,
+          "median": 1.0516146746095585,
+          "min": 0.9685695645859013,
+          "max": 1.4333117138764093
+        },
+        "local_step_rel_dir_mean_deg": {
+          "n": 20,
+          "mean": 14.469578823211572,
+          "median": 13.921479781491785,
+          "min": 8.053532884619784,
+          "max": 22.813208934220576
+        },
+        "step_axis_slopes": {
+          "n": 20,
+          "mean": 0.9623694868611548,
+          "median": 0.9455023979450983,
+          "min": 0.4346374560817226,
+          "max": 1.345880334320252
+        },
+        "firstcam_axis_slopes": {
+          "n": 20,
+          "mean": 1.0102149794628201,
+          "median": 1.0300578247940435,
+          "min": 0.26113941685503655,
+          "max": 1.3607656359339853
+        },
+        "naive_focal_z_correction_n_improved": 4
+      },
+      "paired": [
+        {
+          "tag": "A_desk_00",
+          "ate_ratio": 2.2678259042690154,
+          "interpolated_ate_ratio": 2.251853147874082,
+          "focal_ratio": 1.1065348236098134
+        },
+        {
+          "tag": "A_desk_01",
+          "ate_ratio": 0.9864233356805552,
+          "interpolated_ate_ratio": 0.9825392924882046,
+          "focal_ratio": 1.122865598952962
+        },
+        {
+          "tag": "A_desk_02",
+          "ate_ratio": 1.5533476319559585,
+          "interpolated_ate_ratio": 1.5453567906299062,
+          "focal_ratio": 1.108472618536476
+        },
+        {
+          "tag": "A_desk2_00",
+          "ate_ratio": 1.2819814065367554,
+          "interpolated_ate_ratio": 1.2675675751499993,
+          "focal_ratio": 1.1289676385536922
+        },
+        {
+          "tag": "A_desk2_01",
+          "ate_ratio": 1.314192903878985,
+          "interpolated_ate_ratio": 1.3237211674206952,
+          "focal_ratio": 1.152244192514646
+        },
+        {
+          "tag": "A_desk2_02",
+          "ate_ratio": 1.225758784995743,
+          "interpolated_ate_ratio": 1.2338535844285923,
+          "focal_ratio": 1.1259382522306172
+        },
+        {
+          "tag": "A_desk2_03",
+          "ate_ratio": 1.2555239670981424,
+          "interpolated_ate_ratio": 1.27007837036067,
+          "focal_ratio": 1.1163066829538233
+        },
+        {
+          "tag": "A_desk2_04",
+          "ate_ratio": 1.4066130317952696,
+          "interpolated_ate_ratio": 1.4162082339651387,
+          "focal_ratio": 1.1232845523907737
+        },
+        {
+          "tag": "A_desk2_05",
+          "ate_ratio": 1.170621968303241,
+          "interpolated_ate_ratio": 1.1823399124370328,
+          "focal_ratio": 1.1280625955329835
+        },
+        {
+          "tag": "A_room_00",
+          "ate_ratio": 1.158231986710412,
+          "interpolated_ate_ratio": 1.1326023789937916,
+          "focal_ratio": 1.0999011631695812
+        },
+        {
+          "tag": "A_room_01",
+          "ate_ratio": 1.8938053861302089,
+          "interpolated_ate_ratio": 1.870519900970403,
+          "focal_ratio": 1.1104432522158363
+        },
+        {
+          "tag": "A_room_02",
+          "ate_ratio": 1.5821934990751214,
+          "interpolated_ate_ratio": 1.57514500805393,
+          "focal_ratio": 1.0884229548115103
+        },
+        {
+          "tag": "A_room_03",
+          "ate_ratio": 1.5940694221362248,
+          "interpolated_ate_ratio": 1.6088074946725697,
+          "focal_ratio": 1.1136169648108565
+        },
+        {
+          "tag": "A_room_04",
+          "ate_ratio": 0.7481862588012655,
+          "interpolated_ate_ratio": 0.756797614178897,
+          "focal_ratio": 1.113453441801021
+        },
+        {
+          "tag": "A_room_05",
+          "ate_ratio": 1.8868516959307613,
+          "interpolated_ate_ratio": 1.8995721460883292,
+          "focal_ratio": 1.0959982182153218
+        },
+        {
+          "tag": "A_room_06",
+          "ate_ratio": 1.3678414372882857,
+          "interpolated_ate_ratio": 1.3640068956013232,
+          "focal_ratio": 1.1023291508063768
+        },
+        {
+          "tag": "A_room_07",
+          "ate_ratio": 1.0522481772693568,
+          "interpolated_ate_ratio": 1.0557933015410534,
+          "focal_ratio": 1.102440620667037
+        },
+        {
+          "tag": "A_room_08",
+          "ate_ratio": 1.339723667080116,
+          "interpolated_ate_ratio": 1.3306297325421546,
+          "focal_ratio": 1.1172864957530657
+        },
+        {
+          "tag": "A_room_09",
+          "ate_ratio": 1.2133085624316273,
+          "interpolated_ate_ratio": 1.2217985218073817,
+          "focal_ratio": 1.079830944126894
+        },
+        {
+          "tag": "A_room_10",
+          "ate_ratio": 0.6988413964785648,
+          "interpolated_ate_ratio": 0.6940478773367802,
+          "focal_ratio": 1.1024305506377698
+        }
+      ],
+      "paired_median_ate_ratio": 1.2980871552078703,
+      "paired_median_interpolated_ate_ratio": 1.2968997688906825
+    },
+    "und": {
+      "vggt": {
+        "focal_bias": {
+          "n": 20,
+          "mean": 0.03274834433373659,
+          "median": 0.03390482450523946,
+          "min": 0.012104813806532944,
+          "max": 0.0580974814598707
+        },
+        "ate_norm": {
+          "n": 20,
+          "mean": 0.014068044820132219,
+          "median": 0.011542543292744034,
+          "min": 0.005841601952140957,
+          "max": 0.028985321884791835
+        },
+        "interp_over_nearest_ate": {
+          "n": 20,
+          "mean": 0.9978990389598155,
+          "median": 0.9978302234608101,
+          "min": 0.9540583301760276,
+          "max": 1.0301761786794812
+        },
+        "projected_rel_rot_mean_deg": {
+          "n": 20,
+          "mean": 0.8178422719495482,
+          "median": 0.8200722920530461,
+          "min": 0.3606650376542033,
+          "max": 1.365152132266509
+        },
+        "rotation_alignment_disagreement_deg": {
+          "n": 20,
+          "mean": 3.7800932884350673,
+          "median": 2.9346408859495163,
+          "min": 0.31694763305085694,
+          "max": 11.057647923735264
+        },
+        "naive_focal_z_correction_ratio": {
+          "n": 20,
+          "mean": 1.0329483971696445,
+          "median": 1.0175154405661893,
+          "min": 0.9414358378273842,
+          "max": 1.1474209756331035
+        },
+        "local_step_rel_dir_mean_deg": {
+          "n": 20,
+          "mean": 12.389434880938373,
+          "median": 12.087467905399901,
+          "min": 6.212208300517833,
+          "max": 24.539156379889313
+        },
+        "step_axis_slopes": {
+          "n": 20,
+          "mean": 1.024314997410735,
+          "median": 1.0164440147769307,
+          "min": 0.8082633448138405,
+          "max": 1.2967865840043986
+        },
+        "firstcam_axis_slopes": {
+          "n": 20,
+          "mean": 0.967924010764257,
+          "median": 0.985010605379492,
+          "min": 0.709854813678043,
+          "max": 1.1504131131696886
+        },
+        "naive_focal_z_correction_n_improved": 5
+      },
+      "omega": {
+        "focal_bias": {
+          "n": 20,
+          "mean": 0.1346936722386074,
+          "median": 0.1354598224651371,
+          "min": 0.1099026347647607,
+          "max": 0.15795405056162548
+        },
+        "ate_norm": {
+          "n": 20,
+          "mean": 0.017868220153187273,
+          "median": 0.014179206186094803,
+          "min": 0.007957061884114542,
+          "max": 0.038802452908061856
+        },
+        "interp_over_nearest_ate": {
+          "n": 20,
+          "mean": 0.9966677605603254,
+          "median": 0.9993571424047274,
+          "min": 0.966257823366427,
+          "max": 1.0153891425696893
+        },
+        "projected_rel_rot_mean_deg": {
+          "n": 20,
+          "mean": 0.7543331476232578,
+          "median": 0.7237507953455898,
+          "min": 0.4709837351138002,
+          "max": 1.1489086640435922
+        },
+        "rotation_alignment_disagreement_deg": {
+          "n": 20,
+          "mean": 7.3331602321989395,
+          "median": 5.830835563117793,
+          "min": 0.8670364269654315,
+          "max": 16.2728869551968
+        },
+        "naive_focal_z_correction_ratio": {
+          "n": 20,
+          "mean": 1.161696866141671,
+          "median": 1.0926550405622473,
+          "min": 0.961959103427997,
+          "max": 1.4506528666781542
+        },
+        "local_step_rel_dir_mean_deg": {
+          "n": 20,
+          "mean": 13.528282372259842,
+          "median": 13.548094494789066,
+          "min": 6.718942308813288,
+          "max": 22.941811973286622
+        },
+        "step_axis_slopes": {
+          "n": 20,
+          "mean": 0.9801368016432951,
+          "median": 0.9627442633373029,
+          "min": 0.550703186853662,
+          "max": 1.2828129338343583
+        },
+        "firstcam_axis_slopes": {
+          "n": 20,
+          "mean": 0.9885197321979667,
+          "median": 1.0193376905890719,
+          "min": 0.3289644349667127,
+          "max": 1.263239878831131
+        },
+        "naive_focal_z_correction_n_improved": 2
+      },
+      "paired": [
+        {
+          "tag": "A_desk_00",
+          "ate_ratio": 2.053354568428352,
+          "interpolated_ate_ratio": 2.0461434474879243,
+          "focal_ratio": 1.0978144228483286
+        },
+        {
+          "tag": "A_desk_01",
+          "ate_ratio": 0.9215673055979109,
+          "interpolated_ate_ratio": 0.9156040324163633,
+          "focal_ratio": 1.113027208464236
+        },
+        {
+          "tag": "A_desk_02",
+          "ate_ratio": 1.2602940898305195,
+          "interpolated_ate_ratio": 1.2537059960360768,
+          "focal_ratio": 1.0932278731320473
+        },
+        {
+          "tag": "A_desk2_00",
+          "ate_ratio": 1.269885171533371,
+          "interpolated_ate_ratio": 1.253741782361552,
+          "focal_ratio": 1.0985166830581563
+        },
+        {
+          "tag": "A_desk2_01",
+          "ate_ratio": 1.150492342041652,
+          "interpolated_ate_ratio": 1.1455513299263411,
+          "focal_ratio": 1.1441048740856716
+        },
+        {
+          "tag": "A_desk2_02",
+          "ate_ratio": 1.181233823382319,
+          "interpolated_ate_ratio": 1.1887319558736547,
+          "focal_ratio": 1.108030927350211
+        },
+        {
+          "tag": "A_desk2_03",
+          "ate_ratio": 1.1687662541883397,
+          "interpolated_ate_ratio": 1.1593188277717932,
+          "focal_ratio": 1.106461835239194
+        },
+        {
+          "tag": "A_desk2_04",
+          "ate_ratio": 1.1582401758204524,
+          "interpolated_ate_ratio": 1.1730505314253992,
+          "focal_ratio": 1.0991387919520716
+        },
+        {
+          "tag": "A_desk2_05",
+          "ate_ratio": 0.938215103414914,
+          "interpolated_ate_ratio": 0.9464376599643041,
+          "focal_ratio": 1.1136922512651977
+        },
+        {
+          "tag": "A_room_00",
+          "ate_ratio": 1.004409611358307,
+          "interpolated_ate_ratio": 0.9884000450806167,
+          "focal_ratio": 1.0885485633744132
+        },
+        {
+          "tag": "A_room_01",
+          "ate_ratio": 1.772201080235539,
+          "interpolated_ate_ratio": 1.7646415135667375,
+          "focal_ratio": 1.096314275482183
+        },
+        {
+          "tag": "A_room_02",
+          "ate_ratio": 1.266788177221832,
+          "interpolated_ate_ratio": 1.2677137983661455,
+          "focal_ratio": 1.0812849726587017
+        },
+        {
+          "tag": "A_room_03",
+          "ate_ratio": 1.5621909601979878,
+          "interpolated_ate_ratio": 1.572019852687971,
+          "focal_ratio": 1.0994627598104474
+        },
+        {
+          "tag": "A_room_04",
+          "ate_ratio": 1.2319474661793028,
+          "interpolated_ate_ratio": 1.2515597121024484,
+          "focal_ratio": 1.1017102626249908
+        },
+        {
+          "tag": "A_room_05",
+          "ate_ratio": 1.6701309936865134,
+          "interpolated_ate_ratio": 1.6755740196161377,
+          "focal_ratio": 1.0860752502234587
+        },
+        {
+          "tag": "A_room_06",
+          "ate_ratio": 1.4373115946317463,
+          "interpolated_ate_ratio": 1.4349572722020356,
+          "focal_ratio": 1.0757184966222935
+        },
+        {
+          "tag": "A_room_07",
+          "ate_ratio": 1.6285573026500844,
+          "interpolated_ate_ratio": 1.6304431744862857,
+          "focal_ratio": 1.0995511000149971
+        },
+        {
+          "tag": "A_room_08",
+          "ate_ratio": 1.3727270499153157,
+          "interpolated_ate_ratio": 1.3561749507218899,
+          "focal_ratio": 1.102384463159263
+        },
+        {
+          "tag": "A_room_09",
+          "ate_ratio": 1.0895549709517691,
+          "interpolated_ate_ratio": 1.0946647863969128,
+          "focal_ratio": 1.0757094676367889
+        },
+        {
+          "tag": "A_room_10",
+          "ate_ratio": 0.7065293922141024,
+          "interpolated_ate_ratio": 0.7002745663650721,
+          "focal_ratio": 1.0951177104688752
+        }
+      ],
+      "paired_median_ate_ratio": 1.246120778004911,
+      "paired_median_interpolated_ate_ratio": 1.2526328540692626
+    }
+  },
+  "focal_ate_correlation": {
+    "raw/vggt": {
+      "rho": -0.4670929250968201,
+      "p": 0.03785632426196597,
+      "n": 20
+    },
+    "raw/omega": {
+      "rho": -0.4015037593984962,
+      "p": 0.07931658537453376,
+      "n": 20
+    },
+    "raw/paired": {
+      "rho": -0.11127819548872178,
+      "p": 0.6404548402871416,
+      "n": 20
+    },
+    "und/vggt": {
+      "rho": -0.0617005441784425,
+      "p": 0.7960890693789351,
+      "n": 20
+    },
+    "und/omega": {
+      "rho": -0.3684210526315789,
+      "p": 0.10996436611637704,
+      "n": 20
+    },
+    "und/paired": {
+      "rho": -0.2601503759398496,
+      "p": 0.2679803337219606,
+      "n": 20
+    }
+  },
+  "caveats": [
+    "Correlations are observational; adjacent submaps and shared scenes invalidate simple independent-sample p-value interpretations.",
+    "First-camera z de-stretch is a coordinate diagnostic, not known-K inference or a model focal intervention.",
+    "Axis slopes are weakly identified where the GT motion has little energy in that axis.",
+    "Principal-point fractions assume full-frame resized images; inspect actual loader crop/pad to recover exact GT K."
+  ]
+}

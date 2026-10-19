@@ -1,0 +1,1871 @@
+{
+  "baseline_verification": [
+    {
+      "tag": "A_desk_00",
+      "max_pose_enc_abs_diff": 0.0
+    },
+    {
+      "tag": "A_desk_01",
+      "max_pose_enc_abs_diff": 0.0
+    },
+    {
+      "tag": "A_desk2_00",
+      "max_pose_enc_abs_diff": 0.0
+    },
+    {
+      "tag": "A_desk2_03",
+      "max_pose_enc_abs_diff": 0.0
+    },
+    {
+      "tag": "A_room_00",
+      "max_pose_enc_abs_diff": 0.0
+    },
+    {
+      "tag": "A_room_05",
+      "max_pose_enc_abs_diff": 0.0
+    }
+  ],
+  "summary": {
+    "omega_cached": {
+      "n": 20,
+      "fx_bias_mean": 0.13469367824047793,
+      "fy_bias_mean": 0.1377419146516447,
+      "ate_path_median": 0.014179204717269665,
+      "paired_ate_ratio_to_cached_omega_median": 1.0,
+      "paired_fx_change_pp_mean": 0.0,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.1467368316982347,
+          "ate_ratio_median": 1.0
+        },
+        "desk2": {
+          "fx_bias_mean": 0.14509107266098445,
+          "ate_ratio_median": 1.0
+        },
+        "room": {
+          "fx_bias_mean": 0.1257378757953589,
+          "ate_ratio_median": 1.0
+        }
+      }
+    },
+    "vggt_cached": {
+      "n": 20,
+      "fx_bias_mean": 0.03073444605683443,
+      "fy_bias_mean": 0.031128558751210057,
+      "ate_path_median": 0.011415194913865228,
+      "paired_ate_ratio_to_cached_omega_median": 0.8109871838892435,
+      "paired_fx_change_pp_mean": -10.395923218364352,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.039203967502038806,
+          "ate_ratio_median": 0.796430842392233
+        },
+        "desk2": {
+          "fx_bias_mean": 0.02830020925276248,
+          "ate_ratio_median": 0.8537310269603813
+        },
+        "room": {
+          "fx_bias_mean": 0.02975234210127248,
+          "ate_ratio_median": 0.7152372280825904
+        }
+      }
+    },
+    "baseline_verify": {
+      "n": 6,
+      "fx_bias_mean": 0.13966122288131377,
+      "fy_bias_mean": 0.14133070669678563,
+      "ate_path_median": 0.01856625290879874,
+      "paired_ate_ratio_to_cached_omega_median": 1.0,
+      "paired_fx_change_pp_mean": 0.0,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.14173442005960246,
+          "ate_ratio_median": 1.0
+        },
+        "desk2": {
+          "fx_bias_mean": 0.14207625021122428,
+          "ate_ratio_median": 1.0
+        },
+        "room": {
+          "fx_bias_mean": 0.13517299837311458,
+          "ate_ratio_median": 1.0
+        }
+      }
+    },
+    "zoom_control": {
+      "n": 20,
+      "fx_bias_mean": 0.12029653048614553,
+      "fy_bias_mean": 0.12302829956215358,
+      "ate_path_median": 0.014421651716628948,
+      "paired_ate_ratio_to_cached_omega_median": 1.012328557711935,
+      "paired_fx_change_pp_mean": -1.4397147754332427,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.1305824433414234,
+          "ate_ratio_median": 1.0059385596957624
+        },
+        "desk2": {
+          "fx_bias_mean": 0.13078328660697494,
+          "ate_ratio_median": 1.0116570332230608
+        },
+        "room": {
+          "fx_bias_mean": 0.11177123273243547,
+          "ate_ratio_median": 1.0128643095667413
+        }
+      }
+    },
+    "zoom_centered": {
+      "n": 20,
+      "fx_bias_mean": 0.11474825896329661,
+      "fy_bias_mean": 0.11763119220127863,
+      "ate_path_median": 0.014511376303862164,
+      "paired_ate_ratio_to_cached_omega_median": 0.9861272861748436,
+      "paired_fx_change_pp_mean": -1.9945419277181327,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.11979886886779638,
+          "ate_ratio_median": 0.9864583556755421
+        },
+        "desk2": {
+          "fx_bias_mean": 0.12215545848897687,
+          "ate_ratio_median": 0.9809796955935863
+        },
+        "room": {
+          "fx_bias_mean": 0.10933052924806197,
+          "ate_ratio_median": 0.9857962166741452
+        }
+      }
+    },
+    "resolution_512x384": {
+      "n": 20,
+      "fx_bias_mean": 0.1491685131790177,
+      "fy_bias_mean": 0.16805819086324475,
+      "ate_path_median": 0.01569671684952946,
+      "paired_ate_ratio_to_cached_omega_median": 1.0671577113634374,
+      "paired_fx_change_pp_mean": 1.4474834938539725,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.16019406892351898,
+          "ate_ratio_median": 1.1464780636497078
+        },
+        "desk2": {
+          "fx_bias_mean": 0.16329213850619306,
+          "ate_ratio_median": 1.0647359908972684
+        },
+        "room": {
+          "fx_bias_mean": 0.13845774779751252,
+          "ate_ratio_median": 1.0610691160934294
+        }
+      }
+    },
+    "resolution_640x480": {
+      "n": 20,
+      "fx_bias_mean": 0.12834387050120238,
+      "fy_bias_mean": 0.1386318246613938,
+      "ate_path_median": 0.01549065270910351,
+      "paired_ate_ratio_to_cached_omega_median": 1.0433011388202922,
+      "paired_fx_change_pp_mean": -0.6349807739275526,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.14337874701401895,
+          "ate_ratio_median": 1.072822768472774
+        },
+        "desk2": {
+          "fx_bias_mean": 0.1392835112189299,
+          "ate_ratio_median": 1.0206669796804404
+        },
+        "room": {
+          "fx_bias_mean": 0.11827637287894653,
+          "ate_ratio_median": 1.04481403590466
+        }
+      }
+    },
+    "fp32": {
+      "n": 6,
+      "fx_bias_mean": 0.13945489706119432,
+      "fy_bias_mean": 0.14120700210595113,
+      "ate_path_median": 0.01848771352482215,
+      "paired_ate_ratio_to_cached_omega_median": 0.9977039144543707,
+      "paired_fx_change_pp_mean": -0.02063258201194425,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.14134432309622413,
+          "ate_ratio_median": 0.9944131215714238
+        },
+        "desk2": {
+          "fx_bias_mean": 0.14196765608884132,
+          "ate_ratio_median": 1.01115603089481
+        },
+        "room": {
+          "fx_bias_mean": 0.13505271199851754,
+          "ate_ratio_median": 0.9926335773314174
+        }
+      }
+    },
+    "zoom_centered_125": {
+      "n": 6,
+      "fx_bias_mean": 0.10664744408650988,
+      "fy_bias_mean": 0.10652182751827473,
+      "ate_path_median": 0.018087488495927253,
+      "paired_ate_ratio_to_cached_omega_median": 0.9519634253856764,
+      "paired_fx_change_pp_mean": -3.30137787948039,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.09932213838357717,
+          "ate_ratio_median": 0.9716999257950627
+        },
+        "desk2": {
+          "fx_bias_mean": 0.11147255749205176,
+          "ate_ratio_median": 0.9693095852664452
+        },
+        "room": {
+          "fx_bias_mean": 0.10914763638390068,
+          "ate_ratio_median": 0.9519634253856764
+        }
+      }
+    },
+    "zoom_centered_150": {
+      "n": 6,
+      "fx_bias_mean": 0.10033018885328145,
+      "fy_bias_mean": 0.09973777866748697,
+      "ate_path_median": 0.01834374251881102,
+      "paired_ate_ratio_to_cached_omega_median": 0.9203569257737335,
+      "paired_fx_change_pp_mean": -3.933103402803232,
+      "per_sequence": {
+        "desk": {
+          "fx_bias_mean": 0.08940980676077837,
+          "ate_ratio_median": 0.9844857933294864
+        },
+        "desk2": {
+          "fx_bias_mean": 0.10183109226215581,
+          "ate_ratio_median": 0.8729168699526946
+        },
+        "room": {
+          "fx_bias_mean": 0.10974966753691018,
+          "ate_ratio_median": 0.949745035017087
+        }
+      }
+    }
+  },
+  "direct_paired_controls": {
+    "zoom_centered_vs_zoom_control": {
+      "n": 20,
+      "mean_fx_bias_difference_pp": -0.5548271522848902,
+      "median_ate_ratio": 0.9795521679252087,
+      "control_fx_bias_mean": 0.12029653048614553,
+      "treatment_fx_bias_mean": 0.11474825896329661,
+      "n_ate_improves": 14
+    },
+    "fp32_vs_omega_cached": {
+      "n": 6,
+      "mean_fx_bias_difference_pp": -0.02063258201194425,
+      "median_ate_ratio": 0.9977039144543707,
+      "control_fx_bias_mean": 0.13966122288131377,
+      "treatment_fx_bias_mean": 0.13945489706119432,
+      "n_ate_improves": 4
+    },
+    "zoom_centered_125_vs_zoom_centered": {
+      "n": 6,
+      "mean_fx_bias_difference_pp": -0.9471383118517732,
+      "median_ate_ratio": 1.007574943998193,
+      "control_fx_bias_mean": 0.1161188272050276,
+      "treatment_fx_bias_mean": 0.10664744408650988,
+      "n_ate_improves": 3
+    },
+    "zoom_centered_150_vs_zoom_centered": {
+      "n": 6,
+      "mean_fx_bias_difference_pp": -1.5788638351746151,
+      "median_ate_ratio": 0.9456933684546048,
+      "control_fx_bias_mean": 0.1161188272050276,
+      "treatment_fx_bias_mean": 0.10033018885328145,
+      "n_ate_improves": 4
+    }
+  },
+  "rows": [
+    {
+      "case": "omega_cached",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.1324088064589226,
+      "fy_bias": 0.13151777032784562,
+      "ate": 0.029722994129815695,
+      "ate_path": 0.01199488115000849,
+      "rel_rot_deg": 0.7521954453346571,
+      "rel_dir_deg": 8.834827277847673
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.1510600336602823,
+      "fy_bias": 0.1538863099737353,
+      "ate": 0.024208382043228772,
+      "ate_path": 0.009486058576724665,
+      "rel_rot_deg": 1.1170879992160603,
+      "rel_dir_deg": 10.35371486898758
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_desk_02",
+      "seq": "desk",
+      "fx_bias": 0.1567416549754992,
+      "fy_bias": 0.1594069952098125,
+      "ate": 0.027131706617203467,
+      "ate_path": 0.007957067517638316,
+      "rel_rot_deg": 0.9829096050939204,
+      "rel_dir_deg": 7.086564032537128
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.13546970026877658,
+      "fy_bias": 0.13457414935709155,
+      "ate": 0.019759631726606802,
+      "ate_path": 0.036808030231613144,
+      "rel_rot_deg": 0.8130062928743962,
+      "rel_dir_deg": 22.932186601313784
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_desk2_01",
+      "seq": "desk2",
+      "fx_bias": 0.15795401383858043,
+      "fy_bias": 0.1633689787873105,
+      "ate": 0.030010028107428182,
+      "ate_path": 0.01317840307993948,
+      "rel_rot_deg": 1.0876633763986923,
+      "rel_dir_deg": 6.718938725411375
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_desk2_02",
+      "seq": "desk2",
+      "fx_bias": 0.14059082039925608,
+      "fy_bias": 0.14326127334405192,
+      "ate": 0.02430372958419406,
+      "ate_path": 0.020235571848997033,
+      "rel_rot_deg": 1.1489095138923897,
+      "rel_dir_deg": 14.920306227452755
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.14868280015367197,
+      "fy_bias": 0.1498221880047077,
+      "ate": 0.024385407585767023,
+      "ate_path": 0.011846805010810754,
+      "rel_rot_deg": 0.7852385376425711,
+      "rel_dir_deg": 8.896788677866699
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_desk2_04",
+      "seq": "desk2",
+      "fx_bias": 0.13698948450563142,
+      "fy_bias": 0.1386697058350217,
+      "ate": 0.021171449102719172,
+      "ate_path": 0.01771455644779996,
+      "rel_rot_deg": 0.6452015092980306,
+      "rel_dir_deg": 17.437862209443942
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_desk2_05",
+      "seq": "desk2",
+      "fx_bias": 0.15085961679999027,
+      "fy_bias": 0.15154042705054982,
+      "ate": 0.01917591737025559,
+      "ate_path": 0.008302789604153576,
+      "rel_rot_deg": 0.8798209231232861,
+      "rel_dir_deg": 10.087964179643597
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.14658140641000172,
+      "fy_bias": 0.14514993006209287,
+      "ate": 0.014532327017462774,
+      "ate_path": 0.02513762466758899,
+      "rel_rot_deg": 0.7646089408996879,
+      "rel_dir_deg": 19.448919886063187
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_01",
+      "seq": "room",
+      "fx_bias": 0.14106245334590484,
+      "fy_bias": 0.14579718942124664,
+      "ate": 0.04444271317491228,
+      "ate_path": 0.020611602945445118,
+      "rel_rot_deg": 0.6587703927726282,
+      "rel_dir_deg": 16.201103429331653
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_02",
+      "seq": "room",
+      "fx_bias": 0.11823323798942731,
+      "fy_bias": 0.12033975364886595,
+      "ate": 0.02140512533965373,
+      "ate_path": 0.01262310539287935,
+      "rel_rot_deg": 0.5304393277308701,
+      "rel_dir_deg": 10.034042482784969
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_03",
+      "seq": "room",
+      "fx_bias": 0.11832520033686156,
+      "fy_bias": 0.12267858184349922,
+      "ate": 0.032682730705568895,
+      "ate_path": 0.02040292882042497,
+      "rel_rot_deg": 0.6469509169914694,
+      "rel_dir_deg": 18.915080932071007
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_04",
+      "seq": "room",
+      "fx_bias": 0.12236867838127186,
+      "fy_bias": 0.12832655217780853,
+      "ate": 0.019192946002039947,
+      "ate_path": 0.020137405425922104,
+      "rel_rot_deg": 0.5092943728435179,
+      "rel_dir_deg": 15.054569869313623
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.12376459033622744,
+      "fy_bias": 0.13303389245524078,
+      "ate": 0.034598575609253446,
+      "ate_path": 0.03880245280280854,
+      "rel_rot_deg": 0.6395251991264824,
+      "rel_dir_deg": 17.20366558549737
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_06",
+      "seq": "room",
+      "fx_bias": 0.10990270506678401,
+      "fy_bias": 0.11612087883554034,
+      "ate": 0.021155039368856467,
+      "ate_path": 0.013239674196705707,
+      "rel_rot_deg": 0.47098424600087163,
+      "rel_dir_deg": 13.743580260566048
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_07",
+      "seq": "room",
+      "fx_bias": 0.1128608747776747,
+      "fy_bias": 0.11763751265416089,
+      "ate": 0.021674631998964564,
+      "ate_path": 0.031943288942438655,
+      "rel_rot_deg": 0.5233911072397557,
+      "rel_dir_deg": 16.884960963207007
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_08",
+      "seq": "room",
+      "fx_bias": 0.1300891859519948,
+      "fy_bias": 0.1303550890905023,
+      "ate": 0.020244881186570644,
+      "ate_path": 0.012965980197577907,
+      "rel_rot_deg": 0.5874682571868587,
+      "rel_dir_deg": 9.536368829630938
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_09",
+      "seq": "room",
+      "fx_bias": 0.12447838385927534,
+      "fy_bias": 0.12653883761624307,
+      "ate": 0.01660038850728162,
+      "ate_path": 0.008857438754443796,
+      "rel_rot_deg": 0.7048212109525596,
+      "rel_dir_deg": 13.352592813074299
+    },
+    {
+      "case": "omega_cached",
+      "tag": "A_room_10",
+      "seq": "room",
+      "fx_bias": 0.13544991729352418,
+      "fy_bias": 0.14281227733756707,
+      "ate": 0.015170184140029993,
+      "ate_path": 0.01511873523783362,
+      "rel_rot_deg": 0.7426804532130997,
+      "rel_dir_deg": 12.911956787733452
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.02944426744607087,
+      "fy_bias": 0.029409929307016025,
+      "ate": 0.014207266503740696,
+      "ate_path": 0.0057334221591061165,
+      "rel_rot_deg": 0.9035494449271577,
+      "rel_dir_deg": 7.476479054847047
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.032373825347711715,
+      "fy_bias": 0.03351358684268857,
+      "ate": 0.02645857752994916,
+      "ate_path": 0.010367798056793782,
+      "rel_rot_deg": 1.3309520640023877,
+      "rel_dir_deg": 12.53301547529741
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_desk_02",
+      "seq": "desk",
+      "fx_bias": 0.05579380971233383,
+      "fy_bias": 0.05572317044716524,
+      "ate": 0.02160852795667828,
+      "ate_path": 0.006337253986044559,
+      "rel_rot_deg": 1.1362593344988152,
+      "rel_dir_deg": 8.453978732570542
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.031071528728376263,
+      "fy_bias": 0.027412506025225714,
+      "ate": 0.01557604018160961,
+      "ate_path": 0.029014880733911372,
+      "rel_rot_deg": 0.7456564363140143,
+      "rel_dir_deg": 17.441932817696685
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_desk2_01",
+      "seq": "desk2",
+      "fx_bias": 0.010522681236092346,
+      "fy_bias": 0.010236408439052713,
+      "ate": 0.02631952949258384,
+      "ate_path": 0.01155778219487144,
+      "rel_rot_deg": 1.1768137307913387,
+      "rel_dir_deg": 9.182970715487283
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_desk2_02",
+      "seq": "desk2",
+      "fx_bias": 0.027451070981125758,
+      "fy_bias": 0.028984930491742222,
+      "ate": 0.020213129543751165,
+      "ate_path": 0.016829690017686437,
+      "rel_rot_deg": 1.255354378739572,
+      "rel_dir_deg": 24.133761275800346
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.03616995129548539,
+      "fy_bias": 0.03640175169673987,
+      "ate": 0.020648875386623737,
+      "ate_path": 0.010031540360253794,
+      "rel_rot_deg": 0.8171102412565759,
+      "rel_dir_deg": 6.087274079222082
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_desk2_04",
+      "seq": "desk2",
+      "fx_bias": 0.03351467177001144,
+      "fy_bias": 0.033271776684458576,
+      "ate": 0.018222059980934267,
+      "ate_path": 0.01524674615144781,
+      "rel_rot_deg": 0.6263497041685004,
+      "rel_dir_deg": 15.584255189322953
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_desk2_05",
+      "seq": "desk2",
+      "fx_bias": 0.03107135150548368,
+      "fy_bias": 0.030332149633132577,
+      "ate": 0.020478669443105165,
+      "ate_path": 0.008866855257879367,
+      "rel_rot_deg": 0.9593160876942296,
+      "rel_dir_deg": 7.328239857760483
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.05020047931410687,
+      "fy_bias": 0.05212688133183563,
+      "ate": 0.014384039984335203,
+      "ate_path": 0.02488112178423439,
+      "rel_rot_deg": 0.8932182840830196,
+      "rel_dir_deg": 17.96259223434896
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_01",
+      "seq": "room",
+      "fx_bias": 0.03828967324851473,
+      "fy_bias": 0.03890926157669905,
+      "ate": 0.0243059828527888,
+      "ate_path": 0.011272607632859017,
+      "rel_rot_deg": 0.7879949560455985,
+      "rel_dir_deg": 10.859368375094375
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_02",
+      "seq": "room",
+      "fx_bias": 0.032208036220760405,
+      "fy_bias": 0.03331421354259878,
+      "ate": 0.01664662210610709,
+      "ate_path": 0.009816904220203194,
+      "rel_rot_deg": 0.6369970953997852,
+      "rel_dir_deg": 10.620797202365502
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_03",
+      "seq": "room",
+      "fx_bias": 0.015502130405641523,
+      "fy_bias": 0.016484253942509852,
+      "ate": 0.020944351463125385,
+      "ate_path": 0.013074981890032143,
+      "rel_rot_deg": 0.5368956339931236,
+      "rel_dir_deg": 12.366819742905776
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_04",
+      "seq": "room",
+      "fx_bias": 0.017483485553398737,
+      "fy_bias": 0.018441517860661616,
+      "ate": 0.015844612305072066,
+      "ate_path": 0.016624304667448013,
+      "rel_rot_deg": 0.37395779159998893,
+      "rel_dir_deg": 15.178119313502883
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.033941102967278924,
+      "fy_bias": 0.036756302341474534,
+      "ate": 0.02071625693683577,
+      "ate_path": 0.023233372122621034,
+      "rel_rot_deg": 0.6516685641283075,
+      "rel_dir_deg": 12.149470564236019
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_06",
+      "seq": "room",
+      "fx_bias": 0.02865679544424693,
+      "fy_bias": 0.03130986188510132,
+      "ate": 0.014565538505297994,
+      "ate_path": 0.009115699618768488,
+      "rel_rot_deg": 0.5611784999017934,
+      "rel_dir_deg": 9.800283519078867
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_07",
+      "seq": "room",
+      "fx_bias": 0.010530635248524378,
+      "fy_bias": 0.010852554823137073,
+      "ate": 0.013372606884723378,
+      "ate_path": 0.01970806450844332,
+      "rel_rot_deg": 0.4535403874556746,
+      "rel_dir_deg": 16.62651453401706
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_08",
+      "seq": "room",
+      "fx_bias": 0.023913520694093693,
+      "fy_bias": 0.02188871270737991,
+      "ate": 0.01447989270274417,
+      "ate_path": 0.00927375173588938,
+      "rel_rot_deg": 0.589502843594446,
+      "rel_dir_deg": 10.820499138080955
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_09",
+      "seq": "room",
+      "fx_bias": 0.04219745458240243,
+      "fy_bias": 0.043935048279158284,
+      "ate": 0.01512956065493181,
+      "ate_path": 0.008072651843293855,
+      "rel_rot_deg": 0.7824137150216122,
+      "rel_dir_deg": 9.711191794409999
+    },
+    {
+      "case": "vggt_cached",
+      "tag": "A_room_10",
+      "seq": "room",
+      "fx_bias": 0.03435244943502869,
+      "fy_bias": 0.033266357166423566,
+      "ate": 0.021536070832181814,
+      "ate_path": 0.021463032351454654,
+      "rel_rot_deg": 0.7893195287108747,
+      "rel_dir_deg": 13.225581879493852
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.1324088064589226,
+      "fy_bias": 0.13151777032784562,
+      "ate": 0.029722994129815695,
+      "ate_path": 0.01199488115000849,
+      "rel_rot_deg": 0.7521954453346571,
+      "rel_dir_deg": 8.834827277847673
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.1510600336602823,
+      "fy_bias": 0.1538863099737353,
+      "ate": 0.024208382043228772,
+      "ate_path": 0.009486058576724665,
+      "rel_rot_deg": 1.1170879992160603,
+      "rel_dir_deg": 10.35371486898758
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.13546970026877658,
+      "fy_bias": 0.13457414935709155,
+      "ate": 0.019759631726606802,
+      "ate_path": 0.036808030231613144,
+      "rel_rot_deg": 0.8130062928743962,
+      "rel_dir_deg": 22.932186601313784
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.14868280015367197,
+      "fy_bias": 0.1498221880047077,
+      "ate": 0.024385407585767023,
+      "ate_path": 0.011846805010810754,
+      "rel_rot_deg": 0.7852385376425711,
+      "rel_dir_deg": 8.896788677866699
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.14658140641000172,
+      "fy_bias": 0.14514993006209287,
+      "ate": 0.014532327017462774,
+      "ate_path": 0.02513762466758899,
+      "rel_rot_deg": 0.7646089408996879,
+      "rel_dir_deg": 19.448919886063187
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.12376459033622744,
+      "fy_bias": 0.13303389245524078,
+      "ate": 0.034598575609253446,
+      "ate_path": 0.03880245280280854,
+      "rel_rot_deg": 0.6395251991264824,
+      "rel_dir_deg": 17.20366558549737
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.11604904871631394,
+      "fy_bias": 0.11617200973606612,
+      "ate": 0.03241212698539183,
+      "ate_path": 0.01308009581103291,
+      "rel_rot_deg": 0.8476988142464938,
+      "rel_dir_deg": 10.220371247652794
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.13314460111189108,
+      "fy_bias": 0.1366483297304255,
+      "ate": 0.024352144965130308,
+      "ate_path": 0.009542392101860043,
+      "rel_rot_deg": 1.07697102673779,
+      "rel_dir_deg": 10.69768511352152
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk_02",
+      "seq": "desk",
+      "fx_bias": 0.14255368019606518,
+      "fy_bias": 0.14561203659122057,
+      "ate": 0.02583619633464506,
+      "ate_path": 0.007577125963148131,
+      "rel_rot_deg": 0.940340792045314,
+      "rel_dir_deg": 7.6931435973000175
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.11990677722973597,
+      "fy_bias": 0.11863909611641299,
+      "ate": 0.0186584655958223,
+      "ate_path": 0.03475678976353461,
+      "rel_rot_deg": 0.8234214448157808,
+      "rel_dir_deg": 21.75814084465094
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_01",
+      "seq": "desk2",
+      "fx_bias": 0.14374275161563066,
+      "fy_bias": 0.14810022675241608,
+      "ate": 0.031065279633740138,
+      "ate_path": 0.013641799179225976,
+      "rel_rot_deg": 1.1666443907246153,
+      "rel_dir_deg": 8.232784078662805
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_02",
+      "seq": "desk2",
+      "fx_bias": 0.13289784132907267,
+      "fy_bias": 0.13457995260461386,
+      "ate": 0.027532457906598026,
+      "ate_path": 0.02292384912440697,
+      "rel_rot_deg": 1.2032525023466618,
+      "rel_dir_deg": 14.15468085509257
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.13980730176996525,
+      "fy_bias": 0.14021933730556935,
+      "ate": 0.02524247997276413,
+      "ate_path": 0.01226318392156684,
+      "rel_rot_deg": 0.7904419819068114,
+      "rel_dir_deg": 9.215681553287013
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_04",
+      "seq": "desk2",
+      "fx_bias": 0.11604916043179792,
+      "fy_bias": 0.11716063976212188,
+      "ate": 0.017645219496923596,
+      "ate_path": 0.014764092684233284,
+      "rel_rot_deg": 0.5378581881354786,
+      "rel_dir_deg": 12.062034170585132
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_05",
+      "seq": "desk2",
+      "fx_bias": 0.13229588726564723,
+      "fy_bias": 0.13314539893265032,
+      "ate": 0.018949011220011823,
+      "ate_path": 0.00820454376855748,
+      "rel_rot_deg": 0.8368058791800244,
+      "rel_dir_deg": 9.361615074027853
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.13132654346076866,
+      "fy_bias": 0.12858106613828357,
+      "ate": 0.01470370392863202,
+      "ate_path": 0.02543406779500324,
+      "rel_rot_deg": 0.8345694339524385,
+      "rel_dir_deg": 19.48083660833445
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_01",
+      "seq": "room",
+      "fx_bias": 0.12499546304334297,
+      "fy_bias": 0.129354499695312,
+      "ate": 0.04907099447210414,
+      "ate_path": 0.022758103228677128,
+      "rel_rot_deg": 0.7418405538244388,
+      "rel_dir_deg": 16.428598452229227
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_02",
+      "seq": "room",
+      "fx_bias": 0.10334044214843097,
+      "fy_bias": 0.10516132621151919,
+      "ate": 0.018250812788726062,
+      "ate_path": 0.010762933161199898,
+      "rel_rot_deg": 0.5818468891377192,
+      "rel_dir_deg": 9.671227100533871
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_03",
+      "seq": "room",
+      "fx_bias": 0.10805677891160559,
+      "fy_bias": 0.1122035780585302,
+      "ate": 0.03159510797829056,
+      "ate_path": 0.01972395590081041,
+      "rel_rot_deg": 0.7312904042886819,
+      "rel_dir_deg": 18.635236469913135
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_04",
+      "seq": "room",
+      "fx_bias": 0.11535210935881346,
+      "fy_bias": 0.12047520759293939,
+      "ate": 0.01854056919496755,
+      "ate_path": 0.01945292602119241,
+      "rel_rot_deg": 0.5222984741880246,
+      "rel_dir_deg": 14.073561743641605
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.1075977335705236,
+      "fy_bias": 0.11743062517501057,
+      "ate": 0.0346625383168532,
+      "ate_path": 0.03887418725716323,
+      "rel_rot_deg": 0.5766371697541838,
+      "rel_dir_deg": 18.475736550341047
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_06",
+      "seq": "room",
+      "fx_bias": 0.09570195084848887,
+      "fy_bias": 0.1022043402325461,
+      "ate": 0.021427184344194036,
+      "ate_path": 0.013409993464134927,
+      "rel_rot_deg": 0.42772541492970634,
+      "rel_dir_deg": 14.63456983649966
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_07",
+      "seq": "room",
+      "fx_bias": 0.10578044834066325,
+      "fy_bias": 0.10916650510271086,
+      "ate": 0.023543251183884395,
+      "ate_path": 0.03469719233282286,
+      "rel_rot_deg": 0.5070127149573616,
+      "rel_dir_deg": 20.062668895091715
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_08",
+      "seq": "room",
+      "fx_bias": 0.11833090328132445,
+      "fy_bias": 0.11905804251945407,
+      "ate": 0.021983062172803297,
+      "ate_path": 0.014079210749024611,
+      "rel_rot_deg": 0.5722310722482626,
+      "rel_dir_deg": 9.105530890084971
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_09",
+      "seq": "room",
+      "fx_bias": 0.1122579373035002,
+      "fy_bias": 0.11385184126821302,
+      "ate": 0.017394587432696434,
+      "ate_path": 0.009281198013910594,
+      "rel_rot_deg": 0.7400133106804128,
+      "rel_dir_deg": 10.895868792899705
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_10",
+      "seq": "room",
+      "fx_bias": 0.10674324978932814,
+      "fy_bias": 0.11280193171705544,
+      "ate": 0.016666598800561892,
+      "ate_path": 0.016610074884720053,
+      "rel_rot_deg": 0.7711992683130482,
+      "rel_dir_deg": 13.595497852925398
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.10645860178588196,
+      "fy_bias": 0.10699094424508027,
+      "ate": 0.03215146516524267,
+      "ate_path": 0.012974904270120895,
+      "rel_rot_deg": 0.7819176761803952,
+      "rel_dir_deg": 10.18933423915091
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.12179271351315912,
+      "fy_bias": 0.12455904774080606,
+      "ate": 0.023880560743928775,
+      "ate_path": 0.009357601745437687,
+      "rel_rot_deg": 1.1266865968999946,
+      "rel_dir_deg": 10.722775069211375
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk_02",
+      "seq": "desk",
+      "fx_bias": 0.13114529130434804,
+      "fy_bias": 0.13533488918782433,
+      "ate": 0.025322367812783766,
+      "ate_path": 0.007426432595472315,
+      "rel_rot_deg": 0.8856569187319712,
+      "rel_dir_deg": 7.269189219131322
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.1141270953427782,
+      "fy_bias": 0.11253974981116643,
+      "ate": 0.018291817522138553,
+      "ate_path": 0.03407380166096071,
+      "rel_rot_deg": 0.793417250847236,
+      "rel_dir_deg": 21.78131719560154
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_01",
+      "seq": "desk2",
+      "fx_bias": 0.12930892983487374,
+      "fy_bias": 0.13499174036129546,
+      "ate": 0.02988200038765308,
+      "ate_path": 0.013122181843139498,
+      "rel_rot_deg": 1.0924129688597835,
+      "rel_dir_deg": 7.775509289932188
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_02",
+      "seq": "desk2",
+      "fx_bias": 0.12728618684545157,
+      "fy_bias": 0.12911251231388654,
+      "ate": 0.02499029787205465,
+      "ate_path": 0.02080721670169821,
+      "rel_rot_deg": 1.1494475440865743,
+      "rel_dir_deg": 15.858853522831485
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.12357910449925047,
+      "fy_bias": 0.12349541704114575,
+      "ate": 0.023561803997831768,
+      "ate_path": 0.011446685755959012,
+      "rel_rot_deg": 0.7886695965979762,
+      "rel_dir_deg": 8.39047015891681
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_04",
+      "seq": "desk2",
+      "fx_bias": 0.11594320563256799,
+      "fy_bias": 0.1174789999528909,
+      "ate": 0.017782849304239026,
+      "ate_path": 0.014879250176701567,
+      "rel_rot_deg": 0.5477537231234486,
+      "rel_dir_deg": 15.089043656951194
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_05",
+      "seq": "desk2",
+      "fx_bias": 0.12268822877893926,
+      "fy_bias": 0.12282456411341136,
+      "ate": 0.020065590056044632,
+      "ate_path": 0.008688000125457057,
+      "rel_rot_deg": 0.8313898214478168,
+      "rel_dir_deg": 8.816307424001657
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.12620939915053198,
+      "fy_bias": 0.12449034356545541,
+      "ate": 0.013492338319560294,
+      "ate_path": 0.023338680457553492,
+      "rel_rot_deg": 0.8033591944931203,
+      "rel_dir_deg": 18.595072912175127
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_01",
+      "seq": "room",
+      "fx_bias": 0.12914290505194526,
+      "fy_bias": 0.134074931776345,
+      "ate": 0.0464404779675301,
+      "ate_path": 0.021538124567150974,
+      "rel_rot_deg": 0.7640796825015702,
+      "rel_dir_deg": 14.81355308232771
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_02",
+      "seq": "room",
+      "fx_bias": 0.10248489388701087,
+      "fy_bias": 0.10355651700486446,
+      "ate": 0.01928944213070232,
+      "ate_path": 0.011375437289994472,
+      "rel_rot_deg": 0.5584402046521927,
+      "rel_dir_deg": 9.193729992780566
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_03",
+      "seq": "room",
+      "fx_bias": 0.09898557963626753,
+      "fy_bias": 0.1033547242085806,
+      "ate": 0.030347086782637395,
+      "ate_path": 0.01894485063415794,
+      "rel_rot_deg": 0.6229458665559275,
+      "rel_dir_deg": 19.71703627588359
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_04",
+      "seq": "room",
+      "fx_bias": 0.11080174609223947,
+      "fy_bias": 0.11573554974616207,
+      "ate": 0.01937419281758006,
+      "ate_path": 0.02032757115693081,
+      "rel_rot_deg": 0.4964495759262291,
+      "rel_dir_deg": 16.878771102520002
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.1045460489385639,
+      "fy_bias": 0.11405416746675168,
+      "ate": 0.03393435700434366,
+      "ate_path": 0.038057528752788804,
+      "rel_rot_deg": 0.5872248898733596,
+      "rel_dir_deg": 17.06687093667538
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_06",
+      "seq": "room",
+      "fx_bias": 0.09159908945570683,
+      "fy_bias": 0.09768897327929427,
+      "ate": 0.02259922308482879,
+      "ate_path": 0.014143502431022763,
+      "rel_rot_deg": 0.4793813752176432,
+      "rel_dir_deg": 12.886711380513031
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_07",
+      "seq": "room",
+      "fx_bias": 0.10910275334902653,
+      "fy_bias": 0.11306609644088073,
+      "ate": 0.023768960605185036,
+      "ate_path": 0.03502983471687724,
+      "rel_rot_deg": 0.4826256448922591,
+      "rel_dir_deg": 19.58488130862243
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_08",
+      "seq": "room",
+      "fx_bias": 0.11758738171307992,
+      "fy_bias": 0.11905583944205489,
+      "ate": 0.019483888271169654,
+      "ate_path": 0.012478596795291924,
+      "rel_rot_deg": 0.5172759920797168,
+      "rel_dir_deg": 11.109012774813213
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_09",
+      "seq": "room",
+      "fx_bias": 0.1059338321342107,
+      "fy_bias": 0.10718484753826418,
+      "ate": 0.01636460018579918,
+      "ate_path": 0.008731629613553648,
+      "rel_rot_deg": 0.7309448847234268,
+      "rel_dir_deg": 12.934809059825326
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_10",
+      "seq": "room",
+      "fx_bias": 0.10624219232009868,
+      "fy_bias": 0.11303398878941229,
+      "ate": 0.016012028377589114,
+      "ate_path": 0.015957724403796843,
+      "rel_rot_deg": 0.7295599588337238,
+      "rel_dir_deg": 14.025048357944293
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.14980589121517074,
+      "fy_bias": 0.16639163379371436,
+      "ate": 0.03407676075582273,
+      "ate_path": 0.013751868114570114,
+      "rel_rot_deg": 0.8086683578226294,
+      "rel_dir_deg": 11.591739436350629
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.15932050467867476,
+      "fy_bias": 0.1804665566337167,
+      "ate": 0.024679279288029113,
+      "ate_path": 0.00967057974132863,
+      "rel_rot_deg": 1.152577987685234,
+      "rel_dir_deg": 10.509888564853448
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk_02",
+      "seq": "desk",
+      "fx_bias": 0.17145581087671147,
+      "fy_bias": 0.19077214597865289,
+      "ate": 0.03161499054224172,
+      "ate_path": 0.009271905297494455,
+      "rel_rot_deg": 1.0021116810057642,
+      "rel_dir_deg": 7.746604304448379
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.1596612584391468,
+      "fy_bias": 0.17234601651801196,
+      "ate": 0.020870630361369782,
+      "ate_path": 0.038877586582735435,
+      "rel_rot_deg": 0.8265876205040713,
+      "rel_dir_deg": 25.532099766921462
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_01",
+      "seq": "desk2",
+      "fx_bias": 0.17971523239466847,
+      "fy_bias": 0.2030479419355209,
+      "ate": 0.03325922146915275,
+      "ate_path": 0.014605232126956308,
+      "rel_rot_deg": 1.2239230450135627,
+      "rel_dir_deg": 8.412546289637877
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_02",
+      "seq": "desk2",
+      "fx_bias": 0.15709884825256548,
+      "fy_bias": 0.17522496741293292,
+      "ate": 0.027842309120699443,
+      "ate_path": 0.02318183489913045,
+      "rel_rot_deg": 1.2025788070597876,
+      "rel_dir_deg": 20.572007983138256
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.16494307634094718,
+      "fy_bias": 0.18202922328581805,
+      "ate": 0.02538011692480757,
+      "ate_path": 0.012330050063845004,
+      "rel_rot_deg": 0.8094712468180102,
+      "rel_dir_deg": 9.538277904400344
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_04",
+      "seq": "desk2",
+      "fx_bias": 0.15225231357814462,
+      "fy_bias": 0.17091915638295263,
+      "ate": 0.02272217955557133,
+      "ate_path": 0.019012082281250998,
+      "rel_rot_deg": 0.6718727927064783,
+      "rel_dir_deg": 16.04211213466776
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_05",
+      "seq": "desk2",
+      "fx_bias": 0.16608210203168583,
+      "fy_bias": 0.18294640082860814,
+      "ate": 0.020234908238098304,
+      "ate_path": 0.008761311519879836,
+      "rel_rot_deg": 0.8953041677995919,
+      "rel_dir_deg": 10.133196533230203
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.1550922893772535,
+      "fy_bias": 0.16993314293701944,
+      "ate": 0.015936647928412588,
+      "ate_path": 0.027566780846766854,
+      "rel_rot_deg": 0.852336675078536,
+      "rel_dir_deg": 22.523086139459984
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_01",
+      "seq": "room",
+      "fx_bias": 0.15599925649565316,
+      "fy_bias": 0.176417502079542,
+      "ate": 0.0481854597010837,
+      "ate_path": 0.02234741068110867,
+      "rel_rot_deg": 0.6861101042329245,
+      "rel_dir_deg": 16.984655676029625
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_02",
+      "seq": "room",
+      "fx_bias": 0.13139481808729436,
+      "fy_bias": 0.14830388518679238,
+      "ate": 0.020429834136608902,
+      "ate_path": 0.012047953252939482,
+      "rel_rot_deg": 0.5701298224886122,
+      "rel_dir_deg": 9.386774971963373
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_03",
+      "seq": "room",
+      "fx_bias": 0.12270367497568668,
+      "fy_bias": 0.14300136897447913,
+      "ate": 0.02818674638037544,
+      "ate_path": 0.017596209608647537,
+      "rel_rot_deg": 0.6187261365790129,
+      "rel_dir_deg": 19.67677324300967
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_04",
+      "seq": "room",
+      "fx_bias": 0.139781899908328,
+      "fy_bias": 0.1599670589039357,
+      "ate": 0.018311502293043798,
+      "ate_path": 0.019212587040756148,
+      "rel_rot_deg": 0.49834485403117834,
+      "rel_dir_deg": 16.3508555453373
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.13404183122237145,
+      "fy_bias": 0.15833824535530883,
+      "ate": 0.03346061151826235,
+      "ate_path": 0.03752622113273472,
+      "rel_rot_deg": 0.6688412370774118,
+      "rel_dir_deg": 20.522606010293075
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_06",
+      "seq": "room",
+      "fx_bias": 0.1215478534134522,
+      "fy_bias": 0.14288745266932823,
+      "ate": 0.02244695892403423,
+      "ate_path": 0.014048209397263508,
+      "rel_rot_deg": 0.49529741901872937,
+      "rel_dir_deg": 13.593678579994993
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_07",
+      "seq": "room",
+      "fx_bias": 0.1313725623033557,
+      "fy_bias": 0.1501459705652255,
+      "ate": 0.024236740012642415,
+      "ate_path": 0.03571923109391597,
+      "rel_rot_deg": 0.5285109670676602,
+      "rel_dir_deg": 21.198707296920478
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_08",
+      "seq": "room",
+      "fx_bias": 0.1329543759353291,
+      "fy_bias": 0.14857710343655128,
+      "ate": 0.02086139438810706,
+      "ate_path": 0.013360830524877883,
+      "rel_rot_deg": 0.5639095493238993,
+      "rel_dir_deg": 12.45915793053173
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_09",
+      "seq": "room",
+      "fx_bias": 0.1471420431065098,
+      "fy_bias": 0.16441121255390523,
+      "ate": 0.01815808114066041,
+      "ate_path": 0.009688573946993592,
+      "rel_rot_deg": 0.771876728175773,
+      "rel_dir_deg": 12.192364869136426
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_10",
+      "seq": "room",
+      "fx_bias": 0.15100462094740386,
+      "fy_bias": 0.17503683183287833,
+      "ate": 0.016845331651249355,
+      "ate_path": 0.01678820157210261,
+      "rel_rot_deg": 0.769597987425398,
+      "rel_dir_deg": 14.88554814784806
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.13207480798255045,
+      "fy_bias": 0.1389186250380221,
+      "ate": 0.03298053935793131,
+      "ate_path": 0.01330948181511539,
+      "rel_rot_deg": 0.7736677166018484,
+      "rel_dir_deg": 9.89035650334704
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.14919770756051176,
+      "fy_bias": 0.1583443110710654,
+      "ate": 0.025156993544006214,
+      "ate_path": 0.009857772152909179,
+      "rel_rot_deg": 1.1347529013509945,
+      "rel_dir_deg": 11.298290674539984
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk_02",
+      "seq": "desk",
+      "fx_bias": 0.14886372549899463,
+      "fy_bias": 0.1591037614153885,
+      "ate": 0.02910751260645931,
+      "ate_path": 0.008536523203197522,
+      "rel_rot_deg": 1.001790023978852,
+      "rel_dir_deg": 7.515752301647213
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.1303872658348364,
+      "fy_bias": 0.13727660010792775,
+      "ate": 0.019299292038751033,
+      "ate_path": 0.03595051439418026,
+      "rel_rot_deg": 0.797899372880193,
+      "rel_dir_deg": 22.24723133465167
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_01",
+      "seq": "desk2",
+      "fx_bias": 0.15110369142722924,
+      "fy_bias": 0.16253388033437788,
+      "ate": 0.030458121385803723,
+      "ate_path": 0.013375175766013131,
+      "rel_rot_deg": 1.1596648115571169,
+      "rel_dir_deg": 7.707479989784256
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_02",
+      "seq": "desk2",
+      "fx_bias": 0.1384719106227814,
+      "fy_bias": 0.14775856575923063,
+      "ate": 0.02552212369594642,
+      "ate_path": 0.02125002115412731,
+      "rel_rot_deg": 1.1853916484834164,
+      "rel_dir_deg": 19.407821064697185
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.14312675642780337,
+      "fy_bias": 0.1509893635799675,
+      "ate": 0.025029243501910714,
+      "ate_path": 0.012159590373560354,
+      "rel_rot_deg": 0.7642533422168882,
+      "rel_dir_deg": 9.327127989980921
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_04",
+      "seq": "desk2",
+      "fx_bias": 0.12542483701985163,
+      "fy_bias": 0.13375121339833917,
+      "ate": 0.019895776570792084,
+      "ate_path": 0.0166471768383037,
+      "rel_rot_deg": 0.5859711493544241,
+      "rel_dir_deg": 14.877498555966683
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_05",
+      "seq": "desk2",
+      "fx_bias": 0.14718660598107736,
+      "fy_bias": 0.15521947388366253,
+      "ate": 0.020403913049120346,
+      "ate_path": 0.008834487230898611,
+      "rel_rot_deg": 0.8615701328420534,
+      "rel_dir_deg": 9.638461052589498
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.13914317793778053,
+      "fy_bias": 0.14498186837967775,
+      "ate": 0.01634774961223355,
+      "ate_path": 0.028277893376486778,
+      "rel_rot_deg": 0.8127997860616492,
+      "rel_dir_deg": 21.31543970829318
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_01",
+      "seq": "room",
+      "fx_bias": 0.13619401703960943,
+      "fy_bias": 0.1485810745171492,
+      "ate": 0.046434370518833305,
+      "ate_path": 0.02153529205989489,
+      "rel_rot_deg": 0.7159594155101188,
+      "rel_dir_deg": 16.690144797478197
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_02",
+      "seq": "room",
+      "fx_bias": 0.1119790726993053,
+      "fy_bias": 0.12099048879918928,
+      "ate": 0.020744482884796064,
+      "ate_path": 0.012233509013397755,
+      "rel_rot_deg": 0.5803585056673114,
+      "rel_dir_deg": 10.922503866826709
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_03",
+      "seq": "room",
+      "fx_bias": 0.11688428255773697,
+      "fy_bias": 0.12924666599350831,
+      "ate": 0.034048484556883314,
+      "ate_path": 0.021255531342093736,
+      "rel_rot_deg": 0.6743338106739452,
+      "rel_dir_deg": 22.39322994403136
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_04",
+      "seq": "room",
+      "fx_bias": 0.11510991611445132,
+      "fy_bias": 0.1281663156495183,
+      "ate": 0.017961110892711563,
+      "ate_path": 0.018844953344214887,
+      "rel_rot_deg": 0.4857608889922501,
+      "rel_dir_deg": 13.86386173553118
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.11200981910673846,
+      "fy_bias": 0.12886118151735904,
+      "ate": 0.03222308242445803,
+      "ate_path": 0.036138326879608246,
+      "rel_rot_deg": 0.6129582702317867,
+      "rel_dir_deg": 16.31641428870286
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_06",
+      "seq": "room",
+      "fx_bias": 0.1003991343978563,
+      "fy_bias": 0.11407991230901593,
+      "ate": 0.022903815450500832,
+      "ate_path": 0.01433412857990332,
+      "rel_rot_deg": 0.4721257799604114,
+      "rel_dir_deg": 12.91013010339477
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_07",
+      "seq": "room",
+      "fx_bias": 0.10574835041314978,
+      "fy_bias": 0.1178591608684516,
+      "ate": 0.020396339291999282,
+      "ate_path": 0.030059387370612447,
+      "rel_rot_deg": 0.5427896231954239,
+      "rel_dir_deg": 21.12167409664105
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_08",
+      "seq": "room",
+      "fx_bias": 0.12291917470384472,
+      "fy_bias": 0.1313226234290512,
+      "ate": 0.02160491619601506,
+      "ate_path": 0.013837024430337672,
+      "rel_rot_deg": 0.5721353134716586,
+      "rel_dir_deg": 10.591767622149305
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_09",
+      "seq": "room",
+      "fx_bias": 0.11595074133755423,
+      "fy_bias": 0.1257204716348661,
+      "ate": 0.01829036364148331,
+      "ate_path": 0.009759155677584388,
+      "rel_rot_deg": 0.7712734549639331,
+      "rel_dir_deg": 12.657731626909001
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_10",
+      "seq": "room",
+      "fx_bias": 0.12470241536038484,
+      "fy_bias": 0.13893093554210756,
+      "ate": 0.01707926049968858,
+      "ate_path": 0.017021337062838784,
+      "rel_rot_deg": 0.7695930796730721,
+      "rel_dir_deg": 14.781084227918331
+    },
+    {
+      "case": "fp32",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.13253343640255344,
+      "fy_bias": 0.1320480946734537,
+      "ate": 0.029719546445234116,
+      "ate_path": 0.011993489817539825,
+      "rel_rot_deg": 0.7446682803871703,
+      "rel_dir_deg": 8.881175532585885
+    },
+    {
+      "case": "fp32",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.15015520978989483,
+      "fy_bias": 0.15302949499110308,
+      "ate": 0.023940691491856146,
+      "ate_path": 0.009381163989130088,
+      "rel_rot_deg": 1.110601944815615,
+      "rel_dir_deg": 10.300181599858563
+    },
+    {
+      "case": "fp32",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.13549739486547563,
+      "fy_bias": 0.1344876705342053,
+      "ate": 0.01978548629874332,
+      "ate_path": 0.03685619185152557,
+      "rel_rot_deg": 0.8181630487071645,
+      "rel_dir_deg": 22.935804104772544
+    },
+    {
+      "case": "fp32",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.148437917312207,
+      "fy_bias": 0.14954579899309572,
+      "ate": 0.024897589118829003,
+      "ate_path": 0.01209563065504009,
+      "rel_rot_deg": 0.7812813426787074,
+      "rel_dir_deg": 8.76560922111182
+    },
+    {
+      "case": "fp32",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.14629326247277086,
+      "fy_bias": 0.14488719076775092,
+      "ate": 0.014383273762554665,
+      "ate_path": 0.02487979639460421,
+      "rel_rot_deg": 0.7734353140327019,
+      "rel_dir_deg": 19.860103401177568
+    },
+    {
+      "case": "fp32",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.12381216152426422,
+      "fy_bias": 0.13324376267609805,
+      "ate": 0.034443706252599945,
+      "ate_path": 0.038628766146744535,
+      "rel_rot_deg": 0.635000018265031,
+      "rel_dir_deg": 17.204445036069135
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.09587949299270737,
+      "fy_bias": 0.09610094169182304,
+      "ate": 0.025154113118401995,
+      "ate_path": 0.010151083567534665,
+      "rel_rot_deg": 0.7778491576323303,
+      "rel_dir_deg": 7.8965280743754285
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.10276478377444698,
+      "fy_bias": 0.10356147395147719,
+      "ate": 0.026559384406272313,
+      "ate_path": 0.010407299248241872,
+      "rel_rot_deg": 1.220555100175841,
+      "rel_dir_deg": 12.517214984649105
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.10418653110321707,
+      "fy_bias": 0.10064886250930072,
+      "ate": 0.018034248992858364,
+      "ate_path": 0.03359400576478055,
+      "rel_rot_deg": 0.824117772207489,
+      "rel_dir_deg": 20.57566225079768
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.11875858388088645,
+      "fy_bias": 0.11800363916516021,
+      "ate": 0.02501790989591572,
+      "ate_path": 0.012154084333941382,
+      "rel_rot_deg": 0.7878123308694305,
+      "rel_dir_deg": 8.310595072925143
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.11255294473890731,
+      "fy_bias": 0.11056814758337041,
+      "ate": 0.013886732416935443,
+      "ate_path": 0.024020892657913125,
+      "rel_rot_deg": 0.830171015245417,
+      "rel_dir_deg": 17.29557115527124
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.10574232802889405,
+      "fy_bias": 0.11024790020851682,
+      "ate": 0.03281161362507132,
+      "ate_path": 0.03679836717700909,
+      "rel_rot_deg": 0.6022589237973318,
+      "rel_dir_deg": 20.733817235946276
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_desk_00",
+      "seq": "desk",
+      "fx_bias": 0.08018288735854706,
+      "fy_bias": 0.08153009703404268,
+      "ate": 0.025274627420843923,
+      "ate_path": 0.010199717790868748,
+      "rel_rot_deg": 0.8909485124350374,
+      "rel_dir_deg": 9.340881601807386
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_desk_01",
+      "seq": "desk",
+      "fx_bias": 0.09863672616300967,
+      "fy_bias": 0.09882861205790028,
+      "ate": 0.02708027988009033,
+      "ate_path": 0.010611412227298667,
+      "rel_rot_deg": 1.3866556749458132,
+      "rel_dir_deg": 12.764635469023201
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_desk2_00",
+      "seq": "desk2",
+      "fx_bias": 0.09821147654660667,
+      "fy_bias": 0.09612896206359056,
+      "ate": 0.015685427744097178,
+      "ate_path": 0.0292186467130912,
+      "rel_rot_deg": 0.7915010244404473,
+      "rel_dir_deg": 16.94283351664086
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_desk2_03",
+      "seq": "desk2",
+      "fx_bias": 0.10545070797770495,
+      "fy_bias": 0.10431519997818772,
+      "ate": 0.02321544437312235,
+      "ate_path": 0.011278418938063174,
+      "rel_rot_deg": 0.765312881655362,
+      "rel_dir_deg": 8.94664841054083
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_room_00",
+      "seq": "room",
+      "fx_bias": 0.10483119028984467,
+      "fy_bias": 0.10158752960405026,
+      "ate": 0.014689250183737936,
+      "ate_path": 0.02540906609955887,
+      "rel_rot_deg": 0.8646323320912199,
+      "rel_dir_deg": 19.25628900914615
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_room_05",
+      "seq": "room",
+      "fx_bias": 0.11466814478397569,
+      "fy_bias": 0.11603627126715033,
+      "ate": 0.030747472399984942,
+      "ate_path": 0.034483423828782805,
+      "rel_rot_deg": 0.5954678774142308,
+      "rel_dir_deg": 17.048426018912835
+    }
+  ],
+  "metric_note": "Re-decoded cached quaternion and FoV in fp64; ATE uses Sim3; exploratory windows overlap, not independent samples."
+}

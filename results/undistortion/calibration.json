@@ -1,0 +1,198 @@
+{
+  "opencv": "4.10.0",
+  "K_old": [
+    [
+      517.306408,
+      0.0,
+      318.64304
+    ],
+    [
+      0.0,
+      516.469215,
+      255.313989
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "D_old_k1_k2_p1_p2_k3": [
+    0.262383,
+    -0.953104,
+    -0.005358,
+    0.002628,
+    1.163314
+  ],
+  "K_new": [
+    [
+      546.7498550972869,
+      0.0,
+      320.13582066891126
+    ],
+    [
+      0.0,
+      543.054587108014,
+      251.88600291265143
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "roi": [
+    0,
+    0,
+    639,
+    479
+  ],
+  "image_size_wh": [
+    640,
+    480
+  ],
+  "method": "cv2.getOptimalNewCameraMatrix(K, D, (640,480), alpha=0, newImgSize=(640,480)); cv2.initUndistortRectifyMap(K, D, None, K_new, (640,480), CV_32FC1); cv2.remap(INTER_LINEAR); PNG",
+  "fx_old_over_width": 0.8082912625,
+  "fx_new_over_width": 0.8542966485895107,
+  "fy_old_over_height": 1.07597753125,
+  "fy_new_over_height": 1.1313637231416958,
+  "maps": {
+    "fraction_source_coordinate_inside_raw_image": 1.0,
+    "n_output_pixels_outside_raw": 0,
+    "constant_border_remap_min_value_of_all_255_image": 255,
+    "n_output_pixels_darkened_by_border": 0,
+    "roundtrip_undistortPoints_max_err_px": 0.0719312491759545,
+    "roundtrip_undistortPoints_mean_err_px": 0.00010332955693554194,
+    "roundtrip_n_points": 4800,
+    "distortion_displacement_px": {
+      "max": 23.471691631439214,
+      "p95": 9.92537460749774,
+      "median": 4.428687073736414,
+      "mean": 4.668941868439167,
+      "grid_step_px": 4
+    },
+    "map_x_range": [
+      0.2552875876426697,
+      638.8980102539062
+    ],
+    "map_y_range": [
+      0.08295655250549316,
+      478.4869079589844
+    ]
+  },
+  "sequences": {
+    "desk": {
+      "n_original": 613,
+      "n_undistorted": 613,
+      "names_identical": true,
+      "n_written_this_call": 0,
+      "seconds": 2.2249815464019775,
+      "groundtruth_identical": true,
+      "rgb_txt_identical": true,
+      "straight_line_guides": [
+        {
+          "frame": "1305031464.995687.png",
+          "segment_undistorted_px": [
+            553.1275024414062,
+            149.36834716796875,
+            289.8786926269531,
+            49.2999267578125
+          ],
+          "segment_length_px": 281.6267395019531,
+          "raw_curve_max_deviation_from_its_chord_px": 0.8227101369687873,
+          "undistorted_image_edge_rms_offset_from_straight_line_px": 0.8440971508067067,
+          "raw_image_edge_rms_offset_from_mapped_curve_px": 0.816496580927726
+        }
+      ],
+      "png_equals_fresh_remap": {
+        "n_checked": 613,
+        "n_mismatch": 0,
+        "mismatching_files": []
+      }
+    },
+    "desk2": {
+      "n_original": 640,
+      "n_undistorted": 640,
+      "names_identical": true,
+      "n_written_this_call": 0,
+      "seconds": 2.2490406036376953,
+      "groundtruth_identical": true,
+      "rgb_txt_identical": true,
+      "straight_line_guides": [
+        {
+          "frame": "1305031541.607431.png",
+          "segment_undistorted_px": [
+            493.11993408203125,
+            29.211912155151367,
+            45.54610061645508,
+            43.07837677001953
+          ],
+          "segment_length_px": 447.78857421875,
+          "raw_curve_max_deviation_from_its_chord_px": 1.0792580949155024,
+          "undistorted_image_edge_rms_offset_from_straight_line_px": 1.050793351076541,
+          "raw_image_edge_rms_offset_from_mapped_curve_px": 1.0684880283216405
+        }
+      ],
+      "png_equals_fresh_remap": {
+        "n_checked": 640,
+        "n_mismatch": 0,
+        "mismatching_files": []
+      }
+    },
+    "room": {
+      "n_original": 1362,
+      "n_undistorted": 1362,
+      "names_identical": true,
+      "n_written_this_call": 0,
+      "seconds": 4.801610946655273,
+      "groundtruth_identical": true,
+      "rgb_txt_identical": true,
+      "straight_line_guides": [
+        {
+          "frame": "1305031945.506438.png",
+          "segment_undistorted_px": [
+            12.94970703125,
+            13.136874198913574,
+            24.463958740234375,
+            183.1189727783203
+          ],
+          "segment_length_px": 170.3716278076172,
+          "raw_curve_max_deviation_from_its_chord_px": 1.7131910936169268,
+          "undistorted_image_edge_rms_offset_from_straight_line_px": 0.5361902647381804,
+          "raw_image_edge_rms_offset_from_mapped_curve_px": 0.5773502691896257
+        },
+        {
+          "frame": "1305031945.506438.png",
+          "segment_undistorted_px": [
+            114.22273254394531,
+            257.5396423339844,
+            370.3690185546875,
+            236.28932189941406
+          ],
+          "segment_length_px": 257.0262756347656,
+          "raw_curve_max_deviation_from_its_chord_px": 0.22160743069589195,
+          "undistorted_image_edge_rms_offset_from_straight_line_px": 0.7664854858377946,
+          "raw_image_edge_rms_offset_from_mapped_curve_px": 0.689202437604511
+        },
+        {
+          "frame": "1305031945.506438.png",
+          "segment_undistorted_px": [
+            47.510528564453125,
+            330.6776428222656,
+            33.6773681640625,
+            169.2205810546875
+          ],
+          "segment_length_px": 162.04856872558594,
+          "raw_curve_max_deviation_from_its_chord_px": 0.021269376359420278,
+          "undistorted_image_edge_rms_offset_from_straight_line_px": 0.3651483716701107,
+          "raw_image_edge_rms_offset_from_mapped_curve_px": 0.31622776601683794
+        }
+      ],
+      "png_equals_fresh_remap": {
+        "n_checked": 1362,
+        "n_mismatch": 0,
+        "mismatching_files": []
+      }
+    }
+  }
+}

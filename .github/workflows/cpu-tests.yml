@@ -1,0 +1,26 @@
+name: CPU checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  geometry-and-calibration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CPU test dependencies
+        run: python -m pip install 'numpy<2' scipy matplotlib pillow 'opencv-python-headless<4.12' pytest
+      - name: Run tests without models or datasets
+        env:
+          CUDA_VISIBLE_DEVICES: ''
+          OMP_NUM_THREADS: '4'
+        run: >-
+          python -m pytest -q
+          tests/test_eval_ate.py tests/test_compare_utils.py
+          tests/test_compare_summary.py tests/test_calibration.py
+          tests/test_calibration_pipeline.py tests/test_why_utils.py
+          tests/test_geometry_precision.py

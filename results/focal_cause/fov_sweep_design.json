@@ -1,0 +1,39 @@
+{
+  "design": "Exploratory follow-up to distinguish approximately multiplicative bias from focal-range dependence",
+  "before_results": true,
+  "conditions": [
+    {
+      "focal_multiplier": 1.06,
+      "cx": 320,
+      "cy": 240,
+      "hw": [
+        448,
+        592
+      ]
+    },
+    {
+      "focal_multiplier": 1.25,
+      "cx": 320,
+      "cy": 240,
+      "hw": [
+        448,
+        592
+      ]
+    },
+    {
+      "focal_multiplier": 1.5,
+      "cx": 320,
+      "cy": 240,
+      "hw": [
+        448,
+        592
+      ]
+    }
+  ],
+  "selection": "same six predefined baseline/fp32 windows; two per sequence",
+  "predictions": {
+    "fixed_multiplier": "similar fractional focal error at all zooms",
+    "range_dependent_calibration": "fractional error changes with zoom"
+  },
+  "limitations": "Zoom changes visible scene content; tests input dependence but does not uniquely identify a learned prior"
+}

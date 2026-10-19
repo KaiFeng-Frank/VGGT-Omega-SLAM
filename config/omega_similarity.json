@@ -1,0 +1,463 @@
+{
+ "layer": 15,
+ "tau": 0.3764137492904663,
+ "dataset": "office_loop",
+ "date": "2026-10-19",
+ "rule_text": "Dev data = office_loop only (473 frames, TUM never used). K = keyframes of the upstream LK selector (min_disparity 50). P_adj = consecutive keyframe pairs (cap 60, evenly spaced). P_loop = for each keyframe in the last ceil(15%) of K, the keyframe in the first ceil(15%) of K with the smallest SALAD L2 distance (upstream ImageRetrieval on the VGGT-loader frames, i.e. the solver's own retrieval). N = pairs whose index gap is within [0.30, 0.70] x len(K), 60 pairs by an even deterministic stride over the lexicographically sorted candidates. Raw image_match_ratio from a 2-frame forward with the later (query) frame first, as the solver does. VGGT at its upstream setting, Omega at every global inter-frame block in {12,13,15,16,17,18,19,21,22,23}. L* = argmax ROC AUC of (P_adj U P_loop) vs N, ties -> layer closest to 20 (then the lower layer). FAR_vggt = fraction of N with VGGT raw ratio >= 0.95. tau = (1 - FAR_vggt) quantile (numpy linear interpolation) of Omega raw ratios on N at L*; FAR_vggt == 0 -> tau = max(Omega N ratios) + 1e-6. A loop closure passes when raw >= threshold (upstream rejects raw < threshold). Note on the VGGT layer: the rule text named layer 20, the Aggregator default, but main.py builds VGGT() whose constructor passes target_layer=21 to the Aggregator, so the upstream operating point is layer 21. FAR_vggt is taken at layer 21 and reported at layer 20 as well.",
+ "FAR_vggt": 0.0,
+ "vggt_layer_used_for_far": 21,
+ "FAR_vggt_by_layer": {
+  "20": 1.0,
+  "21": 0.0
+ },
+ "tau_if_vggt_layer20_far": 0.06983837485313416,
+ "omega_far_at_tau": 0.0,
+ "layer_choice_bootstrap_frequency": {
+  "12": 0.0,
+  "13": 0.0,
+  "15": 0.841,
+  "16": 0.0,
+  "17": 0.0,
+  "18": 0.104,
+  "19": 0.0,
+  "21": 0.055,
+  "22": 0.0,
+  "23": 0.0
+ },
+ "pass_semantics": "a loop closure passes when raw image_match_ratio >= threshold",
+ "auc_per_layer": {
+  "12": 0.7547101449275362,
+  "13": 0.7155797101449275,
+  "15": 0.9893115942028986,
+  "16": 0.9144927536231884,
+  "17": 0.8739130434782608,
+  "18": 0.9637681159420289,
+  "19": 0.9108695652173913,
+  "21": 0.9760869565217392,
+  "22": 0.8715579710144927,
+  "23": 0.5934782608695652
+ },
+ "auc_ci95_per_layer": {
+  "12": [
+   0.6742753623188406,
+   0.8255525362318841
+  ],
+  "13": [
+   0.6307835144927536,
+   0.7922192028985507
+  ],
+  "15": [
+   0.9775362318840579,
+   0.9972826086956522
+  ],
+  "16": [
+   0.8610461956521739,
+   0.9601449275362319
+  ],
+  "17": [
+   0.8153849637681159,
+   0.9230072463768116
+  ],
+  "18": [
+   0.9175634057971015,
+   0.9956567028985507
+  ],
+  "19": [
+   0.8543478260869565,
+   0.9559782608695652
+  ],
+  "21": [
+   0.9518115942028985,
+   0.9933016304347826
+  ],
+  "22": [
+   0.7954664855072463,
+   0.938953804347826
+  ],
+  "23": [
+   0.4785869565217392,
+   0.7019972826086955
+  ]
+ },
+ "sensitivity_subsets_not_used_for_config": {
+  "P_loop_visual_same_place": {
+   "n_loop_pairs": 8,
+   "auc_pooled": {
+    "12": 0.7661764705882353,
+    "13": 0.9134803921568627,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 0.9762254901960784,
+    "18": 0.9681372549019608,
+    "19": 1.0,
+    "21": 1.0,
+    "22": 0.8779411764705882,
+    "23": 0.5674019607843137
+   },
+   "layer_star": 19,
+   "tau": 0.9540470705757141,
+   "vggt@21_pass_at_0.95": {
+    "n": 8,
+    "min": 1.006127119064331,
+    "median": 1.0235912203788757,
+    "max": 1.0366311073303223,
+    "threshold": 0.95,
+    "n_pass": 8,
+    "pass_rate": 1.0
+   },
+   "omega_at_rule_L*_and_tau": {
+    "n": 8,
+    "min": 0.74971604347229,
+    "median": 1.0222578346729279,
+    "max": 1.1468658447265625,
+    "threshold": 0.3764137492904663,
+    "n_pass": 8,
+    "pass_rate": 1.0
+   },
+   "omega_at_subset_L*_and_tau": {
+    "n": 8,
+    "min": 1.1350433826446533,
+    "median": 1.2279801964759827,
+    "max": 1.2783674001693726,
+    "threshold": 0.9540470705757141,
+    "n_pass": 8,
+    "pass_rate": 1.0
+   }
+  },
+  "P_loop_salad_below_0.95": {
+   "n_loop_pairs": 7,
+   "auc_pooled": {
+    "12": 0.7629353233830846,
+    "13": 0.9201492537313433,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 0.9771144278606965,
+    "18": 0.9679104477611941,
+    "19": 1.0,
+    "21": 1.0,
+    "22": 0.8781094527363185,
+    "23": 0.5646766169154229
+   },
+   "layer_star": 19,
+   "tau": 0.9540470705757141,
+   "vggt@21_pass_at_0.95": {
+    "n": 7,
+    "min": 1.006127119064331,
+    "median": 1.0226372480392456,
+    "max": 1.0366311073303223,
+    "threshold": 0.95,
+    "n_pass": 7,
+    "pass_rate": 1.0
+   },
+   "omega_at_rule_L*_and_tau": {
+    "n": 7,
+    "min": 0.74971604347229,
+    "median": 1.045633316040039,
+    "max": 1.1468658447265625,
+    "threshold": 0.3764137492904663,
+    "n_pass": 7,
+    "pass_rate": 1.0
+   },
+   "omega_at_subset_L*_and_tau": {
+    "n": 7,
+    "min": 1.1350433826446533,
+    "median": 1.2369625568389893,
+    "max": 1.2783674001693726,
+    "threshold": 0.9540470705757141,
+    "n_pass": 7,
+    "pass_rate": 1.0
+   }
+  }
+ },
+ "per_set_stats": {
+  "vggt@21": {
+   "P_adj": {
+    "n": 60,
+    "min": 1.0055595636367798,
+    "median": 1.0239266157150269,
+    "max": 1.0523127317428589,
+    "threshold": 0.95,
+    "n_pass": 60,
+    "pass_rate": 1.0
+   },
+   "P_loop": {
+    "n": 32,
+    "min": 0.5411544442176819,
+    "median": 1.003121018409729,
+    "max": 1.0622133016586304,
+    "threshold": 0.95,
+    "n_pass": 19,
+    "pass_rate": 0.59375
+   },
+   "N": {
+    "n": 60,
+    "min": 0.4758424162864685,
+    "median": 0.5943723917007446,
+    "max": 0.8521454930305481,
+    "threshold": 0.95,
+    "n_pass": 0,
+    "pass_rate": 0.0
+   },
+   "P_loop_visual_same_place": {
+    "n": 8,
+    "min": 1.006127119064331,
+    "median": 1.0235912203788757,
+    "max": 1.0366311073303223,
+    "threshold": 0.95,
+    "n_pass": 8,
+    "pass_rate": 1.0
+   },
+   "P_loop_salad_below_0.95": {
+    "n": 7,
+    "min": 1.006127119064331,
+    "median": 1.0226372480392456,
+    "max": 1.0366311073303223,
+    "threshold": 0.95,
+    "n_pass": 7,
+    "pass_rate": 1.0
+   }
+  },
+  "vggt@20": {
+   "P_adj": {
+    "n": 60,
+    "min": 1.00055992603302,
+    "median": 1.0067349076271057,
+    "max": 1.0133800506591797,
+    "threshold": 0.95,
+    "n_pass": 60,
+    "pass_rate": 1.0
+   },
+   "P_loop": {
+    "n": 32,
+    "min": 1.0070011615753174,
+    "median": 1.032262146472931,
+    "max": 1.1337761878967285,
+    "threshold": 0.95,
+    "n_pass": 32,
+    "pass_rate": 1.0
+   },
+   "N": {
+    "n": 60,
+    "min": 1.0010937452316284,
+    "median": 1.0598487854003906,
+    "max": 1.1694468259811401,
+    "threshold": 0.95,
+    "n_pass": 60,
+    "pass_rate": 1.0
+   },
+   "P_loop_visual_same_place": {
+    "n": 8,
+    "min": 1.0070011615753174,
+    "median": 1.0140334367752075,
+    "max": 1.030181646347046,
+    "threshold": 0.95,
+    "n_pass": 8,
+    "pass_rate": 1.0
+   },
+   "P_loop_salad_below_0.95": {
+    "n": 7,
+    "min": 1.0070011615753174,
+    "median": 1.0125584602355957,
+    "max": 1.0195772647857666,
+    "threshold": 0.95,
+    "n_pass": 7,
+    "pass_rate": 1.0
+   }
+  },
+  "omega@15": {
+   "P_adj": {
+    "n": 60,
+    "min": 0.7044275999069214,
+    "median": 0.9373884499073029,
+    "max": 1.179839015007019,
+    "threshold": 0.3764137492904663,
+    "n_pass": 60,
+    "pass_rate": 1.0
+   },
+   "P_loop": {
+    "n": 32,
+    "min": 0.22696292400360107,
+    "median": 0.43933604657649994,
+    "max": 1.1468658447265625,
+    "threshold": 0.3764137492904663,
+    "n_pass": 19,
+    "pass_rate": 0.59375
+   },
+   "N": {
+    "n": 60,
+    "min": 0.06983837485313416,
+    "median": 0.18324193358421326,
+    "max": 0.3764127492904663,
+    "threshold": 0.3764137492904663,
+    "n_pass": 0,
+    "pass_rate": 0.0
+   },
+   "P_loop_visual_same_place": {
+    "n": 8,
+    "min": 0.74971604347229,
+    "median": 1.0222578346729279,
+    "max": 1.1468658447265625,
+    "threshold": 0.3764137492904663,
+    "n_pass": 8,
+    "pass_rate": 1.0
+   },
+   "P_loop_salad_below_0.95": {
+    "n": 7,
+    "min": 0.74971604347229,
+    "median": 1.045633316040039,
+    "max": 1.1468658447265625,
+    "threshold": 0.3764137492904663,
+    "n_pass": 7,
+    "pass_rate": 1.0
+   }
+  },
+  "omega@19_at_placeholder_0.95": {
+   "P_adj": {
+    "n": 60,
+    "min": 1.1142206192016602,
+    "median": 1.2084009051322937,
+    "max": 1.301369309425354,
+    "threshold": 0.95,
+    "n_pass": 60,
+    "pass_rate": 1.0
+   },
+   "P_loop": {
+    "n": 32,
+    "min": 0.6480513215065002,
+    "median": 1.0949583053588867,
+    "max": 1.2783674001693726,
+    "threshold": 0.95,
+    "n_pass": 20,
+    "pass_rate": 0.625
+   },
+   "N": {
+    "n": 60,
+    "min": 0.5771118998527527,
+    "median": 0.758847177028656,
+    "max": 0.9540460705757141,
+    "threshold": 0.95,
+    "n_pass": 2,
+    "pass_rate": 0.03333333333333333
+   },
+   "P_loop_visual_same_place": {
+    "n": 8,
+    "min": 1.1350433826446533,
+    "median": 1.2279801964759827,
+    "max": 1.2783674001693726,
+    "threshold": 0.95,
+    "n_pass": 8,
+    "pass_rate": 1.0
+   },
+   "P_loop_salad_below_0.95": {
+    "n": 7,
+    "min": 1.1350433826446533,
+    "median": 1.2369625568389893,
+    "max": 1.2783674001693726,
+    "threshold": 0.95,
+    "n_pass": 7,
+    "pass_rate": 1.0
+   }
+  }
+ },
+ "per_set_stats_reverse_order_sensitivity": {
+  "vggt@21": {
+   "P_adj": {
+    "n": 60,
+    "min": 1.0142587423324585,
+    "median": 1.0297154784202576,
+    "max": 1.0489531755447388,
+    "threshold": 0.95,
+    "n_pass": 60,
+    "pass_rate": 1.0
+   },
+   "P_loop": {
+    "n": 32,
+    "min": 0.46171313524246216,
+    "median": 0.8583270609378815,
+    "max": 1.0219703912734985,
+    "threshold": 0.95,
+    "n_pass": 11,
+    "pass_rate": 0.34375
+   },
+   "N": {
+    "n": 60,
+    "min": 0.45169520378112793,
+    "median": 0.551929771900177,
+    "max": 0.78857421875,
+    "threshold": 0.95,
+    "n_pass": 0,
+    "pass_rate": 0.0
+   },
+   "P_loop_visual_same_place": {
+    "n": 8,
+    "min": 0.9931687712669373,
+    "median": 1.0187955498695374,
+    "max": 1.0219703912734985,
+    "threshold": 0.95,
+    "n_pass": 8,
+    "pass_rate": 1.0
+   },
+   "P_loop_salad_below_0.95": {
+    "n": 7,
+    "min": 1.0081775188446045,
+    "median": 1.0192211866378784,
+    "max": 1.0219703912734985,
+    "threshold": 0.95,
+    "n_pass": 7,
+    "pass_rate": 1.0
+   }
+  },
+  "omega@15": {
+   "P_adj": {
+    "n": 60,
+    "min": 0.4958915114402771,
+    "median": 0.9255579710006714,
+    "max": 1.2276172637939453,
+    "threshold": 0.3764137492904663,
+    "n_pass": 60,
+    "pass_rate": 1.0
+   },
+   "P_loop": {
+    "n": 32,
+    "min": 0.1552218645811081,
+    "median": 0.3925585448741913,
+    "max": 1.0295872688293457,
+    "threshold": 0.3764137492904663,
+    "n_pass": 17,
+    "pass_rate": 0.53125
+   },
+   "N": {
+    "n": 60,
+    "min": 0.08478463441133499,
+    "median": 0.15045691281557083,
+    "max": 0.3628208041191101,
+    "threshold": 0.3764137492904663,
+    "n_pass": 0,
+    "pass_rate": 0.0
+   },
+   "P_loop_visual_same_place": {
+    "n": 8,
+    "min": 0.8066560626029968,
+    "median": 0.8506541848182678,
+    "max": 1.0295872688293457,
+    "threshold": 0.3764137492904663,
+    "n_pass": 8,
+    "pass_rate": 1.0
+   },
+   "P_loop_salad_below_0.95": {
+    "n": 7,
+    "min": 0.8066560626029968,
+    "median": 0.8572441935539246,
+    "max": 1.0295872688293457,
+    "threshold": 0.3764137492904663,
+    "n_pass": 7,
+    "pass_rate": 1.0
+   }
+  }
+ },
+ "sources": {
+  "pairs": "runs/calibration/pairs.json",
+  "summary": "runs/calibration/summary.json",
+  "figure": "runs/calibration/similarity_calibration.png"
+ }
+}

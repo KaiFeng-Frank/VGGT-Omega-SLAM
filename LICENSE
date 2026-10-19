@@ -1,0 +1,54 @@
+VGGT-Ω-SLAM — license scope
+==========================
+
+This repository contains original integration code and identified adaptations
+of third-party code. It is not offered under a single license covering the
+entire software/model/data stack.
+
+The BSD 2-Clause license below applies only to the original contributions of
+VGGT-Ω-SLAM, excluding third-party code, adaptations identified in
+THIRD_PARTY_NOTICES.md, model checkpoints, datasets, and model outputs/results.
+The original third-party licenses continue to apply to their respective
+material. In particular:
+
+* The copied VGGT_SPARK attention-similarity functions retain CC-BY-NC-4.0.
+* The evo-derived evaluation helpers identified in THIRD_PARTY_NOTICES.md
+  retain GPL-3.0-or-later.
+* VGGT-Omega research materials are governed by the FAIR Noncommercial Research
+  License and its Acceptable Use Policy. That agreement also restricts use of
+  outputs/results; this repository does not remove those restrictions.
+* VGGT-SLAM code retains BSD 2-Clause, SALAD retains GPLv3, and DINOv2 retains
+  Apache-2.0, with separately licensed third-party components where indicated.
+
+See THIRD_PARTY_NOTICES.md and licenses/ for provenance, scope, and unmodified
+license texts. This BSD grant does not relicense any of the above material or
+grant additional rights to checkpoints, datasets, outputs, or a combined
+distribution. Checkpoints and datasets are obtained separately from their
+respective providers.
+
+BSD 2-Clause License — original VGGT-Ω-SLAM contributions only
+-----------------------------------------------------------
+
+Copyright (c) 2026, KaiFeng-Frank and VGGT-Ω-SLAM contributors
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

@@ -1,0 +1,924 @@
+{
+  "cases": {
+    "baseline_verify": {
+      "hw": [
+        448,
+        592
+      ],
+      "K": [
+        [
+          546.7498550972869,
+          0.0,
+          320.13582066891126
+        ],
+        [
+          0.0,
+          543.054587108014,
+          251.88600291265143
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "subset": true
+    },
+    "zoom_control": {
+      "hw": [
+        448,
+        592
+      ],
+      "K": [
+        [
+          579.5548464031241,
+          0.0,
+          320.13582066891126
+        ],
+        [
+          0.0,
+          575.6378623344948,
+          251.88600291265143
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "zoom_centered": {
+      "hw": [
+        448,
+        592
+      ],
+      "K": [
+        [
+          579.5548464031241,
+          0.0,
+          320.0
+        ],
+        [
+          0.0,
+          575.6378623344948,
+          240.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "resolution_512x384": {
+      "hw": [
+        384,
+        512
+      ],
+      "K": [
+        [
+          546.7498550972869,
+          0.0,
+          320.13582066891126
+        ],
+        [
+          0.0,
+          543.054587108014,
+          251.88600291265143
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "resolution_640x480": {
+      "hw": [
+        480,
+        640
+      ],
+      "K": [
+        [
+          546.7498550972869,
+          0.0,
+          320.13582066891126
+        ],
+        [
+          0.0,
+          543.054587108014,
+          251.88600291265143
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "fp32": {
+      "hw": [
+        448,
+        592
+      ],
+      "K": [
+        [
+          546.7498550972869,
+          0.0,
+          320.13582066891126
+        ],
+        [
+          0.0,
+          543.054587108014,
+          251.88600291265143
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "subset": true
+    },
+    "zoom_centered_125": {
+      "hw": [
+        448,
+        592
+      ],
+      "K": [
+        [
+          683.4373188716086,
+          0.0,
+          320.0
+        ],
+        [
+          0.0,
+          678.8182338850174,
+          240.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "subset": true,
+      "source_inside_fraction": 1.0
+    },
+    "zoom_centered_150": {
+      "hw": [
+        448,
+        592
+      ],
+      "K": [
+        [
+          820.1247826459303,
+          0.0,
+          320.0
+        ],
+        [
+          0.0,
+          814.5818806620209,
+          240.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "subset": true,
+      "source_inside_fraction": 1.0
+    }
+  },
+  "entries": [
+    {
+      "case": "baseline_verify",
+      "tag": "A_desk_00",
+      "seconds": 2.961651288991561,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_desk_01",
+      "seconds": 2.7583700039976975,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_desk2_00",
+      "seconds": 2.7419002579990774,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_desk2_03",
+      "seconds": 2.748848115996225,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_room_00",
+      "seconds": 2.7546077740116743,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "baseline_verify",
+      "tag": "A_room_05",
+      "seconds": 2.7517614559910726,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk_00",
+      "seconds": 2.7476458820019616,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk_01",
+      "seconds": 2.7536145180056337,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk_02",
+      "seconds": 2.7514735580043634,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_00",
+      "seconds": 2.7489150609908393,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_01",
+      "seconds": 2.7641008749924367,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_02",
+      "seconds": 2.745750381000107,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_03",
+      "seconds": 2.750960451012361,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_04",
+      "seconds": 2.756472555003711,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_desk2_05",
+      "seconds": 2.747549342995626,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_00",
+      "seconds": 2.7579011530033313,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_01",
+      "seconds": 2.745882826988236,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_02",
+      "seconds": 2.757501599000534,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_03",
+      "seconds": 2.75614924900583,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_04",
+      "seconds": 2.7507498589984607,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_05",
+      "seconds": 2.7559053750010207,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_06",
+      "seconds": 2.7499634599953424,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_07",
+      "seconds": 2.752279370004544,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_08",
+      "seconds": 2.7466090009984327,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_09",
+      "seconds": 2.746764127005008,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_control",
+      "tag": "A_room_10",
+      "seconds": 2.73814308999863,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk_00",
+      "seconds": 2.7457436110125855,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk_01",
+      "seconds": 2.741455548995873,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk_02",
+      "seconds": 2.7304208940040553,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_00",
+      "seconds": 2.746522037006798,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_01",
+      "seconds": 2.757891383007518,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_02",
+      "seconds": 2.7451657409983454,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_03",
+      "seconds": 2.74543341199751,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_04",
+      "seconds": 2.7445286480069626,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_desk2_05",
+      "seconds": 2.758998014003737,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_00",
+      "seconds": 2.7378133480087854,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_01",
+      "seconds": 2.745397566992324,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_02",
+      "seconds": 2.7393335929955356,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_03",
+      "seconds": 2.7355680269974982,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_04",
+      "seconds": 2.752602421998745,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_05",
+      "seconds": 2.7639112070028204,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_06",
+      "seconds": 2.756400616999599,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_07",
+      "seconds": 2.760680732986657,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_08",
+      "seconds": 2.750665227009449,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_09",
+      "seconds": 2.7426735009939875,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered",
+      "tag": "A_room_10",
+      "seconds": 2.739519887996721,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk_00",
+      "seconds": 1.9365447119926102,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk_01",
+      "seconds": 1.9370202669961145,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk_02",
+      "seconds": 1.936455114002456,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_00",
+      "seconds": 1.9325925599987386,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_01",
+      "seconds": 1.9324759419978363,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_02",
+      "seconds": 1.8995312309998553,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_03",
+      "seconds": 1.9384237560007023,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_04",
+      "seconds": 1.933343523007352,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_desk2_05",
+      "seconds": 1.9336707610054873,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_00",
+      "seconds": 1.9275872470025206,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_01",
+      "seconds": 1.9197751720057568,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_02",
+      "seconds": 1.9110852730082115,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_03",
+      "seconds": 1.9379621719999705,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_04",
+      "seconds": 1.9160039959970163,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_05",
+      "seconds": 1.9418529030081118,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_06",
+      "seconds": 1.941876573007903,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_07",
+      "seconds": 1.935462801004178,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_08",
+      "seconds": 1.942710599003476,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_09",
+      "seconds": 1.9319321750081144,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_512x384",
+      "tag": "A_room_10",
+      "seconds": 1.9209109890070977,
+      "peak_gib": 5.113438129425049,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk_00",
+      "seconds": 3.2544758419971913,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk_01",
+      "seconds": 3.2494304930005455,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk_02",
+      "seconds": 3.2376112730125897,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_00",
+      "seconds": 3.220964327992988,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_01",
+      "seconds": 3.230834412999684,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_02",
+      "seconds": 3.2471032009925693,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_03",
+      "seconds": 3.2437491769960616,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_04",
+      "seconds": 3.224582709997776,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_desk2_05",
+      "seconds": 3.229761831011274,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_00",
+      "seconds": 3.2404322850052267,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_01",
+      "seconds": 3.2389501640136587,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_02",
+      "seconds": 3.239662414009217,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_03",
+      "seconds": 3.248923281003954,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_04",
+      "seconds": 3.248034561998793,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_05",
+      "seconds": 3.242438569999649,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_06",
+      "seconds": 3.2239097940037027,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_07",
+      "seconds": 3.2141715250036214,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_08",
+      "seconds": 3.2262206040031742,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_09",
+      "seconds": 3.225759505003225,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "resolution_640x480",
+      "tag": "A_room_10",
+      "seconds": 3.2219864549988415,
+      "peak_gib": 5.645931720733643,
+      "status": "ok"
+    },
+    {
+      "case": "fp32",
+      "tag": "A_desk_00",
+      "seconds": 11.193022396997549,
+      "peak_gib": 5.549519062042236,
+      "status": "ok"
+    },
+    {
+      "case": "fp32",
+      "tag": "A_desk_01",
+      "seconds": 11.257685079006478,
+      "peak_gib": 5.549519062042236,
+      "status": "ok"
+    },
+    {
+      "case": "fp32",
+      "tag": "A_desk2_00",
+      "seconds": 11.192142141007935,
+      "peak_gib": 5.549519062042236,
+      "status": "ok"
+    },
+    {
+      "case": "fp32",
+      "tag": "A_desk2_03",
+      "seconds": 11.296412771000178,
+      "peak_gib": 5.549519062042236,
+      "status": "ok"
+    },
+    {
+      "case": "fp32",
+      "tag": "A_room_00",
+      "seconds": 11.264096148006502,
+      "peak_gib": 5.549519062042236,
+      "status": "ok"
+    },
+    {
+      "case": "fp32",
+      "tag": "A_room_05",
+      "seconds": 11.2534005829948,
+      "peak_gib": 5.549519062042236,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_desk_00",
+      "seconds": 2.953393181989668,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_desk_01",
+      "seconds": 2.7421665230067447,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_desk2_00",
+      "seconds": 2.7492094869958237,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_desk2_03",
+      "seconds": 2.7538672749942634,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_room_00",
+      "seconds": 2.7604186509997817,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_125",
+      "tag": "A_room_05",
+      "seconds": 2.757632602006197,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_desk_00",
+      "seconds": 2.7557908430026146,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_desk_01",
+      "seconds": 2.746699852999882,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_desk2_00",
+      "seconds": 2.756467508006608,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_desk2_03",
+      "seconds": 2.7427740179991815,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_room_00",
+      "seconds": 2.7595686720014783,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    },
+    {
+      "case": "zoom_centered_150",
+      "tag": "A_room_05",
+      "seconds": 2.7493858420057222,
+      "peak_gib": 5.44378137588501,
+      "status": "ok"
+    }
+  ]
+}

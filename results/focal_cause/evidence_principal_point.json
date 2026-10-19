@@ -1,0 +1,120 @@
+{
+  "raw": {
+    "processed_wh": [
+      592,
+      448
+    ],
+    "true_processed_K": [
+      [
+        478.5084274000001,
+        0.0,
+        294.744812
+      ],
+      [
+        0.0,
+        482.03793399999995,
+        238.29305639999998
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "model_center": [
+      296.0,
+      224.0
+    ],
+    "principal_offset_px": [
+      -1.2551879999999755,
+      14.293056399999983
+    ],
+    "principal_offset_as_fraction_of_focal": [
+      -0.002623126214976199,
+      0.02965131038836455
+    ],
+    "centered_K_best_uniform_ray_fit_focal_px": [
+      478.69834157136154,
+      482.4167389935971
+    ],
+    "centered_K_best_uniform_ray_fit_focal_ratio": [
+      1.0003968878299456,
+      1.0007858406297068
+    ],
+    "best_uniform_ray_fit_rotation_deg": [
+      1.5787610307236994,
+      0.1334101316702347,
+      0.0004598806730314213
+    ],
+    "centered_K_exact_axis_fov_equivalent": [
+      {
+        "equivalent_centered_f": 517.3089823872484,
+        "fractional_bias": 4.976523021227308e-06
+      },
+      {
+        "equivalent_centered_f": 516.842702201639,
+        "fractional_bias": 0.0007231548188966208
+      }
+    ],
+    "caveat": "Geometric ray fit for uniform pixels with free camera rotation; does not test model sensitivity to principal point."
+  },
+  "und": {
+    "processed_wh": [
+      592,
+      448
+    ],
+    "true_processed_K": [
+      [
+        505.74361596499034,
+        0.0,
+        296.12563411874294
+      ],
+      [
+        0.0,
+        506.85094796747967,
+        235.09360271847467
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "model_center": [
+      296.0,
+      224.0
+    ],
+    "principal_offset_px": [
+      0.12563411874293706,
+      11.09360271847467
+    ],
+    "principal_offset_as_fraction_of_focal": [
+      0.00024841464089115457,
+      0.021887307822864036
+    ],
+    "centered_K_best_uniform_ray_fit_focal_px": [
+      505.8523613312761,
+      507.0692130110923
+    ],
+    "centered_K_best_uniform_ray_fit_focal_ratio": [
+      1.0002150207394676,
+      1.0004306296446477
+    ],
+    "best_uniform_ray_fit_rotation_deg": [
+      1.173058368074686,
+      -0.012775319748941699,
+      -3.229098104745319e-05
+    ],
+    "centered_K_exact_axis_fov_equivalent": [
+      {
+        "equivalent_centered_f": 546.7498802284703,
+        "fractional_bias": 4.596468228257322e-08
+      },
+      {
+        "equivalent_centered_f": 543.2722449179882,
+        "fractional_bias": 0.0004008028200874758
+      }
+    ],
+    "caveat": "Geometric ray fit for uniform pixels with free camera rotation; does not test model sensitivity to principal point."
+  }
+}

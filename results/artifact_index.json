@@ -1,0 +1,147 @@
+{
+  "schema": "vggt-omega-slam-results-index-v1",
+  "path_sanitization": "Host paths replaced with relative archive locations or symbolic placeholders; internal GPU-lock name replaced with a descriptive label. Numerical values unchanged.",
+  "files": [
+    {
+      "file": "focal_cause/intervention_results.json",
+      "purpose": "Full exploratory focal, ATE and paired-control summaries and all per-window rows.",
+      "metric_convention": "fp64_pose_decode_v1",
+      "source_artifact": "runs/focal_cause_probe/intervention_results.json",
+      "source_sha256": "4833968dce6821420e095572f20eb1a91b57e2f092cbe6e3390ce87dedbcb2ff",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "focal_cause/intervention_design.json",
+      "purpose": "Intervention definitions, exact windows and predefined six-window subset.",
+      "metric_convention": "See artifact fields; cached geometry uses SO(3) projection; focal-regime values use archived decoded intrinsics.",
+      "source_artifact": "runs/focal_cause_probe/intervention_design.json",
+      "source_sha256": "201fd5b0a9955b2650579ccbe4776ea01b88ac3f5f0c33b73832f497f0a66091",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "focal_cause/intervention_forward.json",
+      "purpose": "All completed intervention forward statuses, timings, memory and case definitions.",
+      "metric_convention": "See artifact fields; cached geometry uses SO(3) projection; focal-regime values use archived decoded intrinsics.",
+      "source_artifact": "runs/focal_cause_probe/intervention_forward.json",
+      "source_sha256": "41ed714303e854e0ce73ea5430526ab31559611f2d7482d8968395f33685cb4a",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "focal_cause/fov_sweep_design.json",
+      "purpose": "Pre-result hypotheses and limitations for the centered zoom follow-up.",
+      "metric_convention": "See artifact fields; cached geometry uses SO(3) projection; focal-regime values use archived decoded intrinsics.",
+      "source_artifact": "runs/focal_cause_probe/fov_sweep_design.json",
+      "source_sha256": "ac779a6893c3bc10cbf6609f00f917d639a591966d632c737c2d7118a5f66965",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "focal_cause/evidence_cached_geometry.json",
+      "purpose": "Independent cached-geometry audit, GT interpolation, directional slopes and diagnostic coordinate stretches.",
+      "metric_convention": "See artifact fields; cached geometry uses SO(3) projection; focal-regime values use archived decoded intrinsics.",
+      "source_artifact": "runs/focal_cause_probe/evidence_cached_geometry.json",
+      "source_sha256": "e08f4cc3f4c7b99ba625b12df0b0aec21a5708b6de1cd81634659a6135528255",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "focal_cause/evidence_focal_regimes.json",
+      "purpose": "Sparse-frame-count and context dependence of the cached focal predictions.",
+      "metric_convention": "See artifact fields; cached geometry uses SO(3) projection; focal-regime values use archived decoded intrinsics.",
+      "source_artifact": "runs/focal_cause_probe/evidence_focal_regimes.json",
+      "source_sha256": "4acb60960a94f144eb9848da3157a05d64c50e62a6491f1128eb3f089bdb856b",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "focal_cause/evidence_intervention_pairs.json",
+      "purpose": "Independent direct principal-point-control pairing with per-case true focal.",
+      "metric_convention": "fp64_pose_decode_v1",
+      "source_artifact": "runs/focal_cause_probe/evidence_intervention_pairs.json",
+      "source_sha256": "82404e8b8a9a6fea04c365320d52abb9c23ad2478f6f58d85c47ab67947e6574",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "focal_cause/evidence_principal_point.json",
+      "purpose": "Pinhole ray and field-of-view calculation for the fixed principal-point approximation.",
+      "metric_convention": "See artifact fields; cached geometry uses SO(3) projection; focal-regime values use archived decoded intrinsics.",
+      "source_artifact": "runs/focal_cause_probe/evidence_principal_point.json",
+      "source_sha256": "8062fcf15744911d1bfe29d0195d6070f50e7a36d5f357843cca35e51d9cb300",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "undistortion/local_metrics.json",
+      "purpose": "Full raw/undistorted local and sparse-window metrics, original decision rule and projected-rotation correction.",
+      "metric_convention": "legacy decoded top-level fields are archival; use nested proj for matrix-projected geometry",
+      "source_artifact": "runs/undistort/analysis/analysis.json",
+      "source_sha256": "5b11b9872d3007a3ae00b3cb3a0e73e12d33b2d36ab39f1b9120a8664852122a",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "undistortion/slam_summary.json",
+      "purpose": "All 24 loop-enabled SLAM runs, representing 12 paired configurations; includes frame, partition and loop-change checks.",
+      "metric_convention": "Saved SLAM trajectory Sim(3) ATE; unmodified by diagnostic rotation re-decoding",
+      "source_artifact": "runs/undistort/analysis/slam_summary.json",
+      "source_sha256": "78fe7b7535b197bc2ad0991d416c3cbbedcdc106648c05fcb50d277f679a4260",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "undistortion/calibration.json",
+      "purpose": "Exact original/new intrinsics, distortion coefficients, remap verification and public-sequence image counts.",
+      "metric_convention": "OpenCV calibration/remap diagnostics",
+      "source_artifact": "runs/undistort/undistort_report.json",
+      "source_sha256": "eb9a38a5a78c87dfc9c74f9459c9e3ad78972f473e1aedb14a8c4d4968cfb47f",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "front_end_legacy.json",
+      "purpose": "Historical front-end and overlap-coupling audit; retained as an archive, including superseded rotation metrics.",
+      "metric_convention": "legacy_unprojected_v0; angular claims are superseded",
+      "source_artifact": "runs/analysis_why/results.json",
+      "source_sha256": "433418f15abab2050fa95e21d00f7b14868c96f920d22f2951781f2342b69410",
+      "numeric_values_preserved": true
+    },
+    {
+      "file": "frame_manifest.json",
+      "purpose": "Exact public TUM filenames and partitions for all A/R/B replay jobs, including short tails.",
+      "metric_convention": "Frame definitions only; no measurements."
+    },
+    {
+      "file": "summary.json",
+      "purpose": "Compact cross-experiment summary, corrected/legacy metric distinctions, all 12 SLAM pairs and mechanism-probe results.",
+      "metric_convention": "Each section is explicitly named; never combine legacy, projected-matrix and fp64-pose numbers silently."
+    },
+    {
+      "file": "render_figures.py",
+      "purpose": "Reproduce the three data-only scientific figures using only published JSON.",
+      "metric_convention": "Uses archived projected matrices for local geometry and fp64-pose direct control pairs for focal interventions."
+    },
+    {
+      "file": "figures/undistortion_summary.png",
+      "purpose": "Focal bias and corrected local ATE/rotation on 20 matched windows. Data-only plot; no scene imagery.",
+      "generated_by": "render_figures.py"
+    },
+    {
+      "file": "figures/undistortion_summary.svg",
+      "purpose": "Focal bias and corrected local ATE/rotation on 20 matched windows. Data-only plot; no scene imagery.",
+      "generated_by": "render_figures.py"
+    },
+    {
+      "file": "figures/principal_point_control.png",
+      "purpose": "Direct centered vs uncentered principal-point comparison at identical 6% zoom. Data-only plot; no scene imagery.",
+      "generated_by": "render_figures.py"
+    },
+    {
+      "file": "figures/principal_point_control.svg",
+      "purpose": "Direct centered vs uncentered principal-point comparison at identical 6% zoom. Data-only plot; no scene imagery.",
+      "generated_by": "render_figures.py"
+    },
+    {
+      "file": "figures/slam_ate.png",
+      "purpose": "24 whole-SLAM runs representing 12 paired configurations. Data-only plot; no scene imagery.",
+      "generated_by": "render_figures.py"
+    },
+    {
+      "file": "figures/slam_ate.svg",
+      "purpose": "24 whole-SLAM runs representing 12 paired configurations. Data-only plot; no scene imagery.",
+      "generated_by": "render_figures.py"
+    }
+  ]
+}

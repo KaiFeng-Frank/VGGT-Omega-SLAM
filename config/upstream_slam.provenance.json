@@ -1,0 +1,156 @@
+{
+  "upstream": "https://github.com/MIT-SPARK/VGGT-SLAM",
+  "commit": "35327ac28b7d193df9ccc39ba6346052bb6f1207",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 2325,
+      "git_blob": "d2c6564f690955416cc8d2831094908ef0d4ac68",
+      "sha256": "d2ea5075e07a2540d1ca8d638ce80530d9db0435ddfca78c27263c178d21b797"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1298,
+      "git_blob": "aab458e5fea4d60852f78d60144fd20100c7db0c",
+      "sha256": "dc493d7ac51f587fd71184315999c792ead523bf46da0f0cbf3e26a577b1a580"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7293,
+      "git_blob": "4b54148647474ace887ae9cde11d31c5f19aae8c",
+      "sha256": "3cc8069121fabc2b5e13e0997e2e927fac558fa3d8032b2599dbadc486672454"
+    },
+    {
+      "path": "assets/office_loop_figure.png",
+      "bytes": 807688,
+      "git_blob": "2c0ebd01c2155e4bd74d3a7bef2aa5c07bf51f06",
+      "sha256": "5d20d0acb81d3fb38e14235499ba67a22441cfe835e899f3e224a99e514c28e9"
+    },
+    {
+      "path": "assets/vggt_slam_demo.gif",
+      "bytes": 12198554,
+      "git_blob": "e8ea2e0e1de5b730832737cf377773c4460eb347",
+      "sha256": "dc2ed38e8efb7183425a131b6cb01924607301912ec094a7d6284b865ef3d831"
+    },
+    {
+      "path": "evals/__init__.py",
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evals/eval_tum.sh",
+      "bytes": 1995,
+      "git_blob": "acc3d18d55976594119f2b31434a7e674c845bd7",
+      "sha256": "c01f407abcb9f99bbbdf2348d772d0746fcf5d84b5029c4a3271905e346b050b"
+    },
+    {
+      "path": "evals/process_logs_tum.py",
+      "bytes": 1285,
+      "git_blob": "25ac4afb1c2f2f6583645cd0381f2504b57c47bf",
+      "sha256": "9a78265063ad670136d6f4d6b5773d0e362f07b64f41f26ea2c941e973f59c3a"
+    },
+    {
+      "path": "main.py",
+      "bytes": 10018,
+      "git_blob": "4a475c942b7d748b9f4fdc02ff8b8ad3f855d46f",
+      "sha256": "85a5146f1fc93c3536e37acb4b077cdb7d7d952bf17c06b92ab944f126d56225"
+    },
+    {
+      "path": "main_realtime.py",
+      "bytes": 13532,
+      "git_blob": "88191e5220e6dc2884b69a3ac290ae47c49b4f31",
+      "sha256": "d4de3928f7ed3d09515cd8481e7fc2c6e69b494c94b5c57d5a29c8e2074484ea"
+    },
+    {
+      "path": "office_loop.zip",
+      "bytes": 17089246,
+      "git_blob": "53a09082e71e289e5f60eea9366d693a82d389fc",
+      "sha256": "1189ca66700e044ed1fe09b680259b6e9e48ad3d29f715eac003560ea433f103"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 274,
+      "git_blob": "821fbff684fadad251fe9bf2b3dfad912ed75363",
+      "sha256": "19527fb57122aee8bd3f737b183ee8f14f10f26a996a1e417b824c26668737db"
+    },
+    {
+      "path": "setup.py",
+      "bytes": 291,
+      "git_blob": "1a698bd40a15050b23f85e2147e3c8e60943401f",
+      "sha256": "a4540f135807abebcf8e2864e5abf0c6fcbd324812fbad21c908339c40c856e3"
+    },
+    {
+      "path": "setup.sh",
+      "bytes": 1043,
+      "git_blob": "10d1520f0adb4da207e574d495d40876c59c90e7",
+      "sha256": "ccb2d154d82f4c8fc527ec7a95c6ea73db84fe1484c2e8d013700c9b1c30d94e"
+    },
+    {
+      "path": "vggt_slam/__init__.py",
+      "bytes": 0,
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "vggt_slam/cameras.py",
+      "bytes": 1509,
+      "git_blob": "3f934d7b8fbb02f7019bbdfe5daf75c1553fc7c7",
+      "sha256": "2b741a4f78c52b8b6e154c78b66d81f0a13a230b3ea9eba7f0faf0d6fd2d75c5"
+    },
+    {
+      "path": "vggt_slam/frame_overlap.py",
+      "bytes": 2012,
+      "git_blob": "5c4fb345fa3aeb5f6ea8db9b4857c5410724f928",
+      "sha256": "bbb78f549a34b58eaf27556e6dda703468cc0518de4b936f7f886882d151afb8"
+    },
+    {
+      "path": "vggt_slam/graph.py",
+      "bytes": 6082,
+      "git_blob": "2a7cd6707fd2a669e569b7328160b3a0c875c540",
+      "sha256": "ab38010590702d31b1b281d08c4c6ef8fc8d8073d07e6828c7b89be392cf0882"
+    },
+    {
+      "path": "vggt_slam/loop_closure.py",
+      "bytes": 3332,
+      "git_blob": "1caca7344d2f75422db19228871185d790b43a18",
+      "sha256": "9df75c36cd349ffe2199d5819f0fbb27acf6ae755b34a6e24ec174caca7af839"
+    },
+    {
+      "path": "vggt_slam/map.py",
+      "bytes": 7493,
+      "git_blob": "f0fdf85a0b09149bccd71bf758890b216d483ef6",
+      "sha256": "4815edf5997ca38c4e7833e3fdfeeaad2c0903076b82a4d55815d6144bdf053a"
+    },
+    {
+      "path": "vggt_slam/scale_solver.py",
+      "bytes": 758,
+      "git_blob": "78cf53974f83d5d16bac5ddecf0cefa8a897c9d1",
+      "sha256": "dc36b11d4d9953222a3fc2f3aef274acc9e9cc6dc61cb22d86b1e6721d9bd691"
+    },
+    {
+      "path": "vggt_slam/slam_utils.py",
+      "bytes": 6227,
+      "git_blob": "90a1a36bae7cb324c2ea534c273c8abbb665d153",
+      "sha256": "ee3e1857ac4bff7d31052889c2c5de3b070d098e865444b5ef314d392db06368"
+    },
+    {
+      "path": "vggt_slam/solver.py",
+      "bytes": 19224,
+      "git_blob": "f5cb07012220a0bdf5deaa976f7876fff300e0a7",
+      "sha256": "29e5034b03bd717c95eada7fbe645a46fa968eadb5384eaebea137a5b14cd712"
+    },
+    {
+      "path": "vggt_slam/submap.py",
+      "bytes": 10087,
+      "git_blob": "9989c89a47114c5d1e134c9f80b69d3d331a6482",
+      "sha256": "fddccafee4e9f32452ce044b80669bd48f5fe5f331a980986a6091e7fce92e63"
+    },
+    {
+      "path": "vggt_slam/viewer.py",
+      "bytes": 10985,
+      "git_blob": "93f62fbedde31b4db83c19cc15bfbb4cf10fc204",
+      "sha256": "b89733e8cf872100c65422827923793bf6d5b702931f8e4c07bfa4ca0a80c13c"
+    }
+  ]
+}
